@@ -1,0 +1,50 @@
+name: Pages Build and Deploy
+on:
+  push:
+    branches: [main, niek/monday]
+  pull_request:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  build-and-deploy:
+    strategy:
+      matrix:
+        conference: [heapcon25]
+      max-parallel: 1  # Ensure jobs run sequentially to avoid GitHub Pages conflicts
+    
+    concurrency: ci-${{ github.ref }}-${{ matrix.conference }} # Recommended if you intend to make multiple deployments in quick succession.
+    permissions:
+      contents: write
+      pages: write
+    
+    runs-on: ubuntu-latest
+    env:
+      CONFERENCE: ${{ matrix.conference }}
+    
+    steps:
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: 🛎️ Checkout
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: 🔧 Install
+        run: |
+          npm ci
+          
+      - name: 🔧 Build pages for ${{ matrix.conference }}
+        run: |
+          npm run build-html
+
+      - name: 🚀 Deploy ${{ matrix.conference }}
+        if: github.event_name != 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@6c2d9db40f9296374acc17b90404b6e8864128c8 # v4.7.3
+        with:
+          branch: gh-pages
+          folder: build-${{ matrix.conference }}
+          target-folder: ${{ matrix.conference }}
