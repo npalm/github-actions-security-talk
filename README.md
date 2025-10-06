@@ -1,4 +1,4 @@
-# Talk - GitHub Actions Security: Patterns, Risks & Solutions
+# Talk - GitHub Actions Security
 
 This repository has slides and demo resources for the talk **GitHub Actions Security: Patterns, Risks & Solutions**.
 
