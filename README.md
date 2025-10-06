@@ -6,7 +6,7 @@ This repository has slides and demo resources for the talk **GitHub Actions Secu
 
 ### Talk
 - [Slides](https://npalm.github.io/github-actions-security-talk/heapcon25/)
-  [Demo Zizmor](https://github.com/codethebuild/gh-actions-security-zizmor)
+- [Demo Zizmor](https://github.com/codethebuild/gh-actions-security-zizmor)
 - [Demo GHAS](https://github.com/codethebuild/gh-actions-security-ghas)
 
 

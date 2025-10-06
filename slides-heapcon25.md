@@ -6,7 +6,7 @@ color: white
 class:
   - invert
   - lead
-#footer: '![h:36px](assets/img/philips-footer-logo.svg)'
+footer: '![h:106px](assets/img/resources.png)'
 
 theme:
 
@@ -101,6 +101,8 @@ style: |
 <!--
 _backgroundColor: #1E3A8A
 _color: white
+_footer: ''
+
 -->
 
 <style scoped>
@@ -162,6 +164,8 @@ section.optional.enabled {
 
 <!--
 _backgroundColor: #000000
+_footer: ''
+
 -->
 
 <style scoped>
@@ -240,6 +244,11 @@ _color: white
   margin: 0;
   font-weight: 300;
   font-style: italic;
+}
+
+footer img {
+  max-height: 100px;
+  width: auto;
 }
 </style>
 
@@ -2889,6 +2898,19 @@ _color: white
 h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(0, 0, 0, 0.5);
   color: white;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  left: auto;
+  text-align: right;
+}
+
+footer img {
+  max-height: 100px;
+  width: auto;
 }
 </style>
 
