@@ -2803,6 +2803,20 @@ _color: white
 h1 {
   font-size: 120px;
 }
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  left: auto;
+  text-align: right;
+}
+
+footer img {
+  max-height: 100px;
+  width: auto;
+}
+
 </style>
 
 
@@ -2890,7 +2904,125 @@ _color: white
 }
 </style>
 
-# Add links / resources
+<!--
+_backgroundColor: #1E40AF
+_color: white
+_footer: ''
+-->
+
+<style scoped>
+.resources-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+  height: 85%;
+  align-items: start;
+  padding: 1rem;
+}
+
+.links-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.links-image-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.links-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.github-sticker {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  background: #24292F;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transform: rotate(12deg);
+  z-index: 10;
+  border: 2px solid #F0F6FF;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+}
+
+.qr-container {
+  background: transparent;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code {
+  max-width: 300px;
+  max-height: 300px;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.qr-label {
+  font-size: 0.8rem;
+  color: #DBEAFE;
+  text-align: center;
+  font-style: italic;
+}
+</style>
+
+# 🔗 Resources and links
+
+<div class="resources-container">
+  <div class="links-section">
+    <div class="links-image-container">
+      <img src="assets/img/links.png" class="links-image" alt="GitHub Repository Links" />
+      <div class="github-sticker">
+        🔗<br>
+        github.com/npalm/<br>
+        github-actions-security-talk
+      </div>
+    </div>
+  </div>
+  
+  <div class="qr-section">
+    <div class="qr-container">
+      <img src="assets/img/resources.png" class="qr-code" alt="QR Code" />
+    </div>
+    <p class="qr-label">Scan for resources</p>
+  </div>
+</div>
 
 ---
 
