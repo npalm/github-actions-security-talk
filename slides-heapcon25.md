@@ -463,7 +463,7 @@ on: [push, pull_request]                           # 1
 
 jobs:
   build:
-    runs-on: [self-hosted, philips-code-hub, ...]. # 2
+    runs-on: [ubuntu-latest]                       # 2
     
     steps:
     - name: Checkout code
@@ -482,7 +482,7 @@ jobs:
     <h3>🔍 <strong>What's happening?</strong></h3>
     <ol>
       <li><strong>Trigger</strong>: on <code>push</code> or <code>pull_request</code></li>
-      <li><strong>Runner</strong>: Philips ephemeral fleet<br><code>self-hosted, philips-code-hub, ...</code></li>
+      <li><strong>Runner</strong>: GitHub hosted fleet<br><code>ubuntu-latest</code></li>
       <li><strong>Third party action</strong>: <code>checkout@v5</code></li>
       <li><strong>Run script</strong>: <code>npm ...</code></li>
     </ol>
@@ -493,7 +493,7 @@ jobs:
 ---
 
 <!--
-_backgroundColor: #2D3748
+_backgroundColor: #00629F
 _color: white
 -->
 
@@ -1046,7 +1046,7 @@ Opens reverse shell to attacker!
 ---
 
 <!--
-_backgroundColor: #B91C1C
+_backgroundColor: #00629F
 _color: white
 -->
 
@@ -2793,39 +2793,6 @@ _color: white
 
 ---
 
-
-<!--
--->
-
-# Questions
-
-<style scoped>
-h1 {
-  font-size: 120px;
-}
-
-footer {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  left: auto;
-  text-align: right;
-}
-
-footer img {
-  max-height: 100px;
-  width: auto;
-}
-
-</style>
-
-
-
-![bg](assets/img/questions.jpeg)
-
-
----
-
 <!--
 _backgroundColor: #D10077
 _color: purple
@@ -3023,6 +2990,40 @@ _footer: ''
     <p class="qr-label">Scan for resources</p>
   </div>
 </div>
+
+
+---
+
+
+<!--
+-->
+
+# Questions
+
+<style scoped>
+h1 {
+  font-size: 120px;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  left: auto;
+  text-align: right;
+}
+
+footer img {
+  max-height: 100px;
+  width: auto;
+}
+
+</style>
+
+
+
+![bg](assets/img/questions.jpeg)
+
 
 ---
 
