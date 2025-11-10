@@ -1,7 +1,7 @@
 name: Pages Build and Deploy
 on:
   push:
-    branches: [main, niek/monday]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
@@ -11,7 +11,7 @@ jobs:
   build-and-deploy:
     strategy:
       matrix:
-        conference: [heapcon25]
+        conference: [heapcon25, gotechworld25]
       max-parallel: 1  # Ensure jobs run sequentially to avoid GitHub Pages conflicts
     
     concurrency: ci-${{ github.ref }}-${{ matrix.conference }} # Recommended if you intend to make multiple deployments in quick succession.

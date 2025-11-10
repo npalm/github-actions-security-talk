@@ -99,7 +99,7 @@ style: |
 
 
 <!--
-_backgroundColor: #1E3A8A
+_backgroundColor: #4C1D95
 _color: white
 _footer: ''
 
@@ -118,14 +118,14 @@ h2 {
   font-size: 28px;
   text-align: right;
   font-style: italic;
-  color: #10B981;
+  color: #FCD34D;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 em {
   font-weight: bold;
   font-style: normal;
-  color: #10B981;
+  color: #FCD34D;
 }
 
 p {
@@ -136,7 +136,7 @@ p {
 
 strong {
     font-weight: bold;
-    color: #10B981;
+    color: #FCD34D;
 }
 
 section.optional {
@@ -145,6 +145,15 @@ section.optional {
 
 section.optional.enabled {
   display: block;
+}
+
+.conference-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  max-height: 120px;
+  width: auto;
+  z-index: 10;
 }
 </style>
 
@@ -157,6 +166,8 @@ section.optional.enabled {
 <br>
 
 ## Niek Palm
+
+<img src="assets/img/gotechworld.png" class="conference-logo" alt="GoTechWorld" />
 
 ---
 
@@ -264,6 +275,262 @@ footer img {
   </div>
 </div>
 
+
+---
+
+<!--
+_backgroundColor: #DC2626
+_color: white
+-->
+
+<style scoped>
+.supply-chain-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  height: 85%;
+  align-items: start;
+  padding: 1rem;
+}
+
+.chain-visual {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+}
+
+.chain-image {
+  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.chain-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.stat-box h3 {
+  margin: 0 0 0.7rem 0;
+  color: #FEF3C7;
+  font-size: 0.9rem;
+}
+
+.stat-box ul {
+  margin: 0;
+  padding-left: 1.3rem;
+  font-size: 0.65rem;
+  line-height: 1.8;
+  color: #FEE2E2;
+}
+
+.stat-box strong {
+  color: #FECACA;
+  font-weight: bold;
+}
+
+.highlight-danger {
+  color: #FCA5A5;
+  font-weight: bold;
+}
+</style>
+
+# 🔗 Software Supply Chain
+
+<div class="supply-chain-container">
+  <div class="chain-visual">
+    <img src="assets/img/ssc.png" class="chain-image" alt="Software Supply Chain" />
+  </div>
+  
+  <div class="chain-content">
+    <div class="stat-box">
+      <h3>⚠️ Why It's a Prime Target</h3>
+      <ul>
+        <li><strong>Compromise once</strong>, deploy everywhere</li>
+        <li><strong>Massive multiplier effect</strong></li>
+        <li><strong>Trusted relationships</strong> exploited</li>
+        <li><strong>Hard to detect</strong> before it's too late</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+---
+
+<!--
+_backgroundColor: #4C1D95
+_color: white
+-->
+
+<style scoped>
+.attacks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 85%;
+  padding: 0.5rem;
+}
+
+.intro-box {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0.6rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.intro-box p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #FEE2E2;
+  font-style: italic;
+}
+
+.attacks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  flex: 1;
+}
+
+.attack-card {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.attack-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.3rem;
+}
+
+.attack-emoji {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.attack-title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #FEF3C7;
+  margin: 0;
+}
+
+.attack-details {
+  flex: 1;
+}
+
+.attack-detail {
+  font-size: 0.6rem;
+  color: #FEE2E2;
+  margin: 0.3rem 0;
+  line-height: 1.3;
+}
+
+.attack-year {
+  font-size: 0.55rem;
+  color: #FCA5A5;
+  font-style: italic;
+  margin: 0;
+}
+
+.attack-impact {
+  background: rgba(239, 68, 68, 0.2);
+  border-radius: 6px;
+  padding: 0.4rem;
+  margin-top: 0.3rem;
+}
+
+.impact-label {
+  font-size: 0.55rem;
+  font-weight: bold;
+  color: #FECACA;
+  margin: 0 0 0.2rem 0;
+}
+
+.impact-text {
+  font-size: 0.58rem;
+  color: #FEE2E2;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.stat-highlight {
+  color: #FCA5A5;
+  font-weight: bold;
+}
+</style>
+
+# 💥 Supply Chain Attacks in the Wild
+
+<div class="attacks-container">
+  <div class="attacks-grid">
+    <div class="attack-card">
+      <div class="attack-header">
+        <span class="attack-emoji">🔥</span>
+        <div>
+          <h3 class="attack-title">SolarWinds</h3>
+          <p class="attack-year">2020</p>
+        </div>
+      </div>
+      <div class="attack-details">
+        <p class="attack-detail">Compromised build system injected malicious code into legitimate software updates affecting 18,000+ organizations including government agencies and Fortune 500 companies</p>
+      </div>
+    </div>
+    <div class="attack-card">
+      <div class="attack-header">
+        <span class="attack-emoji">💀</span>
+        <div>
+          <h3 class="attack-title">CodeCov</h3>
+          <p class="attack-year">2021</p>
+        </div>
+      </div>
+      <div class="attack-details">
+        <p class="attack-detail">Docker image compromised in CI/CD pipeline, stealing credentials and secrets from hundreds of customers</p>
+      </div>
+    </div>
+    <div class="attack-card">
+      <div class="attack-header">
+        <span class="attack-emoji">⚡</span>
+        <div>
+          <h3 class="attack-title">tj-actions/changed-files</h3>
+          <p class="attack-year">2025</p>
+        </div>
+      </div>
+      <div class="attack-details">
+        <p class="attack-detail">Attackers compromised maintainer bot token, manipulated version tags to point to malicious commits, exfiltrating CI/CD secrets from 23,000+ repositories using this popular GitHub Action</p>
+      </div>
+    </div>
+    <div class="attack-card">
+      <div class="attack-header">
+        <span class="attack-emoji">🎭</span>
+        <div>
+          <h3 class="attack-title">S1ngularity (Nx)</h3>
+          <p class="attack-year">2025</p>
+        </div>
+      </div>
+      <div class="attack-details">
+        <p class="attack-detail">Exploited pull_request_target injection to steal npm token, published malicious Nx packages, weaponized AI tools for secrets exfiltration, exposed 1000s of secrets and private repos</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 ---
 <!--
@@ -575,6 +842,158 @@ code {
 
 </div>
 
+
+---
+
+<!--
+_backgroundColor: #0B5ED7
+_color: white
+-->
+
+<style scoped>
+.usecases-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 85%;
+  padding: 1rem;
+}
+
+.intro-text {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0.8rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.intro-text p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #F3E8FF;
+  font-style: italic;
+}
+
+.usecases-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.3rem;
+  align-content: start;
+}
+
+.usecase-card {
+  padding: 0.2rem 0.1rem 0.2rem 0.8rem;
+  gap: 0.8rem;
+  height: 2.0rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.usecase-emoji {
+  font-size: 1.0rem;
+  flex-shrink: 0;
+  line-height: 1.0;
+}
+
+.usecase-text {
+  font-size: 0.45rem;
+  font-weight: bold;
+  color: #F7FAFC;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+</style>
+
+# 🚀 Actions Everywhere
+*From development to deployment - GitHub Actions powers our entire software lifecycle*
+<div class="usecases-container">
+
+  
+  <div class="usecases-grid">
+    <div class="usecase-card card-dark">
+      <span class="usecase-emoji">🏗️</span>
+      <p class="usecase-text">Build & compile code</p>
+    </div>
+    <div class="usecase-card card-dark">
+      <span class="usecase-emoji">🐳</span>
+      <p class="usecase-text">Build containers</p>
+    </div>
+    <div class="usecase-card card-dark">
+      <span class="usecase-emoji">🧪</span>
+      <p class="usecase-text">Run unit tests</p>
+    </div>
+    <div class="usecase-card card-dark">
+      <span class="usecase-emoji">🎭</span>
+      <p class="usecase-text">Run E2E tests</p>
+    </div>
+    <div class="usecase-card card-dark flex-center">
+      <span class="usecase-emoji">🛡️</span>
+      <p class="usecase-text">Security scanning</p>
+    </div>
+    <div class="usecase-card card-dark flex-center">
+      <span class="usecase-emoji">🔍</span>
+      <p class="usecase-text">Code quality checks</p>
+    </div>
+    <div class="usecase-card card-dark flex-center">
+      <span class="usecase-emoji">📦</span>
+      <p class="usecase-text">Publish packages</p>
+    </div>
+    <div class="usecase-card card-dark flex-center">
+      <span class="usecase-emoji">☁️</span>
+      <p class="usecase-text">Deploy to cloud</p>
+    </div>
+    <div class="usecase-card card-dark flex-center">
+      <span class="usecase-emoji">🔄</span>
+      <p class="usecase-text">Manage infrastructure</p>
+    </div>
+    <div class="usecase-card card-dark flex-center">
+      <span class="usecase-emoji">🚀</span>
+      <p class="usecase-text">Release automation</p>
+    </div>
+    <div class="usecase-card card-dark flex-center">
+      <span class="usecase-emoji">📚</span>
+      <p class="usecase-text">Generate docs</p>
+    </div>
+    <div class="usecase-card card-dark flex-center">
+      <span class="usecase-emoji">🌐</span>
+      <p class="usecase-text">Deploy static sites</p>
+    </div>
+    <div class="usecase-card card-dark">
+      <span class="usecase-emoji">🔄</span>
+      <p class="usecase-text">Update dependencies</p>
+    </div>
+    <div class="usecase-card card-dark">
+      <span class="usecase-emoji">🏷️</span>
+      <p class="usecase-text">Tag & version</p>
+    </div>
+    <div class="usecase-card card-dark">
+      <span class="usecase-emoji">🤖</span>
+      <p class="usecase-text">Automate workflows</p>
+    </div>
+    <div class="usecase-card card-dark">
+      <span class="usecase-emoji">📊</span>
+      <p class="usecase-text">Generate reports</p>
+    </div>
+    <div class="usecase-card card-dark">
+      <span class="usecase-emoji">📧</span>
+      <p class="usecase-text">Send notifications</p>
+    </div>
+    <div class="usecase-card card-dark">
+      <span class="usecase-emoji">🔐</span>
+      <p class="usecase-text">Manage secrets</p>
+    </div>
+    <div class="usecase-card card-dark">
+      <span class="usecase-emoji">🎯</span>
+      <p class="usecase-text">Issue triage</p>
+    </div>
+    <div class="usecase-card card-dark">
+      <span class="usecase-emoji">🌍</span>
+      <p class="usecase-text">Multi-platform builds</p>
+    </div>
+  </div>
+</div>
 
 ---
 
