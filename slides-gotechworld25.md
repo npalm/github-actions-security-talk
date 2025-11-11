@@ -3315,19 +3315,16 @@ _footer: ''
 
 .links-image-container {
   position: relative;
-  flex: 1;
+  flex: 0 0 60%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
 
 .links-image {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 450px;
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -3393,7 +3390,7 @@ _footer: ''
 <div class="resources-container">
   <div class="links-section">
     <div class="links-image-container">
-      <img src="assets/img/links.png" class="links-image" alt="GitHub Repository Links" />
+      <img src="assets/img/linksgotech.png" class="links-image" alt="GitHub Repository Links" />
       <div class="github-sticker">
         🔗 github.com/npalm/<br>
         github-actions-security-talk
@@ -3432,7 +3429,8 @@ footer {
 }
 
 footer img {
-  max-height: 100px;
+  height: 200px !important;
+  max-height: 200px !important;
   width: auto;
 }
 

@@ -5,6 +5,7 @@ This repository has slides and demo resources for the talk **GitHub Actions Secu
 ## Conferences
 - [HeapCon 2025](https://heapcon.io/), slides: [here](https://npalm.github.io/github-actions-security-talk/heapcon25/)
 - [GoTech World 2025](https://www.gotech.world/), slides: [here](https://npalm.github.io/github-actions-security-talk/gotechworld25/)
+- [040coders.nl - Ignite Nov 2025](https://www.meetup.com/040coders-nl/), slides: [here](https://npalm.github.io/github-actions-security-talk/040codersignite25/)
 
 ## Demo resources
 - [Demo Zizmor](https://github.com/codethebuild/gh-actions-security-zizmor)
