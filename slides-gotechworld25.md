@@ -3429,7 +3429,8 @@ footer {
 }
 
 footer img {
-  max-height: 100px;
+  height: 200px !important;
+  max-height: 200px !important;
   width: auto;
 }
 

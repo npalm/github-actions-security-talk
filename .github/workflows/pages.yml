@@ -3,21 +3,20 @@ on:
   push:
     branches: [main]
   pull_request:
-  workflow_dispatch:
 
 permissions: {}
 
 jobs:
   build-and-deploy:
+    name: generate and deploy
     strategy:
       matrix:
-        conference: [heapcon25, gotechworld25]
+        conference: [heapcon25, gotechworld25, 040codersignite25]
       max-parallel: 1  # Ensure jobs run sequentially to avoid GitHub Pages conflicts
     
     concurrency: ci-${{ github.ref }}-${{ matrix.conference }} # Recommended if you intend to make multiple deployments in quick succession.
     permissions:
-      contents: write
-      pages: write
+      contents: write # requires to push generated slides
     
     runs-on: ubuntu-latest
     env:
