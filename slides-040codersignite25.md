@@ -174,7 +174,7 @@ _footer: ''
   </div>
   
   <div class="speaker-image">
-    <img src="assets/img/niek512.jpg" class="speaker-photo" alt="Niek Palm" />
+    <img src="assets/img/niek.jpg" class="speaker-photo" alt="Niek Palm" />
   </div>
 </div>
 
