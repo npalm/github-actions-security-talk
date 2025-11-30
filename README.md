@@ -3,11 +3,13 @@
 This repository has slides and demo resources for the talk **GitHub Actions Security: Patterns, Risks & Solutions**.
 
 ## Conferences
+- [NDC Security & AI 2025](https://ndcmanchester.com/), slides: [here](https://npalm.github.io/github-actions-security-talk/ndcmanchester25)
 - [HeapCon 2025](https://heapcon.io/), slides: [here](https://npalm.github.io/github-actions-security-talk/heapcon25/)
 - [GoTech World 2025](https://www.gotech.world/), slides: [here](https://npalm.github.io/github-actions-security-talk/gotechworld25/)
 - [040coders.nl - Ignite Nov 2025](https://www.meetup.com/040coders-nl/), slides: [here](https://npalm.github.io/github-actions-security-talk/040codersignite25/)
 
 ## Demo resources
+- [Demo Zizmor (extend version)](https://github.com/codethebuild/gh-actions-security-zizmor-demo-time)
 - [Demo Zizmor](https://github.com/codethebuild/gh-actions-security-zizmor)
 - [Demo GHAS](https://github.com/codethebuild/gh-actions-security-ghas)
 
@@ -21,6 +23,7 @@ This repository has slides and demo resources for the talk **GitHub Actions Secu
 - [OpenSSF Scorecard](https://securityscorecards.dev/) - Security health metrics for open source projects
 - [OIDC with GitHub Actions](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect) - Short-lived tokens setup
 - [Dependency Review Action](https://github.com/actions/dependency-review-action) - GitHub Action for dependency analysis
+- [GitHub Security Lab - Keeping your GitHub Actions](https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/) - Article serie discussing common security malpractices for GitHub Actions and workflows.
 - [Harden GitHub Actions](https://www.wiz.io/blog/github-actions-security-guide) - How to Harden GitHub Actions: The Unofficial Guide
 
 ## Speaker
@@ -42,3 +45,4 @@ This presentation uses the following sources for images
 - [Pixabay](https://pixabay.com/)
 - [DALL-E](https://labs.openai.com/)
 - [Gemini](https://gemini.google/)
+
