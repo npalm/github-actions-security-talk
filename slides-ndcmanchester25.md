@@ -185,6 +185,93 @@ section.optional.enabled {
 ---
 
 
+<!--
+_backgroundColor: #4C1D95
+_color: white
+_footer: ''
+
+-->
+
+<style scoped>
+h1 {
+  text-align: right;
+  font-size: 52px;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 28px;
+  text-align: right;
+  font-style: italic;
+  color: #FCD34D;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+  color: #FCD34D;
+}
+
+p {
+  font-style: italic;
+  text-align: right;
+  color: #E2E8F0;
+}
+
+strong {
+    font-weight: bold;
+    color: #FCD34D;
+}
+
+section.optional {
+  display: none;
+}
+
+section.optional.enabled {
+  display: block;
+}
+
+.conference-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 32px;
+  z-index: 10;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.conference-logo .ndc-text {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.conference-logo .ndc-location {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+}
+</style>
+
+![bg left:40%](assets/img/gh-actions-sec.png)
+
+# GitHub Actions Security
+## From CI Nightmare to Supply Chain Sentinel
+
+<br>
+<br>
+
+## Niek Palm
+
+<div class="conference-logo">
+  <span class="ndc-text">NDC</span> <span class="ndc-location">{ Manchester }</span>
+</div>
+
+---
+
+
 
 <!--
 _backgroundColor: #000000
@@ -213,6 +300,93 @@ video {
 </style>
 
 <video src="assets/injection.webm" controls></video>
+
+---
+
+
+<!--
+_backgroundColor: #4C1D95
+_color: white
+_footer: ''
+
+-->
+
+<style scoped>
+h1 {
+  text-align: right;
+  font-size: 52px;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 28px;
+  text-align: right;
+  font-style: italic;
+  color: #FCD34D;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+  color: #FCD34D;
+}
+
+p {
+  font-style: italic;
+  text-align: right;
+  color: #E2E8F0;
+}
+
+strong {
+    font-weight: bold;
+    color: #FCD34D;
+}
+
+section.optional {
+  display: none;
+}
+
+section.optional.enabled {
+  display: block;
+}
+
+.conference-logo {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 32px;
+  z-index: 10;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.conference-logo .ndc-text {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.conference-logo .ndc-location {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+}
+</style>
+
+![bg left:40%](assets/img/gh-actions-sec.png)
+
+# <!-- fit --> Weaponizing and Hardening 
+## GitHub Actions
+
+<br>
+<br>
+
+## Niek Palm
+
+<div class="conference-logo">
+  <span class="ndc-text">NDC</span> <span class="ndc-location">{ Manchester }</span>
+</div>
 
 ---
 
@@ -2299,7 +2473,7 @@ _color: white
 ---
 
 <!--
-_backgroundColor: #7C3AED
+_backgroundColor: #D97706
 _color: white
 -->
 
@@ -2349,7 +2523,6 @@ _color: white
 
 .common-threat {
   background: rgba(239, 68, 68, 0.3);
-  border-left: 4px solid #F87171;
   border-radius: 12px;
   padding: 0.8rem 1.2rem;
   margin-top: 0.5rem;
@@ -2418,6 +2591,101 @@ _color: white
     <div class="image-source">source: GitGuardian</div>
   </div>
 </div>
+
+---
+
+
+
+<!--
+_backgroundColor: #DC2626
+_color: white
+-->
+
+<style scoped>
+.impact-container {
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  flex: 1;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-number {
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: #FCD34D;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stat-description {
+  font-size: 0.6rem;
+  line-height: 1.1;
+  color: #FEE2E2;
+}
+
+.source-note {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 0.6rem;
+  color: #E2E8F0;
+  font-style: italic;
+  text-align: center;
+}
+
+.source-note strong {
+  color: #FCD34D;
+}
+</style>
+
+# 💥 Shai-Hulud 2.0 Impact
+
+![bg left:40%](assets/img/impact.jpg)
+
+<div class="impact-container">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-number">1,195+</div>
+      <div class="stat-description">Distinct orgs (banks, government bodies, and Fortune 500)</div>
+    </div> 
+    <div class="stat-card">
+      <div class="stat-number">25,000+</div>
+      <div class="stat-description">Malicious repositories created for exfiltration</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">700+</div>
+      <div class="stat-description">NPM packages infiltrated with malicious code</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">33,000+</div>
+      <div class="stat-description">Unique secrets exposed (GitHub PAT, Cloud, ...)</div>
+    </div>
+  </div>
+  
+  <div class="source-note">
+    Sources: <strong>Entro</strong> (organizations), <strong>Wiz</strong> (repos & packages), <strong>GitGuardian</strong> (secrets)
+  </div>
+</div>
+
+
 
 ---
 
