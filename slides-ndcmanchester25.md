@@ -1620,12 +1620,12 @@ _color: white
     <div class="trust-section">
       <h3>🎯 How to Trust</h3>
       <ul>
-        <li><strong>Pin to SHA</strong> - Immutable (<code>@a1b2c3d</code>)</li>
         <li><strong>Lock to tag</strong> - Mutable (<code>@v1.2.3</code>)</li>
+        <li><strong>Pin to SHA</strong> - Immutable (<code>@a1b2c3d</code>)</li>
         <li><strong>Fork and own</strong> - Full control, your maintenance</li>
       </ul>
       <div class="applies-to">
-        ⚠️ Any third-party component (Docker, NPM, PyPI, ...)
+        ⚠️ Lock third-party component (Docker, PyPI, NuGet ...)
       </div>
     </div>
     <div class="trust-section">
