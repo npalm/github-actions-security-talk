@@ -3640,7 +3640,7 @@ _color: white
   <div class="security-content">
     <div class="security-item">
       <span class="security-emoji">🛡️</span>
-      <p class="security-text"><span class="security-highlight">Scan Actions with</span> with GHAS</p>
+      <p class="security-text"><span class="security-highlight">Scan Actions</span> with GHAS</p>
     </div>
     <div class="security-item">
       <span class="security-emoji">👀</span>
