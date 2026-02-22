@@ -4344,6 +4344,196 @@ h1 {
 ---
 
 <!--
+_backgroundColor: #1a1a2e
+_color: white
+-->
+
+<style scoped>
+.attack-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 1.2rem;
+  height: 85%;
+  padding: 0.5rem;
+}
+
+.chain-box {
+  background: linear-gradient(135deg, rgba(80, 20, 20, 0.95), rgba(50, 10, 10, 0.95));
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.chain-box h3 {
+  color: #FCA5A5;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem 0;
+}
+
+.chain-item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 0.6rem;
+  align-items: start;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+}
+
+.chain-num {
+  background: #DC2626;
+  color: white;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.chain-text {
+  color: rgba(255,255,255,0.95);
+  line-height: 1.3;
+  padding-top: 2px;
+}
+
+.chain-text strong {
+  color: #FCA5A5;
+}
+
+.right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.impact-box {
+  background: rgba(251, 191, 36, 0.15);
+  border-radius: 10px;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.impact-box h3 {
+  color: #FBBF24;
+  font-size: 0.85rem;
+  margin: 0 0 0.4rem 0;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.stat-block {
+  text-align: center;
+}
+
+.stat-big {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #FBBF24;
+}
+
+.stat-small {
+  font-size: 0.55rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.insight-box {
+  background: rgba(16, 185, 129, 0.15);
+  border-radius: 10px;
+  padding: 0.8rem;
+  flex: 1;
+}
+
+.insight-box h3 {
+  color: #10B981;
+  font-size: 0.85rem;
+  margin: 0 0 0.4rem 0;
+}
+
+.insight-box p {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.insight-box strong {
+  color: #10B981;
+  font-style: normal;
+}
+
+.insight-box .source {
+  font-size: 0.5rem;
+  color: rgba(255,255,255,0.5);
+  text-align: right;
+  margin-top: 0.3rem;
+  font-style: normal;
+}
+</style>
+
+<!-- Source: https://www.zenity.io/blog/the-cline-cli-attack-when-ai-coding-assistants-become-attack-vectors/ -->
+
+# 🚨 Real World: Cline CLI Attack (Feb 2026)
+
+<div class="attack-grid">
+  <div class="chain-box">
+    <h3>⚔️ Attack Chain</h3>
+    <div class="chain-item">
+      <div class="chain-num">1</div>
+      <div class="chain-text"><strong>AI agent</strong> triages GitHub issues</div>
+    </div>
+    <div class="chain-item">
+      <div class="chain-num">2</div>
+      <div class="chain-text"><strong>Prompt injection</strong> in issue title</div>
+    </div>
+    <div class="chain-item">
+      <div class="chain-num">3</div>
+      <div class="chain-text"><strong>Cache poisoning</strong> plants malicious cache</div>
+    </div>
+    <div class="chain-item">
+      <div class="chain-num">4</div>
+      <div class="chain-text">Release workflow <strong>restores bad cache</strong></div>
+    </div>
+    <div class="chain-item">
+      <div class="chain-num">5</div>
+      <div class="chain-text"><strong>NPM token stolen</strong>, v2.3.0 hijacked</div>
+    </div>
+    <div class="chain-item">
+      <div class="chain-num">6</div>
+      <div class="chain-text"><strong>OpenClaw</strong> malware on victims</div>
+    </div>
+  </div>
+  <div class="right-col">
+    <div class="impact-box">
+      <h3>📊 Impact</h3>
+      <div class="stats-row">
+        <div class="stat-block">
+          <div class="stat-big">~4,000</div>
+          <div class="stat-small">Downloads</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-big">8h</div>
+          <div class="stat-small">Window</div>
+        </div>
+      </div>
+    </div>
+    <div class="insight-box">
+      <h3>💡 Key Insight</h3>
+      <p>"When a single issue title can influence an automated build pipeline, the risk is no longer theoretical. <strong>AI agents are privileged actors</strong> that require governance."</p>
+      <div class="source">— Chris Hughes, Zenity</div>
+    </div>
+  </div>
+</div>
+
+---
+
+<!--
 _backgroundColor: #A80DF2
 _color: white
 -->
