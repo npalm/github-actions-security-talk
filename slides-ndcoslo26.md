@@ -170,8 +170,8 @@ section.optional.enabled {
 
 ![bg left:40%](assets/img/gh-actions-sec.png)
 
-# GitHub Actions Security
-## From CI Nightmare to Supply Chain Sentinel
+# <!-- fit --> Beyond the Commit
+## Weaponizing and Hardening GitHub Actions
 
 <br>
 <br>
@@ -179,7 +179,7 @@ section.optional.enabled {
 ## Niek Palm
 
 <div class="conference-logo">
-  <span class="ndc-text">NDC</span> <span class="ndc-location">{ Security Oslo }</span>
+  <span class="ndc-text">NDC</span> <span class="ndc-location">{ Security }</span>
 </div>
 
 ---
@@ -191,117 +191,6 @@ _backgroundColor: #000000
 _footer: ''
 
 -->
-
-<style scoped>
-section {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-video {
-  width: 100%;
-  height: 100%;
-  max-width: 100vw;
-  max-height: 100vh;
-  object-fit: contain;
-}
-</style>
-
-<video src="assets/injection.webm" controls></video>
-
----
-
-
-<!--
-_backgroundColor: #4C1D95
-_color: white
-_footer: ''
-
--->
-
-<style scoped>
-h1 {
-  text-align: right;
-  font-size: 52px;
-  color: #FFFFFF;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 28px;
-  text-align: right;
-  font-style: italic;
-  color: #FCD34D;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-em {
-  font-weight: bold;
-  font-style: normal;
-  color: #FCD34D;
-}
-
-p {
-  font-style: italic;
-  text-align: right;
-  color: #E2E8F0;
-}
-
-strong {
-    font-weight: bold;
-    color: #FCD34D;
-}
-
-section.optional {
-  display: none;
-}
-
-section.optional.enabled {
-  display: block;
-}
-
-.conference-logo {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  font-size: 32px;
-  z-index: 10;
-  color: #FFFFFF;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.conference-logo .ndc-text {
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.conference-logo .ndc-location {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 400;
-}
-</style>
-
-![bg left:40%](assets/img/gh-actions-sec.png)
-
-# <!-- fit --> Weaponizing and Hardening 
-## GitHub Actions
-
-<br>
-<br>
-
-## Niek Palm
-
-<div class="conference-logo">
-  <span class="ndc-text">NDC</span> <span class="ndc-location">{ Security Oslo }</span>
-</div>
-
----
 
 <!-- 
 
@@ -1130,6 +1019,80 @@ _color: white
       <p class="usecase-text">Multi-platform builds</p>
     </div>
   </div>
+</div>
+
+---
+
+<!-- ==================== PART 1: WEAPONIZE ==================== -->
+
+<!--
+_backgroundColor: #000000
+_color: white
+_footer: ''
+-->
+
+<style scoped>
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+  background: linear-gradient(90deg, #DC2626, #F97316, #FBBF24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #94A3B8;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.icon-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+.part-badge {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: rgba(220, 38, 38, 0.3);
+  border: 2px solid #DC2626;
+  color: #F87171;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+</style>
+
+<div class="part-badge">PART 1</div>
+
+# WEAPONIZE
+
+<div class="subtitle">Understanding the attack surface</div>
+
+<div class="icon-row">
+  <span>💉</span>
+  <span>🎯</span>
+  <span>🔓</span>
+  <span>💥</span>
 </div>
 
 ---
@@ -3153,6 +3116,80 @@ _color: white
 
 ---
 
+<!-- ==================== PART 2: HARDEN ==================== -->
+
+<!--
+_backgroundColor: #000000
+_color: white
+_footer: ''
+-->
+
+<style scoped>
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0d1f3c 100%);
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+  background: linear-gradient(90deg, #10B981, #3B82F6, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #94A3B8;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.icon-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+.part-badge {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: rgba(16, 185, 129, 0.3);
+  border: 2px solid #10B981;
+  color: #6EE7B7;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+</style>
+
+<div class="part-badge">PART 2</div>
+
+# HARDEN
+
+<div class="subtitle">Securing your pipeline</div>
+
+<div class="icon-row">
+  <span>🛡️</span>
+  <span>🔐</span>
+  <span>✅</span>
+  <span>🔍</span>
+</div>
+
+---
+
 
 <!--
 _backgroundColor: #4A5568
@@ -3283,105 +3320,136 @@ _color: white
 -->
 
 <style scoped>
-.universal-container {
+.universal-container-v2 {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  height: 90%;
+  gap: 0.6rem;
+  height: 85%;
 }
 
-.intro-box {
-  background: rgba(255, 207, 80, 0.15);
-  border: 2px solid #FFCF50;
-  border-radius: 10px;
-  padding: 0.6rem 1rem;
+.intro-box-v2 {
   text-align: center;
+  padding: 0.3rem;
 }
 
-.intro-box p {
+.intro-box-v2 p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #FFCF50;
-  font-weight: bold;
+  font-weight: 600;
+  font-style: italic;
 }
 
-.principles-grid {
+.principles-grid-v2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.8rem;
   flex: 1;
 }
 
-.principle-card {
-  background: rgba(255, 255, 255, 0.1);
+.principle-card-v2 {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
   border-radius: 10px;
-  padding: 0.8rem;
-  border-left: 4px solid #FFCF50;
+  padding: 0.7rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.principle-card h4 {
-  color: #FFCF50;
-  margin: 0 0 0.5rem 0;
-  font-size: 0.75rem;
+.principle-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
 }
 
-.principle-card ul {
-  font-size: 0.6rem;
+.principle-card-v2 h4 {
+  color: #FFFFFF;
+  margin: 0 0 0.4rem 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.principle-card-v2 ul {
+  font-size: 0.5rem;
   line-height: 1.4;
   margin: 0;
-  padding-left: 1rem;
-  color: #E2E8F0;
+  padding: 0;
+  list-style: none;
+  color: #CBD5E0;
+  text-align: left;
 }
 
-.example-row {
+.principle-card-v2 li {
+  padding: 0.1rem 0;
+  position: relative;
+  padding-left: 0.7rem;
+}
+
+.principle-card-v2 li::before {
+  content: "•";
+  color: #FFCF50;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.example-row-v2 {
   display: flex;
-  gap: 1rem;
+  gap: 0.6rem;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.2rem;
 }
 
-.example-badge {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.6rem;
-  color: #A0AEC0;
+.example-badge-v2 {
+  background: rgba(255, 207, 80, 0.2);
+  border: 1px solid rgba(255, 207, 80, 0.4);
+  border-radius: 20px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.5rem;
+  color: #FFCF50;
+  font-weight: 500;
 }
 </style>
 
 # 🌐 Universal Security Principles
 
-<div class="universal-container">
-  <div class="intro-box">
+<div class="universal-container-v2">
+  <div class="intro-box-v2">
     <p>Not just GitHub Actions — these patterns apply everywhere automation runs</p>
   </div>
   
-  <div class="principles-grid">
-    <div class="principle-card">
-      <h4>🔗 Trust Boundaries</h4>
+  <div class="principles-grid-v2">
+    <div class="principle-card-v2">
+      <span class="principle-icon">🔗</span>
+      <h4>Trust Boundaries</h4>
       <ul>
         <li>Pin dependencies immutably</li>
         <li>Verify third-party sources</li>
         <li>Assume external = untrusted</li>
       </ul>
     </div>
-    <div class="principle-card">
-      <h4>🔑 Least Privilege</h4>
+    <div class="principle-card-v2">
+      <span class="principle-icon">🔑</span>
+      <h4>Least Privilege</h4>
       <ul>
         <li>Minimal token scopes</li>
         <li>Short-lived credentials</li>
         <li>No standing access</li>
       </ul>
     </div>
-    <div class="principle-card">
-      <h4>🛡️ Defense in Depth</h4>
+    <div class="principle-card-v2">
+      <span class="principle-icon">🛡️</span>
+      <h4>Defense in Depth</h4>
       <ul>
         <li>Multiple security layers</li>
         <li>Scan & audit continuously</li>
         <li>Monitor for anomalies</li>
       </ul>
     </div>
-    <div class="principle-card">
-      <h4>💉 Input Validation</h4>
+    <div class="principle-card-v2">
+      <span class="principle-icon">💉</span>
+      <h4>Input Validation</h4>
       <ul>
         <li>Never trust user input</li>
         <li>Sanitize before execution</li>
@@ -3390,12 +3458,12 @@ _color: white
     </div>
   </div>
   
-  <div class="example-row">
-    <span class="example-badge">GitHub Actions</span>
-    <span class="example-badge">GitLab CI</span>
-    <span class="example-badge">Jenkins</span>
-    <span class="example-badge">Azure DevOps</span>
-    <span class="example-badge">AI Agents</span>
+  <div class="example-row-v2">
+    <span class="example-badge-v2">GitHub Actions</span>
+    <span class="example-badge-v2">GitLab CI</span>
+    <span class="example-badge-v2">Jenkins</span>
+    <span class="example-badge-v2">Azure DevOps</span>
+    <span class="example-badge-v2">AI Agents</span>
   </div>
 </div>
 
@@ -4054,24 +4122,59 @@ _color: white
 <!-- ==================== BONUS: AI AGENTS ==================== -->
 
 <!--
-_backgroundColor: #A80DF2
+_backgroundColor: #000000
 _color: white
 _footer: ''
 -->
 
 <style scoped>
-h1 {
-  font-size: 2.8rem;
-  text-align: center;
-  margin-top: 15%;
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%);
 }
 
-h2 {
-  font-size: 1.4rem;
+h1 {
+  font-size: 5rem;
   text-align: center;
-  color: #E9D5FF;
+  margin: 0;
+  background: linear-gradient(90deg, #A855F7, #EC4899, #F472B6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #94A3B8;
+  margin-top: 1.5rem;
   font-style: italic;
-  margin-top: 1rem;
+}
+
+.icon-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+.part-badge {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: rgba(168, 85, 247, 0.3);
+  border: 2px solid #A855F7;
+  color: #D8B4FE;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
 }
 
 .bonus-badge {
@@ -4089,11 +4192,19 @@ h2 {
 }
 </style>
 
-# 🤖 AI Agents Join the Supply Chain
+<div class="part-badge">BONUS</div>
+<div class="bonus-badge">🐘 AI</div>
 
-## What does this mean for security?
+# AI AGENTS
 
-<div class="bonus-badge">BONUS</div>
+<div class="subtitle">Old vulnerabilities, new velocity</div>
+
+<div class="icon-row">
+  <span>🤖</span>
+  <span>⚡</span>
+  <span>🔗</span>
+  <span>🛡️</span>
+</div>
 
 ---
 
@@ -4103,62 +4214,130 @@ _color: white
 -->
 
 <style scoped>
-.content-layout {
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+.evolution-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.timeline {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  height: 80%;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.era-card {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+}
+.era-card.past {
+  opacity: 0.9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.era-card.future {
+  box-shadow: 0 0 30px rgba(251, 191, 36, 0.3);
+}
+.era-header {
+  display: flex;
   align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
 }
-
-.dev-box {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+.era-icon {
+  font-size: 1.4rem;
 }
-
-.dev-box h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.1rem;
+.era-title {
+  font-size: 1rem;
+  font-weight: 700;
   color: #E9D5FF;
 }
-
-.dev-box ul {
+.era-card.future .era-title {
+  color: #FBBF24;
+}
+.era-items {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  padding-left: 1.2rem;
-  font-size: 0.85rem;
-  line-height: 1.8;
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+.era-items li {
+  padding: 0.2rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
-.arrow-center {
+.era-items li::before {
+  content: "→";
+  color: #94A3B8;
+}
+
+.era-card.future .era-items li::before {
+  color: #FBBF24;
+}
+
+.arrow-divider {
+  font-size: 2.5rem;
+  color: #FBBF24;
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+  align-self: center;
+}
+
+.tension-box {
   text-align: center;
-  font-size: 2rem;
+  margin-top: 1rem;
+}
+.tension-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.tension-text span {
+  font-weight: 800;
   color: #FBBF24;
 }
 </style>
 
 # 🌍 The World is Changing
 
-<div class="content-layout">
-  <div class="dev-box">
-    <h3>💻 Classic Development</h3>
-    <ul>
-      <li>Developer writes code</li>
-      <li>IDE assists with completion</li>
-      <li>Human reviews all changes</li>
-      <li>Manual tool execution</li>
-    </ul>
+<div class="evolution-container">
+  <div class="timeline">
+    <div class="era-card past">
+      <div class="era-header">
+        <span class="era-icon">💻</span>
+        <span class="era-title">Classic Development</span>
+      </div>
+      <ul class="era-items">
+        <li>Developer writes every line</li>
+        <li>IDE suggests completions</li>
+        <li>Human reviews all changes</li>
+        <li>Manual tool execution</li>
+        <li>You control the keyboard</li>
+      </ul>
+    </div>
+    <div class="arrow-divider">⚡</div>
+    <div class="era-card future">
+      <div class="era-header">
+        <span class="era-icon">🤖</span>
+        <span class="era-title">Agentic Development</span>
+      </div>
+      <ul class="era-items">
+        <li>AI writes code autonomously</li>
+        <li>AI executes shell commands</li>
+        <li>AI accesses your systems</li>
+        <li>AI modifies your pipeline</li>
+        <li>You... watch?</li>
+      </ul>
+    </div>
   </div>
-  
-  <div class="dev-box">
-    <h3>🤖 Agentic Development</h3>
-    <ul>
-      <li>AI writes code</li>
-      <li>AI executes commands</li>
-      <li>AI accesses your systems</li>
-      <li>Human... approves?</li>
-    </ul>
+  <div class="tension-box">
+    <p class="tension-text">The <span>attack surface</span> just got a new operator</p>
   </div>
 </div>
 
