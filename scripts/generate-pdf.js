@@ -7,7 +7,8 @@ const path = require('path');
 
 async function generatePDF() {
   const deckDir = process.cwd();
-  const buildDir = path.join(deckDir, 'build');
+  const conference = process.env.CONFERENCE || 'default';
+  const buildDir = path.join(deckDir, `build-${conference}`);
   const htmlPath = path.join(buildDir, 'index.html');
   const outputPdf = path.join(buildDir, 'slides.pdf');
 

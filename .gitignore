@@ -200,4 +200,4 @@ github-actions-security
 
 screenshots/
 *notes*.md
-build/
+build-*/
