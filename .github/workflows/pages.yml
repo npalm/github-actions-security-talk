@@ -38,7 +38,7 @@ jobs:
           
       - name: 🔧 Build pages for ${{ matrix.conference }}
         run: |
-          npm run build-html
+          npm run build:html
 
       - name: 🚀 Deploy ${{ matrix.conference }}
         if: github.event_name != 'pull_request'
