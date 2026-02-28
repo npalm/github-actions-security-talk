@@ -182,6 +182,8 @@ section.optional.enabled {
   <span class="ndc-text">NDC</span> <span class="ndc-location">{ Security }</span>
 </div>
 
+<!-- Title slide — let it land, audience settles. -->
+
 ---
 
 
@@ -264,6 +266,7 @@ footer img {
   </div>
 </div>
 
+<!-- Brief intro: name, Philips, why CI/CD security matters to you. Don't linger. -->
 
 ---
 
@@ -353,6 +356,8 @@ _color: white
     </div>
   </div>
 </div>
+
+<!-- Compromise once, deploy everywhere. The multiplier effect is what makes SSC attacks devastating. -->
 
 ---
 
@@ -558,6 +563,8 @@ Supply chain attacks exploit trust and automation. The things that make developm
   </div>
 </div>
 
+<!-- Walk through all 4 briefly. Don't deep-dive — you revisit tj-actions, S1ngularity, and Shai-Hulud later. Transition: "These attacks all targeted CI/CD." -->
+
 ---
 <!--
 _backgroundColor: #00629F
@@ -621,6 +628,7 @@ _color: white
   </div>
 </div>
 
+<!-- Quick level-set. Most audience knows Actions — just framing. -->
 
 ---
 <!--
@@ -703,6 +711,7 @@ _color: white
   </div>
 </div>
 
+<!-- Jobs = isolation boundary. Steps share runner environment — that matters for security. -->
 
 ---
 <!--
@@ -782,6 +791,7 @@ jobs:
   </div>
 </div>
 
+<!-- Walk through 4 elements. Highlight: checkout@v5 is a trust decision — a third-party action running in your context. -->
 
 ---
 
@@ -868,6 +878,7 @@ code {
 
 </div>
 
+<!-- LEGO bricks: building blocks. Key point: actions run IN your job context — they get your secrets, tokens, and runner. -->
 
 ---
 
@@ -1021,6 +1032,8 @@ _color: white
   </div>
 </div>
 
+<!-- Quick scan of the grid. Actions touch everything. Transition: "So what happens when they get compromised?" -->
+
 ---
 
 <!-- ==================== PART 1: WEAPONIZE ==================== -->
@@ -1095,6 +1108,8 @@ h1 {
   <span>💥</span>
 </div>
 
+<!-- Transition slide — pause briefly, advance. -->
+
 ---
 
 <!--
@@ -1163,6 +1178,8 @@ _color: white
   </div>
 </div>
 
+<!-- Three reasons: source code access, package publishing, secrets. Pipelines are the nexus of all three. -->
+
 ---
 
 <!--
@@ -1202,6 +1219,8 @@ jobs:
     - name: Process changes
       run: echo "Changed files: ${{ steps.changed-files.outputs.all_changed_files }}"
 ```
+
+<!-- Ask: "What's wrong here?" Uses @v45 — a mutable tag. -->
 
 ---
 
@@ -1243,6 +1262,7 @@ jobs:
       run: echo "Changed files: ${{ steps.changed-files.outputs.all_changed_files }}"
 ```
 
+<!-- Even pinned to @v45.0.7 it's still a tag, not a SHA. Tags can be moved — exactly what happened in the tj-actions attack. -->
 
 ---
 
@@ -1309,6 +1329,8 @@ _color: white
     <img src="assets/img/tj-actions-attack.png" alt="Repository Takeover Attack" />
   </div>
 </div>
+
+<!-- Compromised bot PAT → tag overwritten → 23k repos auto-pulled malicious code. If you control the tag, you control downstream. -->
 
 ---
 
@@ -1398,8 +1420,7 @@ jobs:
   </div>
 </div>
 
-
-
+<!-- Solution: pin to SHA, enable Dependabot for automated updates, verify integrity. Key takeaway for audience. -->
 
 ---
 
@@ -1521,6 +1542,7 @@ _color: white
   </div>
 </div>
 
+<!-- Trust framework: tag vs SHA vs fork. SHA pinning is the default. Use OSSF Scorecard for third-party assessment. -->
 
 ---
 
@@ -1574,7 +1596,7 @@ jobs:
   </div>
 </div>
 
-
+<!-- Ask the audience: spot the vulnerability. Answer: user input in run command → script injection. -->
 
 ---
 
@@ -1683,6 +1705,7 @@ Opens reverse shell to attacker!
 
 </div>
 
+<!-- Four attack vectors from one injection: reverse shell, secret theft, code manipulation, infra compromise. Powerful demo moment. -->
 
 ---
 
@@ -1736,6 +1759,8 @@ _color: white
   <p class="title">Part of</p>
   <p>Shai-Hulud 2.0<br/>Supply Chain Attack</p>
 </div>
+
+<!-- Script injection was the entry point for Shai-Hulud. Secrets stolen, code compromised, infra breached. -->
 
 ---
 
@@ -1837,6 +1862,7 @@ _color: white
   </div>
 </div>
 
+<!-- All event fields shown are attacker-controlled. Never use directly in run commands. -->
 
 ---
 
@@ -1898,6 +1924,8 @@ steps:
   </div>
 </div>
 
+<!-- Fix: assign to env var first, then reference as shell variable. Prevents expression injection. -->
+
 ---
 
 <!--
@@ -1951,6 +1979,8 @@ jobs:
   </div>
 </div>
 
+<!-- Same workflow, now safe. The DISCUSSION_BODY env var is set at shell level — no expression expansion in the run line. -->
+
 ---
 <!--
 _backgroundColor: #DC2626
@@ -1989,6 +2019,8 @@ jobs:
         API_KEY: ${{ secrets.API_KEY }} 
       run: echo "Building ${{ github.event.pull_request.base.ref }}"  
 ```
+
+<!-- Ask: what happens on pull_request_target? Secrets exposed + untrusted code checkout + injection. Triple threat. -->
 
 ---
 <!--
@@ -2031,6 +2063,7 @@ jobs:
       run: echo "Building ${{ github.event.pull_request.base.ref }}"  
 ```
 
+<!-- Spot three issues: pull_request_target + checkout of PR head + secrets exposed + injection in run. This is a triple threat. -->
 
 ---
 
@@ -2050,7 +2083,7 @@ _color: white
 
 ### 👁️ Private source code exposed
 
-
+<!-- Nx s1ngularity: real-world pull_request_target exploit. Secrets leaked, private repos exposed. Feb 2025. -->
 
 ---
 
@@ -2119,6 +2152,7 @@ _color: white
   </div>
 </div>
 
+<!-- 1000s of secrets, 480 users' private repos, 500 repos from one company. Massive real impact. -->
 
 ---
 
@@ -2241,6 +2275,7 @@ jobs:
   </div>
 </div>
 
+<!-- pull_request_target runs in trusted context with secrets. Checking out PR head = running untrusted code with full access. GitHub's Dec 2025 fix helps but doesn't eliminate risk. -->
 
 ---
 
@@ -2345,6 +2380,7 @@ _color: white
   </div>
 </div>
 
+<!-- Caches persist across runs. Attacker poisons cache on a PR, subsequent builds on main pick it up. Never trust cache in release pipelines. -->
 
 ---
 
@@ -2450,7 +2486,7 @@ jobs:
 </div>
 
 
-
+<!-- Default GITHUB_TOKEN has write-all permissions. If compromised, attacker gets full repo access. Always set permissions explicitly. -->
 
 ---
 
@@ -2559,7 +2595,7 @@ jobs:
 </div>
 
 
-
+<!-- Set permissions: {} at workflow level. Add specific permissions per job. Failed is better than compromised. -->
 
 ---
 
@@ -2674,6 +2710,7 @@ jobs:
 
 </div>
 
+<!-- Long-lived AWS keys in secrets: if leaked, attacker has permanent access. These never expire unless rotated. -->
 
 ---
 
@@ -2807,6 +2844,8 @@ jobs:
   </div>
   </div>
 </div>
+
+<!-- OIDC: short-lived tokens, no stored secrets, cloud provider validates claims. Much safer than long-lived keys. -->
 
 ---
 
@@ -2985,6 +3024,8 @@ jobs:
   </div>
 </div>
 
+<!-- Five best practices: environments for gating, env-level secrets, restrict OIDC claims, rotate regularly, audit access. Tight claim conditions are critical. -->
+
 ---
 
 <!--
@@ -3018,6 +3059,8 @@ h1 {
 <div class="image-container">
   <img src="assets/img/shaihulud-annotated.png" alt="Shai-Hulud 2.0 Attack Flow" />
 </div>
+
+<!-- Walk through the diagram: script injection → secrets stolen → action takeover → downstream compromise. Everything we discussed in one kill chain. -->
 
 ---
 
@@ -3112,11 +3155,10 @@ _color: white
   </div>
 </div>
 
-
+<!-- Real numbers: 218 orgs, 23k repos, 33k secrets. This is the scale of a single supply chain attack. -->
 
 ---
 
-<!-- ==================== PART 2: HARDEN ==================== -->
 
 <!--
 _backgroundColor: #000000
@@ -3187,6 +3229,8 @@ h1 {
   <span>✅</span>
   <span>🔍</span>
 </div>
+
+<!-- Transition slide — pause. "Now that we've seen the attacks, let's harden." -->
 
 ---
 
@@ -3311,6 +3355,8 @@ _color: white
     </div>
   </div>
 </div>
+
+<!-- Quick recap of the four attack patterns we covered. Each has a clear mitigation. -->
 
 ---
 
@@ -3467,6 +3513,8 @@ _color: white
   </div>
 </div>
 
+<!-- These principles apply universally — not just GitHub Actions. Least privilege, zero trust, defense in depth, input validation. -->
+
 ---
 
 <!--
@@ -3561,6 +3609,8 @@ _color: white
   </div>
 </div>
 
+<!-- GitHub org settings: allow-list actions, enforce SHA pinning, drop default token to read-only. Quick wins. -->
+
 ---
 
 <!--
@@ -3653,6 +3703,7 @@ _color: white
   </div>
 </div>
 
+<!-- GHAS: CodeQL scans actions too, secret scanning catches leaks, Dependabot updates pinned SHAs. -->
 
 ---
 
@@ -3805,6 +3856,7 @@ _color: white
   </div>
 </div>
 
+<!-- Three open source tools: Zizmor (security-focused), Checkov (IaC), actionlint (syntax). Zizmor is our top pick. -->
 
 ---
 
@@ -3900,96 +3952,148 @@ _color: white
   </div>
 </div>
 
+<!-- Zizmor: dedicated GH Actions security linter. CLI, IDE, pre-commit, or as an Action. GHAS integration. DEMO TIME — 10 minutes. -->
 
 ---
 
 <!--
-_backgroundColor: #4A5568
+_backgroundColor: #1E293B
 _color: white
 -->
 
 <style scoped>
-.note-container {
+.openssf-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
   height: 85%;
+  padding: 0.5rem;
 }
 
-.image-section {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100%;
-}
-
-.placeholder-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.note-box {
+.openssf-intro {
+  text-align: center;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 1.0rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  width: 80%;
-  max-width: 900px;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.note-list {
-  list-style: none;
-  padding: 0;
+.openssf-intro p {
+  margin: 0;
+  font-size: 0.6rem;
+  color: #E2E8F0;
+  font-style: italic;
+}
+
+.openssf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  flex: 1;
+}
+
+.openssf-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.openssf-card-emoji {
+  font-size: 1.8rem;
+}
+
+.openssf-card-title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #F7FAFC;
   margin: 0;
 }
 
-.note-item {
-  font-size: 0.7rem;
-  line-height: 1.5;
-  color: #F7FAFC;
-  margin-bottom: 0.7rem;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
+.openssf-card-desc {
+  font-size: 0.55rem;
+  color: #CBD5E0;
+  margin: 0;
+  line-height: 1.4;
+  flex-grow: 1;
 }
 
-.note-emoji {
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-
-.note-highlight {
-  color: #FCD34D;
+.openssf-card-badge {
+  font-size: 0.55rem;
   font-weight: bold;
+  margin: 0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.badge-scorecard {
+  color: #ECFDF5;
+  background: rgba(16, 185, 129, 0.5);
+  border: 1px solid rgba(16, 185, 129, 0.6);
+}
+
+.badge-slsa {
+  color: #EFF6FF;
+  background: rgba(59, 130, 246, 0.5);
+  border: 1px solid rgba(59, 130, 246, 0.6);
+}
+
+.badge-attestation {
+  color: #FEF3C7;
+  background: rgba(245, 158, 11, 0.5);
+  border: 1px solid rgba(245, 158, 11, 0.6);
+}
+
+.openssf-footer {
+  text-align: center;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 8px;
+  padding: 0.4rem;
+  font-size: 0.6rem;
+  color: #6EE7B7;
+  font-style: italic;
 }
 </style>
 
-# <!-- fit -->📝 Topics not covered in detail
+# 🏛️ OpenSSF & Supply Chain Integrity
 
-<div class="note-container">
-
-  
-  <div class="note-box">
-    <ul class="note-list">
-      <li class="note-item">
-        <span class="note-emoji">⚠️</span>
-        <span><span class="note-highlight">Third-party actions</span><br> run in your trusted context</span>
-      </li>
-      <li class="note-item">
-        <span class="note-emoji">☁️</span>
-        <span><span class="note-highlight">GitHub runners</span><br> are ephemeral but unrestricted</span>
-      </li>
-      <li class="note-item">
-        <span class="note-emoji">🏠</span>
-        <span><span class="note-highlight">Self-hosted runners</span><br>consider hardening and run ephemeral</span>
-      </li>
-    </ul>
+<div class="openssf-container">
+  <div class="openssf-intro">
+    <p>The <strong>Open Source Security Foundation</strong> (Linux Foundation) provides frameworks and tools to secure the software supply chain</p>
   </div>
 
-![bg left](assets/img/security.jpeg)
+  <div class="openssf-grid">
+    <div class="openssf-card">
+      <span class="openssf-card-emoji">📊</span>
+      <h3 class="openssf-card-title">OpenSSF Scorecard</h3>
+      <p class="openssf-card-desc">Automated security health checks for open source projects. Scores 17 risk areas: pinned dependencies, branch protection, dangerous workflows, token permissions, and more.</p>
+      <p class="openssf-card-badge badge-scorecard">Runs as a GitHub Action</p>
+    </div>
+    <div class="openssf-card">
+      <span class="openssf-card-emoji">🔏</span>
+      <h3 class="openssf-card-title">SLSA Framework</h3>
+      <p class="openssf-card-desc">Supply-chain Levels for Software Artifacts. Defines build provenance requirements across levels 1→3, ensuring artifacts are traceable back to source and build system.</p>
+      <p class="openssf-card-badge badge-slsa">Build Provenance</p>
+    </div>
+    <div class="openssf-card">
+      <span class="openssf-card-emoji">✍️</span>
+      <h3 class="openssf-card-title">GitHub Attestations</h3>
+      <p class="openssf-card-desc">Native artifact attestations built on Sigstore. Cryptographically sign build provenance for your artifacts directly in GitHub Actions — verifiable with <code>gh attestation verify</code>.</p>
+      <p class="openssf-card-badge badge-attestation">Sigstore-based</p>
+    </div>
+  </div>
+
+
+</div>
+
+
+<!-- OpenSSF Scorecard for health checks, SLSA for build provenance, GitHub Attestations for Sigstore-based artifact signing. All integrate with Actions. -->
 
 ---
 
@@ -4115,7 +4219,7 @@ _color: white
   </div>
 </div>
 
-
+<!-- Three takeaways: power = responsibility, guard what you allow, use tools to shift security left. -->
 
 ---
 
@@ -4205,6 +4309,8 @@ h1 {
   <span>🔗</span>
   <span>🛡️</span>
 </div>
+
+<!-- Bonus section — same vulnerabilities, but AI agents amplify speed and scale. -->
 
 ---
 
@@ -4340,6 +4446,8 @@ h1 {
     <p class="tension-text">The <span>attack surface</span> just got a new operator</p>
   </div>
 </div>
+
+<!-- Left: traditional dev. Right: agentic. AI writes code, executes commands, accesses systems. Who reviews? -->
 
 ---
 
@@ -4531,6 +4639,8 @@ _color: white
   </div>
 </div>
 
+<!-- Cline CLI attack: issue title triggered malicious build via AI agent. 4k downloads in 8 hours. AI agents are privileged actors. -->
+
 ---
 
 <!--
@@ -4629,6 +4739,8 @@ _color: white
     <p><strong>S1ngularity showed us:</strong> AI tools are already being weaponized for secret hunting and mass exploitation</p>
   </div>
 </div>
+
+<!-- Hours vs seconds. s1ngularity used AI tools for mass secret hunting. Scale changes everything. -->
 
 ---
 
@@ -4733,6 +4845,107 @@ _color: white
     <img src="assets/img/ai-boundary.png" alt="AI Trust Boundaries" />
   </div>
 </div>
+
+<!-- Same four patterns apply to AI: pin deps, minimal creds, validate input, enforce boundaries. AI just moves faster. -->
+
+---
+
+<!--
+_backgroundColor: #4A5568
+_color: white
+-->
+
+<style scoped>
+.topics-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  height: 82%;
+  padding: 0.5rem;
+}
+
+.topic-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.7rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.topic-emoji {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.topic-content {
+  flex: 1;
+}
+
+.topic-title {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #FCD34D;
+  margin: 0 0 0.2rem 0;
+}
+
+.topic-desc {
+  font-size: 0.55rem;
+  color: #E2E8F0;
+  margin: 0;
+  line-height: 1.3;
+}
+</style>
+
+# <!-- fit -->📝 Topics not covered in detail
+
+<div class="topics-container">
+  <div class="topic-card">
+    <span class="topic-emoji">⚠️</span>
+    <div class="topic-content">
+      <h3 class="topic-title">Third-party action context</h3>
+      <p class="topic-desc">Actions run in your trusted context with access to secrets, tokens, and the runner environment</p>
+    </div>
+  </div>
+  <div class="topic-card">
+    <span class="topic-emoji">🏠</span>
+    <div class="topic-content">
+      <h3 class="topic-title">Self-hosted runner hardening</h3>
+      <p class="topic-desc">Run ephemeral, isolate workloads, restrict network access, and avoid persistent state</p>
+    </div>
+  </div>
+  <div class="topic-card">
+    <span class="topic-emoji">☁️</span>
+    <div class="topic-content">
+      <h3 class="topic-title">GitHub-hosted runners</h3>
+      <p class="topic-desc">Ephemeral but unrestricted — jobs can install software, make network calls, and access the internet</p>
+    </div>
+  </div>
+  <div class="topic-card">
+    <span class="topic-emoji">📦</span>
+    <div class="topic-content">
+      <h3 class="topic-title">Artifact & cache integrity</h3>
+      <p class="topic-desc">Artifacts and caches can be poisoned across workflow runs — verify checksums and limit cache scope</p>
+    </div>
+  </div>
+  <div class="topic-card">
+    <span class="topic-emoji">♻️</span>
+    <div class="topic-content">
+      <h3 class="topic-title">Reusable workflow security</h3>
+      <p class="topic-desc">Reusable workflows inherit caller permissions — pin references and audit inherited secret access</p>
+    </div>
+  </div>
+  <div class="topic-card">
+    <span class="topic-emoji">🌐</span>
+    <div class="topic-content">
+      <h3 class="topic-title">Network egress controls</h3>
+      <p class="topic-desc">Runners can reach any endpoint by default — consider network policies to limit exfiltration risk</p>
+    </div>
+  </div>
+</div>
+
+<!-- Six topics for further study — couldn't cover everything today. Great follow-up areas for the audience. -->
 
 ---
 
@@ -4925,6 +5138,8 @@ _footer: ''
 </div>
 
 
+<!-- Slides and resources at the QR code. Repo link on screen. -->
+
 ---
 
 
@@ -4958,6 +5173,7 @@ footer img {
 
 ![bg](assets/img/questions.jpeg)
 
+<!-- Open the floor. Prepared topics: OIDC details, self-hosted runner hardening, AI agent governance. -->
 
 ---
 
@@ -4989,4 +5205,5 @@ footer img {
 
 ![bg](assets/img/start-finish.jpeg)
 
+<!-- Thank the audience. Remind them to scan the QR code. -->
 

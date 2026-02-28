@@ -6,9 +6,9 @@
   "author": "Niek Palm and Scott Guymer",
   "license": "MIT",
   "scripts": {
-    "build-html": "marp slides-${CONFERENCE:-default}.md --html --allow-local-files -o build-${CONFERENCE:-default}/index.html && mkdir -p build-${CONFERENCE:-default} && cp -r assets build-${CONFERENCE:-default}/assets",
-    "build-pdf": "marp slides-${CONFERENCE:-default}.md --allow-local-files -o build-${CONFERENCE:-default}/slides.pdf && mkdir -p build-${CONFERENCE:-default}",
-    "build-all": "npn run build-html && npn run build-pdf",
+    "build:html": "marp slides-${CONFERENCE:-default}.md --html --allow-local-files -o build-${CONFERENCE:-default}/index.html && mkdir -p build-${CONFERENCE:-default} && cp -r assets build-${CONFERENCE:-default}/assets",
+    "build:pdf": "node ./scripts/generate-pdf.js",
+    "build:all": "npn run build-html && npn run build-pdf",
     "watch": "marp --html slides-${CONFERENCE:-default}.md -w"
   },
   "devDependencies": {
