@@ -190,6 +190,74 @@ section.optional.enabled {
 
 ---
 
+<!--
+_backgroundColor: #1E3A8A
+_color: white
+_footer: ''
+-->
+
+<style scoped>
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #DBEAFE;
+}
+
+.slides-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.qr-big {
+  width: 320px;
+  height: 320px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  background: white;
+  padding: 12px;
+}
+
+.message {
+  font-size: 1.3rem;
+  color: #DBEAFE;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+.message em {
+  color: #FCD34D;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #93C5FD;
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+</style>
+
+# 📷 Slides & Demos 📷
+
+<div class="slides-info">
+  <img src="assets/img/resources.png" class="qr-big" alt="Slides QR Code" />
+</div>
+
+<!-- Let audience know slides are available. No rush to photograph. -->
+
+---
+
 
 
 <!--
@@ -719,7 +787,7 @@ _color: white
 
 ---
 <!--
-_backgroundColor: #0072DA
+_backgroundColor: #00629F
 _color: white
 -->
 
@@ -887,7 +955,7 @@ code {
 ---
 
 <!--
-_backgroundColor: #0B5ED7
+_backgroundColor: #00629F
 _color: white
 -->
 
@@ -1117,7 +1185,7 @@ h1 {
 ---
 
 <!--
-_backgroundColor: #8B5CF6
+_backgroundColor: #4C1D95
 _color: white
 -->
 
@@ -1605,7 +1673,7 @@ jobs:
 ---
 
 <!--
-_backgroundColor: #E53E3E
+_backgroundColor: #DC2626
 _color: white
 -->
 
@@ -3963,7 +4031,7 @@ _color: white
 ---
 
 <!--
-_backgroundColor: #1E293B
+_backgroundColor: #1A202C
 _color: white
 -->
 
@@ -4904,7 +4972,7 @@ _color: white
 }
 </style>
 
-# <!-- fit -->📝 Topics not covered in detail
+# <!-- fit -->📝 Some topics not covered in detail
 
 <div class="topics-container">
   <div class="topic-card">

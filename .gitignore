@@ -197,3 +197,7 @@ github-actions-security
 
 # playwright
 .playwright-mcp/
+
+screenshots/
+*notes*.md
+build/
