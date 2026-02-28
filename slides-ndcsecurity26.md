@@ -11,6 +11,10 @@ footer: '![h:106px](assets/img/resources.png)'
 theme:
 
 style: |
+  section {
+    padding-top: 40px;
+  }
+
   video::-webkit-media-controls {
     will-change: transform;
   }
@@ -170,8 +174,8 @@ section.optional.enabled {
 
 ![bg left:40%](assets/img/gh-actions-sec.png)
 
-# GitHub Actions Security
-## From CI Nightmare to Supply Chain Sentinel
+# <!-- fit --> Beyond the Commit
+## Weaponizing and Hardening GitHub Actions
 
 <br>
 <br>
@@ -179,95 +183,78 @@ section.optional.enabled {
 ## Niek Palm
 
 <div class="conference-logo">
-  <span class="ndc-text">NDC</span> <span class="ndc-location">{ Manchester }</span>
+  <span class="ndc-text">NDC</span> <span class="ndc-location">{ Security }</span>
 </div>
+
+<!-- Title slide — let it land, audience settles. -->
 
 ---
 
-
 <!--
-_backgroundColor: #4C1D95
+_backgroundColor: #1E3A8A
 _color: white
 _footer: ''
-
 -->
 
 <style scoped>
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 h1 {
-  text-align: right;
-  font-size: 52px;
-  color: #FFFFFF;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #DBEAFE;
 }
 
-h2 {
-  font-size: 28px;
-  text-align: right;
-  font-style: italic;
+.slides-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.qr-big {
+  width: 320px;
+  height: 320px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  background: white;
+  padding: 12px;
+}
+
+.message {
+  font-size: 1.3rem;
+  color: #DBEAFE;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+.message em {
   color: #FCD34D;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-em {
-  font-weight: bold;
   font-style: normal;
-  color: #FCD34D;
+  font-weight: bold;
 }
 
-p {
+.hint {
+  font-size: 0.85rem;
+  color: #93C5FD;
   font-style: italic;
-  text-align: right;
-  color: #E2E8F0;
-}
-
-strong {
-    font-weight: bold;
-    color: #FCD34D;
-}
-
-section.optional {
-  display: none;
-}
-
-section.optional.enabled {
-  display: block;
-}
-
-.conference-logo {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  font-size: 32px;
-  z-index: 10;
-  color: #FFFFFF;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.conference-logo .ndc-text {
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.conference-logo .ndc-location {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 400;
+  margin-top: 0.2rem;
 }
 </style>
 
-![bg left:40%](assets/img/gh-actions-sec.png)
+# 📷 Slides & Demos 📷
 
-# GitHub Actions Security
-## From CI Nightmare to Supply Chain Sentinel
-
-<br>
-<br>
-
-## Niek Palm
-
-<div class="conference-logo">
-  <span class="ndc-text">NDC</span> <span class="ndc-location">{ Manchester }</span>
+<div class="slides-info">
+  <img src="assets/img/resources.png" class="qr-big" alt="Slides QR Code" />
 </div>
+
+<!-- Let audience know slides are available. No rush to photograph. -->
 
 ---
 
@@ -278,117 +265,6 @@ _backgroundColor: #000000
 _footer: ''
 
 -->
-
-<style scoped>
-section {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-video {
-  width: 100%;
-  height: 100%;
-  max-width: 100vw;
-  max-height: 100vh;
-  object-fit: contain;
-}
-</style>
-
-<video src="assets/injection.webm" controls></video>
-
----
-
-
-<!--
-_backgroundColor: #4C1D95
-_color: white
-_footer: ''
-
--->
-
-<style scoped>
-h1 {
-  text-align: right;
-  font-size: 52px;
-  color: #FFFFFF;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 28px;
-  text-align: right;
-  font-style: italic;
-  color: #FCD34D;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-em {
-  font-weight: bold;
-  font-style: normal;
-  color: #FCD34D;
-}
-
-p {
-  font-style: italic;
-  text-align: right;
-  color: #E2E8F0;
-}
-
-strong {
-    font-weight: bold;
-    color: #FCD34D;
-}
-
-section.optional {
-  display: none;
-}
-
-section.optional.enabled {
-  display: block;
-}
-
-.conference-logo {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  font-size: 32px;
-  z-index: 10;
-  color: #FFFFFF;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.conference-logo .ndc-text {
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.conference-logo .ndc-location {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 400;
-}
-</style>
-
-![bg left:40%](assets/img/gh-actions-sec.png)
-
-# <!-- fit --> Weaponizing and Hardening 
-## GitHub Actions
-
-<br>
-<br>
-
-## Niek Palm
-
-<div class="conference-logo">
-  <span class="ndc-text">NDC</span> <span class="ndc-location">{ Manchester }</span>
-</div>
-
----
 
 <!-- 
 
@@ -462,6 +338,7 @@ footer img {
   </div>
 </div>
 
+<!-- Brief intro: name, Philips, why CI/CD security matters to you. Don't linger. -->
 
 ---
 
@@ -551,6 +428,8 @@ _color: white
     </div>
   </div>
 </div>
+
+<!-- Compromise once, deploy everywhere. The multiplier effect is what makes SSC attacks devastating. -->
 
 ---
 
@@ -756,6 +635,8 @@ Supply chain attacks exploit trust and automation. The things that make developm
   </div>
 </div>
 
+<!-- Walk through all 4 briefly. Don't deep-dive — you revisit tj-actions, S1ngularity, and Shai-Hulud later. Transition: "These attacks all targeted CI/CD." -->
+
 ---
 <!--
 _backgroundColor: #00629F
@@ -819,6 +700,7 @@ _color: white
   </div>
 </div>
 
+<!-- Quick level-set. Most audience knows Actions — just framing. -->
 
 ---
 <!--
@@ -901,10 +783,11 @@ _color: white
   </div>
 </div>
 
+<!-- Jobs = isolation boundary. Steps share runner environment — that matters for security. -->
 
 ---
 <!--
-_backgroundColor: #0072DA
+_backgroundColor: #00629F
 _color: white
 -->
 
@@ -980,6 +863,7 @@ jobs:
   </div>
 </div>
 
+<!-- Walk through 4 elements. Highlight: checkout@v5 is a trust decision — a third-party action running in your context. -->
 
 ---
 
@@ -1066,11 +950,12 @@ code {
 
 </div>
 
+<!-- LEGO bricks: building blocks. Key point: actions run IN your job context — they get your secrets, tokens, and runner. -->
 
 ---
 
 <!--
-_backgroundColor: #0B5ED7
+_backgroundColor: #00629F
 _color: white
 -->
 
@@ -1219,10 +1104,88 @@ _color: white
   </div>
 </div>
 
+<!-- Quick scan of the grid. Actions touch everything. Transition: "So what happens when they get compromised?" -->
+
+---
+
+<!-- ==================== PART 1: WEAPONIZE ==================== -->
+
+<!--
+_backgroundColor: #000000
+_color: white
+_footer: ''
+-->
+
+<style scoped>
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+  background: linear-gradient(90deg, #DC2626, #F97316, #FBBF24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #94A3B8;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.icon-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+.part-badge {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: rgba(220, 38, 38, 0.3);
+  border: 2px solid #DC2626;
+  color: #F87171;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+</style>
+
+<div class="part-badge">PART 1</div>
+
+# WEAPONIZE
+
+<div class="subtitle">Understanding the attack surface</div>
+
+<div class="icon-row">
+  <span>💉</span>
+  <span>🎯</span>
+  <span>🔓</span>
+  <span>💥</span>
+</div>
+
+<!-- Transition slide — pause briefly, advance. -->
+
 ---
 
 <!--
-_backgroundColor: #8B5CF6
+_backgroundColor: #4C1D95
 _color: white
 -->
 
@@ -1287,6 +1250,8 @@ _color: white
   </div>
 </div>
 
+<!-- Three reasons: source code access, package publishing, secrets. Pipelines are the nexus of all three. -->
+
 ---
 
 <!--
@@ -1326,6 +1291,8 @@ jobs:
     - name: Process changes
       run: echo "Changed files: ${{ steps.changed-files.outputs.all_changed_files }}"
 ```
+
+<!-- Ask: "What's wrong here?" Uses @v45 — a mutable tag. -->
 
 ---
 
@@ -1367,6 +1334,7 @@ jobs:
       run: echo "Changed files: ${{ steps.changed-files.outputs.all_changed_files }}"
 ```
 
+<!-- Even pinned to @v45.0.7 it's still a tag, not a SHA. Tags can be moved — exactly what happened in the tj-actions attack. -->
 
 ---
 
@@ -1433,6 +1401,8 @@ _color: white
     <img src="assets/img/tj-actions-attack.png" alt="Repository Takeover Attack" />
   </div>
 </div>
+
+<!-- Compromised bot PAT → tag overwritten → 23k repos auto-pulled malicious code. If you control the tag, you control downstream. -->
 
 ---
 
@@ -1522,8 +1492,7 @@ jobs:
   </div>
 </div>
 
-
-
+<!-- Solution: pin to SHA, enable Dependabot for automated updates, verify integrity. Key takeaway for audience. -->
 
 ---
 
@@ -1645,6 +1614,7 @@ _color: white
   </div>
 </div>
 
+<!-- Trust framework: tag vs SHA vs fork. SHA pinning is the default. Use OSSF Scorecard for third-party assessment. -->
 
 ---
 
@@ -1698,12 +1668,12 @@ jobs:
   </div>
 </div>
 
-
+<!-- Ask the audience: spot the vulnerability. Answer: user input in run command → script injection. -->
 
 ---
 
 <!--
-_backgroundColor: #E53E3E
+_backgroundColor: #DC2626
 _color: white
 -->
 
@@ -1807,6 +1777,7 @@ Opens reverse shell to attacker!
 
 </div>
 
+<!-- Four attack vectors from one injection: reverse shell, secret theft, code manipulation, infra compromise. Powerful demo moment. -->
 
 ---
 
@@ -1860,6 +1831,8 @@ _color: white
   <p class="title">Part of</p>
   <p>Shai-Hulud 2.0<br/>Supply Chain Attack</p>
 </div>
+
+<!-- Script injection was the entry point for Shai-Hulud. Secrets stolen, code compromised, infra breached. -->
 
 ---
 
@@ -1961,6 +1934,7 @@ _color: white
   </div>
 </div>
 
+<!-- All event fields shown are attacker-controlled. Never use directly in run commands. -->
 
 ---
 
@@ -2022,6 +1996,8 @@ steps:
   </div>
 </div>
 
+<!-- Fix: assign to env var first, then reference as shell variable. Prevents expression injection. -->
+
 ---
 
 <!--
@@ -2075,6 +2051,8 @@ jobs:
   </div>
 </div>
 
+<!-- Same workflow, now safe. The DISCUSSION_BODY env var is set at shell level — no expression expansion in the run line. -->
+
 ---
 <!--
 _backgroundColor: #DC2626
@@ -2113,6 +2091,8 @@ jobs:
         API_KEY: ${{ secrets.API_KEY }} 
       run: echo "Building ${{ github.event.pull_request.base.ref }}"  
 ```
+
+<!-- Ask: what happens on pull_request_target? Secrets exposed + untrusted code checkout + injection. Triple threat. -->
 
 ---
 <!--
@@ -2155,6 +2135,7 @@ jobs:
       run: echo "Building ${{ github.event.pull_request.base.ref }}"  
 ```
 
+<!-- Spot three issues: pull_request_target + checkout of PR head + secrets exposed + injection in run. This is a triple threat. -->
 
 ---
 
@@ -2174,7 +2155,7 @@ _color: white
 
 ### 👁️ Private source code exposed
 
-
+<!-- Nx s1ngularity: real-world pull_request_target exploit. Secrets leaked, private repos exposed. Feb 2025. -->
 
 ---
 
@@ -2243,6 +2224,7 @@ _color: white
   </div>
 </div>
 
+<!-- 1000s of secrets, 480 users' private repos, 500 repos from one company. Massive real impact. -->
 
 ---
 
@@ -2365,6 +2347,7 @@ jobs:
   </div>
 </div>
 
+<!-- pull_request_target runs in trusted context with secrets. Checking out PR head = running untrusted code with full access. GitHub's Dec 2025 fix helps but doesn't eliminate risk. -->
 
 ---
 
@@ -2469,223 +2452,7 @@ _color: white
   </div>
 </div>
 
-
----
-
-<!--
-_backgroundColor: #D97706
-_color: white
--->
-
-<style scoped>
-.sha1-container {
-  display: grid;
-  grid-template-columns: 54% 46%;
-  gap: 0.8rem;
-  height: 85%;
-  align-items: center;
-  padding: 0.5rem;
-}
-
-.impact-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1.0rem;
-}
-
-.impact-card {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
-  padding: 0.8rem 1.2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-.impact-card h3 {
-  margin: 0 0 0.6rem 0;
-  color: #FEF3C7;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.impact-card ul {
-  margin: 0;
-  padding-left: 0.5rem;
-  font-size: 0.65rem;
-  line-height: 1.2;
-  color: #E2E8F0;
-}
-
-.impact-card li {
-  margin-bottom: 0.4rem;
-}
-
-.common-threat {
-  background: rgba(239, 68, 68, 0.3);
-  border-radius: 12px;
-  padding: 0.8rem 1.2rem;
-  margin-top: 0.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-.common-threat h4 {
-  margin: 0 0 0.5rem 0;
-  color: #FEF3C7;
-  font-size: 1.1rem;
-}
-
-.common-threat p {
-  margin: 0;
-  font-size: 0.65rem;
-  line-height: 1.6;
-  color: #FEE2E2;
-}
-
-.image-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.sha1-image {
-  max-width: 95%;
-  max-height: 95%;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-}
-
-.image-source {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 0.5rem;
-  color: #000;
-  font-style: italic;
-  z-index: 10;
-}
-</style>
-
-# 🪱 Shai-Hulud 2.0: The Supply Chain Tsunami
-
-<div class="sha1-container">
-  <div class="impact-section">
-    <div class="impact-card">
-      <h3>🎯 Attack Mechanism</h3>
-      <ul>
-        <li><strong>pull_request_target</strong> start of infections</li>
-        <li><strong>Preinstall hooks</strong> execute before code runs</li>
-        <li>Exfiltrates secrets via <strong>cross-victim GitHub accounts</strong></li>
-        <li><strong>Worm-like spread</strong> - replicate automatically (NPM)</li>
-      </ul>
-    </div>
-    <div class="common-threat">
-      <h4>🔗 Common Pattern</h4>
-      <p>All recent supply chain attacks (<strong>tj-actions</strong>, <strong>S1ngularity</strong>, <strong>Shai-Hulud 2.0</strong>) share the same goal: <strong>exfiltrate secrets and GitHub tokens</strong> to enable repository takeover, malicious releases, or comproposie other enviorments like cloud</p>
-    </div>
-  </div>
-  <div class="image-section">
-    <img src="assets/img/sha1-hulud-2-flow.png" class="sha1-image" alt="Supply Chain Attack Visualization" />
-    <div class="image-source">source: GitGuardian</div>
-  </div>
-</div>
-
----
-
-
-
-<!--
-_backgroundColor: #DC2626
-_color: white
--->
-
-<style scoped>
-.impact-container {
-  display: flex;
-  flex-direction: column;
-  height: 85%;
-  gap: 1.5rem;
-  padding: 1rem;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
-  flex: 1;
-}
-
-.stat-card {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
-  padding: 1.2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.stat-number {
-  font-size: 2.0rem;
-  font-weight: bold;
-  color: #FCD34D;
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.stat-description {
-  font-size: 0.6rem;
-  line-height: 1.1;
-  color: #FEE2E2;
-}
-
-.source-note {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  padding: 0.6rem 1rem;
-  font-size: 0.6rem;
-  color: #E2E8F0;
-  font-style: italic;
-  text-align: center;
-}
-
-.source-note strong {
-  color: #FCD34D;
-}
-</style>
-
-# 💥 Shai-Hulud 2.0 Impact
-
-![bg left:40%](assets/img/impact.jpg)
-
-<div class="impact-container">
-  <div class="stats-grid">
-    <div class="stat-card">
-      <div class="stat-number">1,195+</div>
-      <div class="stat-description">Distinct orgs (banks, government bodies, and Fortune 500)</div>
-    </div> 
-    <div class="stat-card">
-      <div class="stat-number">25,000+</div>
-      <div class="stat-description">Malicious repositories created for exfiltration</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">700+</div>
-      <div class="stat-description">NPM packages infiltrated with malicious code</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">33,000+</div>
-      <div class="stat-description">Unique secrets exposed (GitHub PAT, Cloud, ...)</div>
-    </div>
-  </div>
-  
-  <div class="source-note">
-    Sources: <strong>Entro</strong> (organizations), <strong>Wiz</strong> (repos & packages), <strong>GitGuardian</strong> (secrets)
-  </div>
-</div>
-
-
+<!-- Caches persist across runs. Attacker poisons cache on a PR, subsequent builds on main pick it up. Never trust cache in release pipelines. -->
 
 ---
 
@@ -2791,7 +2558,7 @@ jobs:
 </div>
 
 
-
+<!-- Default GITHUB_TOKEN has write-all permissions. If compromised, attacker gets full repo access. Always set permissions explicitly. -->
 
 ---
 
@@ -2900,7 +2667,7 @@ jobs:
 </div>
 
 
-
+<!-- Set permissions: {} at workflow level. Add specific permissions per job. Failed is better than compromised. -->
 
 ---
 
@@ -3015,6 +2782,7 @@ jobs:
 
 </div>
 
+<!-- Long-lived AWS keys in secrets: if leaked, attacker has permanent access. These never expire unless rotated. -->
 
 ---
 
@@ -3148,6 +2916,8 @@ jobs:
   </div>
   </div>
 </div>
+
+<!-- OIDC: short-lived tokens, no stored secrets, cloud provider validates claims. Much safer than long-lived keys. -->
 
 ---
 
@@ -3326,6 +3096,216 @@ jobs:
   </div>
 </div>
 
+<!-- Five best practices: environments for gating, env-level secrets, restrict OIDC claims, rotate regularly, audit access. Tight claim conditions are critical. -->
+
+---
+
+<!--
+_backgroundColor: #1A1A2E
+_color: white
+-->
+
+<style scoped>
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95%;
+}
+
+.image-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+</style>
+
+# 🪱 Shai-Hulud 2.0: The Supply Chain Tsunami
+
+<div class="image-container">
+  <img src="assets/img/shaihulud-annotated.png" alt="Shai-Hulud 2.0 Attack Flow" />
+</div>
+
+<!-- Walk through the diagram: script injection → secrets stolen → action takeover → downstream compromise. Everything we discussed in one kill chain. -->
+
+---
+
+
+
+<!--
+_backgroundColor: #DC2626
+_color: white
+-->
+
+<style scoped>
+.impact-container {
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stat-number {
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: #FCD34D;
+  margin-bottom: 0.3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stat-description {
+  font-size: 0.5rem;
+  line-height: 1.1;
+  color: #FEE2E2;
+}
+
+.source-note {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.4rem;
+  color: #E2E8F0;
+  font-style: italic;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.source-note strong {
+  color: #FCD34D;
+}
+</style>
+
+# 💥 Shai-Hulud 2.0 Impact
+
+![bg left:40%](assets/img/impact.jpg)
+
+<div class="impact-container">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-number">1,195+</div>
+      <div class="stat-description">Distinct orgs (banks, government bodies, and Fortune 500)</div>
+    </div> 
+    <div class="stat-card">
+      <div class="stat-number">25,000+</div>
+      <div class="stat-description">Malicious repositories created for exfiltration</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">700+</div>
+      <div class="stat-description">NPM packages infiltrated with malicious code</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">33,000+</div>
+      <div class="stat-description">Unique secrets exposed (GitHub PAT, Cloud, ...)</div>
+    </div>
+  </div>
+  
+  <div class="source-note">
+    Sources: <strong>Entro</strong> (organizations), <strong>Wiz</strong> (repos & packages), <strong>GitGuardian</strong> (secrets)
+  </div>
+</div>
+
+<!-- Real numbers: 218 orgs, 23k repos, 33k secrets. This is the scale of a single supply chain attack. -->
+
+---
+
+
+<!--
+_backgroundColor: #000000
+_color: white
+_footer: ''
+-->
+
+<style scoped>
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0d1f3c 100%);
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+  background: linear-gradient(90deg, #10B981, #3B82F6, #8B5CF6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #94A3B8;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.icon-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+.part-badge {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: rgba(16, 185, 129, 0.3);
+  border: 2px solid #10B981;
+  color: #6EE7B7;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+</style>
+
+<div class="part-badge">PART 2</div>
+
+# HARDEN
+
+<div class="subtitle">Securing your pipeline</div>
+
+<div class="icon-row">
+  <span>🛡️</span>
+  <span>🔐</span>
+  <span>✅</span>
+  <span>🔍</span>
+</div>
+
+<!-- Transition slide — pause. "Now that we've seen the attacks, let's harden." -->
+
 ---
 
 
@@ -3450,6 +3430,165 @@ _color: white
   </div>
 </div>
 
+<!-- Quick recap of the four attack patterns we covered. Each has a clear mitigation. -->
+
+---
+
+<!--
+_backgroundColor: #00126E
+_color: white
+-->
+
+<style scoped>
+.universal-container-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: 85%;
+}
+
+.intro-box-v2 {
+  text-align: center;
+  padding: 0.3rem;
+}
+
+.intro-box-v2 p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #FFCF50;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.principles-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.principle-card-v2 {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 10px;
+  padding: 0.7rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.principle-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.principle-card-v2 h4 {
+  color: #FFFFFF;
+  margin: 0 0 0.4rem 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.principle-card-v2 ul {
+  font-size: 0.5rem;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #CBD5E0;
+  text-align: left;
+}
+
+.principle-card-v2 li {
+  padding: 0.1rem 0;
+  position: relative;
+  padding-left: 0.7rem;
+}
+
+.principle-card-v2 li::before {
+  content: "•";
+  color: #FFCF50;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.example-row-v2 {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.2rem;
+}
+
+.example-badge-v2 {
+  background: rgba(255, 207, 80, 0.2);
+  border: 1px solid rgba(255, 207, 80, 0.4);
+  border-radius: 20px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.5rem;
+  color: #FFCF50;
+  font-weight: 500;
+}
+</style>
+
+# 🌐 Universal Security Principles
+
+<div class="universal-container-v2">
+  <div class="intro-box-v2">
+    <p>Not just GitHub Actions — these patterns apply everywhere automation runs</p>
+  </div>
+  
+  <div class="principles-grid-v2">
+    <div class="principle-card-v2">
+      <span class="principle-icon">🔗</span>
+      <h4>Trust Boundaries</h4>
+      <ul>
+        <li>Pin dependencies immutably</li>
+        <li>Verify third-party sources</li>
+        <li>Assume external = untrusted</li>
+      </ul>
+    </div>
+    <div class="principle-card-v2">
+      <span class="principle-icon">🔑</span>
+      <h4>Least Privilege</h4>
+      <ul>
+        <li>Minimal token scopes</li>
+        <li>Short-lived credentials</li>
+        <li>No standing access</li>
+      </ul>
+    </div>
+    <div class="principle-card-v2">
+      <span class="principle-icon">🛡️</span>
+      <h4>Defense in Depth</h4>
+      <ul>
+        <li>Multiple security layers</li>
+        <li>Scan & audit continuously</li>
+        <li>Monitor for anomalies</li>
+      </ul>
+    </div>
+    <div class="principle-card-v2">
+      <span class="principle-icon">💉</span>
+      <h4>Input Validation</h4>
+      <ul>
+        <li>Never trust user input</li>
+        <li>Sanitize before execution</li>
+        <li>Escape special characters</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="example-row-v2">
+    <span class="example-badge-v2">GitHub Actions</span>
+    <span class="example-badge-v2">GitLab CI</span>
+    <span class="example-badge-v2">Jenkins</span>
+    <span class="example-badge-v2">Azure DevOps</span>
+    <span class="example-badge-v2">AI Agents</span>
+  </div>
+</div>
+
+<!-- These principles apply universally — not just GitHub Actions. Least privilege, zero trust, defense in depth, input validation. -->
+
 ---
 
 <!--
@@ -3544,6 +3683,8 @@ _color: white
   </div>
 </div>
 
+<!-- GitHub org settings: allow-list actions, enforce SHA pinning, drop default token to read-only. Quick wins. -->
+
 ---
 
 <!--
@@ -3623,7 +3764,7 @@ _color: white
   <div class="security-content">
     <div class="security-item">
       <span class="security-emoji">🛡️</span>
-      <p class="security-text"><span class="security-highlight">Scan Actions with</span> with GHAS</p>
+      <p class="security-text"><span class="security-highlight">Scan Actions</span> with GHAS</p>
     </div>
     <div class="security-item">
       <span class="security-emoji">👀</span>
@@ -3636,6 +3777,7 @@ _color: white
   </div>
 </div>
 
+<!-- GHAS: CodeQL scans actions too, secret scanning catches leaks, Dependabot updates pinned SHAs. -->
 
 ---
 
@@ -3788,6 +3930,7 @@ _color: white
   </div>
 </div>
 
+<!-- Three open source tools: Zizmor (security-focused), Checkov (IaC), actionlint (syntax). Zizmor is our top pick. -->
 
 ---
 
@@ -3883,96 +4026,148 @@ _color: white
   </div>
 </div>
 
+<!-- Zizmor: dedicated GH Actions security linter. CLI, IDE, pre-commit, or as an Action. GHAS integration. DEMO TIME — 10 minutes. -->
 
 ---
 
 <!--
-_backgroundColor: #4A5568
+_backgroundColor: #1A202C
 _color: white
 -->
 
 <style scoped>
-.note-container {
+.openssf-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
   height: 85%;
+  padding: 0.5rem;
 }
 
-.image-section {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100%;
-}
-
-.placeholder-image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.note-box {
+.openssf-intro {
+  text-align: center;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 1.0rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  width: 80%;
-  max-width: 900px;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.note-list {
-  list-style: none;
-  padding: 0;
+.openssf-intro p {
+  margin: 0;
+  font-size: 0.6rem;
+  color: #E2E8F0;
+  font-style: italic;
+}
+
+.openssf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  flex: 1;
+}
+
+.openssf-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.openssf-card-emoji {
+  font-size: 1.8rem;
+}
+
+.openssf-card-title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #F7FAFC;
   margin: 0;
 }
 
-.note-item {
-  font-size: 0.7rem;
-  line-height: 1.5;
-  color: #F7FAFC;
-  margin-bottom: 0.7rem;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
+.openssf-card-desc {
+  font-size: 0.55rem;
+  color: #CBD5E0;
+  margin: 0;
+  line-height: 1.4;
+  flex-grow: 1;
 }
 
-.note-emoji {
-  font-size: 1.2rem;
-  flex-shrink: 0;
-}
-
-.note-highlight {
-  color: #FCD34D;
+.openssf-card-badge {
+  font-size: 0.55rem;
   font-weight: bold;
+  margin: 0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.badge-scorecard {
+  color: #ECFDF5;
+  background: rgba(16, 185, 129, 0.5);
+  border: 1px solid rgba(16, 185, 129, 0.6);
+}
+
+.badge-slsa {
+  color: #EFF6FF;
+  background: rgba(59, 130, 246, 0.5);
+  border: 1px solid rgba(59, 130, 246, 0.6);
+}
+
+.badge-attestation {
+  color: #FEF3C7;
+  background: rgba(245, 158, 11, 0.5);
+  border: 1px solid rgba(245, 158, 11, 0.6);
+}
+
+.openssf-footer {
+  text-align: center;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 8px;
+  padding: 0.4rem;
+  font-size: 0.6rem;
+  color: #6EE7B7;
+  font-style: italic;
 }
 </style>
 
-# <!-- fit -->📝 Topics not covered in detail
+# 🏛️ OpenSSF & Supply Chain Integrity
 
-<div class="note-container">
-
-  
-  <div class="note-box">
-    <ul class="note-list">
-      <li class="note-item">
-        <span class="note-emoji">⚠️</span>
-        <span><span class="note-highlight">Third-party actions</span><br> run in your trusted context</span>
-      </li>
-      <li class="note-item">
-        <span class="note-emoji">☁️</span>
-        <span><span class="note-highlight">GitHub runners</span><br> are ephemeral but unrestricted</span>
-      </li>
-      <li class="note-item">
-        <span class="note-emoji">🏠</span>
-        <span><span class="note-highlight">Self-hosted runners</span><br>consider hardening and run ephemeral</span>
-      </li>
-    </ul>
+<div class="openssf-container">
+  <div class="openssf-intro">
+    <p>The <strong>Open Source Security Foundation</strong> (Linux Foundation) provides frameworks and tools to secure the software supply chain</p>
   </div>
 
-![bg left](assets/img/security.jpeg)
+  <div class="openssf-grid">
+    <div class="openssf-card">
+      <span class="openssf-card-emoji">📊</span>
+      <h3 class="openssf-card-title">OpenSSF Scorecard</h3>
+      <p class="openssf-card-desc">Automated security health checks for open source projects. Scores 17 risk areas: pinned dependencies, branch protection, dangerous workflows, token permissions, and more.</p>
+      <p class="openssf-card-badge badge-scorecard">Runs as a GitHub Action</p>
+    </div>
+    <div class="openssf-card">
+      <span class="openssf-card-emoji">🔏</span>
+      <h3 class="openssf-card-title">SLSA Framework</h3>
+      <p class="openssf-card-desc">Supply-chain Levels for Software Artifacts. Defines build provenance requirements across levels 1→3, ensuring artifacts are traceable back to source and build system.</p>
+      <p class="openssf-card-badge badge-slsa">Build Provenance</p>
+    </div>
+    <div class="openssf-card">
+      <span class="openssf-card-emoji">✍️</span>
+      <h3 class="openssf-card-title">GitHub Attestations</h3>
+      <p class="openssf-card-desc">Native artifact attestations built on Sigstore. Cryptographically sign build provenance for your artifacts directly in GitHub Actions — verifiable with <code>gh attestation verify</code>.</p>
+      <p class="openssf-card-badge badge-attestation">Sigstore-based</p>
+    </div>
+  </div>
+
+
+</div>
+
+
+<!-- OpenSSF Scorecard for health checks, SLSA for build provenance, GitHub Attestations for Sigstore-based artifact signing. All integrate with Actions. -->
 
 ---
 
@@ -4098,15 +4293,735 @@ _color: white
   </div>
 </div>
 
+<!-- Three takeaways: power = responsibility, guard what you allow, use tools to shift security left. -->
 
+---
+
+<!-- ==================== BONUS: AI AGENTS ==================== -->
+
+<!--
+_backgroundColor: #000000
+_color: white
+_footer: ''
+-->
+
+<style scoped>
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%);
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+  background: linear-gradient(90deg, #A855F7, #EC4899, #F472B6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #94A3B8;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.icon-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+.part-badge {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: rgba(168, 85, 247, 0.3);
+  border: 2px solid #A855F7;
+  color: #D8B4FE;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+
+.bonus-badge {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: #FBBF24;
+  color: #1F2937;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transform: rotate(12deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+</style>
+
+<div class="part-badge">BONUS</div>
+<div class="bonus-badge">🐘 AI</div>
+
+# AI AGENTS
+
+<div class="subtitle">Old vulnerabilities, new velocity</div>
+
+<div class="icon-row">
+  <span>🤖</span>
+  <span>⚡</span>
+  <span>🔗</span>
+  <span>🛡️</span>
+</div>
+
+<!-- Bonus section — same vulnerabilities, but AI agents amplify speed and scale. -->
 
 ---
 
 <!--
-_backgroundColor: #D10077
-_color: purple
+_backgroundColor: #A80DF2
+_color: white
 -->
 
+<style scoped>
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+.evolution-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.era-card {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+}
+.era-card.past {
+  opacity: 0.9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.era-card.future {
+  box-shadow: 0 0 30px rgba(251, 191, 36, 0.3);
+}
+.era-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+.era-icon {
+  font-size: 1.4rem;
+}
+.era-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #E9D5FF;
+}
+.era-card.future .era-title {
+  color: #FBBF24;
+}
+.era-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+.era-items li {
+  padding: 0.2rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.era-items li::before {
+  content: "→";
+  color: #94A3B8;
+}
+
+.era-card.future .era-items li::before {
+  color: #FBBF24;
+}
+
+.arrow-divider {
+  font-size: 2.5rem;
+  color: #FBBF24;
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+  align-self: center;
+}
+
+.tension-box {
+  text-align: center;
+  margin-top: 1rem;
+}
+.tension-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.tension-text span {
+  font-weight: 800;
+  color: #FBBF24;
+}
+</style>
+
+# 🌍 The World is Changing
+
+<div class="evolution-container">
+  <div class="timeline">
+    <div class="era-card past">
+      <div class="era-header">
+        <span class="era-icon">💻</span>
+        <span class="era-title">Classic Development</span>
+      </div>
+      <ul class="era-items">
+        <li>Developer writes every line</li>
+        <li>IDE suggests completions</li>
+        <li>Human reviews all changes</li>
+        <li>Manual tool execution</li>
+        <li>You control the keyboard</li>
+      </ul>
+    </div>
+    <div class="arrow-divider">⚡</div>
+    <div class="era-card future">
+      <div class="era-header">
+        <span class="era-icon">🤖</span>
+        <span class="era-title">Agentic Development</span>
+      </div>
+      <ul class="era-items">
+        <li>AI writes code autonomously</li>
+        <li>AI executes shell commands</li>
+        <li>AI accesses your systems</li>
+        <li>AI modifies your pipeline</li>
+        <li>You... watch?</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tension-box">
+    <p class="tension-text">The <span>attack surface</span> just got a new operator</p>
+  </div>
+</div>
+
+<!-- Left: traditional dev. Right: agentic. AI writes code, executes commands, accesses systems. Who reviews? -->
+
+---
+
+<!--
+_backgroundColor: #1a1a2e
+_color: white
+-->
+
+<style scoped>
+.attack-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 1.2rem;
+  height: 85%;
+  padding: 0.5rem;
+}
+
+.chain-box {
+  background: linear-gradient(135deg, rgba(80, 20, 20, 0.95), rgba(50, 10, 10, 0.95));
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.chain-box h3 {
+  color: #FCA5A5;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem 0;
+}
+
+.chain-item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 0.6rem;
+  align-items: start;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+}
+
+.chain-num {
+  background: #DC2626;
+  color: white;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.chain-text {
+  color: rgba(255,255,255,0.95);
+  line-height: 1.3;
+  padding-top: 2px;
+}
+
+.chain-text strong {
+  color: #FCA5A5;
+}
+
+.right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.impact-box {
+  background: rgba(251, 191, 36, 0.15);
+  border-radius: 10px;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.impact-box h3 {
+  color: #FBBF24;
+  font-size: 0.85rem;
+  margin: 0 0 0.4rem 0;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.stat-block {
+  text-align: center;
+}
+
+.stat-big {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #FBBF24;
+}
+
+.stat-small {
+  font-size: 0.55rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.insight-box {
+  background: rgba(16, 185, 129, 0.15);
+  border-radius: 10px;
+  padding: 0.8rem;
+  flex: 1;
+}
+
+.insight-box h3 {
+  color: #10B981;
+  font-size: 0.85rem;
+  margin: 0 0 0.4rem 0;
+}
+
+.insight-box p {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.insight-box strong {
+  color: #10B981;
+  font-style: normal;
+}
+
+.insight-box .source {
+  font-size: 0.5rem;
+  color: rgba(255,255,255,0.5);
+  text-align: right;
+  margin-top: 0.3rem;
+  font-style: normal;
+}
+</style>
+
+<!-- Source: https://www.zenity.io/blog/the-cline-cli-attack-when-ai-coding-assistants-become-attack-vectors/ -->
+
+# 🚨 Real World: Cline CLI Attack (Feb 2026)
+
+<div class="attack-grid">
+  <div class="chain-box">
+    <h3>⚔️ Attack Chain</h3>
+    <div class="chain-item">
+      <div class="chain-num">1</div>
+      <div class="chain-text"><strong>AI agent</strong> triages GitHub issues</div>
+    </div>
+    <div class="chain-item">
+      <div class="chain-num">2</div>
+      <div class="chain-text"><strong>Prompt injection</strong> in issue title</div>
+    </div>
+    <div class="chain-item">
+      <div class="chain-num">3</div>
+      <div class="chain-text"><strong>Cache poisoning</strong> plants malicious cache</div>
+    </div>
+    <div class="chain-item">
+      <div class="chain-num">4</div>
+      <div class="chain-text">Release workflow <strong>restores bad cache</strong></div>
+    </div>
+    <div class="chain-item">
+      <div class="chain-num">5</div>
+      <div class="chain-text"><strong>NPM token stolen</strong>, v2.3.0 hijacked</div>
+    </div>
+    <div class="chain-item">
+      <div class="chain-num">6</div>
+      <div class="chain-text"><strong>OpenClaw</strong> malware on victims</div>
+    </div>
+  </div>
+  <div class="right-col">
+    <div class="impact-box">
+      <h3>📊 Impact</h3>
+      <div class="stats-row">
+        <div class="stat-block">
+          <div class="stat-big">~4,000</div>
+          <div class="stat-small">Downloads</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-big">8h</div>
+          <div class="stat-small">Window</div>
+        </div>
+      </div>
+    </div>
+    <div class="insight-box">
+      <h3>💡 Key Insight</h3>
+      <p>"When a single issue title can influence an automated build pipeline, the risk is no longer theoretical. <strong>AI agents are privileged actors</strong> that require governance."</p>
+      <div class="source">— Chris Hughes, Zenity</div>
+    </div>
+  </div>
+</div>
+
+<!-- Cline CLI attack: issue title triggered malicious build via AI agent. 4k downloads in 8 hours. AI agents are privileged actors. -->
+
+---
+
+<!--
+_backgroundColor: #A80DF2
+_color: white
+-->
+
+<style scoped>
+.speed-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 85%;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.speed-comparison {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  width: 90%;
+}
+
+.speed-box {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.speed-box h3 {
+  margin: 0 0 0.8rem 0;
+  font-size: 1rem;
+  color: #E9D5FF;
+}
+
+.speed-box .time {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FBBF24;
+}
+
+.speed-box .label {
+  font-size: 0.8rem;
+  color: #D1D5DB;
+  margin-top: 0.5rem;
+}
+
+.arrow {
+  font-size: 3rem;
+  color: #FBBF24;
+}
+
+.takeaway {
+  background: rgba(239, 68, 68, 0.2);
+  border: 2px solid #EF4444;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.takeaway p {
+  margin: 0;
+  font-size: 1rem;
+  color: #FEE2E2;
+}
+
+.takeaway strong {
+  color: #FCA5A5;
+}
+</style>
+
+# 🚀 The Speed Difference
+
+<div class="speed-container">
+  <div class="speed-comparison">
+    <div class="speed-box">
+      <h3>👤 Human Attacker</h3>
+      <div class="time">Hours</div>
+      <div class="label">to exploit one target</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="speed-box">
+      <h3>🤖 AI-Assisted</h3>
+      <div class="time">Seconds</div>
+      <div class="label">to exploit thousands</div>
+    </div>
+  </div>
+  
+  <div class="takeaway">
+    <p><strong>S1ngularity showed us:</strong> AI tools are already being weaponized for secret hunting and mass exploitation</p>
+  </div>
+</div>
+
+<!-- Hours vs seconds. s1ngularity used AI tools for mass secret hunting. Scale changes everything. -->
+
+---
+
+<!--
+_backgroundColor: #A80DF2
+_color: white
+-->
+
+<style scoped>
+.layout-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  height: 85%;
+}
+
+.patterns-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.patterns-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.pattern-card {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pattern-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: #FFFFFF;
+  font-size: 0.85rem;
+}
+
+.pattern-card .old {
+  color: #FCA5A5;
+  font-size: 0.65rem;
+  margin: 0.3rem 0;
+}
+
+.pattern-card .new {
+  color: #86EFAC;
+  font-size: 0.65rem;
+  margin: 0.15rem 0;
+}
+
+.image-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-column img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+</style>
+
+# ⚡ Same Patterns, Higher Speed
+
+<div class="layout-container">
+  <div class="patterns-column">
+    <div class="patterns-grid">
+      <div class="pattern-card">
+        <h4>📦 Dependencies</h4>
+        <p class="old">❌ AI installs @latest blindly</p>
+        <p class="new">✅ Pin versions, verify sources</p>
+      </div>
+      <div class="pattern-card">
+        <h4>🔑 Credentials</h4>
+        <p class="old">❌ AI gets broad PAT access</p>
+        <p class="new">✅ Minimal privilege tokens</p>
+      </div>
+      <div class="pattern-card">
+        <h4>💉 Input Trust</h4>
+        <p class="old">❌ AI runs untrusted code</p>
+        <p class="new">✅ Validate before execution</p>
+      </div>
+      <div class="pattern-card">
+        <h4>🧱 Boundaries</h4>
+        <p class="old">❌ AI in full environment</p>
+        <p class="new">✅ Sandbox, isolate, audit</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="image-column">
+    <img src="assets/img/ai-boundary.png" alt="AI Trust Boundaries" />
+  </div>
+</div>
+
+<!-- Same four patterns apply to AI: pin deps, minimal creds, validate input, enforce boundaries. AI just moves faster. -->
+
+---
+
+<!--
+_backgroundColor: #4A5568
+_color: white
+-->
+
+<style scoped>
+.topics-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  height: 82%;
+  padding: 0.5rem;
+}
+
+.topic-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.7rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.topic-emoji {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.topic-content {
+  flex: 1;
+}
+
+.topic-title {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #FCD34D;
+  margin: 0 0 0.2rem 0;
+}
+
+.topic-desc {
+  font-size: 0.55rem;
+  color: #E2E8F0;
+  margin: 0;
+  line-height: 1.3;
+}
+</style>
+
+# <!-- fit -->📝 Some topics not covered in detail
+
+<div class="topics-container">
+  <div class="topic-card">
+    <span class="topic-emoji">⚠️</span>
+    <div class="topic-content">
+      <h3 class="topic-title">Third-party action context</h3>
+      <p class="topic-desc">Actions run in your trusted context with access to secrets, tokens, and the runner environment</p>
+    </div>
+  </div>
+  <div class="topic-card">
+    <span class="topic-emoji">🏠</span>
+    <div class="topic-content">
+      <h3 class="topic-title">Self-hosted runner hardening</h3>
+      <p class="topic-desc">Run ephemeral, isolate workloads, restrict network access, and avoid persistent state</p>
+    </div>
+  </div>
+  <div class="topic-card">
+    <span class="topic-emoji">☁️</span>
+    <div class="topic-content">
+      <h3 class="topic-title">GitHub-hosted runners</h3>
+      <p class="topic-desc">Ephemeral but unrestricted — jobs can install software, make network calls, and access the internet</p>
+    </div>
+  </div>
+  <div class="topic-card">
+    <span class="topic-emoji">📦</span>
+    <div class="topic-content">
+      <h3 class="topic-title">Artifact & cache integrity</h3>
+      <p class="topic-desc">Artifacts and caches can be poisoned across workflow runs — verify checksums and limit cache scope</p>
+    </div>
+  </div>
+  <div class="topic-card">
+    <span class="topic-emoji">♻️</span>
+    <div class="topic-content">
+      <h3 class="topic-title">Reusable workflow security</h3>
+      <p class="topic-desc">Reusable workflows inherit caller permissions — pin references and audit inherited secret access</p>
+    </div>
+  </div>
+  <div class="topic-card">
+    <span class="topic-emoji">🌐</span>
+    <div class="topic-content">
+      <h3 class="topic-title">Network egress controls</h3>
+      <p class="topic-desc">Runners can reach any endpoint by default — consider network policies to limit exfiltration risk</p>
+    </div>
+  </div>
+</div>
+
+<!-- Six topics for further study — couldn't cover everything today. Great follow-up areas for the audience. -->
+
+---
 
 <!--
 _backgroundColor: #1E40AF
@@ -4297,6 +5212,8 @@ _footer: ''
 </div>
 
 
+<!-- Slides and resources at the QR code. Repo link on screen. -->
+
 ---
 
 
@@ -4330,6 +5247,7 @@ footer img {
 
 ![bg](assets/img/questions.jpeg)
 
+<!-- Open the floor. Prepared topics: OIDC details, self-hosted runner hardening, AI agent governance. -->
 
 ---
 
@@ -4361,4 +5279,5 @@ footer img {
 
 ![bg](assets/img/start-finish.jpeg)
 
+<!-- Thank the audience. Remind them to scan the QR code. -->
 

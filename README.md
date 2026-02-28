@@ -3,6 +3,7 @@
 This repository has slides and demo resources for the talk **GitHub Actions Security: Patterns, Risks & Solutions**.
 
 ## Conferences
+- [NDC Security 2026](https://ndcsecurity.com/), slides: [here](https://npalm.github.io/github-actions-security-talk/ndcsecurity26/) - *Beyond the Commit: Weaponizing and Hardening GitHub Actions for Security*
 - [NDC Security & AI 2025](https://ndcmanchester.com/), slides: [here](https://npalm.github.io/github-actions-security-talk/ndcmanchester25)
 - [HeapCon 2025](https://heapcon.io/), slides: [here](https://npalm.github.io/github-actions-security-talk/heapcon25/)
 - [GoTech World 2025](https://www.gotech.world/), slides: [here](https://npalm.github.io/github-actions-security-talk/gotechworld25/)
@@ -25,6 +26,7 @@ This repository has slides and demo resources for the talk **GitHub Actions Secu
 - [Dependency Review Action](https://github.com/actions/dependency-review-action) - GitHub Action for dependency analysis
 - [GitHub Security Lab - Keeping your GitHub Actions](https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/) - Article serie discussing common security malpractices for GitHub Actions and workflows.
 - [Harden GitHub Actions](https://www.wiz.io/blog/github-actions-security-guide) - How to Harden GitHub Actions: The Unofficial Guide
+- [Cline CLI Attack](https://www.zenity.io/blog/the-cline-cli-attack-when-ai-coding-assistants-become-attack-vectors/) - When AI Coding Assistants Become Attack Vectors
 
 ## Speaker
 

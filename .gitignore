@@ -194,3 +194,10 @@ terraform.rc
 # End of https://www.toptal.com/developers/gitignore/api/terraform
 
 github-actions-security
+
+# playwright
+.playwright-mcp/
+
+screenshots/
+*notes*.md
+build/
