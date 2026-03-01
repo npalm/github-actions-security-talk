@@ -9,10 +9,14 @@
     "build:html": "marp slides-${CONFERENCE:-default}.md --html --allow-local-files -o build-${CONFERENCE:-default}/index.html && cp -r assets build-${CONFERENCE:-default}/assets",
     "build:pdf": "node ./scripts/generate-pdf.js",
     "build:all": "npm run build:html && npm run build:pdf",
-    "watch": "marp --html slides-${CONFERENCE:-default}.md -w"
+    "watch": "marp --html slides-${CONFERENCE:-default}.md -w",
+    "serve": "http-server build-${CONFERENCE:-default} -c-1 -a 127.0.0.1 -o",
+    "dev": "concurrently --kill-others \"npm run watch\" \"npm run serve\""
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^4.2.3",
+    "concurrently": "^9.2.1",
+    "http-server": "^14.1.1",
     "pdf-lib": "^1.17.1",
     "playwright": "^1.50.0"
   }
