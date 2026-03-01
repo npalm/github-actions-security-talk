@@ -547,12 +547,12 @@ _color: white
 <!--
 
 
-🔥 SolarWinds (2020)
+🐴 XZ Utils (2024)
 What Happened:
-Hackers compromised SolarWinds' build system and injected SUNBURST backdoor into legitimate Orion software updates. 18,000+ organizations installed the malicious update thinking it was official.
+A contributor "Jia Tan" spent 2+ years gaining maintainer trust on the xz compression library, then injected a sophisticated backdoor targeting OpenSSH authentication. The backdoor would have compromised virtually every Linux server. Caught by Andres Freund who noticed a 500ms SSH login slowdown.
 
 Key Lesson:
-Your build pipeline IS your product. If attackers control your CI/CD, they control what gets shipped to customers. Build system security = product security.
+Trust is the ultimate attack vector. Social engineering over years can bypass every technical control. Open source maintainer burnout creates opportunities for patient attackers. Verify contributors, not just code.
 
 ⚡ tj-actions/changed-files (2025)
 What Happened:
@@ -586,14 +586,14 @@ Supply chain attacks exploit trust and automation. The things that make developm
   <div class="attacks-grid">
     <div class="attack-card">
       <div class="attack-header">
-        <span class="attack-emoji">🔥</span>
+        <span class="attack-emoji">&#x1F40E;</span>
         <div>
-          <h3 class="attack-title">SolarWinds</h3>
-          <p class="attack-year">2020</p>
+          <h3 class="attack-title">XZ Utils Backdoor</h3>
+          <p class="attack-year">2024</p>
         </div>
       </div>
       <div class="attack-details">
-        <p class="attack-detail">Compromised build system injected malicious code into legitimate software updates affecting 18,000+ organizations including government agencies and Fortune 500 companies</p>
+        <p class="attack-detail">A contributor spent 2+ years gaining maintainer trust, then injected a backdoor targeting OpenSSH on every Linux server. Caught by a developer who noticed a 500ms SSH slowdown</p>
       </div>
     </div>
     <div class="attack-card">
@@ -3106,17 +3106,21 @@ _color: white
 -->
 
 <style scoped>
+section {
+  padding: 20px;
+}
+
 h1 {
   margin-top: 0;
-  margin-bottom: 0.3rem;
-  font-size: 1.4rem;
+  margin-bottom: 0;
+  font-size: 1.2rem;
 }
 
 .image-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 95%;
+  height: 100%;
 }
 
 .image-container img {
@@ -4341,20 +4345,6 @@ h1 {
   font-size: 2.5rem;
 }
 
-.part-badge {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  background: rgba(168, 85, 247, 0.3);
-  border: 2px solid #A855F7;
-  color: #D8B4FE;
-  padding: 0.5rem 1.2rem;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  letter-spacing: 0.15em;
-}
-
 .bonus-badge {
   position: absolute;
   top: 40px;
@@ -4370,8 +4360,7 @@ h1 {
 }
 </style>
 
-<div class="part-badge">BONUS</div>
-<div class="bonus-badge">🐘 AI</div>
+<div class="bonus-badge">🐘 ONE MORE THING</div>
 
 # AI AGENTS
 
@@ -4384,7 +4373,7 @@ h1 {
   <span>🛡️</span>
 </div>
 
-<!-- Bonus section — same vulnerabilities, but AI agents amplify speed and scale. -->
+<!-- One more thing — same vulnerabilities, but AI agents amplify speed and scale. -->
 
 ---
 
