@@ -10,8 +10,8 @@
     "build:pdf": "node ./scripts/generate-pdf.js",
     "build:all": "npm run build:html && npm run build:pdf",
     "watch": "marp --html slides-${CONFERENCE:-default}.md -w",
-    "serve": "http-server build-${CONFERENCE:-default} -c-1 -a 127.0.0.1 -o",
-    "dev": "concurrently --kill-others \"npm run watch\" \"npm run serve\""
+    "serve": "http-server . -c-1 -a 127.0.0.1 -o /slides-${CONFERENCE:-default}.html",
+    "dev": "concurrently --raw --kill-others \"npm run watch\" \"npm run serve\""
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^4.2.3",
