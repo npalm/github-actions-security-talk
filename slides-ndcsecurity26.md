@@ -2315,7 +2315,7 @@ _color: white
 }
 </style>
 
-# 🔥 The `pull_request_target` problem
+# 🔥 The `pull_request_target` Problem - Still Real
 
 <div class="problem-explanation">
   <div class="left-boxes">
@@ -2349,12 +2349,121 @@ jobs:
 
 <!-- pull_request_target runs in trusted context with secrets. Checking out PR head = running untrusted code with full access. GitHub's Dec 2025 fix helps but doesn't eliminate risk. -->
 
+
 ---
+
+# 🎯 Attack Vectors: Six Real Exploits
+
+**All exploited: `pull_request_target` + untrusted input**
 
 <!--
 _backgroundColor: #DC2626
 _color: white
 -->
+
+<style scoped>
+.sticker-danger {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  background: linear-gradient(135deg, #DC2626, #991B1B);
+  border: 2px solid #FCA5A5;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #FEF3C7;
+  font-weight: bold;
+  white-space: nowrap;
+  transform: rotate(15deg);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
+  z-index: 100;
+}
+
+.attack-boxes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.attack-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.attack-box:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 28px rgba(220, 38, 38, 0.25);
+  transform: translateY(-2px);
+}
+
+.box-title {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #FCA5A5;
+}
+
+.box-method {
+  font-size: 0.65rem;
+  color: #FED7AA;
+  font-weight: 600;
+}
+
+.box-impact {
+  font-size: 0.55rem;
+  color: #E5E7EB;
+  line-height: 1.3;
+}
+</style>
+
+<div class="sticker-danger">Hackerbot-Claw • THIS WEEK</div>
+
+<div class="attack-boxes-grid">
+  <div class="attack-box">
+    <div class="box-title">awesome-go (140k)</div>
+    <div class="box-method">Go init() poisoning</div>
+    <div class="box-impact">Auto-execute on import, steal GITHUB_TOKEN, exfiltrate private repos</div>
+  </div>
+
+  <div class="attack-box">
+    <div class="box-title">trivy (25k)</div>
+    <div class="box-method">Action injection</div>
+    <div class="box-impact">Inject malicious payload in workflow steps, delete releases, poison artifacts</div>
+  </div>
+
+  <div class="attack-box">
+    <div class="box-title">RustPython (20k)</div>
+    <div class="box-method">Branch name injection</div>
+    <div class="box-impact">Base64 in git push, command substitution, partial code execution</div>
+  </div>
+
+  <div class="attack-box">
+    <div class="box-title">Microsoft AI Agent</div>
+    <div class="box-method">Branch name injection</div>
+    <div class="box-impact">Payload in bash eval from git ref, RCE with full repository permissions</div>
+  </div>
+
+  <div class="attack-box">
+    <div class="box-title">DataDog IaC Scanner</div>
+    <div class="box-method">Filename injection</div>
+    <div class="box-impact">Base64 payload in filenames, trigger build-time code execution</div>
+  </div>
+
+  <div class="attack-box">
+    <div class="box-title">project-akri</div>
+    <div class="box-method">Script injection</div>
+    <div class="box-impact">Shell command injection in build scripts, execute arbitrary code with repo access</div>
+  </div>
+</div>
+
+_<span style="font-size: 0.68rem; color: #FEF3C7; font-weight: 500;">Source: StepSecurity.io (1 Mar 2026)</span>_
+
+---
 
 <style scoped>
 .cache-problem-container {
