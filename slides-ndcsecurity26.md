@@ -2006,32 +2006,14 @@ _color: white
 -->
 
 <style scoped>
-
-
-.code-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80%;
-}
-
-.code-section {
-  width: 70%;
-}
-
-.code-section pre {
+pre {
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  padding: 2rem;
-  margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 </style>
 
 # ✅ The safe way
-
-<div class="code-container">
-  <div class="code-section">
 
 ```yaml
 name: Discussion Create
@@ -2047,9 +2029,6 @@ jobs:
       - name: Handle Discussion
         run: echo $DISCUSSION_BODY                            # ← CHANGED
 ```
-
-  </div>
-</div>
 
 <!-- Same workflow, now safe. The DISCUSSION_BODY env var is set at shell level — no expression expansion in the run line. -->
 
@@ -2315,7 +2294,7 @@ _color: white
 }
 </style>
 
-# 🔥 The `pull_request_target` problem
+# 🔥 The `pull_request_target` Problem - Still Real
 
 <div class="problem-explanation">
   <div class="left-boxes">
@@ -2349,12 +2328,121 @@ jobs:
 
 <!-- pull_request_target runs in trusted context with secrets. Checking out PR head = running untrusted code with full access. GitHub's Dec 2025 fix helps but doesn't eliminate risk. -->
 
+
 ---
+
+# 🎯 Attack Vectors: Six Real Exploits
+
+**All exploited: `pull_request_target` + untrusted input**
 
 <!--
 _backgroundColor: #DC2626
 _color: white
 -->
+
+<style scoped>
+.sticker-danger {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  background: linear-gradient(135deg, #DC2626, #991B1B);
+  border: 2px solid #FCA5A5;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #FEF3C7;
+  font-weight: bold;
+  white-space: nowrap;
+  transform: rotate(15deg);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
+  z-index: 100;
+}
+
+.attack-boxes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.attack-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.attack-box:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 28px rgba(220, 38, 38, 0.25);
+  transform: translateY(-2px);
+}
+
+.box-title {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #FCA5A5;
+}
+
+.box-method {
+  font-size: 0.65rem;
+  color: #FED7AA;
+  font-weight: 600;
+}
+
+.box-impact {
+  font-size: 0.55rem;
+  color: #E5E7EB;
+  line-height: 1.3;
+}
+</style>
+
+<div class="sticker-danger">Hackerbot-Claw • THIS WEEK</div>
+
+<div class="attack-boxes-grid">
+  <div class="attack-box">
+    <div class="box-title">awesome-go (140k)</div>
+    <div class="box-method">Go init() poisoning</div>
+    <div class="box-impact">Auto-execute on import, steal GITHUB_TOKEN, exfiltrate private repos</div>
+  </div>
+
+  <div class="attack-box">
+    <div class="box-title">trivy (25k)</div>
+    <div class="box-method">Action injection</div>
+    <div class="box-impact">Inject malicious payload in workflow steps, delete releases, poison artifacts</div>
+  </div>
+
+  <div class="attack-box">
+    <div class="box-title">RustPython (20k)</div>
+    <div class="box-method">Branch name injection</div>
+    <div class="box-impact">Base64 in git push, command substitution, partial code execution</div>
+  </div>
+
+  <div class="attack-box">
+    <div class="box-title">Microsoft AI Agent</div>
+    <div class="box-method">Branch name injection</div>
+    <div class="box-impact">Payload in bash eval from git ref, RCE with full repository permissions</div>
+  </div>
+
+  <div class="attack-box">
+    <div class="box-title">DataDog IaC Scanner</div>
+    <div class="box-method">Filename injection</div>
+    <div class="box-impact">Base64 payload in filenames, trigger build-time code execution</div>
+  </div>
+
+  <div class="attack-box">
+    <div class="box-title">project-akri</div>
+    <div class="box-method">Script injection</div>
+    <div class="box-impact">Shell command injection in build scripts, execute arbitrary code with repo access</div>
+  </div>
+</div>
+
+_<span style="font-size: 0.68rem; color: #FEF3C7; font-weight: 500;">Source: StepSecurity.io (1 Mar 2026)</span>_
+
+---
 
 <style scoped>
 .cache-problem-container {
@@ -3439,163 +3527,6 @@ _color: white
 ---
 
 <!--
-_backgroundColor: #00126E
-_color: white
--->
-
-<style scoped>
-.universal-container-v2 {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  height: 85%;
-}
-
-.intro-box-v2 {
-  text-align: center;
-  padding: 0.3rem;
-}
-
-.intro-box-v2 p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: #FFCF50;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.principles-grid-v2 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.8rem;
-  flex: 1;
-}
-
-.principle-card-v2 {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
-  border-radius: 10px;
-  padding: 0.7rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.principle-icon {
-  font-size: 1.6rem;
-  margin-bottom: 0.3rem;
-}
-
-.principle-card-v2 h4 {
-  color: #FFFFFF;
-  margin: 0 0 0.4rem 0;
-  font-size: 0.7rem;
-  font-weight: 700;
-}
-
-.principle-card-v2 ul {
-  font-size: 0.5rem;
-  line-height: 1.4;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  color: #CBD5E0;
-  text-align: left;
-}
-
-.principle-card-v2 li {
-  padding: 0.1rem 0;
-  position: relative;
-  padding-left: 0.7rem;
-}
-
-.principle-card-v2 li::before {
-  content: "•";
-  color: #FFCF50;
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-}
-
-.example-row-v2 {
-  display: flex;
-  gap: 0.6rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 0.2rem;
-}
-
-.example-badge-v2 {
-  background: rgba(255, 207, 80, 0.2);
-  border: 1px solid rgba(255, 207, 80, 0.4);
-  border-radius: 20px;
-  padding: 0.25rem 0.6rem;
-  font-size: 0.5rem;
-  color: #FFCF50;
-  font-weight: 500;
-}
-</style>
-
-# 🌐 Universal Security Principles
-
-<div class="universal-container-v2">
-  <div class="intro-box-v2">
-    <p>Not just GitHub Actions — these patterns apply everywhere automation runs</p>
-  </div>
-  
-  <div class="principles-grid-v2">
-    <div class="principle-card-v2">
-      <span class="principle-icon">🔗</span>
-      <h4>Trust Boundaries</h4>
-      <ul>
-        <li>Pin dependencies immutably</li>
-        <li>Verify third-party sources</li>
-        <li>Assume external = untrusted</li>
-      </ul>
-    </div>
-    <div class="principle-card-v2">
-      <span class="principle-icon">🔑</span>
-      <h4>Least Privilege</h4>
-      <ul>
-        <li>Minimal token scopes</li>
-        <li>Short-lived credentials</li>
-        <li>No standing access</li>
-      </ul>
-    </div>
-    <div class="principle-card-v2">
-      <span class="principle-icon">🛡️</span>
-      <h4>Defense in Depth</h4>
-      <ul>
-        <li>Multiple security layers</li>
-        <li>Scan & audit continuously</li>
-        <li>Monitor for anomalies</li>
-      </ul>
-    </div>
-    <div class="principle-card-v2">
-      <span class="principle-icon">💉</span>
-      <h4>Input Validation</h4>
-      <ul>
-        <li>Never trust user input</li>
-        <li>Sanitize before execution</li>
-        <li>Escape special characters</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="example-row-v2">
-    <span class="example-badge-v2">GitHub Actions</span>
-    <span class="example-badge-v2">GitLab CI</span>
-    <span class="example-badge-v2">Jenkins</span>
-    <span class="example-badge-v2">Azure DevOps</span>
-    <span class="example-badge-v2">AI Agents</span>
-  </div>
-</div>
-
-<!-- These principles apply universally — not just GitHub Actions. Least privilege, zero trust, defense in depth, input validation. -->
-
----
-
-<!--
 _backgroundColor: #1A202C
 _color: white
 -->
@@ -4035,6 +3966,90 @@ _color: white
 ---
 
 <!--
+_backgroundColor: #0B1222
+_color: white
+-->
+
+<style scoped>
+.demo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  height: 80%;
+  text-align: center;
+}
+
+.demo-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #FCD34D;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.demo-subtitle {
+  font-size: 0.9rem;
+  color: #CBD5E0;
+  margin: 0;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.demo-qr {
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  background: white;
+  padding: 10px;
+}
+
+.demo-hint {
+  font-size: 0.65rem;
+  color: #93C5FD;
+  font-style: italic;
+  margin: 0;
+}
+
+.demo-sticker {
+  position: absolute;
+  top: 3rem;
+  right: 0.5rem;
+  background: #1E293B;
+  color: #E2E8F0;
+  font-size: 0.52rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  transform: rotate(45deg);
+  transform-origin: center center;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.3px;
+  font-family: 'Courier New', monospace;
+  border: 1.5px solid #94A3B8;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 10;
+}
+</style>
+
+# 🎬 Demo
+
+<div class="demo-container">
+  <p class="demo-title">⚡ ZIZMOR IN ACTION ⚡</p>
+  <p class="demo-subtitle">Static analysis for GitHub Actions workflows — from insecure workflows to hardened pipelines</p>
+  <img src="assets/img/demo-zizmor-qr.png" class="demo-qr" alt="Demo QR Code" />
+  <p class="demo-hint">Scan to follow along — demo repo</p>
+</div>
+
+<div class="demo-sticker">Powered by Demo Time</div>
+
+<!-- DEMO: Run zizmor against workflows, show findings, GHAS integration. ~10 minutes. -->
+
+---
+
+<!--
 _backgroundColor: #1A202C
 _color: white
 -->
@@ -4176,128 +4191,159 @@ _color: white
 ---
 
 <!--
-_backgroundColor: #2D3748
+_backgroundColor: #00126E
 _color: white
 -->
 
 <style scoped>
-.key-lessons-container {
+.universal-container-v2 {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.6rem;
   height: 85%;
-  padding: 1rem;
 }
 
-.intro-message {
+.intro-box-v2 {
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 0.8rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 0.3rem;
 }
 
-.intro-message p {
+.intro-box-v2 p {
   margin: 0;
-  font-size: 0.9rem;
-  color: #E2E8F0;
+  font-size: 0.85rem;
+  color: #FFCF50;
+  font-weight: 600;
   font-style: italic;
 }
 
-.lessons-grid {
+.principles-grid-v2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
   flex: 1;
 }
 
-.lesson-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+.principle-card-v2 {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 10px;
+  padding: 0.7rem;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  align-items: center;
 }
 
-.lesson-header {
+.principle-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.principle-card-v2 h4 {
+  color: #FFFFFF;
+  margin: 0 0 0.4rem 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.principle-card-v2 ul {
+  font-size: 0.5rem;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #CBD5E0;
+  text-align: left;
+}
+
+.principle-card-v2 li {
+  padding: 0.1rem 0;
+  position: relative;
+  padding-left: 0.7rem;
+}
+
+.principle-card-v2 li::before {
+  content: "•";
+  color: #FFCF50;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.example-row-v2 {
   display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-}
-
-.lesson-emoji {
-  font-size: 1.8rem;
-  flex-shrink: 0;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-top: 0.2rem;
 }
 
-.lesson-content {
-  flex: 1;
-}
-
-.lesson-title {
-  font-size: 0.85rem;
-  font-weight: bold;
-  color: #F7FAFC;
-  margin: 0 0 0.4rem 0;
-  line-height: 1.1;
-}
-
-.lesson-description {
+.example-badge-v2 {
+  background: rgba(255, 207, 80, 0.2);
+  border: 1px solid rgba(255, 207, 80, 0.4);
+  border-radius: 20px;
+  padding: 0.25rem 0.6rem;
   font-size: 0.5rem;
-  color: #CBD5E0;
-  margin: 0;
-  line-height: 1.5;
+  color: #FFCF50;
+  font-weight: 500;
 }
 </style>
 
-# 🎯 Essential principles to protect your pipeline
+# 🌐 Universal Security Principles
 
-<div class="key-lessons-container">
+<div class="universal-container-v2">
+  <div class="intro-box-v2">
+    <p>Not just GitHub Actions — these patterns apply everywhere automation runs</p>
+  </div>
   
-  <div class="lessons-grid">
-    <div class="lesson-card">
-      <div class="lesson-header">
-        <span class="lesson-emoji">⚡</span>
-        <div class="lesson-content">
-          <h3 class="lesson-title">Pipelines Are <span class="warning">Powerful</span></h3>
-          <p class="lesson-description">Your pipelines typically have <span class="highlight">extensive permissions</span> - they can modify code, access secrets, and deploy to production. Treat them with the respect they deserve.</p>
-        </div>
-      </div>
+  <div class="principles-grid-v2">
+    <div class="principle-card-v2">
+      <span class="principle-icon">🔗</span>
+      <h4>Trust Boundaries</h4>
+      <ul>
+        <li>Pin dependencies immutably</li>
+        <li>Verify third-party sources</li>
+        <li>Assume external = untrusted</li>
+      </ul>
     </div>
-    <div class="lesson-card">
-      <div class="lesson-header">
-        <span class="lesson-emoji">🛡️</span>
-        <div class="lesson-content">
-          <h3 class="lesson-title">Power & <span class="warning">Responsibility</span></h3>
-          <p class="lesson-description">With <span class="highlight">great power</span> comes <span class="warning">great responsibility</span>. GitHub Actions gives you incredible capabilities, but every workflow is a potential attack vector if not properly secured.</p>
-        </div>
-      </div>
-    </div>    
-    <div class="lesson-card">
-      <div class="lesson-header">
-        <span class="lesson-emoji">🔍</span>
-        <div class="lesson-content">
-          <h3 class="lesson-title">Guard What You <span class="warning">Allow</span></h3>
-          <p class="lesson-description">Be selective about <span class="highlight">third-party actions</span>, <span class="highlight">untrusted input</span>, and <span class="highlight">dangerous triggers</span>. Pin versions, validate inputs, and use least privilege.</p>
-        </div>
-      </div>
-    </div>    
-    <div class="lesson-card">
-      <div class="lesson-header">
-        <span class="lesson-emoji">🔧</span>
-        <div class="lesson-content">
-          <h3 class="lesson-title">Empower Yourself with <span class="highlight">Tools</span></h3>
-          <p class="lesson-description">Use <span class="highlight">GHAS</span> and <span class="highlight">Zizmor</span> to gate vulnerabilities early. Automate security scanning and block unsafe code in your workflow.</p>
-        </div>
-      </div>
+    <div class="principle-card-v2">
+      <span class="principle-icon">🔑</span>
+      <h4>Least Privilege</h4>
+      <ul>
+        <li>Minimal token scopes</li>
+        <li>Short-lived credentials</li>
+        <li>No standing access</li>
+      </ul>
     </div>
+    <div class="principle-card-v2">
+      <span class="principle-icon">🛡️</span>
+      <h4>Defense in Depth</h4>
+      <ul>
+        <li>Multiple security layers</li>
+        <li>Scan & audit continuously</li>
+        <li>Monitor for anomalies</li>
+      </ul>
+    </div>
+    <div class="principle-card-v2">
+      <span class="principle-icon">💉</span>
+      <h4>Input Validation</h4>
+      <ul>
+        <li>Never trust user input</li>
+        <li>Sanitize before execution</li>
+        <li>Escape special characters</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="example-row-v2">
+    <span class="example-badge-v2">GitHub Actions</span>
+    <span class="example-badge-v2">GitLab CI</span>
+    <span class="example-badge-v2">Jenkins</span>
+    <span class="example-badge-v2">Azure DevOps</span>
+    <span class="example-badge-v2">AI Agents</span>
   </div>
 </div>
 
-<!-- Three takeaways: power = responsibility, guard what you allow, use tools to shift security left. -->
+<!-- These principles apply universally — not just GitHub Actions. Least privilege, zero trust, defense in depth, input validation. -->
 
 ---
 
