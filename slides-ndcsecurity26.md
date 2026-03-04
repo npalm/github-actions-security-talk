@@ -2006,32 +2006,14 @@ _color: white
 -->
 
 <style scoped>
-
-
-.code-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80%;
-}
-
-.code-section {
-  width: 70%;
-}
-
-.code-section pre {
+pre {
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  padding: 2rem;
-  margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 </style>
 
 # ✅ The safe way
-
-<div class="code-container">
-  <div class="code-section">
 
 ```yaml
 name: Discussion Create
@@ -2047,9 +2029,6 @@ jobs:
       - name: Handle Discussion
         run: echo $DISCUSSION_BODY                            # ← CHANGED
 ```
-
-  </div>
-</div>
 
 <!-- Same workflow, now safe. The DISCUSSION_BODY env var is set at shell level — no expression expansion in the run line. -->
 
