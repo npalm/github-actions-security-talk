@@ -3,11 +3,15 @@
 This repository has slides and demo resources for the talk **GitHub Actions Security: Patterns, Risks & Solutions**.
 
 ## Conferences
-- [NDC Security 2026](https://ndcsecurity.com/), slides: [here](https://npalm.github.io/github-actions-security-talk/ndcsecurity26/)
-- [NDC Security & AI 2025](https://ndcmanchester.com/), slides: [here](https://npalm.github.io/github-actions-security-talk/ndcmanchester25)
-- [HeapCon 2025](https://heapcon.io/), slides: [here](https://npalm.github.io/github-actions-security-talk/heapcon25/)
-- [GoTech World 2025](https://www.gotech.world/), slides: [here](https://npalm.github.io/github-actions-security-talk/gotechworld25/)
-- [040coders.nl - Ignite Nov 2025](https://www.meetup.com/040coders-nl/), slides: [here](https://npalm.github.io/github-actions-security-talk/040codersignite25/)
+
+| When | Conference | Talk |
+|------|-----------|------|
+| Mar 2026 | [040coders.nl](https://www.meetup.com/040coders-nl/events/312818432/) | [Beyond the Commit: Weaponizing and Hardening GitHub Actions](https://npalm.github.io/github-actions-security-talk/040coders26/) |
+| Jan 2026 | [NDC Security](https://ndcsecurity.com/) | [Beyond the Commit: Weaponizing and Hardening GitHub Actions](https://npalm.github.io/github-actions-security-talk/ndcsecurity26/) |
+| Nov 2025 | [NDC Security & AI](https://ndcmanchester.com/) | [From CI Nightmare to Supply Chain Sentinel](https://npalm.github.io/github-actions-security-talk/ndcmanchester25) |
+| Nov 2025 | [HeapCon](https://heapcon.io/) | [From CI Nightmare to Supply Chain Sentinel](https://npalm.github.io/github-actions-security-talk/heapcon25/) |
+| Nov 2025 | [GoTech World](https://www.gotech.world/) | [From CI Nightmare to Supply Chain Sentinel](https://npalm.github.io/github-actions-security-talk/gotechworld25/) |
+| Nov 2025 | [040coders.nl (Ignite)](https://www.meetup.com/040coders-nl/) | [Weaponizing GitHub Actions](https://npalm.github.io/github-actions-security-talk/040codersignite25/) |
 
 ## Demo resources
 - [Demo Zizmor (extend version)](https://github.com/codethebuild/gh-actions-security-zizmor-demo-time)
