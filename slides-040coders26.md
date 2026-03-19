@@ -360,15 +360,15 @@ h1 { display: none; }
     <!-- Row 3 -->
     <div class="c w"></div><div class="c d"></div><div class="c w"></div><div class="c w"></div><div class="c d"></div><div class="c w"></div><div class="c w"></div><div class="c d"></div><div class="c w"></div><div class="c w"></div><div class="c d"></div><div class="c w"></div><div class="c w"></div><div class="c d"></div><div class="c w"></div>
     <!-- Row 4 -->
-    <div class="c w"></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c"><span class="e">⚙️</span></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c w"></div>
+    <div class="c w"></div><div class="c d"></div><div class="c d"></div><div class="c"><span class="e">🎤</span></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c"><span class="e">⚙️</span></div><div class="c d"></div><div class="c d"></div><div class="c"><span class="ghost">👻</span></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c w"></div>
     <!-- Row 5: middle corridor -->
     <div class="c w"></div><div class="c d"></div><div class="c w"></div><div class="c d"></div><div class="c w"></div><div class="c"><span class="e">🌍</span></div><div class="c w"></div><div class="c w"></div><div class="c w"></div><div class="c"><span class="e">🤝</span></div><div class="c w"></div><div class="c d"></div><div class="c w"></div><div class="c d"></div><div class="c w"></div>
     <!-- Row 6 -->
-    <div class="c w"></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c"><span class="e">👨‍🍳</span></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c"><span class="e">💡</span></div><div class="c d"></div><div class="c d"></div><div class="c w"></div>
+    <div class="c w"></div><div class="c d"></div><div class="c"><span class="e">🍺</span></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c"><span class="e">👨‍🍳</span></div><div class="c d"></div><div class="c d"></div><div class="c d"></div><div class="c"><span class="e">💡</span></div><div class="c d"></div><div class="c d"></div><div class="c w"></div>
     <!-- Row 7 -->
     <div class="c w"></div><div class="c d"></div><div class="c w"></div><div class="c w"></div><div class="c d"></div><div class="c w"></div><div class="c w"></div><div class="c d"></div><div class="c w"></div><div class="c w"></div><div class="c d"></div><div class="c w"></div><div class="c w"></div><div class="c d"></div><div class="c w"></div>
     <!-- Row 8 -->
-    <div class="c w"></div><div class="c d"></div><div class="c d"></div><div class="c"><span class="e">🏃</span></div><div class="c d"></div><div class="c"><span class="e">🏊</span></div><div class="c d"></div><div class="c"><span class="e">🚴</span></div><div class="c d"></div><div class="c"><span class="e">🏅</span></div><div class="c d"></div><div class="c"><span class="e">🗺️</span></div><div class="c d"></div><div class="c"><span class="e">🍺</span></div><div class="c w"></div>
+    <div class="c w"></div><div class="c d"></div><div class="c d"></div><div class="c"><span class="e">🏃</span></div><div class="c d"></div><div class="c"><span class="e">🏊</span></div><div class="c d"></div><div class="c"><span class="e">🚴</span></div><div class="c d"></div><div class="c"><span class="e">🏅</span></div><div class="c d"></div><div class="c"><span class="e">🗺️</span></div><div class="c d"></div><div class="c"><span class="e">🔒</span></div><div class="c w"></div>
     <!-- Row 9: bottom wall -->
     <div class="c w"></div><div class="c w"></div><div class="c w"></div><div class="c w"></div><div class="c w"></div><div class="c w"></div><div class="c w"></div><div class="c w"></div><div class="c w"></div><div class="c w"></div><div class="c w"></div><div class="c w"></div><div class="c w"></div><div class="c w"></div><div class="c w"></div>
   </div>
@@ -5041,6 +5041,110 @@ _color: white
 ---
 
 <!--
+_backgroundColor: #1a1a2e
+_color: white
+-->
+
+<style scoped>
+h1 {
+  font-size: 42px;
+  margin: 0 0 4px 0;
+  color: #FCD34D;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #94A3B8;
+  margin: 0 0 24px 0;
+  font-style: italic;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  height: 55%;
+}
+
+.col-label {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+.col-left .col-label { color: #93C5FD; }
+.col-right .col-label { color: #FCA5A5; }
+
+.col-left, .col-right {
+  padding: 24px 28px;
+  border-radius: 14px;
+}
+
+.col-left {
+  background: rgba(147, 197, 253, 0.1);
+  border: 1px solid rgba(147, 197, 253, 0.2);
+}
+
+.col-right {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.item {
+  font-size: 20px;
+  padding: 8px 0;
+  color: #F1F5F9;
+}
+
+.risk-statement {
+  margin-top: 20px;
+  padding: 14px 24px;
+  background: rgba(239, 68, 68, 0.12);
+  border-left: 4px solid #EF4444;
+  border-radius: 0 10px 10px 0;
+  font-size: 15px;
+  color: #FEE2E2;
+  line-height: 1.5;
+}
+
+.source {
+  font-size: 11px;
+  color: #64748B;
+  margin-top: 8px;
+  text-align: right;
+}
+</style>
+
+# 🧠 Agent Skills
+
+<div class="subtitle">Documentation or code? — They look like docs, but agents execute them</div>
+
+<div class="skills-grid">
+  <div class="col-left">
+    <div class="col-label">👀 Appears as</div>
+    <div class="item">📝 Markdown & YAML files</div>
+    <div class="item">📖 README instructions</div>
+    <div class="item">💬 Natural language prompts</div>
+  </div>
+  <div class="col-right">
+    <div class="col-label">⚡ Executes as</div>
+    <div class="item">💻 Shell commands & scripts</div>
+    <div class="item">📦 Package installs (npx, bunx)</div>
+    <div class="item">🎯 Untrusted code on your machine</div>
+  </div>
+</div>
+
+<div class="risk-statement">
+  An LLM hallucinated <code>react-codeshift</code> — a package that never existed. It spread to 237 repos via copy-pasted skill files. Agents tried to install it. Nobody reviewed it.
+</div>
+
+<div class="source">aikido.dev — Agent Skills Are Spreading Hallucinated npx Commands (2026)</div>
+
+<!-- Skills are the new code. Agents follow them literally without verifying packages exist. react-codeshift: hallucinated by an LLM, spread through skill files to 237 repos, real download attempts observed. -->
+
+---
+
+<!--
 _backgroundColor: #A80DF2
 _color: white
 -->
@@ -5143,105 +5247,6 @@ _color: white
 </div>
 
 <!-- Same four patterns apply to AI: pin deps, minimal creds, validate input, enforce boundaries. AI just moves faster. -->
-
----
-
-<!--
-_backgroundColor: #4A5568
-_color: white
--->
-
-<style scoped>
-.topics-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
-  height: 82%;
-  padding: 0.5rem;
-}
-
-.topic-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 0.7rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: flex-start;
-  gap: 0.7rem;
-}
-
-.topic-emoji {
-  font-size: 1.3rem;
-  flex-shrink: 0;
-}
-
-.topic-content {
-  flex: 1;
-}
-
-.topic-title {
-  font-size: 0.7rem;
-  font-weight: bold;
-  color: #FCD34D;
-  margin: 0 0 0.2rem 0;
-}
-
-.topic-desc {
-  font-size: 0.55rem;
-  color: #E2E8F0;
-  margin: 0;
-  line-height: 1.3;
-}
-</style>
-
-# <!-- fit -->📝 Some topics not covered in detail
-
-<div class="topics-container">
-  <div class="topic-card">
-    <span class="topic-emoji">⚠️</span>
-    <div class="topic-content">
-      <h3 class="topic-title">Third-party action context</h3>
-      <p class="topic-desc">Actions run in your trusted context with access to secrets, tokens, and the runner environment</p>
-    </div>
-  </div>
-  <div class="topic-card">
-    <span class="topic-emoji">🏠</span>
-    <div class="topic-content">
-      <h3 class="topic-title">Self-hosted runner hardening</h3>
-      <p class="topic-desc">Run ephemeral, isolate workloads, restrict network access, and avoid persistent state</p>
-    </div>
-  </div>
-  <div class="topic-card">
-    <span class="topic-emoji">☁️</span>
-    <div class="topic-content">
-      <h3 class="topic-title">GitHub-hosted runners</h3>
-      <p class="topic-desc">Ephemeral but unrestricted — jobs can install software, make network calls, and access the internet</p>
-    </div>
-  </div>
-  <div class="topic-card">
-    <span class="topic-emoji">📦</span>
-    <div class="topic-content">
-      <h3 class="topic-title">Artifact & cache integrity</h3>
-      <p class="topic-desc">Artifacts and caches can be poisoned across workflow runs — verify checksums and limit cache scope</p>
-    </div>
-  </div>
-  <div class="topic-card">
-    <span class="topic-emoji">♻️</span>
-    <div class="topic-content">
-      <h3 class="topic-title">Reusable workflow security</h3>
-      <p class="topic-desc">Reusable workflows inherit caller permissions — pin references and audit inherited secret access</p>
-    </div>
-  </div>
-  <div class="topic-card">
-    <span class="topic-emoji">🌐</span>
-    <div class="topic-content">
-      <h3 class="topic-title">Network egress controls</h3>
-      <p class="topic-desc">Runners can reach any endpoint by default — consider network policies to limit exfiltration risk</p>
-    </div>
-  </div>
-</div>
-
-<!-- Six topics for further study — couldn't cover everything today. Great follow-up areas for the audience. -->
 
 ---
 
