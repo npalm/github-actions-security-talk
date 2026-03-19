@@ -5473,6 +5473,120 @@ footer img {
 
 ---
 
+<!-- _footer: "" -->
+
+<style scoped>
+section {
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.side-layout {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.side-img {
+  width: 50%;
+  min-height: 100%;
+  background: url('assets/img/devops-ams.webp') center center / cover no-repeat;
+  border-right: 4px solid rgba(255,255,255,0.15);
+}
+
+.side-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 50px;
+  background: linear-gradient(160deg, #2d2d3a 0%, #1a1a2e 100%);
+}
+
+.side-content .badge {
+  display: inline-block;
+  background: #F59E0B;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.side-content h1 {
+  font-size: 46px;
+  margin: 0 0 6px 0;
+}
+
+.side-content .date {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 8px 0 24px 0;
+  color: #FCD34D;
+}
+
+.side-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.side-tags span {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.side-tags .highlight {
+  width: 100%;
+}
+
+.side-tags .highlight {
+  background: linear-gradient(135deg, #059669, #047857);
+  border: none;
+  color: white;
+  font-weight: 700;
+}
+
+.side-tags .secondary {
+  flex: 1;
+  min-width: 120px;
+}
+</style>
+
+<div class="side-layout">
+  <div class="side-img"></div>
+  <div class="side-content">
+    <div class="badge">Community Event</div>
+
+  # DevOpsDays Amsterdam
+
+  <div class="date">📅 June 19th, 2026</div>
+
+  <div class="side-tags">
+    <span class="highlight">🎟️ Early Bird Tickets Available!</span>
+    <span class="secondary">📣 CFP Open</span>
+    <span class="secondary">🤝 Looking for Sponsors</span>
+  </div>
+  <img src="assets/img/devopsdays-ams-qr.png" alt="DevOpsDays Amsterdam QR" style="width: 160px; margin-top: 28px; border-radius: 8px;" />
+  </div>
+</div>
+
+---
+
 <style scoped>
 h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 8px rgba(0, 0, 0, 0.5);
