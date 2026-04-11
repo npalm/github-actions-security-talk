@@ -201,3 +201,8 @@ github-actions-security
 screenshots/
 *notes*.md
 build-*/
+research/
+tmp/
+abstract*
+.claude/
+*-backup-*
