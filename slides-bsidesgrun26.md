@@ -130,42 +130,40 @@ style: |
 <!-- TITLE SLIDE -->
 <!-- ====================================================================== -->
 
-![bg left:40%](assets/img/tittle.png)
+![bg brightness:0.3](assets/img/title.png)
 
 <style scoped>
 section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  text-align: left;
-  background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 50%, #1e293b 100%);
-}
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 80px;
 }
 .title {
-  font-size: 2.8em;
+  font-size: 3.4em;
   font-weight: 800;
   background: linear-gradient(135deg, #f97316 0%, #ec4899 50%, #8b5cf6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 80px rgba(249, 115, 22, 0.3);
-  margin-bottom: 0.3em;
+  margin-bottom: 0.25em;
   line-height: 1.1;
+  text-shadow: none;
 }
 .subtitle {
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #cbd5e1;
   font-style: italic;
-  line-height: 1.3;
+  line-height: 1.4;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.8);
 }
 .footer-info {
+  position: absolute;
+  bottom: 40px;
   font-size: 1em;
   color: #94a3b8;
-  padding-bottom: 20px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 .conf-name {
   color: #06b6d4;
@@ -173,10 +171,8 @@ section {
 }
 </style>
 
-<div class="content">
 <div class="title">Supply Chain Compromise</div>
 <div class="subtitle">The Anatomy of the Attack and the Blueprint for Defense</div>
-</div>
 
 <div class="footer-info">
 <span class="conf-name">BSides Groningen '26</span> - Niek Palm
@@ -5215,7 +5211,7 @@ h2 {
 
 ---
 
-<!-- Monday Morning - Quick Wins -->
+<!-- Monday Morning - Quick Wins (copy) -->
 
 <style scoped>
 section {
@@ -5340,163 +5336,62 @@ h2 span {
 
 ---
 
-<!-- Monday Morning Checklist -->
-
-<style scoped>
-section {
-  background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%);
-  color: #e2e8f0;
-  padding: 40px 50px;
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-}
-h2 {
-  font-size: 1.9em;
-  color: #86efac;
-  margin: 0 0 18px 0;
-  font-weight: 700;
-}
-.checklist {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 20px;
-}
-.item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
-.num {
-  flex-shrink: 0;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
-  color: #052e16;
-  font-size: 0.55em;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1px;
-}
-.item-text {
-  flex: 1;
-}
-.item-text p {
-  margin: 0;
-  font-size: 0.58em;
-  line-height: 1.5;
-  color: #d1d5db;
-}
-.item-text strong {
-  color: #86efac;
-}
-.item-text .desc {
-  color: #9ca3af;
-}
-</style>
-
-## ☑️ Monday morning checklist
-
-<div class="checklist">
-<div class="item">
-<span class="num">1</span>
-<div class="item-text"><p>Run <strong>zizmor</strong> on workflows <span class="desc">- catch injection & misconfigs</span></p></div>
-</div>
-<div class="item">
-<span class="num">2</span>
-<div class="item-text"><p>Audit <strong>pull_request_target</strong> <span class="desc">- no PR code in trusted context</span></p></div>
-</div>
-<div class="item">
-<span class="num">3</span>
-<div class="item-text"><p>Enable <strong>SHA pinning</strong> for actions <span class="desc">- Dependabot/Renovate keep updated</span></p></div>
-</div>
-<div class="item">
-<span class="num">4</span>
-<div class="item-text"><p>Add <strong>cooldown</strong> on dep updates <span class="desc">- npm min-release-age, stabilityDays</span></p></div>
-</div>
-<div class="item">
-<span class="num">5</span>
-<div class="item-text"><p>Set up a <strong>dependency mirror</strong> <span class="desc">- Artifactory/Nexus - no direct registry</span></p></div>
-</div>
-<div class="item">
-<span class="num">6</span>
-<div class="item-text"><p>Switch to <strong>OIDC</strong> for cloud creds <span class="desc">- no long-lived PATs</span></p></div>
-</div>
-<div class="item">
-<span class="num">7</span>
-<div class="item-text"><p>Verify <strong>provenance</strong> on deps <span class="desc">- npm audit signatures, cosign verify</span></p></div>
-</div>
-<div class="item">
-<span class="num">8</span>
-<div class="item-text"><p>Enforce <strong>signed images</strong> in K8s <span class="desc">- Kyverno/OPA admission</span></p></div>
-</div>
-<div class="item">
-<span class="num">9</span>
-<div class="item-text"><p>Set up <strong>monitoring</strong> for anomalies <span class="desc">- unexpected publishes, collaborators</span></p></div>
-</div>
-<div class="item">
-<span class="num">10</span>
-<div class="item-text"><p>Review <strong>AI/MCP tool access</strong> <span class="desc">- same trust questions as CI/CD</span></p></div>
-</div>
-</div>
-
----
-
 <!-- Closing -->
 
 <style scoped>
 section {
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 30%, #14532d 60%, #0a0a0f 100%);
+  padding: 0;
+  color: #e2e8f0;
 }
 h2 {
-  font-size: 1.8em;
-  margin-bottom: 0.8em;
+  font-size: 2.4em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.8);
   background: linear-gradient(135deg, #86efac 0%, #4ade80 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.principles {
-  font-size: 1.3em;
+.tagline {
+  font-size: 1.4em;
   max-width: 800px;
   margin: 0 auto;
-  line-height: 2;
+  line-height: 1.6;
   color: #e2e8f0;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+  letter-spacing: 0.02em;
 }
-.principles strong {
+.tagline strong {
   display: inline-block;
-  padding: 2px 14px;
+  padding: 2px 12px;
   border-radius: 6px;
-  margin: 3px;
+  margin: 2px;
 }
-.principles strong:nth-of-type(1) { background: rgba(34, 197, 94, 0.3); color: #4ade80; }
-.principles strong:nth-of-type(2) { background: rgba(129, 140, 248, 0.3); color: #a5b4fc; }
-.principles strong:nth-of-type(3) { background: rgba(251, 191, 36, 0.3); color: #fbbf24; }
-.principles strong:nth-of-type(4) { background: rgba(168, 85, 247, 0.3); color: #c084fc; }
-.principles strong:nth-of-type(5) { background: rgba(248, 113, 113, 0.3); color: #f87171; }
-.principles strong:nth-of-type(6) { background: rgba(20, 184, 166, 0.3); color: #2dd4bf; }
+.tagline strong:nth-of-type(1) { background: rgba(34, 197, 94, 0.35); color: #4ade80; }
+.tagline strong:nth-of-type(2) { background: rgba(129, 140, 248, 0.35); color: #a5b4fc; }
+.tagline strong:nth-of-type(3) { background: rgba(251, 191, 36, 0.35); color: #fbbf24; }
+.tagline strong:nth-of-type(4) { background: rgba(168, 85, 247, 0.35); color: #c084fc; }
+.tagline strong:nth-of-type(5) { background: rgba(248, 113, 113, 0.35); color: #f87171; }
+.tagline strong:nth-of-type(6) { background: rgba(20, 184, 166, 0.35); color: #2dd4bf; }
 .sub {
-  margin-top: 1.2em;
-  font-size: 1.1em;
+  margin-top: 1em;
+  font-size: 0.95em;
   color: #94a3b8;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.7);
 }
 </style>
 
-<h2>The Chain You Can Control</h2>
+![bg brightness:0.3](assets/img/close.png)
 
-<div class="principles">
-<strong>Harden</strong> workflows. <strong>Pin</strong> everything.<br>
-<strong>Delay</strong> updates. <strong>Scope</strong> credentials.<br>
-<strong>Assume</strong> breach. <strong>Verify</strong> provenance.
+<h2>The chain you can control</h2>
+
+<div class="tagline">
+<strong>Harden</strong> · <strong>Pin</strong> · <strong>Delay</strong> · <strong>Scope</strong> · <strong>Assume</strong> · <strong>Verify</strong>
 </div>
 
-<div class="sub">
-Supply chain security is not one fix. It's layers of defense.
-</div>
-
-<div class="sub">The fundamentals don't change.<br>But the attacker might now be an <em>algorithm</em>.</div>
+<div class="sub">The fundamentals don't change - but the attacker might now be an <em>algorithm</em>.</div>
 
 ---
 

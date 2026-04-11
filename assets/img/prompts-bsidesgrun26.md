@@ -173,3 +173,68 @@ For hand-drawn style diagrams that can be created in Excalidraw:
 - Two columns: "Long-lived PAT" vs "OIDC Token"
 - Visual showing PAT as a permanent key that can be stolen
 - Visual showing OIDC as temporary, scoped, auto-expiring
+
+---
+
+## 11. Monday Morning / Coffee Slide Background
+**For slide: "Before your first coffee ☕"**
+**Format: 16:9 widescreen, used with brightness:0.25**
+
+**Option A - Dawn workspace**
+```
+Atmospheric photograph of a developer's desk at dawn, warm golden light streaming through a window onto a dark workspace. A single steaming coffee mug glows softly in the foreground, wisps of steam rising into moody darkness. Faint green terminal glow reflects off the desk surface. Everything else is deep shadow and silhouette. Cinematic, shallow depth of field, dark and moody with warm amber highlights. No text, no people visible. 16:9 widescreen aspect ratio, photorealistic
+```
+
+**Option B - Abstract security dawn**
+```
+Dark abstract painting of a horizon at first light, deep emerald green and black gradient sky. A thin line of warm golden light breaks across the bottom third. Faint geometric shapes - shields, locks, checkmarks - dissolve into the darkness like constellations fading at dawn. Painterly, atmospheric, minimal. Oil on canvas texture, gallery aesthetic. No text, no people. 16:9 widescreen aspect ratio
+```
+
+---
+
+## 12. Closing Slide Background
+**For slide: "The chain you can control"**
+**Format: 16:9 widescreen, used with brightness:0.3**
+**Message: Empowerment, control, resilience**
+
+**Option A - Hands forging a chain**
+```
+Dark cinematic painting of a pair of strong hands forging a glowing chain on an anvil, seen from above. Each link glows a different color - emerald, indigo, amber, purple, coral, teal - as if the chain itself is alive with energy. Sparks rise upward like fireflies into darkness. The hands are steady, confident, in control. A warm golden light illuminates the work from below while the surrounding space is deep black. The mood is quiet determination - not fear, but craftsmanship. Oil painting texture, dramatic chiaroscuro lighting. Dark but warm. No text. 16:9 widescreen aspect ratio
+```
+
+**Option B - Chain stretching toward horizon**
+```
+Dark atmospheric painting of a massive chain stretching from the foreground into a distant warm horizon. The chain is made of six different materials and colors - green crystal, indigo metal, amber glass, purple stone, coral ceramic, teal energy - each link different but fitting perfectly together. The horizon glows with soft dawn light, suggesting a future worth building toward. The foreground is dark, moody, grounded. The chain catches and reflects the distant light. Painterly, cinematic, hopeful. No text, no people. 16:9 widescreen aspect ratio
+```
+
+**Option C - Shield wall at dawn**
+```
+Dark moody painting of six translucent shield-like barriers standing in a row, each a different color - emerald, indigo, amber, purple, coral, teal - glowing softly against a deep dark sky. Behind them, the first light of dawn breaks across the horizon in warm gold. The shields overlap slightly where they meet, creating brighter interference patterns. They stand like silent guardians, protective and resolute. In front of the shields, faint digital circuit patterns dissolve into the dark ground. Oil painting style, atmospheric, quietly powerful. Dark palette with warm dawn undertones. No text, no people. 16:9 widescreen aspect ratio
+```
+
+**Option D - Constellation map**
+```
+Dark abstract painting of a night sky where six bright stars of different colors - emerald, indigo, amber, purple, coral, teal - are connected by faint glowing lines forming a constellation in the shape of a chain or shield. The stars pulse with warm light. Below, a vast dark landscape stretches to a horizon where the faintest golden glow hints at approaching dawn. The constellation feels ancient and purposeful, like a map left by those who came before. Painterly, contemplative, empowering. Deep space darkness with warm star glow. No text, no people. 16:9 widescreen aspect ratio
+```
+
+---
+
+## 13. Title Slide Background
+**For slide: "Supply Chain Compromise" (title slide)**
+**Format: 16:9 widescreen, used with `brightness:0.3` as full background**
+**Tone: Dark, dramatic, slightly ominous**
+
+**Option A - Broken chain in darkness**
+```
+Dark dramatic painting of a massive chain link cracking apart, glowing molten orange and red fractures spreading through dark iron. Sparks and embers drift upward into black smoke. The crack reveals faint lines of code and binary data inside the metal, suggesting software hidden within physical infrastructure. Deep darkness surrounds the link, barely visible other chain links fade into shadow. Cinematic, intense, foreboding. Oil painting texture, dark gallery aesthetic. Warm orange and red on near-black. No text, no people. 16:9 widescreen aspect ratio
+```
+
+**Option B - Dark supply line**
+```
+Dark atmospheric painting of a long corridor stretching into deep perspective, lined with glowing shipping containers and package crates. Some crates are open, spilling faint red light. Cables and pipelines run along the ceiling, pulsing with data. The far end of the corridor shows a faint ominous glow. Industrial, dark, moody. Painterly, cinematic lighting with strong shadows. Deep purple and dark blue tones with red accents. No text, no people visible. 16:9 widescreen aspect ratio
+```
+
+**Option C - Digital venom**
+```
+Dark abstract painting of luminous toxic-looking tendrils of code spreading through a dark network structure, like glowing venom moving through veins. The tendrils are warm orange and red, the network structure is cool purple and indigo. Some nodes are already consumed, glowing red. Others remain untouched, faintly blue. The spread is organic, beautiful but menacing. Deep black background with dramatic lighting from the tendrils themselves. Painterly, ethereal, ominous. No text, no people. 16:9 widescreen aspect ratio
+```
