@@ -1,4 +1,4 @@
-# Talk - GitHub Actions Security
+# Talk - Supply chain security
 
 This repository has slides and demo resources for the talk **GitHub Actions Security: Patterns, Risks & Solutions**.
 
@@ -6,6 +6,7 @@ This repository has slides and demo resources for the talk **GitHub Actions Secu
 
 | When | Conference | Talk |
 |------|-----------|------|
+| Apr 2026 | [BSides Groningen](https://bsidesgroningen.nl/) | [Supply Chain Compromise: The Anatomy of the Attack and the Blueprint for Defense](https://npalm.github.io/github-actions-security-talk/bsidesgrun26/) |
 | Mar 2026 | [040coders.nl](https://www.meetup.com/040coders-nl/events/312818432/) | [Beyond the Commit: Weaponizing and Hardening GitHub Actions](https://npalm.github.io/github-actions-security-talk/040coders26/) |
 | Jan 2026 | [NDC Security](https://ndcsecurity.com/) | [Beyond the Commit: Weaponizing and Hardening GitHub Actions](https://npalm.github.io/github-actions-security-talk/ndcsecurity26/) |
 | Nov 2025 | [NDC Security & AI](https://ndcmanchester.com/) | [From CI Nightmare to Supply Chain Sentinel](https://npalm.github.io/github-actions-security-talk/ndcmanchester25) |
@@ -51,4 +52,3 @@ This presentation uses the following sources for images
 - [Pixabay](https://pixabay.com/)
 - [DALL-E](https://labs.openai.com/)
 - [Gemini](https://gemini.google/)
-
