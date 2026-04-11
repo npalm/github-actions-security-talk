@@ -136,6 +136,19 @@ Style: Dark background, dramatic contrast between red/orange (attack) and green/
 
 ---
 
+### Prompt #10 — Part 6: Breaking the Chain (part-defense.png)
+
+**Option A — Digital mesh / safety net**
+> Abstract dark artistic background evoking digital protection and resilience. Interconnected geometric lattice of soft green glowing nodes and lines forming a protective mesh pattern, like a security fabric or safety net stretched across deep black space. Some nodes pulse brighter, suggesting active defenses. Faint hexagonal shapes and circuit traces fade into the dark edges. Very dark, moody, atmospheric. Emerald green and teal on near-black. No text, no people, no recognizable objects. Painterly, ethereal, cinematic. 16:9 aspect ratio.
+
+**Option B — Ancient fortress with bioluminescence**
+> Dark moody landscape of an ancient fortress wall overgrown with glowing bioluminescent vines, standing strong against a stormy sky. The wall has layers of different materials — stone, iron, living wood — suggesting defense in depth. Soft green and teal bioluminescence pierces through darkness. Atmospheric fog, cinematic lighting from below. Very dark, painterly, abstract. No text, no people. 16:9 aspect ratio.
+
+**Option C — Layered shields of light**
+> Dark abstract painting of layered shields of light, translucent green and teal veils overlapping in front of deep black void. Each layer slightly different texture — woven, crystalline, fluid — suggesting multiple defense strategies. Soft glow where layers intersect. Minimal, moody, atmospheric. Oil painting style, dark gallery aesthetic. No text, no objects. 16:9 aspect ratio.
+
+---
+
 ## Excalidraw Diagram Ideas
 
 For hand-drawn style diagrams that can be created in Excalidraw:

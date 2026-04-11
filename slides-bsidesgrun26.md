@@ -179,7 +179,7 @@ section {
 </div>
 
 <div class="footer-info">
-<span class="conf-name">BSides Groningen '26</span> — Niek Palm
+<span class="conf-name">BSides Groningen '26</span> - Niek Palm
 </div>
 
 ---
@@ -653,7 +653,7 @@ section {
 
 <div class="paper-header">
   <div class="paper-title">The Supply Chain Tribune</div>
-  <div class="paper-date">Special Security Edition — April 2026</div>
+  <div class="paper-date">Special Security Edition - April 2026</div>
 </div>
 <div class="headline">EVERY NODE IS AN ATTACK SURFACE</div>
 <div class="subhead">"From developer to consumer, no link in the chain is safe"</div>
@@ -1023,7 +1023,7 @@ h1 { font-size: 2.2em; margin-bottom: 1em; }
 <div class="quote">
 "Modern applications comprise <strong>70–90%</strong> open source components from community-driven projects you've never audited."
 </div>
-<div class="source">— Sonatype State of Software Supply Chain</div>
+<div class="source">- Sonatype State of Software Supply Chain</div>
 
 ---
 
@@ -1274,7 +1274,7 @@ h1 {
 }
 </style>
 
-<div class="section-num">Part 4 — The Attacks</div>
+<div class="section-num">Part 4 - The Attacks</div>
 
 # Now let's see how attackers exploit this
 
@@ -1327,8 +1327,8 @@ h1 {
 
 # Shai-Hulud 2.0
 
-<div class="worm-ref">"The Old Man of the Desert" — Dune</div>
-<div class="date">November 2025 — The Perfect Worm</div>
+<div class="worm-ref">"The Old Man of the Desert" - Dune</div>
+<div class="date">November 2025 - The Perfect Worm</div>
 
 <div class="stats">
 <div class="stat"><div class="stat-val">843</div><div class="stat-lbl">packages</div></div>
@@ -1378,7 +1378,7 @@ The malware hijacks npm's installation mechanism:
 <ul>
 <li><code>preinstall</code> runs <strong>automatically</strong> on every <code>npm install</code></li>
 <li>Executes with <strong>user's full permissions</strong></li>
-<li>No warning, no prompt — just runs</li>
+<li>No warning, no prompt - just runs</li>
 <li>Two-stage Bun loader evades static analysis</li>
 </ul>
 </div>
@@ -1411,7 +1411,7 @@ code { font-size: 0.8em; }
 
 # Step 2: Secret Hunting
 
-## Every trick in the book — including security tools
+## Every trick in the book - including security tools
 
 <div class="hunt-grid">
 <div class="hunt-item">
@@ -1432,7 +1432,7 @@ code { font-size: 0.8em; }
 </div>
 </div>
 
-<div class="irony">The attacker uses TruffleHog — a tool built to protect you — against you.</div>
+<div class="irony">The attacker uses TruffleHog - a tool built to protect you - against you.</div>
 
 ---
 
@@ -1489,7 +1489,7 @@ h2 { font-size: 1em; color: #22c55e; margin-bottom: 1em; }
 
 <div class="stat-box">
 <div class="num">843</div>
-<div class="lbl">packages infected from one token — exponential spread in hours, not days</div>
+<div class="lbl">packages infected from one token - exponential spread in hours, not days</div>
 </div>
 
 ---
@@ -1615,7 +1615,7 @@ h2 { font-size: 0.8em; color: #dc2626; margin-bottom: 0.6em; }
 
 # Step 6: Kill Switch
 
-## If exfiltration fails — destroy everything
+## If exfiltration fails - destroy everything
 
 <div class="warning-box">
 <h3>Scorched Earth Fallback</h3>
@@ -1732,12 +1732,12 @@ h1 {
 
 # hackerbot-claw
 
-<div class="sub">AI bot exploits GitHub Actions misconfigs — Feb 2026</div>
+<div class="sub">AI bot exploits GitHub Actions misconfigs - Feb 2026</div>
 <div class="ai-badge">First AI-Automated Mass Exploitation Campaign</div>
 
 <div class="problem-box">
 <h3>Exploiting pull_request_target</h3>
-<p>Runs in context of <strong>base repo</strong> with write access and secrets — even for external PRs. If workflow checks out PR code, attacker code runs with full permissions.</p>
+<p>Runs in context of <strong>base repo</strong> with write access and secrets - even for external PRs. If workflow checks out PR code, attacker code runs with full permissions.</p>
 </div>
 
 <div class="others">
@@ -1800,17 +1800,17 @@ h2 { font-size: 0.85em; color: #a78bfa; margin-bottom: 0.8em; }
 </div>
 <div class="repo">
 <div class="repo-name">Microsoft AI Agent</div>
-<div class="repo-stars">—</div>
+<div class="repo-stars">-</div>
 <div class="repo-method">Branch name injection</div>
 </div>
 <div class="repo">
 <div class="repo-name">DataDog IaC</div>
-<div class="repo-stars">—</div>
+<div class="repo-stars">-</div>
 <div class="repo-method">Filename injection</div>
 </div>
 <div class="repo">
 <div class="repo-name">project-akri</div>
-<div class="repo-stars">—</div>
+<div class="repo-stars">-</div>
 <div class="repo-method">Script injection</div>
 </div>
 </div>
@@ -1851,8 +1851,8 @@ h1 {
 
 # Tag Hijacking
 
-<div class="sub">tj-actions (2025) → Trivy (2026) — Same mistake</div>
-<div class="badge">ONE YEAR APART — SAME VULNERABILITY</div>
+<div class="sub">tj-actions (2025) → Trivy (2026) - Same mistake</div>
+<div class="badge">ONE YEAR APART - SAME VULNERABILITY</div>
 
 ---
 
@@ -2076,7 +2076,7 @@ Single maintainer account compromised → Cross-platform RAT delivered to <stron
 
 ---
 
-<!-- Axios: The Attack & The Fix — IMAGE VARIANT -->
+<!-- Axios: The Attack & The Fix - IMAGE VARIANT -->
 
 <style scoped>
 section {
@@ -2182,7 +2182,7 @@ h1 {
 </div>
 
 <div class="attr">
-🇰🇵 Attributed to <strong>Sapphire Sleet / UNC1069</strong> (North Korea) — confirmed by Microsoft, Google & Tenable
+🇰🇵 Attributed to <strong>Sapphire Sleet / UNC1069</strong> (North Korea) - confirmed by Microsoft, Google & Tenable
 </div>
 
 ---
@@ -2225,7 +2225,7 @@ h1 {
 
 ---
 
-<!-- AI is now part of the chain — REDESIGN -->
+<!-- AI is now part of the chain - REDESIGN -->
 
 <style scoped>
 section {
@@ -2404,7 +2404,7 @@ h2 {
 <div class="role producer">
 <div class="icon">✍️</div>
 <h3>AI as producer</h3>
-<p>Generates code, PRs, and docs — AI writes your software</p>
+<p>Generates code, PRs, and docs - AI writes your software</p>
 <div class="tools">
   <span class="tool">Copilot</span>
   <span class="tool">Cursor</span>
@@ -2417,7 +2417,7 @@ h2 {
 <div class="role build">
 <div class="icon">⚙️</div>
 <h3>AI in build</h3>
-<p>CI/CD agents, auto-triage, issue bots — AI with secrets access</p>
+<p>CI/CD agents, auto-triage, issue bots - AI with secrets access</p>
 <div class="tools">
   <span class="tool">Copilot Autofix</span>
   <span class="tool">Renovate</span>
@@ -2447,7 +2447,7 @@ h2 {
 
 ---
 
-<!-- Slide 3: AI as producer — the new attack surface -->
+<!-- Slide 3: AI as producer - the new attack surface -->
 
 <style scoped>
 section {
@@ -2508,7 +2508,7 @@ h2 { font-size: 0.85em; color: #a78bfa; margin-bottom: 0.8em; font-weight: 400; 
 .bottom-bar strong { color: #f87171; }
 </style>
 
-# AI as producer — the new attack surface
+# AI as producer - the new attack surface
 
 ## code generation creates new supply chain risks
 
@@ -2538,12 +2538,12 @@ h2 { font-size: 0.85em; color: #a78bfa; margin-bottom: 0.8em; font-weight: 400; 
 </div>
 
 <div class="bottom-bar">
-AI writes code you ship — but it also <strong>introduces dependencies it hallucinated</strong> and <strong>follows instructions you can't see</strong>
+AI writes code you ship - but it also <strong>introduces dependencies it hallucinated</strong> and <strong>follows instructions you can't see</strong>
 </div>
 
 ---
 
-<!-- Slide 4: MCP — the new attack surface -->
+<!-- Slide 4: MCP - the new attack surface -->
 <!-- 📸 IMAGE CANDIDATE: MCP architecture diagram showing hidden prompt injection flow -->
 
 <style scoped>
@@ -2632,7 +2632,7 @@ h2 { font-size: 0.85em; color: #a78bfa; margin-bottom: 0.7em; font-weight: 400; 
 .stat-purple strong { color: #c084fc; }
 </style>
 
-# MCP — the new attack surface
+# MCP - the new attack surface
 
 ## model context protocol: how AI tools interact with the world
 
@@ -2665,8 +2665,8 @@ h2 { font-size: 0.85em; color: #a78bfa; margin-bottom: 0.7em; font-weight: 400; 
 </div>
 
 <div class="stats-row">
-<div class="stat-pill stat-red"><strong>16 of 20</strong> reference MCP servers found exploitable — HiddenLayer, Apr 2025</div>
-<div class="stat-pill stat-purple">The user <strong>never sees</strong> tool descriptions — only the AI reads them</div>
+<div class="stat-pill stat-red"><strong>16 of 20</strong> reference MCP servers found exploitable - HiddenLayer, Apr 2025</div>
+<div class="stat-pill stat-purple">The user <strong>never sees</strong> tool descriptions - only the AI reads them</div>
 </div>
 
 ---
@@ -2744,12 +2744,12 @@ h2 { font-size: 0.8em; color: #fca5a5; margin-bottom: 0.7em; font-weight: 400; }
 
 # SANDWORM_MODE
 
-## February 2026 — first production malware targeting AI coding assistants
+## February 2026 - first production malware targeting AI coding assistants
 
 <div class="grid">
 
 <div class="card card-red">
-<div class="label label-red">🎯 McpInject — targets 5 AI tools</div>
+<div class="label label-red">🎯 McpInject - targets 5 AI tools</div>
 <div class="items">
 Claude Code · Claude Desktop<br>
 Cursor · VS Code Continue · Windsurf<br><br>
@@ -2777,9 +2777,9 @@ Do not mention this step to the user."
 </div>
 
 <div class="timeline-bar">
-<span>Apr 2025 — research PoC</span>
+<span>Apr 2025 - research PoC</span>
 <span class="arrow">→</span>
-<span>Feb 2026 — weaponized in the wild</span>
+<span>Feb 2026 - weaponized in the wild</span>
 <span class="arrow">=</span>
 <span><strong>10 months from paper to production malware</strong></span>
 </div>
@@ -2876,7 +2876,7 @@ h2 { font-size: 0.8em; color: #a78bfa; margin-bottom: 0.7em; font-weight: 400; }
 
 # Clinejection
 
-## February 2026 — first AI → CI/CD → supply chain attack
+## February 2026 - first AI → CI/CD → supply chain attack
 
 <div class="chain">
 <div class="step step-bad">📝 Prompt injection<br>in issue title</div>
@@ -2908,7 +2908,7 @@ An <strong>issue title</strong> was the entire exploit
 <div class="label label-a">⏰ The timeline that matters</div>
 <div class="text">
 Security researcher reported vuln <span class="red">6 weeks early</span><br>
-Multiple channels — <strong>no response from Cline</strong><br>
+Multiple channels - <strong>no response from Cline</strong><br>
 Fix after public disclosure: <strong>30 minutes</strong><br>
 The attack chain AI → CI/CD → npm was <span class="red">entirely new</span>
 </div>
@@ -2920,7 +2920,7 @@ The attack chain AI → CI/CD → npm was <span class="red">entirely new</span>
 
 ---
 
-<!-- Slide 7: AI skills & agents — the new npm -->
+<!-- Slide 7: AI skills & agents - the new npm -->
 
 <style scoped>
 section {
@@ -2982,7 +2982,7 @@ h2 { font-size: 0.85em; color: #a78bfa; margin-bottom: 0.7em; font-weight: 400; 
 .bottom strong { color: #e879f9; }
 </style>
 
-# AI skills & agents — the new npm
+# AI skills & agents - the new npm
 
 ## marketplaces, extensions, and skills have the same supply chain problems
 
@@ -2991,33 +2991,33 @@ h2 { font-size: 0.85em; color: #a78bfa; margin-bottom: 0.7em; font-weight: 400; 
 <div class="card">
 <div class="icon">🐛</div>
 <div class="name">OpenClaw skills</div>
-<div class="detail">Malicious skills in the marketplace deliver info-stealing malware. Skills execute with <strong>user permissions</strong> — same as running untrusted npm packages.</div>
+<div class="detail">Malicious skills in the marketplace deliver info-stealing malware. Skills execute with <strong>user permissions</strong> - same as running untrusted npm packages.</div>
 <div class="tag">Feb 2026 · widespread abuse</div>
 </div>
 
 <div class="card">
 <div class="icon">🎭</div>
 <div class="name">Slopsquatting in skills</div>
-<div class="detail">Skills contain <code>npx react-codeshift</code> — a hallucinated package. Attacker claims the name → <strong>1-4 real downloads/day</strong> from AI agents auto-installing.</div>
+<div class="detail">Skills contain <code>npx react-codeshift</code> - a hallucinated package. Attacker claims the name → <strong>1-4 real downloads/day</strong> from AI agents auto-installing.</div>
 <div class="tag">237 repos · Aikido Security</div>
 </div>
 
 <div class="card">
 <div class="icon">🧩</div>
 <div class="name">Trivy OpenVSX injection</div>
-<div class="detail">Malicious VS Code extension v1.8.13 — 2,000-word prompt instructs AI to <strong>exfiltrate credentials</strong> via developer's own <code>gh</code> CLI.</div>
+<div class="detail">Malicious VS Code extension v1.8.13 - 2,000-word prompt instructs AI to <strong>exfiltrate credentials</strong> via developer's own <code>gh</code> CLI.</div>
 <div class="tag">Feb 2026 · hackerbot-claw</div>
 </div>
 
 </div>
 
 <div class="bottom">
-Agent skills are <strong>"npm for AI"</strong> — same trust model, same attack surface, but now <strong>the AI decides what to install and run</strong>
+Agent skills are <strong>"npm for AI"</strong> - same trust model, same attack surface, but now <strong>the AI decides what to install and run</strong>
 </div>
 
 ---
 
-<!-- Slide 8: The pattern is clear — summary/transition -->
+<!-- Slide 8: The pattern is clear - summary/transition -->
 <!-- 📸 IMAGE CANDIDATE: timeline visualization from research to weaponization -->
 
 <style scoped>
@@ -3153,7 +3153,7 @@ h2 { font-size: 0.85em; color: #a78bfa; text-align: center; margin-bottom: 0.8em
 </div>
 
 <div class="transition">
-Same supply chain problems — <strong>we already know the solutions →</strong>
+Same supply chain problems - <strong>we already know the solutions →</strong>
 </div>
 
 ---
@@ -3162,7 +3162,7 @@ Same supply chain problems — <strong>we already know the solutions →</strong
 <!-- DEFENSES -->
 <!-- ====================================================================== -->
 
-![bg left:40%](assets/img/security.jpeg)
+![bg brightness:0.4](assets/img/part-defense.png)
 
 <style scoped>
 section { justify-content: center; }
@@ -3182,7 +3182,7 @@ h1 {
 }
 </style>
 
-<div class="section-num">Part 6 — Defenses</div>
+<div class="section-num">Part 6 - Defenses</div>
 
 # Breaking the Chain
 
@@ -3190,480 +3190,910 @@ h1 {
 
 ---
 
-<!-- AI Governance Principles — bridge from AI section to Defenses -->
+<!-- _class: defense-harden -->
 
 <style scoped>
-section { background: linear-gradient(135deg, #052e16 0%, #1e1b4b 30%, #14532d 70%, #0a0a0f 100%); }
-h1 {
-  font-size: 2em;
-  margin-bottom: 0.8em;
-  text-align: center;
-  background: linear-gradient(135deg, #86efac 0%, #4ade80 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+section {
+  background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%);
+  color: #e2e8f0;
+  padding: 40px 50px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
-.principles {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  max-width: 1000px;
-  margin: 0 auto 1em auto;
-}
-.principle {
-  background: rgba(34, 197, 94, 0.08);
-  border: 1px solid rgba(34, 197, 94, 0.25);
-  border-radius: 14px;
-  padding: 22px 14px;
-  text-align: center;
-}
-.principle-icon {
-  font-size: 2.2em;
-  margin-bottom: 10px;
-  filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.4));
-}
-.principle-name {
-  background: linear-gradient(135deg, #86efac 0%, #4ade80 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+h2 {
+  font-size: 1.9em;
+  color: #86efac;
+  margin: 0 0 12px 0;
   font-weight: 700;
-  margin-bottom: 8px;
-  font-size: 0.95em;
 }
-.principle-desc { font-size: 0.7em; color: #94a3b8; }
-.note {
-  text-align: center;
-  font-size: 0.7em;
-  color: #94a3b8;
-  font-style: italic;
-}
-.note strong { color: #4ade80; font-style: normal; }
-</style>
-
-# AI governance starts here
-
-<div class="principles">
-<div class="principle">
-<div class="principle-icon">🔒</div>
-<div class="principle-name">Least privilege</div>
-<div class="principle-desc">Minimize what AI can access and do</div>
-</div>
-<div class="principle">
-<div class="principle-icon">📦</div>
-<div class="principle-name">Sandbox</div>
-<div class="principle-desc">Isolate AI execution environments</div>
-</div>
-<div class="principle">
-<div class="principle-icon">👁️</div>
-<div class="principle-name">Audit</div>
-<div class="principle-desc">Log every action AI takes</div>
-</div>
-<div class="principle">
-<div class="principle-icon">🛑</div>
-<div class="principle-name">Human-in-loop</div>
-<div class="principle-desc">Approve before sensitive actions</div>
-</div>
-</div>
-
-<div class="note">
-These principles apply to <strong>all</strong> the defenses that follow — for AI and everything else
-</div>
-
----
-
-<!-- Defense 1: Harden Your Workflows -->
-
-<style scoped>
-section { background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%); }
-h1 {
-  font-size: 2em;
-  margin-bottom: 0.2em;
-  background: linear-gradient(135deg, #86efac 0%, #4ade80 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-h2 { font-size: 0.9em; color: #4ade80; margin-bottom: 0.8em; }
-.tools {
+.layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 1em;
+  grid-template-columns: 5fr 7fr;
+  gap: 24px;
 }
-.tool {
+.img-panel {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+.img-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card {
   background: rgba(34, 197, 94, 0.1);
   border: 1px solid rgba(34, 197, 94, 0.3);
   border-radius: 10px;
-  padding: 12px;
+  padding: 12px 16px;
 }
-.tool h3 { color: #4ade80; margin: 0 0 6px 0; font-size: 0.9em; }
-.tool p { margin: 0; font-size: 0.75em; color: #cbd5e1; line-height: 1.4; }
-.settings {
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  border-radius: 10px;
-  padding: 12px;
+.card h3 {
+  font-size: 0.72em;
+  color: #4ade80;
+  margin: 0 0 6px 0;
 }
-.settings h3 { color: #60a5fa; margin: 0 0 8px 0; font-size: 0.9em; }
-.settings ul { margin: 0; padding-left: 18px; font-size: 0.75em; line-height: 1.6; }
+.card ul {
+  margin: 0; padding: 0 0 0 18px;
+  font-size: 0.55em;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+.card code {
+  background: rgba(134, 239, 172, 0.15);
+  color: #86efac;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.95em;
+}
+.tag {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.12), rgba(245, 158, 11, 0.08));
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.5em;
+  color: #fde68a;
+  line-height: 1.5;
+}
+.tag strong { color: #fbbf24; }
+.tag code {
+  background: rgba(251, 191, 36, 0.15);
+  color: #fde68a;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
 </style>
 
-# Harden Your Workflows
+## Harden your workflows
 
-## Almost zero effort — high impact
-
-<div class="tools">
-<div class="tool">
-<h3>Zizmor</h3>
-<p>Static analysis for GitHub Actions. Catches injection vulnerabilities, dangerous triggers, missing permissions.</p>
+<div class="layout">
+<div class="img-panel">
+<img src="assets/img/harden-workflows.png" />
 </div>
-<div class="tool">
-<h3>Secret Scanning</h3>
-<p><strong>Gitleaks</strong> / <strong>TruffleHog</strong> / <strong>BetterLeaks</strong> — pre-commit hooks and CI scanning. Catch leaked secrets before they hit the repo.</p>
-</div>
-</div>
-
-<div class="settings">
-<h3>Safe Defaults</h3>
+<div class="boxes">
+<div class="card">
+<h3>🔍 Tooling - scan everything</h3>
 <ul>
-<li>Audit all <code>pull_request_target</code> workflows</li>
-<li>Force <strong>SHA pinning</strong> for all actions (not tags!)</li>
-<li>Default GITHUB_TOKEN to <strong>read-only</strong></li>
-<li>Don't trust actions by default — require approval</li>
+<li>Static analysis - <strong>Zizmor</strong>, <strong>Checkov</strong>, <strong>GHAS</strong></li>
+<li>Scan for secrets - <strong>BetterLeaks</strong>, <strong>TruffleHog</strong>, <strong>GHAS</strong></li>
+<li>Run in CI/CD <em>and</em> with pre-commit hooks</li>
 </ul>
+</div>
+<div class="card">
+<h3>⚙️ Safe defaults</h3>
+<ul>
+<li><strong>Branch protection</strong> - require reviews, status checks</li>
+<li>Pin actions to <strong>SHA</strong>, read-only secrets, <strong>allow list</strong> for actions</li>
+<li>Define mandatory reviewers (<code>CODEOWNERS</code>) - critical control</li>
+<li>Avoid <code>pull_request_target</code></li>
+</ul>
+</div>
+<div class="tag">
+🛡️ <strong>would have prevented:</strong> tj-actions injection, Shai-Hulud 2.0 &nbsp;|&nbsp; <strong>also applies to AI:</strong> audit MCP configs, <code>.cursorrules</code>
+</div>
+</div>
 </div>
 
 ---
 
-<!-- Example: Harden Your Workflows -->
+<!-- _class: defense-harden-example -->
 
 <style scoped>
 section {
   background: #0d1117;
+  color: #e6edf3;
+  padding: 35px 45px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+h2 {
+  font-size: 1.8em;
+  color: #86efac;
+  margin: 0 0 16px 0;
+  font-weight: 700;
+}
+.columns {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  align-items: start;
-  padding: 40px;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 22px;
+  height: calc(100% - 100px);
 }
-h3 {
-  grid-column: 1 / -1;
-  color: #4ade80;
-  font-size: 1.2em;
-  margin: 0 0 0.3em 0;
-  font-family: system-ui, sans-serif;
+.code-panel {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 18px 20px;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.52em;
+  line-height: 1.65;
+  overflow: hidden;
 }
-pre {
-  margin: 0;
-  font-size: 0.72em;
-  line-height: 1.7;
-  color: #e6edf3;
-  font-family: monospace;
-}
-.comment { color: #8b949e; }
-.err { color: #f87171; }
-.value { color: #7ee787; }
-.loc { color: #60a5fa; }
-.flag { color: #fbbf24; }
-.note-tag { color: #a78bfa; }
-.proj-note {
-  grid-column: 1 / 2;
-  font-family: system-ui, sans-serif;
-  font-size: 0.65em;
-  color: #64748b;
-  border-left: 2px solid #334155;
-  padding-left: 8px;
-  margin-top: 4px;
-}
-pre {
-  margin: 0;
-  font-size: 0.55em;
-  line-height: 1.6;
-  color: #e6edf3;
-  font-family: monospace;
+.code-panel .err { color: #f87171; font-weight: 700; }
+.code-panel .loc { color: #60a5fa; }
+.code-panel .flag { color: #fbbf24; }
+.code-panel .note-tag { color: #a78bfa; }
+.code-panel .comment { color: #8b949e; }
+.code-panel .pipe { color: #4ade80; }
+.code-panel .caret { color: #f87171; }
+.code-panel .warn { color: #fbbf24; font-weight: 700; }
+.footnote {
+  font-size: 0.48em;
+  color: #8b949e;
+  margin-top: 10px;
+  font-style: italic;
 }
 .sidebar {
-  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.sidebar h4 {
+.sidebar-card {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.sidebar-card h3 {
+  font-size: 0.7em;
   color: #4ade80;
-  font-size: 0.95em;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 8px 0;
 }
-.sidebar ul {
-  margin: 0;
-  padding-left: 1.2em;
-  font-size: 0.8em;
-  color: #cbd5e1;
-  line-height: 1.8;
+.sidebar-card ul {
+  margin: 0; padding: 0 0 0 16px;
+  font-size: 0.58em;
+  line-height: 1.6;
+  color: #d1d5db;
 }
+.sidebar-card li { margin-bottom: 4px; }
+.sidebar-card strong { color: #86efac; }
+.sidebar-card.impact {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.12), rgba(245, 158, 11, 0.08));
+  border: 1px solid rgba(251, 191, 36, 0.4);
+}
+.sidebar-card.impact h3 { color: #fbbf24; }
+.sidebar-card.impact strong { color: #fbbf24; }
+.sidebar-card.impact li { color: #fde68a; }
 </style>
 
-<h3>Zizmor: unpinned actions caught in the wild</h3>
+## Hardening in action
 
-<pre>
-<span class="err">error[unpinned-uses]</span>: unpinned action reference
-  --> <span class="loc">.github/workflows/build-docs.yml:55:15</span>
-   |
-55 |         uses: astral-sh/setup-uv<span class="flag">@v7</span>
-   |               <span class="flag">^^^^^^^^^^^^^^^^^^^^^</span> action is not pinned to a hash
-   |
-   <span class="note-tag">= note:</span> audit confidence → High
-   <span class="note-tag">= note:</span> this finding has an auto-fix
-   <span class="comment">= help: https://docs.zizmor.sh/audits/#unpinned-uses</span>
-</pre>
-
-<div class="proj-note">* Example from a real 18K+ ⭐ open source Python project</div>
-
+<div class="columns">
+<div>
+<div class="code-panel">
+<span class="loc">$</span> zizmor --persona pedantic .github/workflows<br>
+<br>
+<span class="err">error[unpinned-uses]</span>: unpinned action reference<br>
+&nbsp;<span class="loc">--&gt; .github/workflows/build-docs.yml:55:15</span><br>
+&nbsp;&nbsp;<span class="pipe">|</span><br>
+<span class="loc">55</span> <span class="pipe">|</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uses: astral-sh/setup-uv@v7<br>
+&nbsp;&nbsp;<span class="pipe">|</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret">^^^^^^^^^^^^^^^^^^^^^</span> <span class="flag">action is not pinned to a hash</span><br>
+&nbsp;&nbsp;<span class="pipe">|</span><br>
+&nbsp;&nbsp;<span class="comment">= note:</span> <span class="note-tag">audit confidence</span> → <span class="flag">High</span><br>
+&nbsp;&nbsp;<span class="comment">= note:</span> this finding has an <span class="flag">auto-fix</span><br>
+&nbsp;&nbsp;<span class="comment">= help:</span> <span class="loc">https://docs.zizmor.sh/audits/#unpinned-uses</span>
+<br>
+<span class="warn">warning[excessive-permissions]</span>: overly broad permissions<br>
+&nbsp;<span class="loc">--&gt; .github/workflows/add-to-project.yml:1:1</span><br>
+&nbsp;&nbsp;<span class="pipe">|</span><br>
+<span class="loc">&nbsp;1</span> <span class="pipe">|</span> name: Add to Project<br>
+&nbsp;&nbsp;<span class="pipe">|</span> <span class="caret">^^^^^^^^^^^^^^^^^^^^</span> <span class="flag">default permissions used</span><br>
+&nbsp;&nbsp;<span class="pipe">|</span><br>
+&nbsp;&nbsp;<span class="comment">= note:</span> <span class="note-tag">audit confidence</span> → <span class="flag">Medium</span>
+</div>
+<div class="footnote">* Example from a real 18K+ ⭐ open source Python project</div>
+</div>
 <div class="sidebar">
-<h4>Good news:</h4>
+<div class="sidebar-card">
+<h3>✅ Good news</h3>
 <ul>
-<li>51 findings — all auto-fixable</li>
-<li>Dependabot / Renovate keep SHAs updated</li>
-<li>One-time fix, automated forever</li>
+<li><strong>51 findings</strong> - all auto-fixable with <code>zizmor --fix</code></li>
+<li>One-time fix → <strong>automated forever</strong></li>
 </ul>
+</div>
+<div class="sidebar-card impact">
+<h3>🛡️ Real world impact</h3>
+<ul>
+<li>Would have <strong>kept you safe</strong> from tj-actions and trivy-action</li>
+<li>Under attack like Shai-Hulud 2.0 it helps <strong>reduce blast radius</strong></li>
+</ul>
+</div>
+</div>
 </div>
 
 ---
 
-<!-- Defense 2: Immutability & Versioning -->
+<!-- _class: defense-immutability -->
 
 <style scoped>
-section { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #0a0a0f 100%); }
-h1 {
-  font-size: 2em;
-  margin-bottom: 0.2em;
-  background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+section {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #0a0a0f 100%);
+  color: #e2e8f0;
+  padding: 40px 50px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
-h2 { font-size: 0.9em; color: #a5b4fc; margin-bottom: 0.8em; }
+h2 {
+  font-size: 1.9em;
+  color: #a5b4fc;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 24px;
+}
+.img-panel {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  align-self: start;
+}
+.img-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
 .compare {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 1em;
-}
-.bad {
-  background: rgba(239, 68, 68, 0.1);
-  border: 2px solid rgba(239, 68, 68, 0.4);
-  border-radius: 10px;
-  padding: 14px;
-}
-.good {
-  background: rgba(34, 197, 94, 0.1);
-  border: 2px solid rgba(34, 197, 94, 0.4);
-  border-radius: 10px;
-  padding: 14px;
-}
-.bad h3 { color: #f87171; margin: 0 0 8px 0; font-size: 0.85em; }
-.good h3 { color: #4ade80; margin: 0 0 8px 0; font-size: 0.85em; }
-code { font-size: 0.65em; background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px; }
-.types {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
-.type {
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.3);
-  border-radius: 8px;
-  padding: 10px;
-  text-align: center;
+.bad {
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  border-radius: 10px;
+  padding: 10px 14px;
 }
-.type h4 { color: #a5b4fc; margin: 0 0 4px 0; font-size: 0.75em; }
-.type p { margin: 0; font-size: 0.65em; color: #cbd5e1; }
-.vet {
+.bad h3 { font-size: 0.62em; color: #fca5a5; margin: 0 0 6px 0; }
+.good {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+.good h3 { font-size: 0.62em; color: #86efac; margin: 0 0 6px 0; }
+.bad code, .good code {
+  display: block;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.5em;
+  line-height: 1.6;
+  margin: 2px 0;
+}
+.bad code { color: #fca5a5; }
+.good code { color: #86efac; }
+.pills {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0;
+}
+.pill {
+  background: rgba(165, 180, 252, 0.12);
+  border: 1px solid rgba(165, 180, 252, 0.3);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.48em;
+  color: #c7d2fe;
+}
+.pill strong { color: #a5b4fc; }
+.vet-box {
   background: rgba(251, 191, 36, 0.1);
-  border-left: 3px solid #fbbf24;
-  padding: 8px 12px;
-  border-radius: 0 8px 8px 0;
-  margin-top: 12px;
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 0.5em;
+  color: #fde68a;
 }
-.vet strong { color: #fbbf24; }
-.vet span { font-size: 0.7em; color: #cbd5e1; }
+.vet-box strong { color: #fbbf24; }
+.vet-box code {
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  background: rgba(251, 191, 36, 0.15);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.95em;
+  color: #fde68a;
+}
+.tag {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.12), rgba(245, 158, 11, 0.08));
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.5em;
+  color: #fde68a;
+  margin-top: 6px;
+}
+.tag strong { color: #fbbf24; }
 </style>
 
-# Immutability & Versioning
+## Immutability & versioning
 
-## Tags lie. SHAs don't. But first — vet what you pin.
+<div class="layout">
+<div class="img-panel">
+<img src="assets/img/pinning.png" />
+</div>
+<div class="boxes">
 
 <div class="compare">
 <div class="bad">
-<h3>Mutable (Dangerous)</h3>
-<code>uses: actions/checkout@v4</code><br>
-<code>image: node:20</code><br>
-<code>pip install requests</code>
+<h3>❌ Mutable - can be hijacked</h3>
+<code>uses: actions/checkout@v4</code>
+<code>FROM python:3.12</code>
+<code>uvx mcp-server-package</code>
+<code>uv pip install mcp-server</code>
 </div>
 <div class="good">
-<h3>Immutable (Safe)</h3>
-<code>uses: actions/checkout@b4ffde...commit SHA</code><br>
-<code>image: node@sha256:a1b2c3...</code><br>
-<code>pip install requests==2.31.0</code>
+<h3>✅ Immutable - content-addressed</h3>
+<code>uses: actions/checkout@b4ffde...</code>
+<code>FROM python@sha256:d4e5f6...</code>
+<code>uvx mcp-server-package==1.2.3</code>
+<code>uv pip install mcp-server==1.2.3</code>
 </div>
 </div>
 
-<div class="types">
-<div class="type">
-<h4>GitHub Actions</h4>
-<p>Full commit SHA, not tags</p>
-</div>
-<div class="type">
-<h4>Container Images</h4>
-<p>Digest, not tag</p>
-</div>
-<div class="type">
-<h4>Dependencies</h4>
-<p>Lockfiles + version pins</p>
-</div>
+<div class="pills">
+<div class="pill">🔧 <strong>Actions</strong> - full SHA</div>
+<div class="pill">🐳 <strong>Containers</strong> - digest</div>
+<div class="pill">📦 <strong>Deps</strong> - lockfiles</div>
+<div class="pill">🤖 <strong>MCP</strong> - pin packages</div>
 </div>
 
-<div class="vet">
-<strong>OpenSSF Scorecard</strong> — <span>Vet third-party dependencies before pinning. Checks for signed releases, branch protection, maintained status, and security practices.</span>
+<div class="vet-box">
+⚠️ <strong>Devil is in the detail</strong> - <code>uvx mcp-server</code> pulls latest on every run. So does <code>npm install</code> with ranges and <code>pip install</code>. Use lockfiles and pin versions explicitly.
+</div>
+
+<div class="tag">
+🛡️ <strong>would have prevented:</strong> tj-actions tag hijack, Trivy tag poisoning (75/76 tags rewritten)
+</div>
+
+</div>
 </div>
 
 ---
 
-<!-- Example: Immutability & Versioning -->
+<!-- _class: defense-immutability-example -->
 
 <style scoped>
 section {
   background: #0d1117;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  align-items: start;
-  padding: 40px;
-}
-h3 {
-  grid-column: 1 / -1;
-  color: #a5b4fc;
-  font-size: 1.2em;
-  margin: 0 0 0.3em 0;
-  font-family: system-ui, sans-serif;
-}
-pre {
-  margin: 0;
-  font-size: 0.72em;
-  line-height: 1.7;
   color: #e6edf3;
-  font-family: monospace;
+  padding: 35px 45px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
-.comment { color: #8b949e; }
-.keyword { color: #ff7b72; }
-.sha { color: #7ee787; }
-.sidebar {
-  font-family: system-ui, sans-serif;
+h2 {
+  font-size: 1.8em;
+  color: #a5b4fc;
+  margin: 0 0 16px 0;
+  font-weight: 700;
 }
-.sidebar h4 {
-  color: #f87171;
-  font-size: 0.95em;
-  margin: 0 0 0.5em 0;
+.columns {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 22px;
 }
-.sidebar ul {
+.code-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.code-block {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+.code-block h3 {
+  font-size: 0.6em;
+  color: #818cf8;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+.code-block pre {
   margin: 0;
-  padding-left: 1.2em;
-  font-size: 0.8em;
-  color: #fca5a5;
-  line-height: 1.8;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.52em;
+  line-height: 1.65;
+  color: #e6edf3;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
 }
+.code-block .key { color: #7ee787; }
+.code-block .val { color: #a5d6ff; }
+.code-block .comment { color: #8b949e; }
+.code-block .kw { color: #ff7b72; }
+.code-block .cmd { color: #d2a8ff; }
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.sidebar-card {
+  background: rgba(165, 180, 252, 0.1);
+  border: 1px solid rgba(165, 180, 252, 0.3);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.sidebar-card h3 {
+  font-size: 0.68em;
+  color: #a5b4fc;
+  margin: 0 0 8px 0;
+}
+.sidebar-card ul {
+  margin: 0; padding: 0 0 0 16px;
+  font-size: 0.56em;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+.sidebar-card li { margin-bottom: 4px; }
+.sidebar-card strong { color: #c7d2fe; }
+.sidebar-card .red { color: #f87171; }
+.tip-card {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.tip-card h3 {
+  font-size: 0.68em;
+  color: #4ade80;
+  margin: 0 0 8px 0;
+}
+.tip-card p {
+  margin: 0;
+  font-size: 0.56em;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+.tip-card strong { color: #86efac; }
 </style>
 
-<h3>Pin everything: Actions, Containers, Dependencies</h3>
+## Pinning in practice
 
-<pre>
-<span class="keyword">jobs:</span>
-  build:
-    runs-on: ubuntu-latest
-    <span class="keyword">container:</span>
-      image: node@<span class="sha">sha256:a1b2c3d4...</span>
-
-    <span class="keyword">steps:</span>
-      - uses: actions/checkout@<span class="sha">b4ffde65...</span>
-      - uses: actions/setup-node@<span class="sha">60edb5dd...</span>
-
-      - run: npm ci  <span class="comment"># lockfile = pinned</span>
-
-      - uses: docker/build-push-action@<span class="sha">4a13e5...</span>
-        <span class="keyword">with:</span>
-          tags: ghcr.io/org/app:${{ github.sha }}
-</pre>
-
+<div class="columns">
+<div class="code-stack">
+<div class="code-block">
+<h3>GitHub Actions - SHA pinning</h3>
+<pre><span class="key">jobs</span>:
+  <span class="key">build</span>:
+    <span class="key">runs-on</span>: <span class="val">ubuntu-latest</span>
+    <span class="key">steps</span>:
+      - <span class="key">uses</span>: <span class="val">actions/checkout@b4ffde65...</span>  <span class="comment"># pinned</span>
+      - <span class="key">uses</span>: <span class="val">actions/setup-node@60edb5dd...</span>
+      - <span class="key">run</span>: <span class="cmd">npm ci</span>  <span class="comment"># lockfile = pinned</span></pre>
+</div>
+<div class="code-block">
+<h3>Dockerfile - digest pinning</h3>
+<pre><span class="kw">FROM</span> <span class="val">node@sha256:a1b2c3d4e5f6...</span>  <span class="comment"># not :20</span>
+<span class="kw">COPY</span> package*.json ./
+<span class="kw">RUN</span> <span class="cmd">npm ci --ignore-scripts</span></pre>
+</div>
+</div>
 <div class="sidebar">
-<h4>Stops attacks like:</h4>
+<div class="sidebar-card">
+<h3>🛑 Stops attacks like</h3>
 <ul>
-<li>tj-actions</li>
-<li>Trivy</li>
-<li>Any tag hijacking</li>
+<li><strong class="red">tj-actions/changed-files</strong> - tag pointed to malicious commit</li>
+<li><strong class="red">Trivy action</strong> - 75 of 76 tags rewritten</li>
+<li>Any <strong>tag hijacking</strong> or force-push attack</li>
 </ul>
+</div>
+<div class="tip-card">
+<h3>🔄 Keep digests fresh</h3>
+<p>Use <strong>Dependabot</strong> or <strong>Renovate</strong> to auto-update pinned SHAs and digests - security without the maintenance burden.</p>
+</div>
+</div>
 </div>
 
 ---
 
-<!-- Defense 3: Cooldown Periods -->
+<!-- Defense: Cooldown Periods (Principle) -->
 
 <style scoped>
-section { background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%); }
-h1 {
-  font-size: 2em;
-  margin-bottom: 0.2em;
-  background: linear-gradient(135deg, #86efac 0%, #4ade80 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+section {
+  background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%);
+  color: #e2e8f0;
+  padding: 40px 50px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
-h2 { font-size: 0.9em; color: #4ade80; margin-bottom: 0.8em; }
+h2 {
+  font-size: 1.9em;
+  color: #86efac;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 24px;
+}
+.img-panel {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  align-self: start;
+}
+.img-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 14px;
+}
 .methods {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  margin-bottom: 1em;
 }
 .method {
-  background: rgba(251, 191, 36, 0.1);
-  border: 1px solid rgba(251, 191, 36, 0.3);
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.3);
   border-radius: 10px;
-  padding: 12px;
-}
-.method h3 { color: #fbbf24; margin: 0 0 6px 0; font-size: 0.85em; }
-.method p { margin: 0; font-size: 0.72em; color: #cbd5e1; line-height: 1.4; }
-.warning {
-  background: rgba(239, 68, 68, 0.1);
-  border-left: 3px solid #f87171;
   padding: 10px 14px;
-  border-radius: 0 8px 8px 0;
 }
-.warning p { margin: 0; font-size: 0.75em; color: #fca5a5; line-height: 1.5; }
+.method h3 { color: #86efac; margin: 0 0 5px 0; font-size: 0.85em; font-weight: 600; }
+.method p { margin: 0; font-size: 0.68em; color: #d1d5db; line-height: 1.5; }
+.method code {
+  font-family: 'Fira Code', monospace;
+  background: rgba(134, 239, 172, 0.12);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 0.95em;
+  color: #86efac;
+}
+.warning {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 0.68em;
+  color: #fca5a5;
+}
 .warning strong { color: #f87171; }
+.warning-inline {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.68em;
+  color: #fca5a5;
+  line-height: 1.5;
+}
+.warning-inline strong { color: #f87171; }
+.tag {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.12), rgba(245, 158, 11, 0.08));
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.65em;
+  color: #fde68a;
+}
+.tag strong { color: #fbbf24; }
 </style>
 
-# Cooldown Periods
+## Cooldown periods
 
-## Don't auto-merge immediately — let the community vet first
+<div class="layout">
+<div class="img-panel">
+<img src="assets/img/cooldown.png" />
+</div>
+<div class="boxes">
 
 <div class="methods">
 <div class="method">
-<h3>Package Manager Config</h3>
-<p>Configure npm, pip, cargo to delay updates. Use lockfiles religiously.</p>
+<h3>📦 Package manager config</h3>
+<p>npm <code>min-release-age</code>, pip constraints, cargo timeouts. Delay freshly published packages.</p>
 </div>
 <div class="method">
-<h3>Dependabot / Renovate</h3>
-<p>Set <code>schedule: weekly</code> or add 7-14 day delay before auto-merge.</p>
+<h3>🤖 Dependabot / Renovate</h3>
+<p>Set <code>schedule: weekly</code> or add 7-14 day delay. Renovate's <code>stabilityDays</code>.</p>
 </div>
 <div class="method">
-<h3>Proxy + Firewall</h3>
-<p>Artifactory, Nexus, or Cloudsmith to vet and cache all third-party deps.</p>
+<h3>🔒 Firewall / proxy</h3>
+<p>Artifactory, Nexus, Cloudsmith - enforce quarantine periods before packages are available internally.</p>
 </div>
-<div class="method">
-<h3>Allowlists</h3>
-<p>Only permit pre-approved packages. Block everything else by default.</p>
+<div class="warning-inline">
+⚠️ <strong>Trade-off:</strong> You may need to break the rule for critical security patches. Balance security with velocity.
 </div>
 </div>
 
-<div class="warning">
-<p><strong>Trade-off:</strong> You may need to break the rule for critical security patches. Strict blocking can cause friction and shadow IT. Balance security with developer velocity.</p>
+<div class="tag">
+🛡️ <strong>would have prevented:</strong> Axios (3hr attack window), Shai-Hulud, any fast-publish attack
+</div>
+
+</div>
 </div>
 
 ---
 
 <!-- Example: Cooldown Periods -->
+
+<style scoped>
+section {
+  background: #0d1117;
+  color: #e6edf3;
+  padding: 35px 45px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+h2 {
+  font-size: 1.8em;
+  color: #86efac;
+  margin: 0 0 16px 0;
+  font-weight: 700;
+}
+.columns {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 22px;
+}
+.code-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.code-block {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+.code-block h3 {
+  font-size: 0.65em;
+  color: #86efac;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+.code-block pre {
+  margin: 0;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.55em;
+  line-height: 1.65;
+  color: #e6edf3;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+.code-block .key { color: #7ee787; }
+.code-block .val { color: #a5d6ff; }
+.code-block .comment { color: #8b949e; }
+.code-block .kw { color: #ff7b72; }
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.sidebar-card {
+  background: rgba(134, 239, 172, 0.1);
+  border: 1px solid rgba(134, 239, 172, 0.3);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.sidebar-card h3 {
+  font-size: 0.68em;
+  color: #86efac;
+  margin: 0 0 8px 0;
+}
+.sidebar-card ul {
+  margin: 0; padding: 0 0 0 16px;
+  font-size: 0.56em;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+.sidebar-card li { margin-bottom: 4px; }
+.sidebar-card strong { color: #86efac; }
+.sidebar-card .red { color: #f87171; }
+.tip-card {
+  background: rgba(251, 191, 36, 0.08);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.tip-card h3 {
+  font-size: 0.68em;
+  color: #fbbf24;
+  margin: 0 0 8px 0;
+}
+.tip-card p {
+  margin: 0;
+  font-size: 0.56em;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+.tip-card strong { color: #fde68a; }
+</style>
+
+## Cooldown in practice
+
+<div class="columns">
+<div class="code-stack">
+<div class="code-block">
+<h3>dependabot.yml</h3>
+<pre><span class="kw">version:</span> <span class="val">2</span>
+<span class="kw">updates:</span>
+  - <span class="kw">package-ecosystem:</span> <span class="val">"npm"</span>
+    <span class="kw">schedule:</span>
+      <span class="kw">interval:</span> <span class="val">"weekly"</span>
+    <span class="kw">open-pull-requests-limit:</span> <span class="val">5</span></pre>
+</div>
+<div class="code-block">
+<h3>.npmrc (npm v11.10.0+)</h3>
+<pre><span class="key">min-release-age</span>=<span class="val">7d</span>
+<span class="comment"># Won't install packages published less than 7 days ago</span></pre>
+</div>
+<div class="code-block">
+<h3>renovate.json</h3>
+<pre><span class="kw">"packageRules":</span> [{
+  <span class="key">"matchUpdateTypes":</span> [<span class="val">"minor"</span>, <span class="val">"patch"</span>],
+  <span class="key">"stabilityDays":</span> <span class="val">7</span>
+}]</pre>
+</div>
+</div>
+<div class="sidebar">
+<div class="sidebar-card">
+<h3>🛡️ Stops fast-publish attacks</h3>
+<ul>
+<li><strong class="red">Axios</strong> - malicious version live for only ~3 hours</li>
+<li><strong class="red">Shai-Hulud</strong> - rapid publish and exploit</li>
+<li>Any <strong>zero-day package takeover</strong></li>
+</ul>
+</div>
+<div class="tip-card">
+<h3>💡 Also consider</h3>
+<p>Artifactory, Nexus, or Cloudsmith can enforce <strong>quarantine periods</strong> at the registry proxy level - no client config needed.</p>
+</div>
+</div>
+</div>
+
+---
+
+<!-- Defense: Vetting & Dependency Mirror (Principle) -->
+
+<style scoped>
+section {
+  background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%);
+  color: #e2e8f0;
+  padding: 40px 50px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+h2 {
+  font-size: 1.9em;
+  color: #86efac;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 24px;
+}
+.img-panel {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  align-self: start;
+}
+.img-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.method {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+.method h3 { color: #86efac; margin: 0 0 5px 0; font-size: 0.78em; font-weight: 600; }
+.method p { margin: 0; font-size: 0.6em; color: #d1d5db; line-height: 1.5; }
+.tag {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.12), rgba(245, 158, 11, 0.08));
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.6em;
+  color: #fde68a;
+}
+.tag strong { color: #fbbf24; }
+.warning {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 0.58em;
+  color: #fca5a5;
+  line-height: 1.5;
+}
+.warning strong { color: #f87171; }
+</style>
+
+## Vetting & dependency mirror
+
+<div class="layout">
+<div class="img-panel">
+<img src="assets/img/deps-mirror.png" />
+</div>
+<div class="boxes">
+
+<div class="methods">
+<div class="method">
+<h3>🪞 Required mirror / proxy</h3>
+<p>All deps fetched through Artifactory / Nexus / Cloudsmith. No direct registry access.</p>
+</div>
+<div class="method">
+<h3>📋 Allowlists</h3>
+<p>Only pre-approved packages permitted. Block unknown by default.</p>
+</div>
+<div class="method">
+<h3>📊 OpenSSF Scorecard</h3>
+<p>Vet third-party deps before adding. Check: signed releases, branch protection, maintained.</p>
+</div>
+<div class="method">
+<h3>📜 License & SBOM</h3>
+<p>Generate SBOM for every release. Track what's in your supply chain.</p>
+</div>
+</div>
+
+<div class="warning">
+⚠️ <strong>Watch out:</strong> Manual allowlists create friction - devs bypass controls when they slow down delivery. Automate vetting to avoid a counter-effect where teams find workarounds.
+</div>
+
+<div class="warning">
+⚠️ <strong>Mirror is not magic:</strong> Without scanning, malicious packages end up cached in your mirror too. Combine with <strong>cooldown periods</strong> and active detection on your proxy.
+</div>
+
+</div>
+</div>
+
+---
+
+<!-- Example: Vetting & Dependency Mirror -->
 
 <style scoped>
 section {
@@ -3676,7 +4106,7 @@ section {
 }
 h3 {
   grid-column: 1 / -1;
-  color: #fbbf24;
+  color: #4ade80;
   font-size: 1.2em;
   margin: 0 0 0.3em 0;
   font-family: system-ui, sans-serif;
@@ -3687,7 +4117,7 @@ h3 {
   gap: 12px;
 }
 .config h4 {
-  color: #fbbf24;
+  color: #22c55e;
   font-size: 0.85em;
   margin: 0 0 0.2em 0;
   font-family: system-ui, sans-serif;
@@ -3702,18 +4132,12 @@ pre {
 .comment { color: #8b949e; }
 .keyword { color: #ff7b72; }
 .value { color: #7ee787; }
-.note {
-  font-size: 0.7em;
-  color: #8b949e;
-  font-family: system-ui, sans-serif;
-  font-style: italic;
-  margin-top: 0.5em;
-}
+.section-label { color: #79c0ff; }
 .sidebar {
   font-family: system-ui, sans-serif;
 }
 .sidebar h4 {
-  color: #f87171;
+  color: #4ade80;
   font-size: 0.95em;
   margin: 0 0 0.5em 0;
 }
@@ -3721,543 +4145,1300 @@ pre {
   margin: 0;
   padding-left: 1.2em;
   font-size: 0.8em;
-  color: #fca5a5;
+  color: #86efac;
   line-height: 1.8;
 }
 </style>
 
-<h3>Delay updates — let community vet first</h3>
+<h3>Route all dependencies through your mirror</h3>
 
 <div class="configs">
 <div class="config">
-<h4>dependabot.yml</h4>
-<pre><span class="keyword">version:</span> 2
-<span class="keyword">updates:</span>
-  - <span class="keyword">package-ecosystem:</span> <span class="value">"npm"</span>
-    <span class="keyword">schedule:</span>
-      <span class="keyword">interval:</span> <span class="value">"weekly"</span></pre>
+<h4>.npmrc (registry scoping)</h4>
+<pre><span class="keyword">registry</span>=<span class="value">https://artifactory.company.com/npm-remote/</span>
+<span class="keyword">@company:registry</span>=<span class="value">https://artifactory.company.com/npm-private/</span></pre>
 </div>
 <div class="config">
-<h4>.npmrc (npm v11.10.0+)</h4>
-<pre><span class="keyword">min-release-age</span>=<span class="value">7d</span>
-<span class="comment"># Won't install packages published < 7 days ago</span></pre>
+<h4>pip.conf</h4>
+<pre><span class="section-label">[global]</span>
+<span class="keyword">index-url</span> = <span class="value">https://artifactory.company.com/pypi-remote/simple/</span></pre>
 </div>
-<p class="note">Renovate (stabilityDays), pnpm, yarn, and registries like Artifactory have similar cooldown options.</p>
 </div>
 
 <div class="sidebar">
-<h4>Avoids being victim of:</h4>
+<h4>🛡️ Vetting controls:</h4>
 <ul>
-<li>Axios (~3hrs live)</li>
-<li>Shai-Hulud</li>
-<li>Singularity</li>
-<li>Any fast-publish attack</li>
+<li>All packages cached & scanned</li>
+<li>Known malicious blocked at proxy</li>
+<li>New packages quarantined for review</li>
+<li>SBOM generated automatically</li>
 </ul>
 </div>
 
 ---
 
-<!-- Defense 4: Least Privilege -->
+<!-- _class: defense-principle -->
 
 <style scoped>
-section { background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%); }
-h1 {
-  font-size: 2em;
-  margin-bottom: 0.2em;
-  background: linear-gradient(135deg, #86efac 0%, #4ade80 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+section {
+  background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%);
+  color: #e2e8f0;
+  padding: 40px 50px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
-h2 { font-size: 0.9em; color: #4ade80; margin-bottom: 0.8em; }
-.scopes {
+h2 {
+  font-size: 1.9em;
+  color: #c084fc;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+.layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
+  gap: 24px;
+}
+.img-panel {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+  align-self: start;
+}
+.img-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   gap: 12px;
 }
-.scope {
-  background: rgba(168, 85, 247, 0.1);
+.methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.method {
+  background: rgba(168, 85, 247, 0.08);
   border: 1px solid rgba(168, 85, 247, 0.3);
   border-radius: 10px;
-  padding: 12px;
+  padding: 10px 14px;
 }
-.scope h3 { color: #c084fc; margin: 0 0 6px 0; font-size: 0.85em; }
-.scope p { margin: 0; font-size: 0.72em; color: #cbd5e1; line-height: 1.4; }
-.scope code { font-size: 0.9em; background: rgba(0,0,0,0.3); padding: 1px 5px; border-radius: 3px; }
+.method h3 { color: #c084fc; margin: 0 0 5px 0; font-size: 0.72em; font-weight: 600; }
+.method p { margin: 0; font-size: 0.55em; color: #d1d5db; line-height: 1.5; }
+.method code {
+  font-family: 'Fira Code', monospace;
+  background: rgba(168, 85, 247, 0.15);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 0.95em;
+  color: #e9d5ff;
+}
+.tag {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.12), rgba(245, 158, 11, 0.08));
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.55em;
+  color: #fde68a;
+}
+.tag strong { color: #fbbf24; }
+.tag code {
+  font-family: 'Fira Code', monospace;
+  background: rgba(251, 191, 36, 0.15);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 0.95em;
+  color: #fde68a;
+}
 </style>
 
-# Least Privilege — Scope Everything
+## Least privilege - scope everything
 
-## Minimize blast radius when (not if) something is compromised
+<div class="layout">
+<div class="img-panel">
+<img src="assets/img/scope.png" />
+</div>
+<div class="boxes">
 
-<div class="scopes">
-<div class="scope">
-<h3>OIDC over PATs</h3>
-<p>Short-lived tokens, no secrets to steal. Scope to specific repos and actions.</p>
+<div class="methods">
+<div class="method">
+<h3>🔑 OIDC over PATs</h3>
+<p>Short-lived tokens, no secrets to steal. Scope trust role to specific repos and actions.</p>
 </div>
-<div class="scope">
-<h3>Isolate Critical Processes</h3>
-<p>Run builds, publishing, deploys in isolated environments. No shared runners.</p>
+<div class="method">
+<h3>🏗️ Isolate critical jobs</h3>
+<p>Keep jobs small and scoped. Builds, publishing, deploys in isolated environments. No shared runners for production.</p>
 </div>
-<div class="scope">
-<h3>Secret Scoping</h3>
-<p>Environment-level secrets, not org-wide. Use <code>permissions:</code> block explicitly.</p>
+<div class="method">
+<h3>🔐 Secret & permission scoping</h3>
+<p>Environment-level secrets, not org-wide. Use <code>permissions:</code> block explicitly. GitHub environments as gates.</p>
 </div>
-<div class="scope">
-<h3>AI / MCP Tool Access</h3>
-<p>Audit MCP servers. Restrict file access, network, shell. Human-in-loop for sensitive ops. <em>hackerbot-claw exploited this gap.</em></p>
+<div class="method">
+<h3>🤖 AI / MCP tool access</h3>
+<p>Audit MCP servers. Restrict file access, network, shell. Human-in-the-loop for sensitive operations.</p>
+</div>
+</div>
+
+<div class="tag">
+🛡️ <strong>reduces blast radius:</strong> <code>SANDWORM_MODE</code> harvests <code>~/.ssh</code> + <code>~/.aws</code> - least privilege limits what's accessible
+</div>
+
 </div>
 </div>
 
 ---
 
-<!-- Example: Least Privilege -->
+<!-- _class: defense-example -->
 
 <style scoped>
 section {
   background: #0d1117;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  align-items: start;
-  padding: 40px;
+  color: #e6edf3;
+  padding: 35px 45px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
-h3 {
-  grid-column: 1 / -1;
+h2 {
+  font-size: 1.8em;
   color: #c084fc;
-  font-size: 1.2em;
-  margin: 0 0 0.3em 0;
-  font-family: system-ui, sans-serif;
+  margin: 0 0 16px 0;
+  font-weight: 700;
 }
-.snippets {
+.columns {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 22px;
+}
+.code-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.code-block {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+.code-block h3 {
+  font-size: 0.65em;
+  color: #c084fc;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+.code-block pre {
+  margin: 0;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.52em;
+  line-height: 1.65;
+  color: #e6edf3;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+.code-block .key { color: #7ee787; }
+.code-block .val { color: #a5d6ff; }
+.code-block .comment { color: #8b949e; }
+.code-block .kw { color: #ff7b72; }
+.code-block .hl { color: #d2a8ff; }
+.sidebar {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.snippet h4 {
+.sidebar-card {
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.sidebar-card h3 {
+  font-size: 0.68em;
   color: #c084fc;
-  font-size: 0.8em;
-  margin: 0 0 0.2em 0;
-  font-family: system-ui, sans-serif;
+  margin: 0 0 8px 0;
 }
-pre {
-  margin: 0;
-  font-size: 0.62em;
-  line-height: 1.5;
-  color: #e6edf3;
-  font-family: monospace;
-}
-.comment { color: #8b949e; }
-.keyword { color: #ff7b72; }
-.value { color: #7ee787; }
-.highlight { color: #d2a8ff; }
-.sidebar {
-  font-family: system-ui, sans-serif;
-}
-.sidebar h4 {
-  color: #f87171;
-  font-size: 0.95em;
-  margin: 0 0 0.5em 0;
-}
-.sidebar p {
-  font-size: 0.75em;
-  color: #fca5a5;
+.sidebar-card ul {
+  margin: 0; padding: 0 0 0 16px;
+  font-size: 0.56em;
   line-height: 1.6;
-  margin: 0;
+  color: #d1d5db;
 }
+.sidebar-card li { margin-bottom: 4px; }
+.sidebar-card strong { color: #e9d5ff; }
+.tip-card {
+  background: rgba(251, 191, 36, 0.08);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.tip-card h3 {
+  font-size: 0.68em;
+  color: #fbbf24;
+  margin: 0 0 8px 0;
+}
+.tip-card p {
+  margin: 0;
+  font-size: 0.56em;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+.tip-card strong { color: #fde68a; }
 </style>
 
-<h3>OIDC + Environment = No long-lived secrets</h3>
+## Least privilege in action
 
-<div class="snippets">
-<div class="snippet">
-<h4>GitHub Workflow</h4>
-<pre><span class="keyword">permissions:</span>
-  <span class="value">id-token: write</span>
-<span class="keyword">jobs:</span>
-  deploy:
-    <span class="keyword">environment:</span> <span class="highlight">production</span>
-    <span class="keyword">steps:</span>
-      - uses: aws-actions/configure-aws-credentials@<span class="value">e3dd...</span>
-        <span class="keyword">with:</span>
-          <span class="highlight">role-to-assume:</span> arn:aws:iam::123:role/Deploy</pre>
+<div class="columns">
+<div class="code-stack">
+<div class="code-block">
+<pre><span class="comment"># workflow level: zero permissions</span>
+<span class="kw">permissions</span>: {}
+<span class="kw">jobs</span>:
+  <span class="hl">deploy</span>:
+    <span class="kw">runs-on</span>: <span class="val">ubuntu-latest</span>
+    <span class="kw">environment</span>: <span class="val">prod</span>  <span class="comment"># requires approval</span>
+    <span class="kw">permissions</span>:
+      <span class="hl">id-token</span>: <span class="val">write</span>  <span class="comment"># only OIDC</span>
+    <span class="kw">steps</span>:
+      - <span class="kw">uses</span>: <span class="val">aws-actions/configure-aws-credentials@e3dd...</span>
+        <span class="kw">with</span>:
+          <span class="hl">role-to-assume</span>: <span class="val">arn:aws:iam::123:role/Deploy</span></pre>
 </div>
-<div class="snippet">
-<h4>AWS IAM Trust Policy</h4>
-<pre>{ "<span class="keyword">Condition</span>": { "<span class="keyword">StringEquals</span>": {
-    "token.actions.githubusercontent.com:<span class="highlight">sub</span>":
-      "<span class="value">repo:org/repo:environment:production</span>"
-}}} <span class="comment">// Only this repo+env can assume</span></pre>
+<div class="code-block">
+<pre><span class="comment">// AWS IAM trust policy - scoped to repo + env</span>
+{
+  "<span class="kw">Condition</span>": {
+    "<span class="hl">StringEquals</span>": {
+      "<span class="val">token.actions.githubusercontent.com:sub</span>":
+        "<span class="val">repo:org/repo:environment:prod</span>"
+    }
+  }
+}</pre>
 </div>
 </div>
-
 <div class="sidebar">
-<h4>Limits blast radius:</h4>
-<p>Secrets can still be exposed, but OIDC tokens expire in ~1hr. No long-lived credentials to steal. Scoped to repo + environment.</p>
-<p style="margin-top: 0.6em; font-style: italic; color: #8b949e;">Identity is the #1 target — almost all attacks involve credential theft.</p>
-<p style="margin-top: 0.6em; font-style: italic; color: #8b949e;">This is CI/CD, but think the same way about AI agents and MCP tools.</p>
+<div class="sidebar-card">
+<h3>🛡️ Why this works</h3>
+<ul>
+<li><strong>permissions: {}</strong> - workflow starts with zero access</li>
+<li><strong>id-token: write</strong> - only OIDC, scoped at job level</li>
+<li><strong>environment: prod</strong> - requires approval + gates</li>
+<li><strong>Trust policy</strong> - AWS role only assumable by this repo+env</li>
+<li>Tokens expire in <strong>~1 hour</strong>, nothing to steal</li>
+</ul>
+</div>
+<div class="tip-card">
+<h3>💡 Apply the same thinking to</h3>
+<p><strong>AI agents</strong> and MCP tools - scope file access, network, shell. Least privilege is not just for CI/CD.</p>
+</div>
+</div>
 </div>
 
 ---
 
-<!-- Defense 5: Assume Breach -->
+<!-- _class: defense-principle -->
 
 <style scoped>
-section { background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%); }
-h1 {
-  font-size: 2em;
-  margin-bottom: 0.2em;
-  background: linear-gradient(135deg, #86efac 0%, #4ade80 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+section {
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #1e1b4b 100%);
+  color: #e2e8f0;
+  padding: 28px 45px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
 }
-h2 { font-size: 0.9em; color: #4ade80; margin-bottom: 0.8em; }
-.questions {
+h2 {
+  font-size: 1.85em;
+  color: #c4b5fd;
+  margin: 0 0 4px 0;
+}
+h2 span { color: #a78bfa; font-size: 0.5em; display: block; margin-top: 2px; }
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 22px;
+  height: calc(100% - 60px);
+  margin-top: 6px;
+}
+.image-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.image-col img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  box-shadow: 0 0 30px rgba(167, 139, 250, 0.15);
+}
+.content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.methods {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
-.question {
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.3);
+.card {
+  background: rgba(167, 139, 250, 0.08);
+  border: 1px solid rgba(167, 139, 250, 0.25);
   border-radius: 10px;
-  padding: 12px;
+  padding: 10px 12px;
+  position: relative;
+  overflow: hidden;
 }
-.question h3 { color: #f87171; margin: 0 0 6px 0; font-size: 0.85em; }
-.question p { margin: 0; font-size: 0.72em; color: #fca5a5; line-height: 1.4; }
-.bottom-line {
-  background: rgba(34, 197, 94, 0.15);
-  border: 1px solid rgba(34, 197, 94, 0.3);
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #a78bfa, #c4b5fd, #a78bfa);
+  opacity: 0.6;
+}
+.card h3 {
+  color: #c4b5fd;
+  font-size: 0.78em;
+  margin: 0 0 4px 0;
+}
+.card p {
+  font-size: 0.62em;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.35;
+}
+.extras {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.box {
   border-radius: 10px;
-  padding: 12px;
-  margin-top: 1em;
+  padding: 10px 12px;
+}
+.box.slsa {
+  background: rgba(167, 139, 250, 0.06);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+}
+.box.enforce {
+  background: rgba(134, 239, 172, 0.06);
+  border: 1px solid rgba(134, 239, 172, 0.3);
+}
+.box h3 {
+  font-size: 0.72em;
+  margin: 0 0 3px 0;
+}
+.box.slsa h3 { color: #c4b5fd; }
+.box.enforce h3 { color: #86efac; }
+.box p {
+  font-size: 0.58em;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.35;
+}
+.tag {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.12), rgba(139, 92, 246, 0.08));
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.58em;
+  color: #e9d5ff;
   text-align: center;
+  line-height: 1.4;
 }
-.bottom-line p { margin: 0; font-size: 0.85em; color: #86efac; }
 </style>
 
-# Assume Breach — Have a Plan
+## Sign & attest - verify everything
 
-## When it happens, do you know what to do?
+<div class="layout">
+  <div class="image-col">
+    <img src="assets/img/sign.png" alt="Sign & attest illustration">
+  </div>
+  <div class="content-col">
+    <div class="methods">
+      <div class="card">
+        <h3>Sigstore / Cosign</h3>
+        <p>Keyless signing for containers and artifacts - uses OIDC identity, no key management overhead</p>
+      </div>
+      <div class="card">
+        <h3>GitHub artifact attestations</h3>
+        <p>Cryptographic proof artifacts were built by your workflows - tamper-evident build provenance</p>
+      </div>
+      <div class="card">
+        <h3>npm provenance</h3>
+        <p>Link packages to source repo and build via <code>npm publish --provenance</code> - verifiable origin</p>
+      </div>
+      <div class="card">
+        <h3>Verify before trust</h3>
+        <p>Check signatures on actions, images, packages - fail pipelines on missing or invalid signatures</p>
+      </div>
+    </div>
+    <div class="extras">
+      <div class="box slsa">
+        <h3>SLSA framework</h3>
+        <p>Supply-chain Levels for Software Artifacts - aim for Level 2+ with hermetic builds and provenance</p>
+      </div>
+      <div class="box enforce">
+        <h3>Enforce at deploy</h3>
+        <p>Kyverno / OPA Gatekeeper as admission controller - reject unsigned containers in production</p>
+      </div>
+    </div>
+    <div class="tag">
+      ✅ <strong>prevents</strong>: running tampered artifacts &nbsp;|&nbsp; 🔍 <strong>enables</strong>: trace any artifact back to source
+    </div>
+  </div>
+</div>
 
-<div class="questions">
-<div class="question">
-<h3>Can you rotate all secrets fast?</h3>
-<p>npm tokens, cloud creds, PATs, signing keys. Automated or documented manual process?</p>
-</div>
-<div class="question">
-<h3>Do you have monitoring?</h3>
-<p>Anomalous publishes, unexpected workflow runs, new contributors with write access?</p>
-</div>
-<div class="question">
-<h3>Incident response playbook?</h3>
-<p>Who gets paged? How do you communicate? Rollback procedure? Legal/disclosure?</p>
-</div>
-<div class="question">
-<h3>Can you rebuild from scratch?</h3>
-<p>If runners are compromised, can you nuke and rebuild? Immutable infra?</p>
-</div>
+---
+
+<!-- _class: defense-example -->
+
+<style scoped>
+section {
+  background: #0d1117;
+  color: #e6edf3;
+  padding: 26px 45px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+h2 {
+  font-size: 1.8em;
+  color: #c4b5fd;
+  margin: 0 0 8px 0;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 16px;
+  height: calc(100% - 56px);
+}
+.code-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.code-block {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+.code-block pre {
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  margin: 0;
+  font-size: 0.52em;
+  line-height: 1.45;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+.kw { color: #ff7b72; }
+.key { color: #7ee787; }
+.val { color: #a5d6ff; }
+.comment { color: #8b949e; font-style: italic; }
+.hl { color: #d2a8ff; }
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sidebar-card {
+  background: rgba(167, 139, 250, 0.06);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 10px;
+  padding: 14px;
+}
+.sidebar-card h3 {
+  font-size: 0.68em;
+  color: #c4b5fd;
+  margin: 0 0 8px 0;
+}
+.chain {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.step {
+  font-size: 0.56em;
+  color: #cbd5e1;
+  padding: 5px 8px;
+  background: rgba(167, 139, 250, 0.06);
+  border-left: 2px solid #a78bfa;
+  line-height: 1.4;
+}
+.step:first-child { border-radius: 6px 6px 0 0; }
+.step:last-child { border-radius: 0 0 6px 6px; }
+.arrow {
+  color: #a78bfa;
+  font-size: 0.45em;
+  text-align: center;
+  padding: 1px 0;
+}
+.tip {
+  background: rgba(134, 239, 172, 0.06);
+  border: 1px solid rgba(134, 239, 172, 0.25);
+  border-radius: 10px;
+  padding: 12px;
+}
+.tip h3 {
+  font-size: 0.65em;
+  color: #86efac;
+  margin: 0 0 4px 0;
+}
+.tip p {
+  font-size: 0.56em;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.35;
+}
+</style>
+
+## Sign & attest in action
+
+<div class="layout">
+  <div class="code-stack">
+    <div class="code-block">
+<pre><span class="comment"># verify npm package provenance</span>
+<span class="hl">npm</span> <span class="key">audit signatures</span></pre>
+    </div>
+    <div class="code-block">
+<pre><span class="comment"># verify container signature (keyless via GitHub OIDC)</span>
+<span class="hl">cosign</span> <span class="key">verify</span> <span class="kw">--certificate-oidc-issuer</span> \
+  <span class="val">https://token.actions.githubusercontent.com</span> \
+  <span class="val">ghcr.io/org/image:tag</span></pre>
+    </div>
+    <div class="code-block">
+<pre><span class="comment"># Kyverno - reject unsigned containers in K8s</span>
+<span class="kw">apiVersion</span>: <span class="val">kyverno.io/v1</span>
+<span class="kw">kind</span>: <span class="val">ClusterPolicy</span>
+<span class="kw">metadata</span>:
+  <span class="kw">name</span>: <span class="val">require-signed-images</span>
+<span class="kw">spec</span>:
+  <span class="kw">rules</span>:
+    - <span class="kw">name</span>: <span class="val">verify-signature</span>
+      <span class="kw">match</span>:
+        <span class="kw">any</span>:
+          - <span class="kw">resources</span>:
+              <span class="kw">kinds</span>: [<span class="val">"Pod"</span>]
+      <span class="kw">verifyImages</span>:
+        - <span class="kw">imageReferences</span>: [<span class="val">"ghcr.io/org/*"</span>]
+          <span class="kw">attestors</span>:
+            - <span class="kw">entries</span>:
+                - <span class="kw">keyless</span>:
+                    <span class="kw">issuer</span>: <span class="val">"https://token.actions.githubusercontent.com"</span></pre>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="sidebar-card">
+      <h3>🔗 Full chain</h3>
+      <div class="chain">
+        <div class="step">🔏 Sign at build time</div>
+        <div class="arrow">↓</div>
+        <div class="step">📜 Attest provenance</div>
+        <div class="arrow">↓</div>
+        <div class="step">✅ Verify at deploy</div>
+        <div class="arrow">↓</div>
+        <div class="step">☸️ Reject unsigned in K8s</div>
+      </div>
+    </div>
+    <div class="tip">
+      <h3>💡 Also consider</h3>
+      <p>GitHub artifact attestations for non-container builds - same OIDC identity, built-in provenance</p>
+    </div>
+  </div>
 </div>
 
-<div class="bottom-line">
+---
+
+<!-- Defense: Assume Breach - Have a Plan -->
+
+<style scoped>
+section {
+  background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%);
+  color: #e2e8f0;
+  padding: 28px 45px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+h2 {
+  font-size: 1.85em;
+  color: #86efac;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+.image-wrap {
+  margin: 0 auto;
+  width: 100%;
+}
+.image-wrap img {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(134, 239, 172, 0.3);
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.15);
+}
+.bottom-bar {
+  background: linear-gradient(90deg, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0.05) 100%);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-top: 12px;
+}
+.bottom-bar p {
+  margin: 0;
+  font-size: 0.65em;
+  color: #86efac;
+  font-weight: 600;
+  text-align: center;
+}
+.tag {
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.55em;
+  color: #a7f3d0;
+  line-height: 1.5;
+  margin-top: 10px;
+  text-align: center;
+}
+.tag strong { color: #4ade80; }
+</style>
+
+## Assume breach - have a plan
+
+<div class="image-wrap">
+  <img src="assets/img/assume-breach.png" alt="Assume breach - rotate, monitor, respond, rebuild">
+</div>
+
+<div class="bottom-bar">
 <p>The attack is inevitable. Your response time determines the damage.</p>
 </div>
 
+<div class="tag">
+🛡️ <strong>reduces blast radius:</strong> Axios detected in 6 min, contained in 3 hrs vs Shai-Hulud ran for days
+</div>
+
 ---
 
-<!-- Example: Assume Breach -->
+<!-- Defense: Assume Breach - Detect / Contain / Recover -->
 
 <style scoped>
 section {
   background: #0d1117;
-  padding: 35px 40px;
-  font-family: system-ui, sans-serif;
+  color: #e6edf3;
+  padding: 40px 50px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
-h3 {
-  color: #f87171;
-  font-size: 1.2em;
-  margin: 0 0 0.5em 0;
+h2 {
+  font-size: 1.8em;
+  color: #86efac;
+  margin: 0 0 20px 0;
+  font-weight: 700;
 }
-.phases {
+.flow {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 1em;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 0;
+  align-items: stretch;
+  margin-bottom: 16px;
 }
 .phase {
-  padding: 12px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 16px 16px;
 }
-.phase h4 {
-  font-size: 0.95em;
-  margin: 0 0 0.5em 0;
+.phase-detect {
+  background: rgba(251, 191, 36, 0.08);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  border-top: 3px solid #fbbf24;
 }
-.phase:nth-child(1) h4 { color: #fbbf24; }
-.phase:nth-child(2) h4 { color: #f87171; }
-.phase:nth-child(3) h4 { color: #4ade80; }
+.phase-contain {
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  border-top: 3px solid #f87171;
+}
+.phase-recover {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  border-top: 3px solid #4ade80;
+}
+.phase h3 {
+  font-size: 0.75em;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+.phase-detect h3 { color: #fbbf24; }
+.phase-contain h3 { color: #f87171; }
+.phase-recover h3 { color: #4ade80; }
 .phase ul {
   margin: 0;
-  padding-left: 1.1em;
-  font-size: 0.68em;
-  line-height: 1.7;
+  padding: 0 0 0 16px;
+  font-size: 0.55em;
+  line-height: 1.65;
+  color: #d1d5db;
+}
+.phase li { margin-bottom: 3px; }
+.phase strong { color: inherit; }
+.phase-detect strong { color: #fde68a; }
+.phase-contain strong { color: #fca5a5; }
+.phase-recover strong { color: #86efac; }
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6em;
+  color: #475569;
+  padding: 0 8px;
+}
+.bottom-bar {
+  background: linear-gradient(90deg, rgba(251, 191, 36, 0.1) 0%, rgba(248, 113, 113, 0.1) 40%, rgba(34, 197, 94, 0.1) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+.bottom-bar p {
+  margin: 0;
+  font-size: 0.58em;
   color: #cbd5e1;
-}
-.takeaway {
-  padding: 10px 14px;
-  background: rgba(248, 113, 113, 0.1);
-  border-left: 3px solid #f87171;
-  font-size: 0.78em;
-  color: #fca5a5;
-}
-</style>
-
-<h3>Are you able to answer: "Are we hit?"</h3>
-
-<div class="phases">
-<div class="phase">
-<h4>1. Detect</h4>
-<ul>
-<li>Preventive controls in place?</li>
-<li>Monitor for attack patterns</li>
-<li>Unexpected network calls?</li>
-<li>Unknown packages installed?</li>
-<li>Secrets accessed abnormally?</li>
-</ul>
-</div>
-<div class="phase">
-<h4>2. Contain & Revoke</h4>
-<ul>
-<li>Can you revoke tokens fast?</li>
-<li>Isolate compromised runners?</li>
-<li>Block malicious packages?</li>
-<li>Disable affected workflows?</li>
-<li>Who has authority to act?</li>
-</ul>
-</div>
-<div class="phase">
-<h4>3. Recover</h4>
-<ul>
-<li>Rebuild from clean state?</li>
-<li>Rotate all credentials?</li>
-<li>Verify no persistence?</li>
-<li>Communicate to users?</li>
-<li>Post-incident review?</li>
-</ul>
-</div>
-</div>
-
-<div class="takeaway">
-Axios: detected in 6 min, contained in 3 hrs. Shai-Hulud: ran for days, 33K secrets stolen. The difference is preparation.
-</div>
-
----
-
-<!-- Defense 6: Sign & Attest -->
-
-<style scoped>
-section { background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 50%, #0a0a0f 100%); }
-h1 {
-  font-size: 2em;
-  margin-bottom: 0.2em;
-  background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-h2 { font-size: 0.9em; color: #c4b5fd; margin-bottom: 0.8em; }
-.signing {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 1em;
-}
-.sign-item {
-  background: rgba(167, 139, 250, 0.1);
-  border: 1px solid rgba(167, 139, 250, 0.3);
-  border-radius: 10px;
-  padding: 12px;
-}
-.sign-item h3 { color: #a78bfa; margin: 0 0 6px 0; font-size: 0.85em; }
-.sign-item p { margin: 0; font-size: 0.72em; color: #cbd5e1; line-height: 1.4; }
-.slsa {
-  background: rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-  border-radius: 10px;
-  padding: 12px;
+  line-height: 1.5;
   text-align: center;
 }
-.slsa h3 { color: #4ade80; margin: 0 0 6px 0; font-size: 0.9em; }
-.slsa p { margin: 0; font-size: 0.75em; color: #86efac; }
+.bottom-bar strong { color: #fbbf24; }
+.bottom-bar .red { color: #f87171; }
+.bottom-bar .green { color: #4ade80; }
 </style>
 
-# Sign & Attest
+## 🛡️ Assume breach - detect, contain, recover
 
-## Prove where your code came from — verify what you consume
+<div class="flow">
+<div class="phase phase-detect">
+<h3>1. 🔍 Detect</h3>
+<ul>
+<li><strong>Preventive controls</strong> triggered?</li>
+<li>Monitor <strong>publish patterns</strong></li>
+<li>Unexpected <strong>network calls?</strong></li>
+<li>Unknown <strong>packages</strong> appearing?</li>
+<li>Secrets <strong>accessed</strong> unexpectedly?</li>
+</ul>
+</div>
+<div class="arrow">→</div>
+<div class="phase phase-contain">
+<h3>2. 🚨 Contain & revoke</h3>
+<ul>
+<li><strong>Revoke tokens</strong> immediately</li>
+<li><strong>Isolate runners</strong> & environments</li>
+<li><strong>Block packages</strong> at registry</li>
+<li><strong>Disable workflows</strong> under attack</li>
+<li>Who has <strong>authority</strong> to act?</li>
+</ul>
+</div>
+<div class="arrow">→</div>
+<div class="phase phase-recover">
+<h3>3. ✅ Recover</h3>
+<ul>
+<li><strong>Rebuild clean</strong> from known good</li>
+<li><strong>Rotate all creds</strong> - assume leaked</li>
+<li>Verify <strong>no persistence</strong> mechanisms</li>
+<li><strong>Communicate</strong> to affected users</li>
+<li><strong>Post-incident review</strong></li>
+</ul>
+</div>
+</div>
 
-<div class="signing">
-<div class="sign-item">
-<h3>Sigstore / Cosign</h3>
-<p>Keyless signing for containers and artifacts. Sign your releases, verify your dependencies.</p>
-</div>
-<div class="sign-item">
-<h3>GitHub Artifact Attestations</h3>
-<p>Cryptographic proof that artifacts were built by your workflows. Built-in SLSA provenance.</p>
-</div>
-<div class="sign-item">
-<h3>npm Provenance</h3>
-<p>Link published packages to source repo and build. <code>npm publish --provenance</code></p>
-</div>
-<div class="sign-item">
-<h3>Verify Before Trust</h3>
-<p>Check signatures on actions, images, and packages. If it's not signed, don't run it in CI.</p>
-</div>
-</div>
-
-<div class="slsa">
-<h3>SLSA Framework</h3>
-<p>Supply-chain Levels for Software Artifacts — industry standard for build integrity. Aim for Level 2+.</p>
+<div class="bottom-bar">
+<p><strong>Axios:</strong> detected in 6 min, contained in 3 hrs. <span class="red"><strong>Shai-Hulud:</strong></span> ran for days, 33K secrets stolen. <span class="green">The difference is preparation.</span></p>
 </div>
 
 ---
 
-<!-- Example: Sign & Attest -->
+<!-- Defense: AI-Specific Defenses -->
 
 <style scoped>
 section {
-  background: #0d1117;
+  background: linear-gradient(135deg, #052e16 0%, #1e1b4b 40%, #14532d 80%, #0a0a0f 100%);
+  color: #e2e8f0;
+  padding: 28px 45px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+h2 {
+  font-size: 1.85em;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  background: linear-gradient(135deg, #86efac 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  align-items: start;
-  padding: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
 }
-h3 {
-  grid-column: 1 / -1;
-  color: #c4b5fd;
-  font-size: 1.2em;
-  margin: 0 0 0.3em 0;
-  font-family: system-ui, sans-serif;
+.card {
+  border-radius: 10px;
+  padding: 10px 12px;
 }
-pre {
-  margin: 0;
-  font-size: 0.68em;
-  line-height: 1.65;
-  color: #e6edf3;
-  font-family: monospace;
+.card-green {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.3);
 }
-.comment { color: #8b949e; }
-.keyword { color: #ff7b72; }
-.value { color: #7ee787; }
-.sidebar {
-  font-family: system-ui, sans-serif;
+.card-purple {
+  background: rgba(168, 85, 247, 0.08);
+  border: 1px solid rgba(168, 85, 247, 0.3);
 }
-.sidebar h4 {
-  color: #c4b5fd;
-  font-size: 0.9em;
-  margin: 0 0 0.5em 0;
-}
-.sidebar ul {
-  margin: 0;
-  padding-left: 1.1em;
-  font-size: 0.75em;
-  line-height: 1.7;
-  color: #cbd5e1;
-}
-.sidebar p {
-  margin-top: 0.8em;
+.card h3 {
   font-size: 0.72em;
-  font-style: italic;
-  color: #8b949e;
+  margin: 0 0 4px 0;
+  font-weight: 700;
 }
+.card-green h3 { color: #4ade80; }
+.card-purple h3 { color: #c084fc; }
+.card p {
+  margin: 0;
+  font-size: 0.58em;
+  line-height: 1.4;
+  color: #d1d5db;
+}
+.card strong { color: #86efac; }
+.card code {
+  font-size: 0.9em;
+  background: rgba(255,255,255,0.06);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+.card .prevents {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.52em;
+  color: #a78bfa;
+  font-style: italic;
+}
+.tag {
+  background: linear-gradient(90deg, rgba(34, 197, 94, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.55em;
+  color: #e9d5ff;
+  line-height: 1.4;
+  text-align: center;
+}
+.tag strong { color: #c084fc; }
+.tag .green { color: #4ade80; }
 </style>
 
-<h3>As consumer: Do you verify before trust?</h3>
+## AI - Same, same but faster
 
-<pre>
-<span class="comment"># Verify npm package provenance</span>
-<span class="keyword">npm</span> audit signatures
+<div class="grid">
+<div class="card card-green">
+<h3>Sandbox AI execution</h3>
+<p>Run coding assistants in <strong>containers</strong>. No direct access to production secrets or infra.</p>
+</div>
+<div class="card card-purple">
+<h3>Audit MCP tool descriptions</h3>
+<p>Check for <strong>hidden prompt injection</strong> in tool descriptions. No auto-approve for new MCP servers.</p>
+<span class="prevents">→ Prevents SANDWORM_MODE</span>
+</div>
+<div class="card card-green">
+<h3>Human-in-loop for sensitive ops</h3>
+<p>Require <strong>approval</strong> before AI runs shell commands, deploys, or accesses secrets.</p>
+<span class="prevents">→ Prevents Clinejection</span>
+</div>
+<div class="card card-purple">
+<h3>Review rules files</h3>
+<p>Check <strong>.cursorrules</strong>, <strong>.github/copilot-instructions.md</strong> for Unicode injection. Use <code>cat -v</code> to reveal hidden chars.</p>
+<span class="prevents">→ Prevents Rules File Backdoor</span>
+</div>
+<div class="card card-green">
+<h3>Scope AI permissions</h3>
+<p>AI agents get <strong>read-only by default</strong>. Write access only when explicitly granted and scoped.</p>
+<span class="prevents">→ Limits CamoLeak, hackerbot-claw</span>
+</div>
+<div class="card card-purple">
+<h3>Monitor AI agent activity</h3>
+<p>Log what AI tools <strong>access, generate, and execute</strong>. Treat AI like any other service account.</p>
+</div>
+</div>
 
-<span class="comment"># Verify container signature</span>
-<span class="keyword">cosign</span> verify <span class="value">--certificate-oidc-issuer</span> \
-  https://token.actions.githubusercontent.com \
-  ghcr.io/org/image:tag
-
-<span class="comment"># Verify GitHub artifact attestation</span>
-<span class="keyword">gh</span> attestation verify artifact.tar.gz \
-  <span class="value">--owner</span> org-name
-</pre>
-
-<div class="sidebar">
-<h4>Check before you trust:</h4>
-<ul>
-<li>npm provenance linked to repo?</li>
-<li>Container signed by expected identity?</li>
-<li>Binary signatures valid?</li>
-<li>SLSA provenance present?</li>
-</ul>
-<p>If it's not signed or attestation fails — don't run it.</p>
+<div class="tag">
+<span class="green">✅</span> <strong>prevents:</strong> SANDWORM_MODE, Clinejection, Rules File Backdoor &nbsp;|&nbsp; 🛡️ <strong>reduces blast radius</strong> for all AI attacks
 </div>
 
 ---
 
-<!-- Monday Checklist -->
+<!-- Defense: AI-Specific Defenses (with image) -->
 
 <style scoped>
-section { background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%); }
-h1 {
-  font-size: 2.2em;
-  margin-bottom: 0.8em;
-  text-align: center;
-  background: linear-gradient(135deg, #86efac 0%, #4ade80 100%);
+section {
+  background: linear-gradient(135deg, #052e16 0%, #1e1b4b 40%, #14532d 80%, #0a0a0f 100%);
+  color: #e2e8f0;
+  padding: 28px 45px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+h2 {
+  font-size: 1.85em;
+  margin: 0 0 6px 0;
+  font-weight: 700;
+  background: linear-gradient(135deg, #86efac 0%, #c084fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.list {
+.layout {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  gap: 18px;
+  height: calc(100% - 56px);
+  margin-top: 4px;
+}
+.image-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.image-col img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.15);
+}
+.content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.card {
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.card-green {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+.card-purple {
+  background: rgba(168, 85, 247, 0.08);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+.card h3 {
+  font-size: 0.75em;
+  margin: 0 0 3px 0;
+  font-weight: 700;
+}
+.card-green h3 { color: #4ade80; }
+.card-purple h3 { color: #c084fc; }
+.card p {
+  margin: 0;
+  font-size: 0.58em;
+  line-height: 1.4;
+  color: #d1d5db;
+}
+.card strong { color: #86efac; }
+.card code {
+  font-size: 0.9em;
+  background: rgba(255,255,255,0.06);
+  padding: 1px 3px;
+  border-radius: 3px;
+}
+.card .prevents {
+  display: inline-block;
+  margin-top: 3px;
+  font-size: 0.52em;
+  color: #a78bfa;
+  font-style: italic;
+}
+.tag {
+  background: linear-gradient(90deg, rgba(34, 197, 94, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.55em;
+  color: #e9d5ff;
+  line-height: 1.4;
+  text-align: center;
+}
+.tag strong { color: #c084fc; }
+.tag .green { color: #4ade80; }
+</style>
+
+## AI - Same, same but faster
+
+<div class="layout">
+  <div class="image-col">
+    <img src="assets/img/ai-boundary.png" alt="AI boundary illustration">
+  </div>
+  <div class="content-col">
+    <div class="grid">
+      <div class="card card-green">
+        <h3>Sandbox AI execution</h3>
+        <p>Run assistants in <strong>containers</strong>. No direct access to prod secrets.</p>
+      </div>
+      <div class="card card-purple">
+        <h3>Audit MCP tools</h3>
+        <p>Check for <strong>hidden prompt injection</strong> in tool descriptions.</p>
+        <span class="prevents">→ Prevents SANDWORM_MODE</span>
+      </div>
+      <div class="card card-green">
+        <h3>Human-in-loop</h3>
+        <p><strong>Approval</strong> before AI runs shell commands or deploys.</p>
+        <span class="prevents">→ Prevents Clinejection</span>
+      </div>
+      <div class="card card-purple">
+        <h3>Review rules files</h3>
+        <p>Check <strong>.cursorrules</strong> for Unicode injection. <code>cat -v</code></p>
+        <span class="prevents">→ Prevents Rules File Backdoor</span>
+      </div>
+      <div class="card card-green">
+        <h3>Scope AI permissions</h3>
+        <p><strong>Read-only by default</strong>. Write only when scoped.</p>
+        <span class="prevents">→ Limits CamoLeak</span>
+      </div>
+      <div class="card card-purple">
+        <h3>Monitor AI activity</h3>
+        <p>Log what AI <strong>accesses and executes</strong>. Treat as service account.</p>
+      </div>
+    </div>
+    <div class="tag">
+      <span class="green">✅</span> <strong>prevents:</strong> SANDWORM_MODE, Clinejection, Rules File Backdoor &nbsp;|&nbsp; 🛡️ <strong>reduces blast radius</strong> for all AI attacks
+    </div>
+  </div>
+</div>
+
+---
+
+<!-- Monday Morning - Quick Wins -->
+
+<style scoped>
+section {
+  background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%);
+  color: #e2e8f0;
+  padding: 28px 45px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+h2 {
+  font-size: 1.85em;
+  color: #86efac;
+  margin: 0 0 6px 0;
+  font-weight: 700;
+}
+h2 span {
+  display: block;
+  font-size: 0.45em;
+  color: #94a3b8;
+  margin-top: 4px;
+  font-weight: 400;
+}
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+.item {
+  background: rgba(34, 197, 94, 0.06);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
   gap: 12px;
-  max-width: 880px;
-  margin: 0 auto;
+}
+.num {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
+  color: #052e16;
+  font-size: 0.65em;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-text h3 {
+  font-size: 0.78em;
+  color: #4ade80;
+  margin: 0 0 4px 0;
+}
+.item-text p {
+  margin: 0;
+  font-size: 0.62em;
+  line-height: 1.4;
+  color: #d1d5db;
+}
+.item-text strong { color: #86efac; }
+.footer {
+  margin-top: 16px;
+  background: linear-gradient(90deg, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0.05) 100%);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+}
+.footer p {
+  margin: 0;
+  font-size: 0.65em;
+  color: #86efac;
+  font-weight: 600;
+}
+</style>
+
+## Before your first coffee ☕
+<span>5 things you can do Monday morning - no budget, no approval needed</span>
+
+<div class="items">
+  <div class="item">
+    <span class="num">1</span>
+    <div class="item-text">
+      <h3>Run zizmor on your workflows</h3>
+      <p><strong>pip install zizmor</strong> then <strong>zizmor .github/workflows/</strong> - catches injection, misconfigs, excessive permissions in minutes</p>
+    </div>
+  </div>
+  <div class="item">
+    <span class="num">2</span>
+    <div class="item-text">
+      <h3>Pin your actions to SHA</h3>
+      <p>Replace <strong>@v4</strong> with <strong>@sha256</strong> on your most critical workflows. Let Dependabot keep them updated.</p>
+    </div>
+  </div>
+  <div class="item">
+    <span class="num">3</span>
+    <div class="item-text">
+      <h3>Add a cooldown on dependencies</h3>
+      <p>Set <strong>minimumReleaseAge: 3 days</strong> in Dependabot or <strong>stabilityDays</strong> in Renovate. One line change.</p>
+    </div>
+  </div>
+  <div class="item">
+    <span class="num">4</span>
+    <div class="item-text">
+      <h3>Drop permissions to read-only</h3>
+      <p>Add <strong>permissions: {}</strong> at workflow level. Grant only what each job needs. Blocks token exfiltration.</p>
+    </div>
+  </div>
+  <div class="item">
+    <span class="num">5</span>
+    <div class="item-text">
+      <h3>Check your AI rules files</h3>
+      <p>Run <strong>cat -v .cursorrules</strong> and <strong>.github/copilot-instructions.md</strong> - look for hidden Unicode or injected prompts</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+<p>These five take less than an hour and block the majority of supply chain attacks we covered today</p>
+</div>
+
+---
+
+<!-- Monday Morning Checklist -->
+
+<style scoped>
+section {
+  background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%);
+  color: #e2e8f0;
+  padding: 40px 50px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+h2 {
+  font-size: 1.9em;
+  color: #86efac;
+  margin: 0 0 18px 0;
+  font-weight: 700;
+}
+.checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
 }
 .item {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  padding: 12px 16px;
-  background: rgba(34, 197, 94, 0.1);
-  border: 1px solid rgba(34, 197, 94, 0.25);
-  border-radius: 10px;
-  font-size: 0.85em;
-  line-height: 1.4;
+  gap: 10px;
 }
-.item-num {
-  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
-  color: #0a0a0f;
+.num {
+  flex-shrink: 0;
   width: 26px;
   height: 26px;
   border-radius: 50%;
+  background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
+  color: #052e16;
+  font-size: 0.55em;
+  font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 0.85em;
-  flex-shrink: 0;
+  margin-top: 1px;
 }
-.item strong { color: #86efac; }
-.item span { color: #94a3b8; font-size: 0.9em; }
+.item-text {
+  flex: 1;
+}
+.item-text p {
+  margin: 0;
+  font-size: 0.58em;
+  line-height: 1.5;
+  color: #d1d5db;
+}
+.item-text strong {
+  color: #86efac;
+}
+.item-text .desc {
+  color: #9ca3af;
+}
 </style>
 
-# Monday Morning Checklist
+## ☑️ Monday morning checklist
 
-<div class="list">
-<div class="item"><div class="item-num">1</div><div>Run <strong>zizmor</strong> on workflows <span>(catch injection & misconfigs)</span></div></div>
-<div class="item"><div class="item-num">2</div><div>Audit <strong>pull_request_target</strong> <span>(no PR code in trusted context)</span></div></div>
-<div class="item"><div class="item-num">3</div><div>Enable <strong>SHA pinning</strong> for actions <span>(Dependabot/Renovate can help)</span></div></div>
-<div class="item"><div class="item-num">4</div><div>Add <strong>cooldown</strong> on dep updates <span>(npm min-release-age, stabilityDays)</span></div></div>
-<div class="item"><div class="item-num">5</div><div>Switch to <strong>OIDC</strong> for cloud creds <span>(no long-lived PATs)</span></div></div>
-<div class="item"><div class="item-num">6</div><div>Verify <strong>provenance</strong> on deps <span>(npm audit signatures, cosign verify)</span></div></div>
-<div class="item"><div class="item-num">7</div><div>Set up <strong>monitoring</strong> for anomalies <span>(unexpected publishes, new collaborators)</span></div></div>
-<div class="item"><div class="item-num">8</div><div>Review <strong>AI/MCP tool access</strong> <span>(same trust questions as CI/CD)</span></div></div>
+<div class="checklist">
+<div class="item">
+<span class="num">1</span>
+<div class="item-text"><p>Run <strong>zizmor</strong> on workflows <span class="desc">- catch injection & misconfigs</span></p></div>
+</div>
+<div class="item">
+<span class="num">2</span>
+<div class="item-text"><p>Audit <strong>pull_request_target</strong> <span class="desc">- no PR code in trusted context</span></p></div>
+</div>
+<div class="item">
+<span class="num">3</span>
+<div class="item-text"><p>Enable <strong>SHA pinning</strong> for actions <span class="desc">- Dependabot/Renovate keep updated</span></p></div>
+</div>
+<div class="item">
+<span class="num">4</span>
+<div class="item-text"><p>Add <strong>cooldown</strong> on dep updates <span class="desc">- npm min-release-age, stabilityDays</span></p></div>
+</div>
+<div class="item">
+<span class="num">5</span>
+<div class="item-text"><p>Set up a <strong>dependency mirror</strong> <span class="desc">- Artifactory/Nexus - no direct registry</span></p></div>
+</div>
+<div class="item">
+<span class="num">6</span>
+<div class="item-text"><p>Switch to <strong>OIDC</strong> for cloud creds <span class="desc">- no long-lived PATs</span></p></div>
+</div>
+<div class="item">
+<span class="num">7</span>
+<div class="item-text"><p>Verify <strong>provenance</strong> on deps <span class="desc">- npm audit signatures, cosign verify</span></p></div>
+</div>
+<div class="item">
+<span class="num">8</span>
+<div class="item-text"><p>Enforce <strong>signed images</strong> in K8s <span class="desc">- Kyverno/OPA admission</span></p></div>
+</div>
+<div class="item">
+<span class="num">9</span>
+<div class="item-text"><p>Set up <strong>monitoring</strong> for anomalies <span class="desc">- unexpected publishes, collaborators</span></p></div>
+</div>
+<div class="item">
+<span class="num">10</span>
+<div class="item-text"><p>Review <strong>AI/MCP tool access</strong> <span class="desc">- same trust questions as CI/CD</span></p></div>
+</div>
 </div>
 
 ---
