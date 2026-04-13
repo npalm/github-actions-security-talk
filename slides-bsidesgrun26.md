@@ -268,7 +268,9 @@ h1 {
   font-size: 3.2em;
   margin-bottom: 0.3em;
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
-  color: #ffffff;
+  background: linear-gradient(135deg, #e2e8f0 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .sub {
   font-size: 1.4em;
@@ -398,7 +400,11 @@ Modern software isn't built - it's assembled. Every link in this chain is a pote
 <!-- Practical View: Your Code's Journey -->
 
 <style scoped>
-h1 { font-size: 2em; margin-bottom: 0.3em; text-align: center; }
+h1 { font-size: 2em; margin-bottom: 0.3em; text-align: center;
+  background: linear-gradient(135deg, #5eead4 0%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 h2 { font-size: 1em; color: #fbbf24; text-align: center; margin-bottom: 0.8em; }
 .practical-chain {
   position: relative;
@@ -649,7 +655,11 @@ From idea to user - the full pipeline.
 
 <style scoped>
 section { justify-content: center; text-align: center; }
-h1 { font-size: 2.2em; margin-bottom: 1em; }
+h1 { font-size: 2.2em; margin-bottom: 1em;
+  background: linear-gradient(135deg, #5eead4 0%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .stats {
   display: flex;
   justify-content: center;
@@ -778,7 +788,11 @@ Section transition - GitHub Actions.
 <!-- Why GitHub Actions matters -->
 
 <style scoped>
-h1 { font-size: 2.2em; margin-bottom: 1em; }
+h1 { font-size: 2.2em; margin-bottom: 1em;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -847,7 +861,11 @@ If you use open source, you depend on GitHub Actions security.
 <!-- How it works -->
 
 <style scoped>
-h1 { font-size: 2em; margin-bottom: 0.8em; }
+h1 { font-size: 2em; margin-bottom: 0.8em;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .split {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
@@ -920,7 +938,11 @@ GitHub Actions is now THE CI/CD platform for open source. 4.5M+ workflows runnin
 <!-- Why it's a target -->
 
 <style scoped>
-h1 { font-size: 2.2em; margin-bottom: 1em; text-align: center; }
+h1 { font-size: 2.2em; margin-bottom: 1em; text-align: center;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .reasons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1078,7 +1100,11 @@ GITHUB_TOKEN, secrets, network access, arbitrary code execution. It's a goldmine
 ![bg left:38%](assets/img/sh-step-1.png)
 
 <style scoped>
-h1 { font-size: 1.6em; margin-bottom: 0.2em; }
+h1 { font-size: 1.6em; margin-bottom: 0.2em;
+  background: linear-gradient(135deg, #fcd34d 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 h2 { font-size: 0.85em; color: #f97316; margin-bottom: 0.8em; }
 p { font-size: 0.8em; margin: 0.5em 0; }
 .hook-box {
@@ -1128,7 +1154,11 @@ Transition - now let's see real attacks.
 ![bg left:38%](assets/img/sh-step-2.png)
 
 <style scoped>
-h1 { font-size: 1.6em; margin-bottom: 0.2em; }
+h1 { font-size: 1.6em; margin-bottom: 0.2em;
+  background: linear-gradient(135deg, #fcd34d 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 h2 { font-size: 0.8em; color: #fbbf24; margin-bottom: 0.6em; }
 .hunt-grid {
   display: grid;
@@ -1183,7 +1213,11 @@ Shai-Hulud - named after Dune's sandworm. This was the most sophisticated npm su
 <!-- ![bg left:38%](assets/img/shai-hulud-3-worm.png) -->
 
 <style scoped>
-h1 { font-size: 2em; margin-bottom: 0.3em; }
+h1 { font-size: 2em; margin-bottom: 0.3em;
+  background: linear-gradient(135deg, #fcd34d 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 h2 { font-size: 1em; color: #22c55e; margin-bottom: 1em; }
 .worm-flow {
   display: flex;
@@ -1245,7 +1279,11 @@ Step 1 - npm preinstall hooks run before your code. The attacker hides malicious
 ![bg left:38%](assets/img/sh-step-4.png)
 
 <style scoped>
-h1 { font-size: 1.6em; margin-bottom: 0.2em; }
+h1 { font-size: 1.6em; margin-bottom: 0.2em;
+  background: linear-gradient(135deg, #fcd34d 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 h2 { font-size: 0.8em; color: #ef4444; margin-bottom: 0.6em; }
 .rce-content {
   display: grid;
@@ -1296,7 +1334,11 @@ Step 2 - hunts for every secret it can find. AWS keys, npm tokens, GitHub tokens
 ![bg left:38%](assets/img/sh-step-5.png)
 
 <style scoped>
-h1 { font-size: 1.4em; margin-bottom: 0.2em; }
+h1 { font-size: 1.4em; margin-bottom: 0.2em;
+  background: linear-gradient(135deg, #fcd34d 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 h2 { font-size: 0.8em; color: #a855f7; margin-bottom: 0.6em; }
 .exfil-method {
   background: rgba(168, 85, 247, 0.1);
@@ -1340,7 +1382,11 @@ Step 3 - if it finds an npm token AND the victim maintains a package, it injects
 ![bg left:38%](assets/img/sh-step-kill.png)
 
 <style scoped>
-h1 { font-size: 1.6em; margin-bottom: 0.2em; }
+h1 { font-size: 1.6em; margin-bottom: 0.2em;
+  background: linear-gradient(135deg, #fcd34d 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 h2 { font-size: 0.8em; color: #dc2626; margin-bottom: 0.6em; }
 .warning-box {
   background: rgba(220, 38, 38, 0.15);
@@ -1515,7 +1561,11 @@ Step 6 - if exfiltration fails, destroy everything. Delete repos, wipe traces. S
 <!-- hackerbot-claw: Impact -->
 
 <style scoped>
-h1 { font-size: 1.8em; margin-bottom: 0.3em; }
+h1 { font-size: 1.8em; margin-bottom: 0.3em;
+  background: linear-gradient(135deg, #fca5a5 0%, #ef4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 h2 { font-size: 0.85em; color: #a78bfa; margin-bottom: 0.8em; }
 .repos {
   display: grid;
