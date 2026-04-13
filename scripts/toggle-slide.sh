@@ -1,53 +1,50 @@
 #!/bin/bash
 # Toggle slides hidden/visible in Marp deck
 # Usage:
-#   ./scripts/toggle-slide.sh hide "Vetting & Dependency Mirror"
-#   ./scripts/toggle-slide.sh unhide "Vetting & Dependency Mirror"
 #   ./scripts/toggle-slide.sh list
+#   ./scripts/toggle-slide.sh unhide "Slide Name"
 #
-# Hidden slides are wrapped in <!-- HIDDEN:Name ... END:Name -->
+# Hidden slides are stored in the parked file.
 # The dev server auto-rebuilds on save.
 
 DECK="slides-bsidesgrun26.md"
+PARKED="slides-bsidesgrun26-parked.md"
 ACTION="${1:-list}"
 NAME="$2"
 
 if [ "$ACTION" = "list" ]; then
-  echo "=== Hidden slides ==="
-  grep -n "^<!-- HIDDEN:" "$DECK" | sed 's/<!-- HIDDEN:/  /' | sed 's/$//'
+  echo "=== Parked (hidden) slides ==="
+  if [ -f "$PARKED" ]; then
+    grep "PARKED:" "$PARKED" | sed 's/<!-- PARKED:/  /' | sed 's/ -->//'
+  else
+    echo "  (none - no parked file found)"
+  fi
   echo ""
-  echo "=== To unhide: ./scripts/toggle-slide.sh unhide \"Name\" ==="
+  echo "=== To restore: ./scripts/toggle-slide.sh unhide \"Name\" ==="
   exit 0
 fi
 
 if [ -z "$NAME" ]; then
-  echo "Usage: $0 hide|unhide \"Slide Name\""
+  echo "Usage: $0 unhide \"Slide Name\""
   echo "       $0 list"
   exit 1
 fi
 
-if [ "$ACTION" = "hide" ]; then
-  # Find the slide comment and wrap content until next ---
-  echo "TODO: Manual hide not yet implemented."
-  echo "Ask Copilot to hide a slide by name instead."
-  exit 1
-
-elif [ "$ACTION" = "unhide" ]; then
-  if ! grep -q "HIDDEN:${NAME}" "$DECK"; then
-    echo "No hidden slide matching '${NAME}' found."
+if [ "$ACTION" = "unhide" ]; then
+  if ! grep -q "PARKED:${NAME}" "$PARKED" 2>/dev/null; then
+    echo "No parked slide matching '${NAME}' found."
     echo "Run: $0 list"
     exit 1
   fi
 
-  # Remove the HIDDEN: opening marker
-  sed -i '' "s/^<!-- HIDDEN:${NAME}$/---\n\n<!-- ${NAME} -->/" "$DECK"
-  # Remove the END: closing marker
-  sed -i '' "/^END:${NAME} -->$/d" "$DECK"
-  echo "✅ Unhidden: ${NAME}"
-  echo "Dev server will auto-rebuild."
+  echo "Found '${NAME}' in parked file."
+  echo "To restore, manually copy the slide content from:"
+  echo "  ${PARKED}"
+  echo "Search for: <!-- PARKED:${NAME} -->"
+  echo "Copy everything between PARKED and END markers back into ${DECK}."
 
 else
   echo "Unknown action: $ACTION"
-  echo "Usage: $0 hide|unhide|list \"Slide Name\""
+  echo "Usage: $0 unhide|list \"Slide Name\""
   exit 1
 fi
