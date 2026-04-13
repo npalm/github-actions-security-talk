@@ -3269,6 +3269,166 @@ We learned not to <code>curl | bash</code> from the internet. Skills are <strong
 
 ---
 
+<!-- AI skills & agents - the new npm - terminal style alt -->
+
+<style scoped>
+section {
+  background: #0a0a0a;
+  padding: 30px 50px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+h1 {
+  font-size: 1.85em;
+  text-align: center;
+  margin-bottom: 0.4em;
+  background: linear-gradient(135deg, #e879f9 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.terminal {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.06), 0 16px 48px rgba(0,0,0,0.5);
+  margin-bottom: 0.6em;
+}
+.title-bar {
+  background: #161b22;
+  padding: 7px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1px solid #30363d;
+}
+.dot { width: 11px; height: 11px; border-radius: 50%; }
+.dot-r { background: #f87171; }
+.dot-y { background: #fbbf24; }
+.dot-g { background: #4ade80; }
+.title-bar span {
+  color: #484f58;
+  font-size: 0.5em;
+  margin-left: 8px;
+}
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.pane {
+  padding: 14px 18px;
+  font-size: 0.48em;
+  line-height: 1.65;
+}
+.pane-left { border-right: 1px solid #21262d; }
+.section-label {
+  font-weight: 700;
+  font-size: 1.05em;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #21262d;
+}
+.label-purple { color: #c084fc; }
+.label-red { color: #f87171; }
+.prompt { color: #4ade80; }
+.comment { color: #8b949e; }
+.key { color: #7dd3fc; }
+.val { color: #86efac; }
+.danger { color: #f87171; font-weight: 700; }
+.warn { color: #fbbf24; }
+.dim { color: #484f58; }
+.output { color: #e2e8f0; }
+.attack { color: #e879f9; font-weight: 700; }
+.num { color: #f87171; font-weight: 700; font-size: 1.1em; }
+.stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+.stat {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(100, 116, 139, 0.15);
+  border-radius: 8px;
+  padding: 10px 14px;
+  text-align: center;
+}
+.stat .number {
+  font-size: 1.2em;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.stat .unit { font-size: 0.55em; color: #94a3b8; }
+.s-purple .number { color: #c084fc; }
+.s-red .number { color: #f87171; }
+.s-amber .number { color: #fbbf24; }
+</style>
+
+# AI skills & agents - the new npm
+
+<div class="terminal">
+<div class="title-bar">
+  <div class="dot dot-r"></div>
+  <div class="dot dot-y"></div>
+  <div class="dot dot-g"></div>
+  <span>researcher@supply-chain ~ /ai-marketplace-audit</span>
+</div>
+<div class="body">
+<div class="pane pane-left">
+<div class="section-label label-purple">$ cat SKILL.md</div>
+<br>
+<span class="key">name:</span> <span class="val">"productivity-helper"</span><br>
+<span class="key">description:</span> <span class="val">"Helps organize tasks"</span><br>
+<br>
+<span class="comment"># Instructions</span><br>
+<span class="output">You are a task management assistant.</span><br>
+<span class="output">Use <span class="warn">shell commands</span> to read project files.</span><br>
+<span class="output">Use <span class="warn">fetch</span> to sync with external APIs.</span><br>
+<span class="output">Use <span class="warn">fs_write</span> to update config files.</span><br>
+<br>
+<span class="prompt">$</span> <span class="comment"># A skill = markdown file</span><br>
+<span class="prompt">$</span> <span class="comment"># Agent loads it → becomes instructions</span><br>
+<span class="prompt">$</span> <span class="comment"># It can invoke tools, shell, network</span><br>
+<span class="prompt">$</span> <span class="comment"># Same trust model as npm install</span><br>
+</div>
+<div class="pane">
+<div class="section-label label-red">$ grep --attacks marketplace.db</div>
+<br>
+<span class="attack">OpenClaw marketplace</span> <span class="dim">Feb 2026</span><br>
+<span class="output">&nbsp; Malicious skills deliver info-stealers</span><br>
+<span class="output">&nbsp; <span class="num">1,184</span> flagged, 677 from one author</span><br>
+<span class="output">&nbsp; No review process, no sandboxing</span><br>
+<br>
+<span class="attack">Slopsquatting</span> <span class="dim">Mar 2025</span><br>
+<span class="output">&nbsp; AI hallucinates package names in skills</span><br>
+<span class="output">&nbsp; Attacker claims the name → real installs</span><br>
+<span class="output">&nbsp; <span class="num">237</span> repos with hallucinated dependencies</span><br>
+<br>
+<span class="attack">hackerbot-claw</span> <span class="dim">Feb 2026</span><br>
+<span class="output">&nbsp; Extension loads skill → injects prompt</span><br>
+<span class="output">&nbsp; Victim's AI exfiltrates credentials</span><br>
+<span class="output">&nbsp; <span class="num">5</span> different injection techniques</span><br>
+</div>
+</div>
+</div>
+
+<div class="stats-row">
+<div class="stat s-purple">
+<div class="number">0</div>
+<div class="unit">curation on OpenClaw marketplace</div>
+</div>
+<div class="stat s-red">
+<div class="number">curl | bash</div>
+<div class="unit">but the AI does it for you</div>
+</div>
+<div class="stat s-amber">
+<div class="number">npm circa 2015</div>
+<div class="unit">same mistakes, new ecosystem</div>
+</div>
+</div>
+
+---
+
 <!-- "What Would Elon Do?" - terminal style alt -->
 
 <style scoped>
@@ -3418,319 +3578,6 @@ h1 {
 
 <div class="bottom-bar">
 The only difference between a PoC and an exploit is <strong>one line of code</strong>
-</div>
-
----
-
-<!-- Slide 8: The pattern is clear - summary/transition -->
-<!-- 📸 IMAGE CANDIDATE: timeline visualization from research to weaponization -->
-
-<style scoped>
-section {
-  background: linear-gradient(135deg, #0f0a1a 0%, #1e1b4b 50%, #0a0a0f 100%);
-  padding: 35px 40px 25px 40px;
-}
-h1 {
-  font-size: 1.9em;
-  margin-bottom: 0.15em;
-  text-align: center;
-  background: linear-gradient(135deg, #e879f9 0%, #c084fc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-h2 { font-size: 0.85em; color: #a78bfa; text-align: center; margin-bottom: 0.8em; font-weight: 400; }
-.timeline {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  margin-bottom: 0.8em;
-}
-.tl-node {
-  text-align: center;
-  padding: 12px 18px;
-  border-radius: 10px;
-  min-width: 140px;
-}
-.tl-research {
-  background: rgba(168, 85, 247, 0.12);
-  border: 1px solid rgba(168, 85, 247, 0.3);
-}
-.tl-exploit {
-  background: rgba(251, 191, 36, 0.1);
-  border: 1px solid rgba(251, 191, 36, 0.3);
-}
-.tl-production {
-  background: rgba(248, 113, 113, 0.12);
-  border: 1px solid rgba(248, 113, 113, 0.3);
-}
-.tl-now {
-  background: rgba(248, 113, 113, 0.2);
-  border: 2px solid rgba(248, 113, 113, 0.5);
-}
-.tl-node .date { font-size: 0.55em; margin-bottom: 4px; }
-.tl-research .date { color: #a78bfa; }
-.tl-exploit .date { color: #fbbf24; }
-.tl-production .date { color: #f87171; }
-.tl-now .date { color: #f87171; }
-.tl-node .label { font-size: 0.65em; font-weight: 700; }
-.tl-research .label { color: #c084fc; }
-.tl-exploit .label { color: #fde68a; }
-.tl-production .label { color: #fca5a5; }
-.tl-now .label { color: #f87171; }
-.tl-arrow {
-  color: #64748b;
-  font-size: 1.2em;
-  padding: 0 8px;
-}
-.incidents {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-  margin-bottom: 0.7em;
-}
-.inc {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(100, 116, 139, 0.2);
-  border-radius: 8px;
-  padding: 10px 14px;
-  text-align: center;
-}
-.inc .name {
-  color: #e879f9;
-  font-size: 0.6em;
-  font-weight: 700;
-  margin-bottom: 3px;
-}
-.inc .desc {
-  color: #94a3b8;
-  font-size: 0.5em;
-  line-height: 1.4;
-}
-.transition {
-  text-align: center;
-  font-size: 0.75em;
-  color: #94a3b8;
-  padding: 10px;
-}
-.transition strong { color: #4ade80; }
-</style>
-
-# The pattern is clear
-
-## research → weaponization is accelerating
-
-<div class="timeline">
-<div class="tl-node tl-research">
-<div class="date">Mar 2025</div>
-<div class="label">Research papers</div>
-</div>
-<div class="tl-arrow">→</div>
-<div class="tl-node tl-exploit">
-<div class="date">Apr 2025</div>
-<div class="label">PoC exploits</div>
-</div>
-<div class="tl-arrow">→</div>
-<div class="tl-node tl-production">
-<div class="date">Feb 2026</div>
-<div class="label">Production malware</div>
-</div>
-<div class="tl-arrow">→</div>
-<div class="tl-node tl-now">
-<div class="date">Now</div>
-<div class="label">Multiple active campaigns</div>
-</div>
-</div>
-
-<div class="incidents">
-<div class="inc">
-<div class="name">SANDWORM_MODE</div>
-<div class="desc">MCP injection → credential theft from 5 AI tools</div>
-</div>
-<div class="inc">
-<div class="name">Clinejection</div>
-<div class="desc">AI → CI/CD → npm publish chain compromise</div>
-</div>
-<div class="inc">
-<div class="name">hackerbot-claw</div>
-<div class="desc">Extension + AI prompt → credential exfiltration</div>
-</div>
-</div>
-
-<div class="transition">
-Same supply chain problems - <strong>we already know the solutions →</strong>
-</div>
-
----
-
-<!-- The pattern is clear - terminal style alt with AI amplifier -->
-
-<style scoped>
-section {
-  background: #0a0a0a;
-  padding: 30px 50px;
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
-}
-h1 {
-  font-size: 1.9em;
-  margin-bottom: 0.3em;
-  text-align: center;
-  background: linear-gradient(135deg, #e879f9 0%, #c084fc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.terminal {
-  background: #0d1117;
-  border: 1px solid #30363d;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 40px rgba(168, 85, 247, 0.06), 0 16px 48px rgba(0,0,0,0.5);
-  margin-bottom: 0.5em;
-}
-.title-bar {
-  background: #161b22;
-  padding: 7px 14px;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  border-bottom: 1px solid #30363d;
-}
-.dot { width: 11px; height: 11px; border-radius: 50%; }
-.dot-r { background: #f87171; }
-.dot-y { background: #fbbf24; }
-.dot-g { background: #4ade80; }
-.title-bar span {
-  color: #484f58;
-  font-size: 0.5em;
-  margin-left: 8px;
-}
-.body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-}
-.pane {
-  padding: 14px 18px;
-  font-size: 0.46em;
-  line-height: 1.65;
-}
-.pane-left { border-right: 1px solid #21262d; }
-.section-label {
-  font-weight: 700;
-  font-size: 1.05em;
-  margin-bottom: 8px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid #21262d;
-}
-.label-purple { color: #c084fc; }
-.label-red { color: #f87171; }
-.prompt { color: #4ade80; }
-.comment { color: #8b949e; }
-.attack { color: #e879f9; font-weight: 700; }
-.target { color: #fbbf24; }
-.output { color: #f87171; }
-.dim { color: #484f58; }
-.amplifier {
-  background: rgba(248, 113, 113, 0.08);
-  border: 1px solid rgba(248, 113, 113, 0.25);
-  border-radius: 10px;
-  padding: 14px 20px;
-  text-align: center;
-}
-.amp-title {
-  font-size: 0.7em;
-  color: #f87171;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-.amp-grid {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr;
-  gap: 0;
-  align-items: center;
-}
-.amp-box {
-  padding: 8px 12px;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 0.52em;
-  line-height: 1.4;
-}
-.amp-before {
-  background: rgba(168, 85, 247, 0.1);
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  color: #d8b4fe;
-}
-.amp-ai {
-  background: rgba(248, 113, 113, 0.15);
-  border: 1px solid rgba(248, 113, 113, 0.4);
-  color: #fca5a5;
-}
-.amp-after {
-  background: rgba(248, 113, 113, 0.2);
-  border: 2px solid rgba(248, 113, 113, 0.5);
-  color: #f87171;
-}
-.amp-arrow {
-  color: #f87171;
-  font-size: 1.4em;
-  padding: 0 8px;
-}
-.amp-box strong { color: inherit; font-size: 1.3em; }
-</style>
-
-# The pattern is clear
-
-<div class="terminal">
-<div class="title-bar">
-  <div class="dot dot-r"></div>
-  <div class="dot dot-y"></div>
-  <div class="dot dot-g"></div>
-  <span>analyst@threat-intel ~ /2025-2026</span>
-</div>
-<div class="body">
-<div class="pane pane-left">
-<div class="section-label label-purple">$ timeline --attacks</div>
-<br>
-<span class="dim">Mar 2025</span> <span class="comment">Research papers published</span><br>
-<span class="dim">Apr 2025</span> <span class="comment">PoC exploits demonstrated</span><br>
-<span class="dim">Feb 2026</span> <span class="attack">SANDWORM_MODE</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="target">MCP → credential theft from 5 AI tools</span><br>
-<span class="dim">Feb 2026</span> <span class="attack">Clinejection</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="target">AI → CI/CD → npm publish compromise</span><br>
-<span class="dim">Feb 2026</span> <span class="attack">hackerbot-claw</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="target">extension → AI prompt → exfiltration</span><br>
-<span class="dim">Feb 2026</span> <span class="attack">OpenClaw malware</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="target">1,184 malicious skills in marketplace</span><br>
-</div>
-<div class="pane">
-<div class="section-label label-red">$ diff --before-ai --after-ai</div>
-<br>
-<span class="comment"># Before AI</span><br>
-<span class="dim">attacker writes exploit manually</span><br>
-<span class="dim">targets one repo at a time</span><br>
-<span class="dim">limited by human speed</span><br>
-<br>
-<span class="comment"># After AI</span><br>
-<span class="output">bot scans thousands of repos/hour</span><br>
-<span class="output">adapts technique per target</span><br>
-<span class="output">AI agent does the dirty work</span><br>
-<span class="output">victim's own tools used against them</span><br>
-<br>
-<span class="comment"># hackerbot-claw used 5 different</span><br>
-<span class="comment"># injection techniques, adapted per repo</span>
-</div>
-</div>
-</div>
-
-<div class="amplifier">
-<div class="amp-grid">
-<div class="amp-box amp-before">Same old vulns<br><strong>supply chain</strong></div>
-<div class="amp-arrow">×</div>
-<div class="amp-box amp-ai">AI as amplifier<br><strong>speed + scale</strong></div>
-<div class="amp-arrow">=</div>
-<div class="amp-box amp-after">Attacks that adapt<br><strong>faster than you patch</strong></div>
-</div>
 </div>
 
 ---
