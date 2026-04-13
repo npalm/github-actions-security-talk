@@ -195,9 +195,11 @@ section {
 
 <video src="assets/injection.webm" controls></video>
 
----
+<!-- HIDDEN:What you just saw
 
-<!-- What you just saw -->
+- - -
+
+< !-- What you just saw -- >
 
 <style scoped>
 section {
@@ -299,6 +301,8 @@ The CI/CD pipeline ran the attacker's code with full access to secrets.
 <span class="output">+ secrets posted to attacker</span>
 </div>
 </div>
+
+END:What you just saw -->
 
 ---
 
@@ -614,9 +618,11 @@ h2 { font-size: 1em; color: #fbbf24; text-align: center; margin-bottom: 0.8em; }
   <div class="example-item"><strong>Users</strong><br>Apps, APIs</div>
 </div>
 
----
+<!-- HIDDEN:Tribune and Mapped slides
 
-<!-- Every Node is an Attack Surface - Newspaper Style Dark -->
+- - -
+
+< !-- Every Node is an Attack Surface - Newspaper Style Dark -- >
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:wght@400;600&display=swap');
@@ -730,9 +736,9 @@ section {
   </div>
 </div>
 
----
+- - -
 
-<!-- Real Attacks Mapped - Front Page News Dark -->
+< !-- Real Attacks Mapped - Front Page News Dark -- >
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:wght@400;600&display=swap');
@@ -867,6 +873,8 @@ section {
     </div>
   </div>
 </div>
+
+END:Tribune and Mapped slides -->
 
 ---
 
@@ -1945,9 +1953,11 @@ h1 {
 <div class="same">Same vulnerability. Same attack. One year later. SHA pinning would have prevented both.</div>
 </div>
 
----
+<!-- HIDDEN:Tags lie SHAs dont
 
-<!-- The fix -->
+- - -
+
+< !-- The fix -- >
 
 <style scoped>
 h1 { font-size: 2em; margin-bottom: 1em; }
@@ -1997,6 +2007,8 @@ Cannot be changed. Ever. Let Dependabot update.
 
 </div>
 </div>
+
+END:Tags lie SHAs dont -->
 
 ---
 
@@ -4685,9 +4697,9 @@ h2 {
 </div>
 </div>
 
----
+<!-- HIDDEN:Vetting & Dependency Mirror
 
-<!-- Example: Vetting & Dependency Mirror -->
+- - -
 
 <style scoped>
 section {
@@ -4768,6 +4780,8 @@ pre {
 <li>SBOM generated automatically</li>
 </ul>
 </div>
+
+END:Vetting & Dependency Mirror -->
 
 ---
 
@@ -5030,9 +5044,11 @@ h2 {
 </div>
 </div>
 
----
+<!-- HIDDEN:Sign & attest - verify everything
 
-<!-- _class: defense-principle -->
+- - -
+
+< !-- _class: defense-principle -- >
 
 <style scoped>
 section {
@@ -5187,9 +5203,13 @@ h2 span { color: #a78bfa; font-size: 0.5em; display: block; margin-top: 2px; }
   </div>
 </div>
 
----
+END:Sign & attest - verify everything -->
 
-<!-- _class: defense-example -->
+<!-- HIDDEN:Sign & attest in action
+
+- - -
+
+< !-- _class: defense-example -- >
 
 <style scoped>
 section {
@@ -5363,6 +5383,8 @@ h2 {
   </div>
 </div>
 
+END:Sign & attest in action -->
+
 ---
 
 <!-- Defense: Assume Breach - Have a Plan -->
@@ -5432,9 +5454,11 @@ h2 {
 🛡️ <strong>reduces blast radius:</strong> Axios detected in 6 min, contained in 3 hrs vs Shai-Hulud ran for days
 </div>
 
----
+<!-- HIDDEN:Assume Breach DCR
 
-<!-- Defense: Assume Breach - Detect / Contain / Recover -->
+- - -
+
+< !-- Defense: Assume Breach - Detect / Contain / Recover -- >
 
 <style scoped>
 section {
@@ -5562,270 +5586,13 @@ h2 {
 <p><strong>Axios:</strong> detected in 6 min, contained in 3 hrs. <span class="red"><strong>Shai-Hulud:</strong></span> ran for days, 33K secrets stolen. <span class="green">The difference is preparation.</span></p>
 </div>
 
----
+END:Assume Breach DCR -->
 
-<!-- Defense: AI-Specific Defenses -->
+<!-- HIDDEN:Monday Morning Quick Wins original
 
-<style scoped>
-section {
-  background: linear-gradient(135deg, #052e16 0%, #1e1b4b 40%, #14532d 80%, #0a0a0f 100%);
-  color: #e2e8f0;
-  padding: 28px 45px;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-}
-h2 {
-  font-size: 1.85em;
-  margin: 0 0 10px 0;
-  font-weight: 700;
-  background: linear-gradient(135deg, #86efac 0%, #c084fc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-  margin-bottom: 12px;
-}
-.card {
-  border-radius: 10px;
-  padding: 10px 12px;
-}
-.card-green {
-  background: rgba(34, 197, 94, 0.08);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-}
-.card-purple {
-  background: rgba(168, 85, 247, 0.08);
-  border: 1px solid rgba(168, 85, 247, 0.3);
-}
-.card h3 {
-  font-size: 0.72em;
-  margin: 0 0 4px 0;
-  font-weight: 700;
-}
-.card-green h3 { color: #4ade80; }
-.card-purple h3 { color: #c084fc; }
-.card p {
-  margin: 0;
-  font-size: 0.58em;
-  line-height: 1.4;
-  color: #d1d5db;
-}
-.card strong { color: #86efac; }
-.card code {
-  font-size: 0.9em;
-  background: rgba(255,255,255,0.06);
-  padding: 1px 4px;
-  border-radius: 3px;
-}
-.card .prevents {
-  display: inline-block;
-  margin-top: 4px;
-  font-size: 0.52em;
-  color: #a78bfa;
-  font-style: italic;
-}
-.tag {
-  background: linear-gradient(90deg, rgba(34, 197, 94, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 0.55em;
-  color: #e9d5ff;
-  line-height: 1.4;
-  text-align: center;
-}
-.tag strong { color: #c084fc; }
-.tag .green { color: #4ade80; }
-</style>
+- - -
 
-## AI - Same, same but faster
-
-<div class="grid">
-<div class="card card-green">
-<h3>Sandbox AI execution</h3>
-<p>Run coding assistants in <strong>containers</strong>. No direct access to production secrets or infra.</p>
-</div>
-<div class="card card-purple">
-<h3>Audit MCP tool descriptions</h3>
-<p>Check for <strong>hidden prompt injection</strong> in tool descriptions. No auto-approve for new MCP servers.</p>
-<span class="prevents">→ Prevents SANDWORM_MODE</span>
-</div>
-<div class="card card-green">
-<h3>Human-in-loop for sensitive ops</h3>
-<p>Require <strong>approval</strong> before AI runs shell commands, deploys, or accesses secrets.</p>
-<span class="prevents">→ Prevents Clinejection</span>
-</div>
-<div class="card card-purple">
-<h3>Review rules files</h3>
-<p>Check <strong>.cursorrules</strong>, <strong>.github/copilot-instructions.md</strong> for Unicode injection. Use <code>cat -v</code> to reveal hidden chars.</p>
-<span class="prevents">→ Prevents Rules File Backdoor</span>
-</div>
-<div class="card card-green">
-<h3>Scope AI permissions</h3>
-<p>AI agents get <strong>read-only by default</strong>. Write access only when explicitly granted and scoped.</p>
-<span class="prevents">→ Limits CamoLeak, hackerbot-claw</span>
-</div>
-<div class="card card-purple">
-<h3>Monitor AI agent activity</h3>
-<p>Log what AI tools <strong>access, generate, and execute</strong>. Treat AI like any other service account.</p>
-</div>
-</div>
-
-<div class="tag">
-<span class="green">✅</span> <strong>prevents:</strong> SANDWORM_MODE, Clinejection, Rules File Backdoor &nbsp;|&nbsp; 🛡️ <strong>reduces blast radius</strong> for all AI attacks
-</div>
-
----
-
-<!-- Defense: AI-Specific Defenses (with image) -->
-
-<style scoped>
-section {
-  background: linear-gradient(135deg, #052e16 0%, #1e1b4b 40%, #14532d 80%, #0a0a0f 100%);
-  color: #e2e8f0;
-  padding: 28px 45px;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-}
-h2 {
-  font-size: 1.85em;
-  margin: 0 0 6px 0;
-  font-weight: 700;
-  background: linear-gradient(135deg, #86efac 0%, #c084fc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.layout {
-  display: grid;
-  grid-template-columns: 1.5fr 3fr;
-  gap: 18px;
-  height: calc(100% - 56px);
-  margin-top: 4px;
-}
-.image-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.image-col img {
-  width: 100%;
-  aspect-ratio: 4/5;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  box-shadow: 0 0 30px rgba(168, 85, 247, 0.15);
-}
-.content-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 8px;
-}
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-.card {
-  border-radius: 8px;
-  padding: 10px 12px;
-}
-.card-green {
-  background: rgba(34, 197, 94, 0.08);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-}
-.card-purple {
-  background: rgba(168, 85, 247, 0.08);
-  border: 1px solid rgba(168, 85, 247, 0.3);
-}
-.card h3 {
-  font-size: 0.75em;
-  margin: 0 0 3px 0;
-  font-weight: 700;
-}
-.card-green h3 { color: #4ade80; }
-.card-purple h3 { color: #c084fc; }
-.card p {
-  margin: 0;
-  font-size: 0.58em;
-  line-height: 1.4;
-  color: #d1d5db;
-}
-.card strong { color: #86efac; }
-.card code {
-  font-size: 0.9em;
-  background: rgba(255,255,255,0.06);
-  padding: 1px 3px;
-  border-radius: 3px;
-}
-.card .prevents {
-  display: inline-block;
-  margin-top: 3px;
-  font-size: 0.52em;
-  color: #a78bfa;
-  font-style: italic;
-}
-.tag {
-  background: linear-gradient(90deg, rgba(34, 197, 94, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 0.55em;
-  color: #e9d5ff;
-  line-height: 1.4;
-  text-align: center;
-}
-.tag strong { color: #c084fc; }
-.tag .green { color: #4ade80; }
-</style>
-
-## AI - Same, same but faster
-
-<div class="layout">
-  <div class="image-col">
-    <img src="assets/img/ai-boundary.png" alt="AI boundary illustration">
-  </div>
-  <div class="content-col">
-    <div class="grid">
-      <div class="card card-green">
-        <h3>Sandbox AI execution</h3>
-        <p>Run assistants in <strong>containers</strong>. No direct access to prod secrets.</p>
-      </div>
-      <div class="card card-purple">
-        <h3>Audit MCP tools</h3>
-        <p>Check for <strong>hidden prompt injection</strong> in tool descriptions.</p>
-        <span class="prevents">→ Prevents SANDWORM_MODE</span>
-      </div>
-      <div class="card card-green">
-        <h3>Human-in-loop</h3>
-        <p><strong>Approval</strong> before AI runs shell commands or deploys.</p>
-        <span class="prevents">→ Prevents Clinejection</span>
-      </div>
-      <div class="card card-purple">
-        <h3>Review rules files</h3>
-        <p>Check <strong>.cursorrules</strong> for Unicode injection. <code>cat -v</code></p>
-        <span class="prevents">→ Prevents Rules File Backdoor</span>
-      </div>
-      <div class="card card-green">
-        <h3>Scope AI permissions</h3>
-        <p><strong>Read-only by default</strong>. Write only when scoped.</p>
-        <span class="prevents">→ Limits CamoLeak</span>
-      </div>
-      <div class="card card-purple">
-        <h3>Monitor AI activity</h3>
-        <p>Log what AI <strong>accesses and executes</strong>. Treat as service account.</p>
-      </div>
-    </div>
-    <div class="tag">
-      <span class="green">✅</span> <strong>prevents:</strong> SANDWORM_MODE, Clinejection, Rules File Backdoor &nbsp;|&nbsp; 🛡️ <strong>reduces blast radius</strong> for all AI attacks
-    </div>
-  </div>
-</div>
-
----
-
-<!-- Monday Morning - Quick Wins (copy) -->
+< !-- Monday Morning - Quick Wins (copy) -- >
 
 <style scoped>
 section {
@@ -5911,7 +5678,7 @@ h2 span {
     <span class="num">1</span>
     <div class="item-text">
       <h3>Run zizmor on your workflows</h3>
-      <p><strong>pip install zizmor</strong> then <strong>zizmor .github/workflows/</strong> - catches injection, misconfigs, excessive permissions in minutes</p>
+      <p>Grab the latest from <strong>github.com/zizmorcore/zizmor/releases</strong>, run <strong>zizmor .github/workflows/</strong> - catches injection, misconfigs, excessive permissions in minutes</p>
     </div>
   </div>
   <div class="item">
@@ -5946,6 +5713,130 @@ h2 span {
 
 <div class="footer">
 <p>These five take less than an hour and block the majority of supply chain attacks we covered today</p>
+</div>
+
+END:Monday Morning Quick Wins original -->
+
+---
+
+<!-- Monday Morning - Quick Wins (terminal alt) -->
+
+<style scoped>
+section {
+  background: #0a0a0a;
+  padding: 30px 50px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+h2 {
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 0.35em;
+  background: linear-gradient(135deg, #86efac 0%, #4ade80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.terminal {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(34, 197, 94, 0.06), 0 16px 48px rgba(0,0,0,0.5);
+  margin-bottom: 0.5em;
+}
+.title-bar {
+  background: #161b22;
+  padding: 7px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1px solid #30363d;
+}
+.dot { width: 11px; height: 11px; border-radius: 50%; }
+.dot-r { background: #f87171; }
+.dot-y { background: #fbbf24; }
+.dot-g { background: #4ade80; }
+.title-bar span {
+  color: #484f58;
+  font-size: 0.5em;
+  margin-left: 8px;
+}
+.body {
+  padding: 16px 20px;
+  font-size: 0.52em;
+  line-height: 1.8;
+}
+.prompt { color: #4ade80; }
+.cmd { color: #e2e8f0; font-weight: 700; }
+.flag { color: #fbbf24; }
+.comment { color: #8b949e; }
+.ok { color: #4ade80; }
+.dim { color: #484f58; }
+.output { color: #86efac; }
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.stat {
+  background: rgba(34, 197, 94, 0.06);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  border-radius: 8px;
+  padding: 8px 18px;
+  text-align: center;
+}
+.stat .number {
+  font-size: 1.0em;
+  font-weight: 800;
+  color: #4ade80;
+}
+.stat .unit {
+  font-size: 0.5em;
+  color: #94a3b8;
+}
+</style>
+
+## Before your first coffee ☕
+
+<div class="terminal">
+<div class="title-bar">
+  <div class="dot dot-r"></div>
+  <div class="dot dot-y"></div>
+  <div class="dot dot-g"></div>
+  <span>defender@monday-morning ~ /your-repo</span>
+</div>
+<div class="body">
+<span class="prompt">$</span> <span class="cmd">gh release download</span> <span class="flag">--repo zizmorcore/zizmor</span> <span class="cmd">&&</span> <span class="cmd">gh attestation verify</span> <span class="flag">zizmor-*.tar.gz --repo zizmorcore/zizmor</span><br>
+<span class="output">&nbsp; ✓ SLSA provenance verified</span> <span class="comment"># built by their CI, not tampered</span><br>
+<span class="prompt">$</span> <span class="cmd">./zizmor .github/workflows/</span><br>
+<span class="output">&nbsp; 12 findings fixed</span> <span class="comment"># injection, misconfigs, excessive permissions</span><br>
+<br>
+<span class="prompt">$</span> <span class="cmd">sed -i 's/@v[0-9]*/@sha256:.../g'</span> <span class="flag">.github/workflows/*.yml</span><br>
+<span class="output">&nbsp; 8 actions pinned to SHA</span> <span class="comment"># tags lie, SHAs don't - Dependabot keeps them fresh</span><br>
+<br>
+<span class="prompt">$</span> <span class="cmd">echo</span> <span class="flag">'minimumReleaseAge: "3 days"'</span> <span class="cmd">>> .github/dependabot.yml</span><br>
+<span class="output">&nbsp; cooldown enabled</span> <span class="comment"># blocks 0-day malicious publishes</span><br>
+<br>
+<span class="prompt">$</span> <span class="cmd">echo</span> <span class="flag">'permissions: {}'</span> <span class="comment"># top of every workflow</span><br>
+<span class="output">&nbsp; default: read-only</span> <span class="comment"># grant only what each job needs</span><br>
+<br>
+<span class="prompt">$</span> <span class="cmd">cat -v</span> <span class="flag">.cursorrules .github/copilot-instructions.md</span><br>
+<span class="output">&nbsp; no hidden Unicode or injected prompts found</span> <span class="ok">✓</span><br>
+</div>
+</div>
+
+<div class="stats">
+<div class="stat">
+<div class="number">&lt; 1 hour</div>
+<div class="unit">total effort</div>
+</div>
+<div class="stat">
+<div class="number">0</div>
+<div class="unit">budget needed</div>
+</div>
+<div class="stat">
+<div class="number">80%</div>
+<div class="unit">of attacks covered today blocked</div>
+</div>
 </div>
 
 ---
