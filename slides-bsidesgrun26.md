@@ -3856,15 +3856,18 @@ section {
 }
 .sidebar .section-label { color: #fbbf24; }
 .stat-line { margin: 4px 0; }
-.blink {
+.hl { opacity: 0; transition: opacity 0.15s; white-space: pre; }
+.hl.hv { opacity: 1; }
+.hl-typed { display: inline; }
+.hl-cursor {
   display: inline-block;
   width: 7px;
   height: 1em;
   background: #4ade80;
   vertical-align: text-bottom;
-  animation: blink 1s step-end infinite;
+  animation: hlblink 0.7s step-end infinite;
 }
-@keyframes blink { 50% { opacity: 0; } }
+@keyframes hlblink { 50% { opacity: 0; } }
 </style>
 
 ## Hardening in action
@@ -3877,30 +3880,32 @@ section {
   <span>defender@ci-pipeline ~ /workflows</span>
 </div>
 <div class="body">
-<div class="main">
-<div class="section-label">$ zizmor --persona pedantic .github/workflows/</div>
-<br>
-<span class="err">error[unpinned-uses]</span>: unpinned action reference<br>
-&nbsp;<span class="loc">--> build-docs.yml:55:15</span><br>
-&nbsp;&nbsp;<span class="pipe">|</span><br>
-<span class="loc">55</span> <span class="pipe">|</span>&nbsp;&nbsp;uses: astral-sh/setup-uv@v7<br>
-&nbsp;&nbsp;<span class="pipe">|</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret">^^^^^^^^^^^^^^^^^^^^^</span> <span class="flag">not pinned to hash</span><br>
-&nbsp;&nbsp;<span class="pipe">|</span><br>
-&nbsp;&nbsp;<span class="comment">= note:</span> <span class="note-tag">confidence</span> <span class="flag">High</span> &middot; has <span class="flag">auto-fix</span><br>
-<br>
-<span class="warn">warning[excessive-permissions]</span>: overly broad permissions<br>
-&nbsp;<span class="loc">--> add-to-project.yml:1:1</span><br>
-&nbsp;&nbsp;<span class="pipe">|</span><br>
-<span class="loc">&nbsp;1</span> <span class="pipe">|</span> name: Add to Project<br>
-&nbsp;&nbsp;<span class="pipe">|</span> <span class="caret">^^^^^^^^^^^^^^^^^^^^</span> <span class="flag">default permissions used</span><br>
-&nbsp;&nbsp;<span class="pipe">|</span><br>
-&nbsp;&nbsp;<span class="comment">= note:</span> <span class="note-tag">confidence</span> <span class="flag">Medium</span><br>
-<br>
-<span class="dim">... 49 more findings</span><br>
-<br>
-<span class="prompt">$</span> zizmor <span class="ok">--fix</span> .github/workflows/<br>
-<span class="ok">✓ 51 findings auto-fixed</span><br>
-<span class="prompt">$</span> <span class="blink"></span>
+<div class="main" id="harden-left">
+
+<div class="hl" data-d="200" data-t="800"><span class="prompt">$</span> <span class="hl-typed" style="color:#e6edf3" data-text="zizmor --persona pedantic .github/workflows/"></span></div>
+<div class="hl" data-d="500"></div>
+<div class="hl" data-d="300"><span class="err">error[unpinned-uses]</span>: unpinned action reference</div>
+<div class="hl" data-d="100">&nbsp;<span class="loc">--> build-docs.yml:55:15</span></div>
+<div class="hl" data-d="100">&nbsp;&nbsp;<span class="pipe">|</span></div>
+<div class="hl" data-d="100"><span class="loc">55</span> <span class="pipe">|</span>&nbsp;&nbsp;uses: astral-sh/setup-uv@v7</div>
+<div class="hl" data-d="100">&nbsp;&nbsp;<span class="pipe">|</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="caret">^^^^^^^^^^^^^^^^^^^^^</span> <span class="flag">not pinned to hash</span></div>
+<div class="hl" data-d="100">&nbsp;&nbsp;<span class="pipe">|</span></div>
+<div class="hl" data-d="100">&nbsp;&nbsp;<span class="comment">= note:</span> <span class="note-tag">confidence</span> <span class="flag">High</span> &middot; has <span class="flag">auto-fix</span></div>
+<div class="hl" data-d="400"></div>
+<div class="hl" data-d="300"><span class="warn">warning[excessive-permissions]</span>: overly broad permissions</div>
+<div class="hl" data-d="100">&nbsp;<span class="loc">--> add-to-project.yml:1:1</span></div>
+<div class="hl" data-d="100">&nbsp;&nbsp;<span class="pipe">|</span></div>
+<div class="hl" data-d="100"><span class="loc">&nbsp;1</span> <span class="pipe">|</span> name: Add to Project</div>
+<div class="hl" data-d="100">&nbsp;&nbsp;<span class="pipe">|</span> <span class="caret">^^^^^^^^^^^^^^^^^^^^</span> <span class="flag">default permissions used</span></div>
+<div class="hl" data-d="100">&nbsp;&nbsp;<span class="pipe">|</span></div>
+<div class="hl" data-d="100">&nbsp;&nbsp;<span class="comment">= note:</span> <span class="note-tag">confidence</span> <span class="flag">Medium</span></div>
+<div class="hl" data-d="400"></div>
+<div class="hl" data-d="200"><span class="dim">... 49 more findings</span></div>
+<div class="hl" data-d="400"></div>
+<div class="hl" data-d="300" data-t="600"><span class="prompt">$</span> <span class="hl-typed" style="color:#e6edf3" data-text="zizmor --fix .github/workflows/"></span></div>
+<div class="hl" data-d="500"><span class="ok">✓ 51 findings auto-fixed</span></div>
+<div class="hl" data-d="300"><span class="prompt">$</span> <span class="hl-cursor"></span></div>
+
 </div>
 <div class="sidebar">
 <div class="section-label">🛡️ impact</div>
@@ -3918,10 +3923,50 @@ section {
 <br>
 <div class="stat-line"><span class="prompt">time:</span> &lt; 1 hour</div>
 <div class="stat-line"><span class="prompt">cost:</span> $0</div>
-<div class="stat-line"><span class="prompt">approval:</span> none needed</div>
 </div>
 </div>
 </div>
+
+<script>
+{
+  const section = document.currentScript.closest('section')
+  let started = false
+  const run = () => {
+    if (started) return
+    started = true
+    const container = section.querySelector('#harden-left')
+    if (!container) return
+    const lines = container.querySelectorAll('.hl')
+    let cumDelay = 400
+    lines.forEach(line => {
+      const lineDelay = parseInt(line.dataset.d || '300', 10)
+      const typeSpeed = parseInt(line.dataset.t || '0', 10)
+      cumDelay += lineDelay
+      const typedEl = line.querySelector('.hl-typed')
+      if (typedEl && typeSpeed > 0) {
+        const fullText = typedEl.dataset.text
+        typedEl.textContent = ''
+        const showAt = cumDelay
+        setTimeout(() => { line.classList.add('hv') }, showAt)
+        const charDelay = typeSpeed / fullText.length
+        for (let i = 0; i < fullText.length; i++) {
+          setTimeout(() => { typedEl.textContent = fullText.slice(0, i + 1) }, showAt + charDelay * i)
+        }
+        cumDelay += typeSpeed
+      } else {
+        setTimeout(() => { line.classList.add('hv') }, cumDelay)
+      }
+    })
+  }
+  if (typeof IntersectionObserver !== 'undefined') {
+    const obs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) { run(); obs.disconnect() }
+    }, { threshold: 0.5 })
+    obs.observe(section)
+  }
+  section.addEventListener('click', run, { once: true })
+}
+</script>
 
 <!--
 Now the good news. Breaking the chain. Every attack we showed has defenses. Let's go through them.
