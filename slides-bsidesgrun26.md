@@ -4254,57 +4254,65 @@ Live example - hardened workflow with all the patterns we'll discuss.
 
 ---
 
-<!-- Defense: Cooldown Periods (Principle) -->
+<!-- Defense: Cooldown Periods (Visual version) -->
 
 <style scoped>
 section {
   background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%);
   color: #e2e8f0;
-  padding: 40px 50px;
+  padding: 30px 50px;
   font-family: 'Inter', 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 h2 {
   font-size: 1.9em;
   color: #86efac;
-  margin: 0 0 12px 0;
+  margin: 0 0 8px 0;
   font-weight: 700;
+}
+.subtitle {
+  font-size: 0.75em;
+  color: #94a3b8;
+  margin-bottom: 0.8em;
 }
 .layout {
   display: grid;
   grid-template-columns: 2fr 3fr;
-  gap: 24px;
+  gap: 28px;
+  align-items: center;
 }
 .img-panel {
-  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 14px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.5);
-  align-self: start;
 }
 .img-panel img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.boxes {
+.right {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   gap: 14px;
 }
 .methods {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 12px;
 }
 .method {
   background: rgba(34, 197, 94, 0.08);
   border: 1px solid rgba(34, 197, 94, 0.3);
   border-radius: 10px;
-  padding: 10px 14px;
+  padding: 12px 14px;
+  text-align: center;
 }
-.method h3 { color: #86efac; margin: 0 0 5px 0; font-size: 0.85em; font-weight: 600; }
-.method p { margin: 0; font-size: 0.68em; color: #d1d5db; line-height: 1.5; }
+.method .icon { font-size: 1.4em; margin-bottom: 4px; }
+.method h3 { color: #86efac; margin: 0 0 4px 0; font-size: 0.72em; font-weight: 600; }
+.method p { margin: 0; font-size: 0.55em; color: #d1d5db; line-height: 1.4; }
 .method code {
   font-family: 'Fira Code', monospace;
   background: rgba(134, 239, 172, 0.12);
@@ -4313,64 +4321,48 @@ h2 {
   font-size: 0.95em;
   color: #86efac;
 }
-.warning {
-  background: rgba(239, 68, 68, 0.08);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  border-radius: 10px;
-  padding: 8px 14px;
-  font-size: 0.68em;
-  color: #fca5a5;
-}
-.warning strong { color: #f87171; }
-.warning-inline {
-  background: rgba(239, 68, 68, 0.08);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  border-radius: 10px;
-  padding: 10px 14px;
-  font-size: 0.68em;
-  color: #fca5a5;
-  line-height: 1.5;
-}
-.warning-inline strong { color: #f87171; }
 .tag {
   background: linear-gradient(135deg, rgba(251, 191, 36, 0.12), rgba(245, 158, 11, 0.08));
   border: 1px solid rgba(251, 191, 36, 0.4);
   border-radius: 8px;
-  padding: 8px 14px;
+  padding: 10px 16px;
   font-size: 0.65em;
   color: #fde68a;
+  text-align: center;
 }
 .tag strong { color: #fbbf24; }
 </style>
 
 ## Cooldown periods
 
+<div class="subtitle">Don't install new packages immediately - delay gives the community time to detect malice</div>
+
 <div class="layout">
 <div class="img-panel">
 <img src="assets/img/cooldown.png" />
 </div>
-<div class="boxes">
+<div class="right">
 
 <div class="methods">
 <div class="method">
-<h3>📦 Package manager config</h3>
-<p>npm <code>min-release-age</code>, pip constraints, cargo timeouts. Delay freshly published packages.</p>
+<div class="icon">📦</div>
+<h3>Package config</h3>
+<p>npm <code>min-release-age</code><br>cargo <code>publish-timeout</code><br>pip constraints</p>
 </div>
 <div class="method">
-<h3>🤖 Dependabot / Renovate</h3>
-<p>Set <code>schedule: weekly</code> or add 7-14 day delay. Renovate's <code>stabilityDays</code>.</p>
+<div class="icon">🤖</div>
+<h3>Dependabot / Renovate</h3>
+<p>Dependabot <code>cooldown</code><br>Renovate <code>stabilityDays</code></p>
 </div>
 <div class="method">
-<h3>🔒 Firewall / proxy</h3>
-<p>Artifactory, Nexus, Cloudsmith - enforce quarantine periods before packages are available internally.</p>
-</div>
-<div class="warning-inline">
-⚠️ <strong>Trade-off:</strong> You may need to break the rule for critical security patches. Balance security with velocity.
+<div class="icon">🔒</div>
+<h3>Proxy / firewall</h3>
+<p>Artifactory, Nexus<br>quarantine periods</p>
 </div>
 </div>
 
 <div class="tag">
-🛡️ <strong>would have prevented:</strong> Axios (3hr attack window), Shai-Hulud, any fast-publish attack
+🛡️ <strong>would have prevented:</strong> Axios (3hr window), Shai-Hulud, any fast-publish attack
 </div>
 
 </div>
@@ -4490,7 +4482,9 @@ h2 {
   - <span class="kw">package-ecosystem:</span> <span class="val">"npm"</span>
     <span class="kw">schedule:</span>
       <span class="kw">interval:</span> <span class="val">"weekly"</span>
-    <span class="kw">open-pull-requests-limit:</span> <span class="val">5</span></pre>
+    <span class="kw">cooldown:</span>
+      <span class="kw">default-days:</span> <span class="val">7</span>
+      <span class="kw">semver-major-days:</span> <span class="val">14</span></pre>
 </div>
 <div class="code-block">
 <h3>.npmrc (npm v11.10.0+)</h3>
@@ -4527,32 +4521,34 @@ Pinning in practice. SHA pinning with Dependabot auto-updates. Best of both worl
 
 ---
 
-<!-- Defense: Vetting & Dependency Mirror (Principle) -->
+<!-- Defense: Vetting & Dependency Mirror (Visual version) -->
 
 <style scoped>
 section {
   background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%);
   color: #e2e8f0;
-  padding: 40px 50px;
+  padding: 30px 50px;
   font-family: 'Inter', 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 h2 {
   font-size: 1.9em;
   color: #86efac;
-  margin: 0 0 12px 0;
+  margin: 0 0 10px 0;
   font-weight: 700;
 }
 .layout {
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: 24px;
+  align-items: center;
 }
 .img-panel {
-  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 14px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.5);
-  align-self: start;
 }
 .img-panel img {
   width: 100%;
@@ -4562,7 +4558,6 @@ h2 {
 .boxes {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   gap: 12px;
 }
 .methods {
@@ -4574,25 +4569,21 @@ h2 {
   background: rgba(34, 197, 94, 0.08);
   border: 1px solid rgba(34, 197, 94, 0.3);
   border-radius: 10px;
-  padding: 10px 14px;
+  padding: 12px 16px;
 }
-.method h3 { color: #86efac; margin: 0 0 5px 0; font-size: 0.78em; font-weight: 600; }
-.method p { margin: 0; font-size: 0.6em; color: #d1d5db; line-height: 1.5; }
-.tag {
-  background: linear-gradient(135deg, rgba(251, 191, 36, 0.12), rgba(245, 158, 11, 0.08));
-  border: 1px solid rgba(251, 191, 36, 0.4);
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 0.6em;
-  color: #fde68a;
+.method h3 { color: #86efac; margin: 0 0 5px 0; font-size: 0.82em; font-weight: 600; }
+.method p { margin: 0; font-size: 0.68em; color: #d1d5db; line-height: 1.5; }
+.warnings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
-.tag strong { color: #fbbf24; }
 .warning {
   background: rgba(239, 68, 68, 0.08);
   border: 1px solid rgba(239, 68, 68, 0.3);
   border-radius: 10px;
-  padding: 8px 14px;
-  font-size: 0.58em;
+  padding: 12px 16px;
+  font-size: 0.62em;
   color: #fca5a5;
   line-height: 1.5;
 }
@@ -4609,29 +4600,30 @@ h2 {
 
 <div class="methods">
 <div class="method">
-<h3>🪞 Required mirror / proxy</h3>
-<p>All deps fetched through Artifactory / Nexus / Cloudsmith. No direct registry access.</p>
+<h3>🪞 Mirror / proxy</h3>
+<p>All deps via Artifactory / Nexus. No direct registry access.</p>
 </div>
 <div class="method">
 <h3>📋 Allowlists</h3>
-<p>Only pre-approved packages permitted. Block unknown by default.</p>
+<p>Only pre-approved packages. Block unknown by default.</p>
 </div>
 <div class="method">
 <h3>📊 OpenSSF Scorecard</h3>
-<p>Vet third-party deps before adding. Check: signed releases, branch protection, maintained.</p>
+<p>Vet deps before adding. Check signed releases, maintenance.</p>
 </div>
 <div class="method">
 <h3>📜 License & SBOM</h3>
-<p>Generate SBOM for every release. Track what's in your supply chain.</p>
+<p>Generate SBOM per release. Track your supply chain.</p>
 </div>
 </div>
 
+<div class="warnings">
 <div class="warning">
-⚠️ <strong>Watch out:</strong> Manual allowlists create friction - devs bypass controls when they slow down delivery. Automate vetting to avoid a counter-effect where teams find workarounds.
+⚠️ <strong>Allowlists create friction</strong> — devs bypass controls when they slow delivery. Automate vetting.
 </div>
-
 <div class="warning">
-⚠️ <strong>Mirror is not magic:</strong> Without scanning, malicious packages end up cached in your mirror too. Combine with <strong>cooldown periods</strong> and active detection on your proxy.
+⚠️ <strong>Mirror ≠ safe</strong> — without scanning, malicious packages get cached too. Combine with cooldown + detection.
+</div>
 </div>
 
 </div>
