@@ -5290,7 +5290,9 @@ h2 {
 <span class="prompt">$</span> <span class="cmd">echo</span> <span class="flag">'permissions: {}'</span> <span class="comment"># top of every workflow</span><br>
 <span class="output">&nbsp; default: read-only</span> <span class="comment"># grant only what each job needs</span><br>
 <br>
-<span class="prompt">$</span> <span class="cmd">cat -v</span> <span class="flag">.cursorrules .github/copilot-instructions.md</span><br>
+<span class="prompt">$</span> <span class="cmd">ls -la</span> <span class="flag">.agent/ .skills/ .cursor/ .github/copilot-instructions.md</span><br>
+<span class="output">&nbsp; review every AI agent config in your repo</span> <span class="comment"># know what your agents can do</span><br>
+<span class="prompt">$</span> <span class="cmd">cat -v</span> <span class="flag">.cursorrules .github/copilot-instructions.md .agent/*.md</span><br>
 <span class="output">&nbsp; no hidden Unicode or injected prompts found</span> <span class="ok">✓</span><br>
 </div>
 </div>
