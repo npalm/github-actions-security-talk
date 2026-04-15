@@ -4649,6 +4649,149 @@ Cooldown periods. Don't install new packages immediately. Wait 3 days.
 
 ---
 
+<!-- Vetting in action - AI Skill Registry security scanning -->
+
+<style scoped>
+section {
+  background: #0a0a0a;
+  padding: 30px 50px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+h2 {
+  font-size: 1.6em;
+  text-align: center;
+  margin-bottom: 0.15em;
+  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.52em;
+  margin-bottom: 0.5em;
+}
+.terminal {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(74, 222, 128, 0.06), 0 16px 48px rgba(0,0,0,0.5);
+}
+.title-bar {
+  background: #161b22;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1px solid #30363d;
+}
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot-r { background: #f87171; }
+.dot-y { background: #fbbf24; }
+.dot-g { background: #4ade80; }
+.title-bar span {
+  color: #484f58;
+  font-size: 0.45em;
+  margin-left: 8px;
+}
+.body {
+  padding: 14px 20px;
+  font-size: 0.44em;
+  line-height: 1.6;
+}
+.prompt { color: #4ade80; }
+.cmd { color: #d2a8ff; }
+.flag { color: #7dd3fc; }
+.url { color: #a5d6ff; }
+.dim { color: #484f58; }
+.muted { color: #8b949e; }
+.info { color: #e2e8f0; }
+.success { color: #4ade80; font-weight: 700; }
+.safe { color: #4ade80; font-weight: 700; }
+.low-risk { color: #fbbf24; font-weight: 700; }
+.security-box {
+  background: rgba(74, 222, 128, 0.06);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 8px 0;
+}
+.security-header {
+  color: #4ade80;
+  font-weight: 700;
+}
+.tbl {
+  display: grid;
+  grid-template-columns: 160px 100px 100px 100px;
+  gap: 2px 0;
+  margin: 6px 0 4px 8px;
+}
+.tbl-head { color: #94a3b8; font-weight: 600; }
+.tbl-name { color: #e2e8f0; }
+.key-point {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.48em;
+  margin-top: 0.4em;
+}
+.key-point strong { color: #4ade80; }
+</style>
+
+## Vetting in action
+
+<div class="subtitle">skills.sh - open skill registry for AI agents</div>
+
+<div class="terminal">
+<div class="title-bar">
+  <div class="dot dot-r"></div>
+  <div class="dot dot-y"></div>
+  <div class="dot dot-g"></div>
+  <span>developer@workstation ~/project</span>
+</div>
+<div class="body">
+<span class="prompt">$</span> <span class="cmd">npx skills add</span> <span class="url">github.com/anthropics/skills</span> \<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="flag">--skill</span> frontend-design <span class="flag">--agent</span> claude-code <span class="flag">-g</span><br>
+<br>
+<span class="muted">&#9702;&nbsp; Source: github.com/anthropics/skills.git</span><br>
+<span class="muted">&#9702;&nbsp; Repository cloned</span><br>
+<span class="muted">&#9702;&nbsp; Found 18 skills</span><br>
+<span class="success">&#9679;&nbsp; Selected 1 skill: frontend-design</span><br>
+<br>
+<span class="muted">&#9702;&nbsp; Installation Summary</span><br>
+<span class="dim">&nbsp;&nbsp;&nbsp; ~/.agents/skills/frontend-design</span><br>
+<span class="dim">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; copy -> Claude Code</span><br>
+<br>
+<div class="security-box">
+<span class="security-header">&#9702;&nbsp; Security Risk Assessments</span><br>
+<div class="tbl">
+<span></span><span class="tbl-head">Gen</span><span class="tbl-head">Socket</span><span class="tbl-head">Snyk</span>
+<span class="tbl-name">frontend-design</span><span class="safe">Safe</span><span class="safe">0 alerts</span><span class="low-risk">Low Risk</span>
+</div>
+<span class="dim">&nbsp;&nbsp; Details: https://skills.sh/anthropics/skills</span>
+</div>
+<span class="muted">&#9670;&nbsp; Proceed with installation?</span><br>
+<span class="info">&nbsp;&nbsp; &#9675; Yes / &#9679; No</span><br>
+<span class="muted">&#9492;&nbsp; Installation cancelled</span>
+</div>
+</div>
+
+<div class="key-point"><strong>3 independent security vendors</strong> assess every skill before install</div>
+
+<!--
+Vetting in action. skills.sh from Vercel is an open skill registry for AI agents - think npm but for AI capabilities.
+
+Before any skill is installed, three independent security vendors assess the risk: Gen (Norton/Avast parent), Socket for supply chain analysis, and Snyk for known vulnerabilities. Risk ratings range from Safe to Critical Risk.
+
+This matters because AI skills are not just code libraries. They are instructions that tell AI agents what to do, which tools to use, which files to read. A malicious skill can instruct an AI to exfiltrate data, run shell commands, or modify config files.
+
+Early 2026 audit of 22,511 public agent skills found 140,963 issues including code execution, unsafe remote scripts, and consent bypass. Registries with built-in security scanning are the first line of defense.
+
+The ecosystem is young but learning from npm's mistakes. This is what vetting looks like in the rapidly evolving AI world.
+-->
+
+---
+
 <!-- _class: defense-principle -->
 
 <style scoped>
