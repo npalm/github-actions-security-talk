@@ -4736,6 +4736,19 @@ h2 {
   margin-top: 0.4em;
 }
 .key-point strong { color: #4ade80; }
+.al { opacity: 0; transition: opacity 0.15s; }
+.al.av { opacity: 1; }
+.al-typed { display: inline; }
+.al-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  background: #4ade80;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: alblink 1s step-end infinite;
+}
+@keyframes alblink { 50% { opacity: 0; } }
 </style>
 
 ## Vetting in action
@@ -4749,34 +4762,74 @@ h2 {
   <div class="dot dot-g"></div>
   <span>developer@workstation ~/project</span>
 </div>
-<div class="body">
-<span class="prompt">$</span> <span class="cmd">npx skills add</span> <span class="url">github.com/anthropics/skills</span> \<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="flag">--skill</span> frontend-design <span class="flag">--agent</span> claude-code <span class="flag">-g</span><br>
-<br>
-<span class="muted">&#9702;&nbsp; Source: github.com/anthropics/skills.git</span><br>
-<span class="muted">&#9702;&nbsp; Repository cloned</span><br>
-<span class="muted">&#9702;&nbsp; Found 18 skills</span><br>
-<span class="success">&#9679;&nbsp; Selected 1 skill: frontend-design</span><br>
-<br>
-<span class="muted">&#9702;&nbsp; Installation Summary</span><br>
-<span class="dim">&nbsp;&nbsp;&nbsp; ~/.agents/skills/frontend-design</span><br>
-<span class="dim">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; copy -> Claude Code</span><br>
-<br>
-<div class="security-box">
+<div class="body" id="vet-term">
+<div class="al" data-d="200" data-t="1200"><span class="prompt">$</span> <span class="al-typed" data-text='npx skills add github.com/anthropics/skills --skill frontend-design --agent claude-code -g'></span></div>
+<div class="al" data-d="400"></div>
+<div class="al" data-d="300"><span class="muted">&#9702;&nbsp; Source: github.com/anthropics/skills.git</span></div>
+<div class="al" data-d="250"><span class="muted">&#9702;&nbsp; Repository cloned</span></div>
+<div class="al" data-d="250"><span class="muted">&#9702;&nbsp; Found 18 skills</span></div>
+<div class="al" data-d="350"><span class="success">&#9679;&nbsp; Selected 1 skill: frontend-design</span></div>
+<div class="al" data-d="400"></div>
+<div class="al" data-d="300"><span class="muted">&#9702;&nbsp; Installation Summary</span></div>
+<div class="al" data-d="200"><span class="dim">&nbsp;&nbsp;&nbsp; ~/.agents/skills/frontend-design</span></div>
+<div class="al" data-d="200"><span class="dim">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; copy -> Claude Code</span></div>
+<div class="al" data-d="400"></div>
+<div class="al" data-d="500"><div class="security-box">
 <span class="security-header">&#9702;&nbsp; Security Risk Assessments</span><br>
 <div class="tbl">
 <span></span><span class="tbl-head">Gen</span><span class="tbl-head">Socket</span><span class="tbl-head">Snyk</span>
 <span class="tbl-name">frontend-design</span><span class="safe">Safe</span><span class="safe">0 alerts</span><span class="low-risk">Low Risk</span>
 </div>
 <span class="dim">&nbsp;&nbsp; Details: https://skills.sh/anthropics/skills</span>
-</div>
-<span class="muted">&#9670;&nbsp; Proceed with installation?</span><br>
-<span class="info">&nbsp;&nbsp; &#9675; Yes / &#9679; No</span><br>
-<span class="muted">&#9492;&nbsp; Installation cancelled</span>
+</div></div>
+<div class="al" data-d="400"><span class="muted">&#9670;&nbsp; Proceed with installation?</span></div>
+<div class="al" data-d="300"><span class="info">&nbsp;&nbsp; &#9675; Yes / &#9679; No</span></div>
+<div class="al" data-d="300"><span class="prompt">$</span> <span class="al-cursor"></span></div>
 </div>
 </div>
 
-<div class="key-point"><strong>3 independent security vendors</strong> assess every skill before install</div>
+<div class="key-point">Common sense: <strong>assess every skill before use</strong></div>
+
+<script>
+{
+  const section = document.currentScript.closest('section')
+  let started = false
+  const run = () => {
+    if (started) return
+    started = true
+    const container = section.querySelector('#vet-term')
+    if (!container) return
+    const lines = container.querySelectorAll('.al')
+    let cumDelay = 300
+    lines.forEach(line => {
+      const lineDelay = parseInt(line.dataset.d || '300', 10)
+      const typeSpeed = parseInt(line.dataset.t || '0', 10)
+      cumDelay += lineDelay
+      const typedEl = line.querySelector('.al-typed')
+      if (typedEl && typeSpeed > 0) {
+        const fullText = typedEl.dataset.text
+        typedEl.textContent = ''
+        const showAt = cumDelay
+        setTimeout(() => { line.classList.add('av') }, showAt)
+        const charDelay = typeSpeed / fullText.length
+        for (let i = 0; i < fullText.length; i++) {
+          setTimeout(() => { typedEl.textContent = fullText.slice(0, i + 1) }, showAt + charDelay * i)
+        }
+        cumDelay += typeSpeed
+      } else {
+        setTimeout(() => { line.classList.add('av') }, cumDelay)
+      }
+    })
+  }
+  if (typeof IntersectionObserver !== 'undefined') {
+    const obs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) { run(); obs.disconnect() }
+    }, { threshold: 0.5 })
+    obs.observe(section)
+  }
+  section.addEventListener('click', run, { once: true })
+}
+</script>
 
 <!--
 Vetting in action. skills.sh from Vercel is an open skill registry for AI agents - think npm but for AI capabilities.
