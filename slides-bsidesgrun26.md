@@ -4498,8 +4498,7 @@ h2 {
     <span class="kw">schedule:</span>
       <span class="kw">interval:</span> <span class="val">"weekly"</span>
     <span class="kw">cooldown:</span>
-      <span class="kw">default-days:</span> <span class="val">7</span>
-      <span class="kw">semver-major-days:</span> <span class="val">14</span></pre>
+      <span class="kw">default-days:</span> <span class="val">7</span></pre>
 </div>
 <div class="code-block">
 <h3>.npmrc (npm v11.10.0+)</h3>
