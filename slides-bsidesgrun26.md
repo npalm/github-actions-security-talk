@@ -4142,6 +4142,7 @@ h2 {
   color: #a5b4fc;
   margin: 0 0 16px 0;
   font-weight: 700;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 .columns {
   display: grid;
@@ -4226,7 +4227,7 @@ h2 {
 .tip-card strong { color: #86efac; }
 </style>
 
-## Pinning in practice
+## Pinning in action
 
 <div class="columns">
 <div class="code-stack">
@@ -4403,6 +4404,7 @@ h2 {
   color: #86efac;
   margin: 0 0 16px 0;
   font-weight: 700;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 .columns {
   display: grid;
@@ -4486,7 +4488,7 @@ h2 {
 .tip-card strong { color: #fde68a; }
 </style>
 
-## Cooldown in practice
+## Cooldown in action
 
 <div class="columns">
 <div class="code-stack">
@@ -4977,6 +4979,7 @@ h2 {
   color: #c084fc;
   margin: 0 0 16px 0;
   font-weight: 700;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 .columns {
   display: grid;
@@ -5263,7 +5266,7 @@ h2 {
 }
 </style>
 
-## Before your first coffee ☕
+## Monday morning todo list ☕
 
 <div class="terminal">
 <div class="title-bar">
