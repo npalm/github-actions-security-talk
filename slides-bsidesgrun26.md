@@ -2742,7 +2742,7 @@ Use <code>gh</code> CLI to push to <code>posture-report-trivy</code>.<br>
 </div>
 
 <div class="bottom-bar">
-Not a dependency attack. Not a skill. A <strong>VS Code extension</strong> that turns your AI assistant into the attacker's agent — using <strong>your credentials</strong>.
+Not a dependency attack. Not a skill. A <strong>VS Code extension</strong> that turns your AI assistant into the attacker's agent - using <strong>your credentials</strong>.
 </div>
 
 <!--
@@ -3346,7 +3346,7 @@ h1 {
 
 # "What Would Elon Do?"
 
-<div class="wed-sub">openclaw/skills/orlyjamie/wed — security research by @theonejvo</div>
+<div class="wed-sub">openclaw/skills/orlyjamie/wed - security research by @theonejvo</div>
 
 <div class="wed-panels">
 <div class="wed-term">
@@ -3463,7 +3463,7 @@ The PoC only pinged a counter. <strong>Swap one line and it's full exfiltration.
 
 <!--
 Interactive animated version of the WED skill attack. Based on real skill from
-openclaw/skills/orlyjamie/wed — security research by @theonejvo.
+openclaw/skills/orlyjamie/wed - security research by @theonejvo.
 Left: shows the skill executing in Claude Code, gathering secrets via bash.
 Right: network monitor showing the exfiltration in real-time.
 The skill delivered actual value (business plan) while silently stealing credentials.
@@ -4634,10 +4634,10 @@ h2 {
 
 <div class="warnings">
 <div class="warning">
-⚠️ <strong>Allowlists create friction</strong> — devs bypass controls when they slow delivery. Automate vetting.
+⚠️ <strong>Allowlists create friction</strong> - devs bypass controls when they slow delivery. Automate vetting.
 </div>
 <div class="warning">
-⚠️ <strong>Mirror ≠ safe</strong> — without scanning, malicious packages get cached too. Combine with cooldown + detection.
+⚠️ <strong>Mirror ≠ safe</strong> - without scanning, malicious packages get cached too. Combine with cooldown + detection.
 </div>
 </div>
 
