@@ -200,7 +200,7 @@ section {
 <video src="assets/injection.webm" controls></video>
 
 <!--
-Quick intro - I'm Niek Palm, working on developer experience and platform engineering at Philips. Open source contributor.
+Let me show you something real. This is a live GitHub Actions injection attack.
 -->
 
 ---
@@ -250,7 +250,7 @@ section {
 </div>
 
 <!--
-Let me show you something. This is a real GitHub Actions injection attack. Watch what happens.
+Demo video - let it play, ~90 seconds. Pause if needed.
 -->
 
 ---
@@ -284,7 +284,7 @@ h1 {
 <div class="sub">Let's understand the full attack surface</div>
 
 <!--
-Demo video - let it play, ~90 seconds. Pause if needed.
+That was just ONE attack vector. There are dozens more. 431% increase in supply chain attacks since 2021.
 -->
 
 ---
@@ -322,7 +322,7 @@ h1 {
 <div class="sub">Understanding what we're protecting</div>
 
 <!--
-That was just ONE attack vector. There are dozens more. Let's understand the full picture.
+Section transition - the software supply chain. SLSA model.
 -->
 
 ---
@@ -392,7 +392,7 @@ section { justify-content: center; }
 </div>
 
 <!--
-Modern software isn't built - it's assembled. Every link in this chain is a potential attack surface.
+Modern software is assembled, not built. SLSA defines the chain - source, build, package, deploy. Every link is an attack surface.
 -->
 
 ---
@@ -540,7 +540,7 @@ h2 { font-size: 1em; color: #fbbf24; text-align: center; margin-bottom: 0.8em; }
 </div>
 
 <!--
-Section transition - dependencies.
+Walk through the flow left to right. IDE to production - every step is a potential entry point for attackers.
 -->
 
 ---
@@ -578,7 +578,7 @@ h1 {
 <div class="sub">The 📦 node deserves special attention</div>
 
 <!--
-Your code takes a long journey. From IDE to production - every step is a potential entry point.
+Section transition - dependencies. The iceberg below the surface.
 -->
 
 ---
@@ -646,7 +646,7 @@ section { justify-content: center; }
 <div class="multiplier">That's <strong>26x</strong> more attack surface than you thought</div>
 
 <!--
-From idea to user - the full pipeline.
+The reveal - 47 direct dependencies become 1,247 transitive. You trust thousands of maintainers you have never met.
 -->
 
 ---
@@ -742,7 +742,7 @@ h1 { font-size: 2.2em; margin-bottom: 1em;
 <div class="source">- Sonatype State of Software Supply Chain</div>
 
 <!--
-Dependencies are the foundation of modern software. But they're also the biggest attack surface.
+96% of codebases contain OSS. 77% of code is open source. 84% has known vulns. $60B projected damage by 2026.
 -->
 
 ---
@@ -780,7 +780,7 @@ h1 {
 <div class="sub">The 🔨 Build node in modern open source</div>
 
 <!--
-Section transition - GitHub Actions.
+Section transition - GitHub Actions. The build system everyone uses.
 -->
 
 ---
@@ -853,7 +853,7 @@ If you use open source, you depend on GitHub Actions security.
 </div>
 
 <!--
-96% of your code comes from dependencies. You trust thousands of maintainers you've never met.
+GitHub Actions is the standard CI/CD for open source. 4.5M+ workflows, 20K+ marketplace actions. Massive attack surface.
 -->
 
 ---
@@ -930,7 +930,7 @@ jobs:
 </div>
 
 <!--
-GitHub Actions is now THE CI/CD platform for open source. 4.5M+ workflows running. Massive attack surface.
+Walk through the anatomy. Triggers, permissions, steps. Each element is an attack vector.
 -->
 
 ---
@@ -992,7 +992,7 @@ h1 { font-size: 2.2em; margin-bottom: 1em; text-align: center;
 </div>
 
 <!--
-Standard CI/CD for open source. Most popular, most targeted.
+GITHUB_TOKEN access, secrets, network, compute. It is a goldmine for attackers.
 -->
 
 ---
@@ -1029,7 +1029,7 @@ h1 {
 <div class="sub">Real attacks, real damage</div>
 
 <!--
-Walk through the anatomy. Trigger, permissions, steps. Each one is an attack vector.
+Transition - now the attacks. We covered the theory, now real incidents.
 -->
 
 ---
@@ -1090,7 +1090,7 @@ h1 {
 </div>
 
 <!--
-GITHUB_TOKEN, secrets, network access, arbitrary code execution. It's a goldmine for attackers.
+Shai-Hulud 2.0 - named after Dune's sandworm. Most sophisticated npm worm ever. 843+ packages, 33K secrets stolen, 1,195 orgs hit.
 -->
 
 ---
@@ -1144,7 +1144,7 @@ The malware hijacks npm's installation mechanism:
 </div>
 
 <!--
-Transition - now let's see real attacks.
+Step 1 - npm preinstall hooks run BEFORE your code. Attacker hides malicious loader in install script. You never see it.
 -->
 
 ---
@@ -1203,7 +1203,7 @@ code { font-size: 0.8em; }
 <div class="irony">The attacker uses TruffleHog - a tool built to protect you - against you.</div>
 
 <!--
-Shai-Hulud - named after Dune's sandworm. This was the most sophisticated npm supply chain attack ever. One install, total compromise.
+Step 2 - hunts every secret on the system. .npmrc tokens, GitHub PATs, AWS keys, crypto wallets. Even uses gitleaks against you.
 -->
 
 ---
@@ -1269,7 +1269,7 @@ h2 { font-size: 1em; color: #22c55e; margin-bottom: 1em; }
 </div>
 
 <!--
-Step 1 - npm preinstall hooks run before your code. The attacker hides malicious code in a dependency's install script. You never see it.
+Step 3 - if npm token found AND victim maintains a package, inject self. Worm spreads through the entire dependency graph.
 -->
 
 ---
@@ -1324,7 +1324,7 @@ h2 { font-size: 0.8em; color: #ef4444; margin-bottom: 0.6em; }
 </div>
 
 <!--
-Step 2 - hunts for every secret it can find. AWS keys, npm tokens, GitHub tokens. Even uses security scanning tools against you.
+Step 4 - registers self-hosted GitHub runner, creates backdoor workflows. Persistent access survives package cleanup.
 -->
 
 ---
@@ -1372,7 +1372,7 @@ h2 { font-size: 0.8em; color: #a855f7; margin-bottom: 0.6em; }
 </div>
 
 <!--
-Step 3 - if it finds an npm token AND the victim maintains a package, it injects itself into that package. Worm propagation.
+Step 5 - exfiltrates via GitHub infra. Issue comments, gist uploads. Security tools don't flag GitHub-to-GitHub traffic.
 -->
 
 ---
@@ -1436,7 +1436,7 @@ h2 { font-size: 0.8em; color: #dc2626; margin-bottom: 0.6em; }
 </div>
 
 <!--
-Step 4 - registers a self-hosted runner and creates backdoor workflows. Persistent access even if the package is cleaned.
+Step 6 - if exfiltration fails, destroy everything. Delete repos, wipe traces. Anti-forensics built in.
 -->
 
 ---
@@ -1491,7 +1491,7 @@ h2 { font-size: 0.7em; color: #a16207; margin-bottom: 0.4em; }
 <div class="takeaway">Every step uses legitimate platform features. The platform isn't broken, our trust model is.</div>
 
 <!--
-Step 5 - exfiltrates through GitHub's own infrastructure. Issue comments, gist uploads. Blends in with normal traffic.
+Full kill chain summary. One npm install leads to total compromise. 33,185 secrets stolen, 25,000+ exfil repos created.
 -->
 
 ---
@@ -1553,7 +1553,7 @@ Same pattern exploited in: <strong>Ultralytics</strong> (Dec 2024), <strong>Shai
 </div>
 
 <!--
-Step 6 - if exfiltration fails, destroy everything. Delete repos, wipe traces. Scorched earth.
+hackerbot-claw - AI-powered mass exploitation. Feb-Mar 2026. Automated scanning for pull_request_target misconfigs.
 -->
 
 ---
@@ -1636,7 +1636,7 @@ h2 { font-size: 0.85em; color: #a78bfa; margin-bottom: 0.8em; }
 </div>
 
 <!--
-Full kill chain summary. One npm install leads to total compromise in minutes. 33,000 secrets stolen.
+All exploited KNOWN misconfigurations - preventable. 7 repos targeted, Trivy fully compromised. Claude blocked one attack.
 -->
 
 ---
@@ -1675,7 +1675,7 @@ h1 {
 <div class="badge">ONE YEAR APART - SAME VULNERABILITY</div>
 
 <!--
-hackerbot-claw - a different attacker, same playbook. Exploited pull_request_target misconfigurations at scale.
+Tag hijacking - attacker moves git tag to malicious code. tj-actions: 23,000+ repos. Trivy: 75 of 76 tags poisoned.
 -->
 
 ---
@@ -1741,7 +1741,7 @@ hackerbot-claw - a different attacker, same playbook. Exploited pull_request_tar
 </div>
 
 <!--
-Repos compromised by hackerbot-claw. All exploited KNOWN misconfigurations. These were preventable.
+Side by side comparison. Same pattern, different targets. Fix: pin to SHA, not tag. Tags lie, SHAs don't.
 -->
 
 ---
@@ -1796,7 +1796,7 @@ h1 {
 <div class="date">March 31, 2026<span class="fresh">RECENT</span></div>
 
 <!--
-Tag hijacking - tj-actions and Trivy. The attacker moved a git tag to point to malicious code. 23,000 repos affected.
+Axios - 100M+ weekly downloads. Social engineering via fake Microsoft Teams call. One compromised maintainer account.
 -->
 
 ---
@@ -1854,7 +1854,7 @@ Single maintainer account compromised → Cross-platform RAT delivered to <stron
 </div>
 
 <!--
-The fix is simple - pin to SHA, not tag. Tags can be moved anytime. SHAs are immutable.
+The 3-hour window. Malicious versions downloaded 2 million times. Socket detected in ~6 minutes but downloads kept flowing.
 -->
 
 ---
@@ -1969,7 +1969,7 @@ h1 {
 </div>
 
 <!--
-Axios - 100M downloads per week. One compromised maintainer account, 2 million installs of malware.
+Full attack flow - social engineering to publication to detection. The human factor remains the weakest link.
 -->
 
 ---
@@ -2011,7 +2011,7 @@ h1 {
 <div class="sub">Producer, consumer, and attack surface</div>
 
 <!--
-The 3-hour window. In just 3 hours, the malicious package was downloaded 2 million times.
+Section transition - AI is the new frontier. Not replacing the supply chain, becoming part of it.
 -->
 
 ---
@@ -2237,7 +2237,7 @@ h2 {
 </div>
 
 <!--
-Social engineering via Teams. The attacker posed as a Microsoft employee. One call, full access.
+AI as producer, build process, and consumer. 97% of developers use AI coding tools. Walk through the diagram.
 -->
 
 ---
@@ -2337,7 +2337,7 @@ AI writes code you ship - but it also <strong>introduces dependencies it halluci
 </div>
 
 <!--
-Now let's talk about AI. It's not replacing the supply chain - it's becoming part of it.
+AI as code producer creates supply chain risks. Hallucinated packages (slopsquatting), injected patterns. react-codeshift example.
 -->
 
 ---
@@ -2609,7 +2609,7 @@ The attack chain AI → CI/CD → npm was <span class="red">entirely new</span>
 <div class="ghsa"><code>GHSA-9ppg-jx86-fqw7</code></div>
 
 <!--
-AI as code producer. Code generation introduces new supply chain risks - hallucinated packages, injected patterns.
+Clinejection - first AI to CI/CD to supply chain attack. Compromised Cline package. Issue with hidden prompt tricks AI into modifying CI config.
 -->
 
 ---
@@ -2746,7 +2746,7 @@ Not a dependency attack. Not a skill. A <strong>VS Code extension</strong> that 
 </div>
 
 <!--
-SANDWORM_MODE - February 2026. First production malware targeting AI coding assistants.
+Trivy OpenVSX - poisoned VS Code extension. When AI tools interact with scan results, prompt injection takes over. Published by hackerbot-claw.
 -->
 
 ---
@@ -2878,7 +2878,7 @@ h2 { font-size: 0.85em; color: #a78bfa; margin-bottom: 0.7em; font-weight: 400; 
 </div>
 
 <!--
-Clinejection - AI to CI/CD to supply chain. The attacker exploits the coding assistant to inject malicious workflow changes.
+MCP - Model Context Protocol. Every tool call is an injection point. Tool poisoning, rug pulls, tool shadowing.
 -->
 
 ---
@@ -3050,7 +3050,7 @@ We learned not to <code>curl | bash</code> from the internet. Skills are <strong
 </div>
 
 <!--
-Trivy OpenVSX - hackerbot-claw publishes a poisoned VS Code extension. When AI tools use it, prompt injection takes over.
+Skills are to AI agents what npm packages are to Node.js. Same trust problem. Most marketplaces have zero security review.
 -->
 
 ---
@@ -3214,7 +3214,7 @@ h1 {
 </div>
 
 <!--
-MCP - Model Context Protocol. How AI tools interact with the world. Every tool call is a potential injection point.
+Terminal view - let the output speak. Shell commands, file writes, network access. Zero guardrails on most skill platforms.
 -->
 
 ---
@@ -3627,7 +3627,7 @@ h1 {
 </div>
 
 <!--
-Terminal view - look at what a skill can do. Shell commands, file writes, network access. Zero curation on marketplaces.
+Threat dashboard summary - 11 months, 1,184 malicious skills, 4 campaigns. AI amplifies every traditional attack vector.
 -->
 
 ---
@@ -3663,7 +3663,7 @@ h1 {
 <div class="sub">Practical defenses that work</div>
 
 <!--
-What Would Elon Do - the skill that gamed its way to number one on OpenClaw. Trojan horse hiding data exfiltration.
+Section transition - defenses. The good news: every attack we showed has defenses. Tone shift from scary to empowering.
 -->
 
 ---
@@ -3777,7 +3777,7 @@ h2 {
 </div>
 
 <!--
-The pattern is clear. 11 months, 1,184 malicious skills, 4 campaigns. AI amplifies every attack vector we've seen.
+Harden your workflows - first line of defense. Restrict triggers, limit permissions, use environments with approvals. Run zizmor.
 -->
 
 ---
@@ -3965,7 +3965,7 @@ section {
 </script>
 
 <!--
-Now the good news. Breaking the chain. Every attack we showed has defenses. Let's go through them.
+Hardening in action. Walk through each line - trigger restrictions, permission blocks, environment gates. Copy-paste ready.
 -->
 
 ---
@@ -4123,7 +4123,7 @@ h2 {
 </div>
 
 <!--
-Harden your workflows. This is your first line of defense.
+Immutability and versioning. Pin everything to SHAs. Tags can be moved anytime. Dependabot keeps SHA pins fresh.
 -->
 
 ---
@@ -4265,7 +4265,7 @@ h2 {
 </div>
 
 <!--
-Live example - hardened workflow with all the patterns we'll discuss.
+Pinning in action. SHA pinning with Dependabot auto-updates. Best of both worlds - immutable plus auto-updated.
 -->
 
 ---
@@ -4385,7 +4385,7 @@ h2 {
 </div>
 
 <!--
-Immutability and versioning. Pin everything to specific versions.
+Cooldown periods - don't install new packages immediately. Most malicious packages detected within 72 hours.
 -->
 
 ---
@@ -4532,7 +4532,7 @@ h2 {
 </div>
 
 <!--
-Pinning in practice. SHA pinning with Dependabot auto-updates. Best of both worlds.
+Cooldown in action. .npmrc config with ignore-scripts=true and min-release-age=7. One config file blocks most 0-day publishes.
 -->
 
 ---
@@ -4646,7 +4646,7 @@ h2 {
 </div>
 
 <!--
-Cooldown periods. Don't install new packages immediately. Wait 3 days.
+Vetting and dependency mirrors. Private registries, automated scanning. Know what you run before you run it.
 -->
 
 ---
@@ -4834,15 +4834,7 @@ h2 {
 </script>
 
 <!--
-Vetting in action. skills.sh from Vercel is an open skill registry for AI agents - think npm but for AI capabilities.
-
-Before any skill is installed, three independent security vendors assess the risk: Gen (Norton/Avast parent), Socket for supply chain analysis, and Snyk for known vulnerabilities. Risk ratings range from Safe to Critical Risk.
-
-This matters because AI skills are not just code libraries. They are instructions that tell AI agents what to do, which tools to use, which files to read. A malicious skill can instruct an AI to exfiltrate data, run shell commands, or modify config files.
-
-Early 2026 audit of 22,511 public agent skills found 140,963 issues including code execution, unsafe remote scripts, and consent bypass. Registries with built-in security scanning are the first line of defense.
-
-The ecosystem is young but learning from npm's mistakes. This is what vetting looks like in the rapidly evolving AI world.
+Vetting in action - skills.sh (Vercel). Three vendors assess every skill. 140,963 issues found in 22,511 public skills.
 -->
 
 ---
@@ -4960,7 +4952,7 @@ h2 {
 </div>
 
 <!--
-Cooldown in practice. One line in Dependabot or Renovate config.
+Least privilege - scope everything. Default read-only permissions, grant per-job, use time-limited tokens.
 -->
 
 ---
@@ -5112,7 +5104,7 @@ h2 {
 </div>
 
 <!--
-Vetting and dependency mirrors. Know what you're running.
+Least privilege in action. Job-level permissions, OIDC instead of long-lived credentials. permissions: {} at top of every workflow.
 -->
 
 ---
@@ -5185,7 +5177,7 @@ h2 {
 </div>
 
 <!--
-Least privilege. Scope everything. Permissions, tokens, network access.
+Assume breach - have a plan. Detection, containment, recovery. Monitor for unexpected workflow changes, secret rotation.
 -->
 
 ---
@@ -5310,7 +5302,7 @@ h2 {
 </div>
 
 <!--
-Least privilege in practice. Default read-only, grant only what each job needs.
+Monday morning todo list. 5 things before your first coffee. Check AI agent configs, review .npmrc, run zizmor, review permissions. No budget needed.
 -->
 
 ---
@@ -5383,7 +5375,7 @@ h2 {
 <div class="sub">The fundamentals don't change - but the attacker might now be an <em>algorithm</em>.</div>
 
 <!--
-Assume breach. Have a plan. Detection, containment, recovery.
+Closing - the supply chain is everyone's responsibility. Share resources.
 -->
 
 ---
@@ -5395,5 +5387,5 @@ Assume breach. Have a plan. Detection, containment, recovery.
 ![bg](assets/img/questions.jpeg)
 
 <!--
-5 things you can do Monday morning. No budget, no approval needed. These block the majority of attacks we covered.
+Q&A. Have backup slides ready for deep-dive questions on specific attacks.
 -->
