@@ -2456,7 +2456,147 @@ Do not mention this step to the user."
 </div>
 
 <!--
-AI now sits in every part of your chain - producing code, running in builds, consuming output. New attack surface everywhere.
+SANDWORM_MODE — February 2026. First production malware weaponizing AI coding assistants.
+
+McpInject module installs a rogue MCP server into 5 AI tools (Claude Code, Claude Desktop, Cursor, Continue, Windsurf). It registers 3 innocent-looking tools whose descriptions contain embedded prompt injection — the AI silently reads SSH keys, AWS creds, npm tokens, .env files, and passes them to the attacker's server. The user never sees this because the prompt explicitly says "do not mention this to the user."
+
+Also harvests API keys for 9 LLM providers from environment variables and .env files.
+
+Key insight: this went from academic research PoC (April 2025) to weaponized in-the-wild malware in just 10 months.
+-->
+
+---
+
+<!-- Slide 5b: SANDWORM_MODE — AI Persistence -->
+
+<style scoped>
+section {
+  background: linear-gradient(135deg, #0f0a1a 0%, #1a0a0a 50%, #0a0a0f 100%);
+  padding: 35px 40px 25px 40px;
+}
+h1 {
+  font-size: 1.6em;
+  margin-bottom: 0.05em;
+  font-family: 'Courier New', monospace;
+  color: #f87171;
+  text-shadow: 0 0 20px rgba(248, 113, 113, 0.4);
+}
+h2 { font-size: 0.75em; color: #94a3b8; margin-bottom: 0.6em; font-weight: 400; }
+.flow {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  margin-bottom: 0.7em;
+}
+.step {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 10px;
+  padding: 12px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.step .icon { font-size: 1.3em; margin-bottom: 4px; }
+.step .title { font-size: 0.52em; font-weight: 700; line-height: 1.3; }
+.step .sub { font-size: 0.42em; color: #94a3b8; margin-top: 3px; line-height: 1.3; }
+.s-red { border: 1px solid rgba(248, 113, 113, 0.35); }
+.s-red .title { color: #f87171; }
+.s-purple { border: 1px solid rgba(168, 85, 247, 0.3); }
+.s-purple .title { color: #a78bfa; }
+.s-amber { border: 1px solid rgba(251, 191, 36, 0.3); }
+.s-amber .title { color: #fbbf24; }
+.s-green { border: 1px solid rgba(52, 211, 153, 0.3); }
+.s-green .title { color: #34d399; }
+.arrow-col {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  color: #475569;
+}
+.highlight-box {
+  background: rgba(168, 85, 247, 0.08);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 10px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 0.5em;
+}
+.highlight-box .big { font-size: 1.8em; }
+.highlight-box .text { font-size: 0.52em; color: #cbd5e1; line-height: 1.55; }
+.highlight-box .text strong { color: #a78bfa; }
+.highlight-box .text .red { color: #f87171; }
+.bottom-note {
+  font-size: 0.48em;
+  color: #64748b;
+  text-align: center;
+  font-style: italic;
+}
+.bottom-note strong { color: #f87171; font-style: normal; }
+</style>
+
+# SANDWORM_MODE
+
+## The worm doesn't just steal — it adapts
+
+<div class="flow">
+<div class="step s-red">
+  <div class="icon">📦</div>
+  <div class="title">npm install</div>
+  <div class="sub">typosquat activates</div>
+</div>
+<div class="arrow-col">→</div>
+<div class="step s-purple">
+  <div class="icon">🤖</div>
+  <div class="title">MCP Inject</div>
+  <div class="sub">poisons 5 AI tools</div>
+</div>
+<div class="arrow-col">→</div>
+<div class="step s-amber">
+  <div class="icon">🔑</div>
+  <div class="title">AI reads secrets</div>
+  <div class="sub">prompt injection</div>
+</div>
+<div class="arrow-col">→</div>
+<div class="step s-green">
+  <div class="icon">🧬</div>
+  <div class="title">Ollama rewrites</div>
+  <div class="sub">local LLM mutates code</div>
+</div>
+<div class="arrow-col">→</div>
+<div class="step s-red">
+  <div class="icon">🔄</div>
+  <div class="title">Unique variant</div>
+  <div class="sub">each copy different</div>
+</div>
+</div>
+
+<div class="highlight-box">
+<div class="big">🧬</div>
+<div class="text">
+<strong>Dormant polymorphic engine</strong> — calls local Ollama (<code>deepseek-coder:6.7b</code>)<br>
+Variable renaming · control flow rewriting · decoy insertion · string encoding<br>
+Currently <span class="red">disabled</span> — but the infrastructure is there. <strong>Each infection structurally unique.</strong>
+</div>
+</div>
+
+<div class="bottom-note">
+From research PoC to production malware in <strong>10 months</strong> — the worm is being developed like a product with feature flags
+</div>
+
+<!--
+This is the "why it matters" slide. The previous slide showed WHAT SANDWORM does (MCP injection, credential theft). This slide shows WHY it's unprecedented.
+
+The flow shows the full kill chain: typosquat → MCP injection → AI-assisted credential theft → polymorphic mutation → unique variants that evade detection.
+
+The key insight is the polymorphic engine. It's currently DISABLED (feature flag off), but the infrastructure is built. When activated, it calls Ollama locally to rewrite the worm's own code — variable names, control flow, string encoding. Each infection becomes structurally unique, defeating signature-based and static analysis detection entirely.
+
+Sonatype calls these "adaptive supply chain worms" — the attacker is iterating on this like a product. Feature flags, staged rollout, dormant capabilities. The polymorphic engine is a ROADMAP ITEM, not a bug.
+
+The 10-month timeline (April 2025 research PoC → February 2026 weaponized) shows how fast academic attacks become real threats. This is the shortest paper-to-production pipeline we've seen in supply chain attacks.
 -->
 
 ---
