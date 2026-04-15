@@ -6,13 +6,13 @@ This repository has slides and demo resources for the talk **GitHub Actions Secu
 
 | When | Conference | Talk |
 |------|-----------|------|
-| Apr 2026 | [BSides Groningen](https://bsidesgrunn.org/) | [Supply Chain Compromise: The Anatomy of the Attack and the Blueprint for Defense](https://npalm.github.io/github-actions-security-talk/bsidesgrun26/) |
-| Mar 2026 | [040coders.nl](https://www.meetup.com/040coders-nl/events/312818432/) | [Beyond the Commit: Weaponizing and Hardening GitHub Actions](https://npalm.github.io/github-actions-security-talk/040coders26/) |
-| Jan 2026 | [NDC Security](https://ndcsecurity.com/) | [Beyond the Commit: Weaponizing and Hardening GitHub Actions](https://npalm.github.io/github-actions-security-talk/ndcsecurity26/) |
-| Nov 2025 | [NDC Security & AI](https://ndcmanchester.com/) | [From CI Nightmare to Supply Chain Sentinel](https://npalm.github.io/github-actions-security-talk/ndcmanchester25) |
-| Nov 2025 | [HeapCon](https://heapcon.io/) | [From CI Nightmare to Supply Chain Sentinel](https://npalm.github.io/github-actions-security-talk/heapcon25/) |
-| Nov 2025 | [GoTech World](https://www.gotech.world/) | [From CI Nightmare to Supply Chain Sentinel](https://npalm.github.io/github-actions-security-talk/gotechworld25/) |
-| Nov 2025 | [040coders.nl (Ignite)](https://www.meetup.com/040coders-nl/) | [Weaponizing GitHub Actions](https://npalm.github.io/github-actions-security-talk/040codersignite25/) |
+| Apr 2026 | [BSides Groningen](https://bsidesgrunn.org/) | [Supply Chain Compromise: The Anatomy of the Attack and the Blueprint for Defense](https://npalm.github.io/supply-chain-security-talks/bsidesgrun26/) |
+| Mar 2026 | [040coders.nl](https://www.meetup.com/040coders-nl/events/312818432/) | [Beyond the Commit: Weaponizing and Hardening GitHub Actions](https://npalm.github.io/supply-chain-security-talks/040coders26/) |
+| Jan 2026 | [NDC Security](https://ndcsecurity.com/) | [Beyond the Commit: Weaponizing and Hardening GitHub Actions](https://npalm.github.io/supply-chain-security-talks/ndcsecurity26/) |
+| Nov 2025 | [NDC Security & AI](https://ndcmanchester.com/) | [From CI Nightmare to Supply Chain Sentinel](https://npalm.github.io/supply-chain-security-talks/ndcmanchester25) |
+| Nov 2025 | [HeapCon](https://heapcon.io/) | [From CI Nightmare to Supply Chain Sentinel](https://npalm.github.io/supply-chain-security-talks/heapcon25/) |
+| Nov 2025 | [GoTech World](https://www.gotech.world/) | [From CI Nightmare to Supply Chain Sentinel](https://npalm.github.io/supply-chain-security-talks/gotechworld25/) |
+| Nov 2025 | [040coders.nl (Ignite)](https://www.meetup.com/040coders-nl/) | [Weaponizing GitHub Actions](https://npalm.github.io/supply-chain-security-talks/040codersignite25/) |
 
 ## Demo resources
 - [Demo Zizmor (extend version)](https://github.com/codethebuild/gh-actions-security-zizmor-demo-time)

@@ -2,7 +2,7 @@
   "name": "slides",
   "version": "1.0.0",
   "description": "Beyond the Commit: Weaponizing and Hardening GitHub Actions",
-  "repository": "git@github.com:npalm/github-actions-security-talk.git",
+  "repository": "git@github.com:npalm/supply-chain-security-talks.git",
   "author": "Niek Palm",
   "license": "MIT",
   "scripts": {
