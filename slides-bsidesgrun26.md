@@ -5281,9 +5281,7 @@ h2 {
 <span class="prompt">$</span> <span class="cmd">./zizmor .github/workflows/</span><br>
 <span class="output">&nbsp; 12 findings fixed</span> <span class="comment"># injection, misconfigs, excessive permissions</span><br>
 <br>
-<span class="prompt">$</span> <span class="cmd">sed -i 's/@v[0-9]*/@sha256:.../g'</span> <span class="flag">.github/workflows/*.yml</span><br>
-<span class="output">&nbsp; 8 actions pinned to SHA</span> <span class="comment"># tags lie, SHAs don't - Dependabot keeps them fresh</span><br>
-<br>
+
 <span class="prompt">$</span> <span class="cmd">echo</span> <span class="flag">'minimumReleaseAge: "3 days"'</span> <span class="cmd">>> .github/dependabot.yml</span><br>
 <span class="output">&nbsp; cooldown enabled</span> <span class="comment"># blocks 0-day malicious publishes</span><br>
 <br>
