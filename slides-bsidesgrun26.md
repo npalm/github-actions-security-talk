@@ -5281,8 +5281,11 @@ h2 {
 <span class="prompt">$</span> <span class="cmd">./zizmor .github/workflows/</span><br>
 <span class="output">&nbsp; 12 findings fixed</span> <span class="comment"># injection, misconfigs, excessive permissions</span><br>
 <br>
-<span class="prompt">$</span> <span class="cmd">echo</span> <span class="flag">'install-strategy=audit'</span> <span class="cmd">>> .npmrc</span><br>
-<span class="output">&nbsp; package manager enforces cooldown globally</span> <span class="comment"># pip, gem, cargo have equivalents</span><br>
+<span class="prompt">$</span> <span class="cmd">cat</span> <span class="flag">>> .npmrc</span> <span class="comment"><< EOF</span><br>
+<span class="output">&nbsp; ignore-scripts=true</span><br>
+<span class="output">&nbsp; min-release-age=7</span><br>
+<span class="comment">&nbsp; EOF</span><br>
+<span class="output">&nbsp; cooldown + no postinstall surprises</span> <span class="comment"># pip, gem, cargo have equivalents</span><br>
 <br>
 <span class="prompt">$</span> <span class="cmd">ls -la</span> <span class="flag">.agent/ .skills/ .cursor/ .github/copilot-instructions.md</span><br>
 <span class="output">&nbsp; review every AI agent config in your repo</span> <span class="comment"># know what your agents can do</span><br>
