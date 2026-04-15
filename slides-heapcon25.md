@@ -2977,7 +2977,7 @@ _footer: ''
       <img src="assets/img/links.png" class="links-image" alt="GitHub Repository Links" />
       <div class="github-sticker">
         🔗 github.com/npalm/<br>
-        github-actions-security-talk
+        supply-chain-security-talks
       </div>
     </div>
   </div>
