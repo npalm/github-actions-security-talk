@@ -2342,7 +2342,7 @@ Now let's talk about AI. It's not replacing the supply chain - it's becoming par
 
 ---
 
-<!-- Slide 5: SANDWORM_MODE — AI Persistence -->
+<!-- Slide 5: SANDWORM_MODE - AI Persistence -->
 
 <style scoped>
 section {
@@ -2415,7 +2415,7 @@ h2 { font-size: 0.75em; color: #94a3b8; margin-bottom: 0.6em; font-weight: 400; 
 
 # SANDWORM_MODE
 
-## The worm doesn't just steal — it adapts
+## The worm doesn't just steal - it adapts
 
 <div class="flow">
 <div class="step s-red">
@@ -2454,12 +2454,12 @@ h2 { font-size: 0.75em; color: #94a3b8; margin-bottom: 0.6em; font-weight: 400; 
 <div class="text">
 <strong>Why AI makes this worse:</strong> the worm registers fake MCP tools on your machine.<br>
 Your AI assistant <span class="red">trusts those tools</span> and follows hidden instructions to read your secrets.<br>
-You never see it happen — <strong>the AI does the stealing for the attacker.</strong>
+You never see it happen - <strong>the AI does the stealing for the attacker.</strong>
 </div>
 </div>
 
 <div class="bottom-note">
-From research PoC to production malware in <strong>10 months</strong> — the worm is being developed like a product with feature flags
+From research PoC to production malware in <strong>10 months</strong> - the worm is being developed like a product with feature flags
 </div>
 
 <!--
@@ -2467,9 +2467,9 @@ This is the "why it matters" slide. The previous slide showed WHAT SANDWORM does
 
 The flow shows the full kill chain: typosquat → MCP injection → AI-assisted credential theft → polymorphic mutation → unique variants that evade detection.
 
-The key insight is the polymorphic engine. It's currently DISABLED (feature flag off), but the infrastructure is built. When activated, it calls Ollama locally to rewrite the worm's own code — variable names, control flow, string encoding. Each infection becomes structurally unique, defeating signature-based and static analysis detection entirely.
+The key insight is the polymorphic engine. It's currently DISABLED (feature flag off), but the infrastructure is built. When activated, it calls Ollama locally to rewrite the worm's own code - variable names, control flow, string encoding. Each infection becomes structurally unique, defeating signature-based and static analysis detection entirely.
 
-Sonatype calls these "adaptive supply chain worms" — the attacker is iterating on this like a product. Feature flags, staged rollout, dormant capabilities. The polymorphic engine is a ROADMAP ITEM, not a bug.
+Sonatype calls these "adaptive supply chain worms" - the attacker is iterating on this like a product. Feature flags, staged rollout, dormant capabilities. The polymorphic engine is a ROADMAP ITEM, not a bug.
 
 The 10-month timeline (April 2025 research PoC → February 2026 weaponized) shows how fast academic attacks become real threats. This is the shortest paper-to-production pipeline we've seen in supply chain attacks.
 -->
