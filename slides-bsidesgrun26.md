@@ -5263,18 +5263,19 @@ h1 {
 .vp {
   height: 280px;
   overflow: hidden;
-  padding: 0 16px;
-}
-.sc {
-  animation: qs 10s linear infinite;
+  position: relative;
+  padding: 0;
 }
 .qs {
-  height: 280px;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 4px;
+  padding: 8px 16px;
+  opacity: 0;
 }
 .cl {
   font-size: 0.5em;
@@ -5284,6 +5285,14 @@ h1 {
 }
 .cl .p { color: #4ade80; font-weight: 700; }
 .cl .f { color: #79c0ff; }
+.ct {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  vertical-align: bottom;
+  border-right: 2px solid transparent;
+}
 .qp {
   font-size: 11px;
   line-height: 1;
@@ -5305,10 +5314,63 @@ h1 {
   color: #8b949e;
   margin-top: 2px;
 }
-@keyframes qs {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-280px); }
-  100% { transform: translateY(-560px); }
+.qc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  opacity: 0;
+}
+.q1 { animation: s1 14s linear infinite; }
+.q2 { animation: s2 14s linear infinite; }
+@keyframes s1 {
+  0%, 46% { opacity: 1; }
+  49%, 100% { opacity: 0; }
+}
+@keyframes s2 {
+  0%, 49% { opacity: 0; }
+  52%, 96% { opacity: 1; }
+  99%, 100% { opacity: 0; }
+}
+.ct1 { animation: t1 14s linear infinite, c1 14s step-end infinite; }
+.ct2 { animation: t2 14s linear infinite, c2 14s step-end infinite; }
+@keyframes t1 {
+  0% { width: 0; animation-timing-function: steps(23, end); }
+  12% { width: 23ch; }
+  46% { width: 23ch; }
+  49% { width: 0; }
+  100% { width: 0; }
+}
+@keyframes t2 {
+  0%, 49% { width: 0; }
+  52% { width: 0; animation-timing-function: steps(25, end); }
+  64% { width: 25ch; }
+  96% { width: 25ch; }
+  99% { width: 0; }
+  100% { width: 0; }
+}
+@keyframes c1 {
+  0% { border-right-color: #4ade80; }
+  13% { border-right-color: transparent; }
+  100% { border-right-color: transparent; }
+}
+@keyframes c2 {
+  0% { border-right-color: transparent; }
+  52% { border-right-color: #4ade80; }
+  65% { border-right-color: transparent; }
+  100% { border-right-color: transparent; }
+}
+.qc1 { animation: r1 14s linear infinite; }
+.qc2 { animation: r2 14s linear infinite; }
+@keyframes r1 {
+  0%, 13% { opacity: 0; }
+  15%, 46% { opacity: 1; }
+  49%, 100% { opacity: 0; }
+}
+@keyframes r2 {
+  0%, 64% { opacity: 0; }
+  66%, 96% { opacity: 1; }
+  99%, 100% { opacity: 0; }
 }
 </style>
 
@@ -5321,9 +5383,9 @@ h1 {
 <span class="td dg"></span>
 </div>
 <div class="vp">
-<div class="sc">
-<div class="qs">
-<div class="cl"><span class="p">$</span> qr-scan <span class="f">--target</span> github</div>
+<div class="qs q1">
+<div class="cl"><span class="p">$ </span><span class="ct ct1">qr-scan <span class="f">--target</span> github</span></div>
+<div class="qc qc1">
 <span class="ql">GitHub</span>
 <pre class="qp">█ ▄▄▄▄▄ █▀██▄▀ ▀▀ ▄▄▄ █ ▄▄▄▄▄ █
 █ █   █ █▀▄ ▀▀▀█▄█▀▄███ █   █ █
@@ -5342,8 +5404,10 @@ h1 {
 █▄▄▄▄▄▄▄█▄▄▄▄▄▄▄██▄█▄██▄▄▄█▄███</pre>
 <span class="qu">github.com/npalm/supply-chain-security-talks</span>
 </div>
-<div class="qs">
-<div class="cl"><span class="p">$</span> qr-scan <span class="f">--target</span> linkedin</div>
+</div>
+<div class="qs q2">
+<div class="cl"><span class="p">$ </span><span class="ct ct2">qr-scan <span class="f">--target</span> linkedin</span></div>
+<div class="qc qc2">
 <span class="ql">LinkedIn</span>
 <pre class="qp">█ ▄▄▄▄▄ ██▀▄██▄   ▄  ▀█ ▄▄▄▄▄ █
 █ █   █ █▄▀█▄▀▀████▀ ▄█ █   █ █
@@ -5362,30 +5426,10 @@ h1 {
 █▄▄▄▄▄▄▄█▄██▄██▄▄▄▄█▄▄▄█▄▄▄█▄▄█</pre>
 <span class="qu">linkedin.com/in/niekpalm</span>
 </div>
-<div class="qs">
-<div class="cl"><span class="p">$</span> qr-scan <span class="f">--target</span> github</div>
-<span class="ql">GitHub</span>
-<pre class="qp">█ ▄▄▄▄▄ █▀██▄▀ ▀▀ ▄▄▄ █ ▄▄▄▄▄ █
-█ █   █ █▀▄ ▀▀▀█▄█▀▄███ █   █ █
-█ █▄▄▄█ █▀▄▄▄█▄▀▀ ▄▄▄▄█ █▄▄▄█ █
-█▄▄▄▄▄▄▄█▄▀ █ █ ▀▄█▄█▄█▄▄▄▄▄▄▄█
-█▄▄▄▄▄█▄▄ ▄█▀▄▄ ▄▀  ▀ ▄▀ ▀▄█▄▀█
-█ █▀█▀▀▄███▄█▄▄▀ █▄█▀▀███▄▀█▀██
-███▄█▄ ▄█▄▄▄▀█▄▄█▀▄█ ▀▀▀▀▀▄▄█▀█
-█▄█▀ ▀ ▄ ▄▄ ███ ▄▄▄▄▀  ▀▀ ▄▄▀██
-█  ▄▀▀█▄ ▄    ▄▄▄▀▄█ █ ▀ ▀▄ █▀█
-█ ███ ▄▄█▀ ▀█▀▄▀  ███ ▀ ▄▄█▄▀██
-█▄█████▄▄ █  █▄ ██▄█▄ ▄▄▄ ▀   █
-█ ▄▄▄▄▄ █▄ ▄█▄█  ▄█   █▄█ ▄▄▀██
-█ █   █ █ ▀▀▀█▄ █ ▄█▀ ▄▄▄▄▀ █▀█
-█ █▄▄▄█ █ ███▀▄█ ▀█ ▄  ▄ ▄ ▄ ██
-█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄██▄█▄██▄▄▄█▄███</pre>
-<span class="qu">github.com/npalm/supply-chain-security-talks</span>
-</div>
 </div>
 </div>
 </div>
 
 <!--
-Q&A terminal. Scrolling ASCII QR codes for GitHub and LinkedIn.
+Q&A terminal. Typing animation reveals QR codes for GitHub and LinkedIn.
 -->
