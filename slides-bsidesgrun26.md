@@ -5242,26 +5242,28 @@ h1 {
   text-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
 }
 .tw {
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: rgba(22, 27, 34, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(48, 54, 61, 0.6);
   border-radius: 10px;
   width: 520px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
   overflow: hidden;
 }
 .tb {
   display: flex;
   gap: 6px;
   padding: 8px 12px;
-  background: #1c2128;
-  border-bottom: 1px solid #30363d;
+  background: rgba(28, 33, 40, 0.6);
+  border-bottom: 1px solid rgba(48, 54, 61, 0.6);
 }
 .td { width: 10px; height: 10px; border-radius: 50%; }
 .dr { background: #ff5f57; }
 .dy { background: #febc2e; }
 .dg { background: #28c840; }
 .vp {
-  height: 280px;
+  height: 340px;
   overflow: hidden;
   position: relative;
   padding: 0;
