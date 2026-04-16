@@ -5223,137 +5223,149 @@ Q&A. QR codes link to GitHub repo and LinkedIn profile.
 
 ---
 
-<!-- Questions - Terminal Style -->
+<!-- Questions - Terminal QR -->
 
 <style scoped>
 section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 40px 60px;
   background: #0d1117;
   font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 }
 h1 {
   font-size: 3.2em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.4em;
   color: #4ade80;
   text-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
 }
-.terminal {
+.tw {
   background: #161b22;
   border: 1px solid #30363d;
   border-radius: 12px;
-  padding: 24px 28px;
-  max-width: 780px;
+  width: 640px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  overflow: hidden;
 }
-.terminal-bar {
+.tb {
   display: flex;
   gap: 8px;
-  margin-bottom: 18px;
+  padding: 10px 14px;
+  background: #1c2128;
+  border-bottom: 1px solid #30363d;
 }
-.terminal-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+.td { width: 12px; height: 12px; border-radius: 50%; }
+.dr { background: #ff5f57; }
+.dy { background: #febc2e; }
+.dg { background: #28c840; }
+.vp {
+  height: 340px;
+  overflow: hidden;
+  padding: 0 20px;
 }
-.dot-red { background: #ff5f57; }
-.dot-yellow { background: #febc2e; }
-.dot-green { background: #28c840; }
-.terminal-content {
+.sc {
+  animation: qs 12s ease-in-out infinite;
+}
+.qs {
+  height: 340px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-.cmd-line {
-  display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 0.72em;
-  line-height: 1.5;
+  justify-content: center;
+  gap: 6px;
 }
-.prompt {
-  color: #4ade80;
-  font-weight: 700;
-  white-space: nowrap;
-}
-.cmd {
-  color: #e6edf3;
-}
-.cmd .flag { color: #79c0ff; }
-.cmd .url { color: #a5d6ff; text-decoration: underline; }
-.qr-row {
-  display: flex;
-  gap: 32px;
-  margin-top: 8px;
-}
-.qr-card {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: rgba(74, 222, 128, 0.06);
-  border: 1px solid rgba(74, 222, 128, 0.2);
-  border-radius: 10px;
-  padding: 14px 18px;
-}
-.qr-card img {
-  width: 180px;
-  height: 180px;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-}
-.qr-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.qr-info .label {
+.cl {
   font-size: 0.6em;
+  color: #e6edf3;
+  align-self: flex-start;
+  margin-bottom: 2px;
+}
+.cl .p { color: #4ade80; font-weight: 700; }
+.cl .f { color: #79c0ff; }
+.qp {
+  font-size: 14px;
+  line-height: 1;
+  color: #4ade80;
+  margin: 0;
+  white-space: pre;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  text-shadow: 0 0 6px rgba(74, 222, 128, 0.15);
+}
+.ql {
+  font-size: 0.56em;
   color: #4ade80;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
-.qr-info .link {
-  font-size: 0.48em;
+.qu {
+  font-size: 0.44em;
   color: #8b949e;
-  word-break: break-all;
+  margin-top: 4px;
+}
+@keyframes qs {
+  0%, 38% { transform: translateY(0); }
+  44%, 88% { transform: translateY(-340px); }
+  94%, 100% { transform: translateY(0); }
 }
 </style>
 
 # Questions
 
-<div class="terminal">
-<div class="terminal-bar">
-<span class="terminal-dot dot-red"></span>
-<span class="terminal-dot dot-yellow"></span>
-<span class="terminal-dot dot-green"></span>
+<div class="tw">
+<div class="tb">
+<span class="td dr"></span>
+<span class="td dy"></span>
+<span class="td dg"></span>
 </div>
-<div class="terminal-content">
-<div class="cmd-line">
-<span class="prompt">$</span>
-<span class="cmd">open <span class="flag">--connect</span> <span class="url">niekpalm</span></span>
+<div class="vp">
+<div class="sc">
+<div class="qs">
+<div class="cl"><span class="p">$</span> qr-scan <span class="f">--target</span> github</div>
+<span class="ql">GitHub</span>
+<pre class="qp">█ ▄▄▄▄▄ █▀██▄▀ ▀▀ ▄▄▄ █ ▄▄▄▄▄ █
+█ █   █ █▀▄ ▀▀▀█▄█▀▄███ █   █ █
+█ █▄▄▄█ █▀▄▄▄█▄▀▀ ▄▄▄▄█ █▄▄▄█ █
+█▄▄▄▄▄▄▄█▄▀ █ █ ▀▄█▄█▄█▄▄▄▄▄▄▄█
+█▄▄▄▄▄█▄▄ ▄█▀▄▄ ▄▀  ▀ ▄▀ ▀▄█▄▀█
+█ █▀█▀▀▄███▄█▄▄▀ █▄█▀▀███▄▀█▀██
+███▄█▄ ▄█▄▄▄▀█▄▄█▀▄█ ▀▀▀▀▀▄▄█▀█
+█▄█▀ ▀ ▄ ▄▄ ███ ▄▄▄▄▀  ▀▀ ▄▄▀██
+█  ▄▀▀█▄ ▄    ▄▄▄▀▄█ █ ▀ ▀▄ █▀█
+█ ███ ▄▄█▀ ▀█▀▄▀  ███ ▀ ▄▄█▄▀██
+█▄█████▄▄ █  █▄ ██▄█▄ ▄▄▄ ▀   █
+█ ▄▄▄▄▄ █▄ ▄█▄█  ▄█   █▄█ ▄▄▀██
+█ █   █ █ ▀▀▀█▄ █ ▄█▀ ▄▄▄▄▀ █▀█
+█ █▄▄▄█ █ ███▀▄█ ▀█ ▄  ▄ ▄ ▄ ██
+█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄██▄█▄██▄▄▄█▄███</pre>
+<span class="qu">github.com/npalm/supply-chain-security-talks</span>
 </div>
-<div class="qr-row">
-<div class="qr-card">
-<img src="assets/img/qr-gh.png" alt="GitHub QR">
-<div class="qr-info">
-<span class="label">GitHub</span>
-<span class="link">github.com/npalm/supply-chain-security-talks</span>
-</div>
-</div>
-<div class="qr-card">
-<img src="assets/img/qr-in.png" alt="LinkedIn QR">
-<div class="qr-info">
-<span class="label">LinkedIn</span>
-<span class="link">linkedin.com/in/niekpalm</span>
-</div>
+<div class="qs">
+<div class="cl"><span class="p">$</span> qr-scan <span class="f">--target</span> linkedin</div>
+<span class="ql">LinkedIn</span>
+<pre class="qp">█ ▄▄▄▄▄ ██▀▄██▄   ▄  ▀█ ▄▄▄▄▄ █
+█ █   █ █▄▀█▄▀▀████▀ ▄█ █   █ █
+█ █▄▄▄█ ██▄▀▀ ▄  █   ██ █▄▄▄█ █
+█▄▄▄▄▄▄▄█ █▄▀▄█▄▀ ▀ █ █▄▄▄▄▄▄▄█
+█  ▄▀▄▄▄▄▄▀█▀ ▀█▄ ▄▄▄▄  ██▀▄█▀█
+██ █ ▄█▄██▀ ▄ ▀ ▀█ ▀█  ██▀█▄ ▄█
+█▀██▄▀▄▄█▀█  ██ █ ▄█▄   ▀█ █▄ █
+█▀█ ██▄▄▀ ▀ ▀█▄█▀▄▀ ▀███▄█ █ ▄█
+██▄▀▄▀█▄ ▀▀█▀ ▀██▀▄█▄   ▄█ ▀▄ █
+█▄▀▀▀▀ ▄█▀█▀▄ ▀ ██ █▀  ▀▄█▀█ ▄█
+█▄█▄▄██▄▄ █▀ ██ ▄ ▄▄▀ ▄▄▄ █▀▀▀█
+█ ▄▄▄▄▄ █ ▄█▀█▄█▀▀ ▀▄ █▄█  █▄▄█
+█ █   █ █▄▀▄▀ ▀██ ▄██▄▄▄▄ █▀  █
+█ █▄▄▄█ █   ▄ ▀ ▀█ █  ▀▀▄ ▄█▀▄█
+█▄▄▄▄▄▄▄█▄██▄██▄▄▄▄█▄▄▄█▄▄▄█▄▄█</pre>
+<span class="qu">linkedin.com/in/niekpalm</span>
 </div>
 </div>
 </div>
 </div>
 
 <!--
-Q&A terminal style. GitHub repo and LinkedIn profile QR codes.
+Q&A terminal. Scrolling ASCII QR codes for GitHub and LinkedIn.
 -->
