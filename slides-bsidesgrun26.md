@@ -5229,55 +5229,55 @@ Q&A. QR codes link to GitHub repo and LinkedIn profile.
 section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 60px;
-  background: #0d1117;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px 60px;
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
   font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 }
 h1 {
-  font-size: 3.2em;
-  margin-bottom: 0.4em;
+  font-size: 2.8em;
+  margin-bottom: 0.3em;
   color: #4ade80;
   text-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
 }
 .tw {
   background: #161b22;
   border: 1px solid #30363d;
-  border-radius: 12px;
-  width: 640px;
+  border-radius: 10px;
+  width: 520px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.5);
   overflow: hidden;
 }
 .tb {
   display: flex;
-  gap: 8px;
-  padding: 10px 14px;
+  gap: 6px;
+  padding: 8px 12px;
   background: #1c2128;
   border-bottom: 1px solid #30363d;
 }
-.td { width: 12px; height: 12px; border-radius: 50%; }
+.td { width: 10px; height: 10px; border-radius: 50%; }
 .dr { background: #ff5f57; }
 .dy { background: #febc2e; }
 .dg { background: #28c840; }
 .vp {
-  height: 340px;
+  height: 280px;
   overflow: hidden;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 .sc {
-  animation: qs 12s ease-in-out infinite;
+  animation: qs 10s linear infinite;
 }
 .qs {
-  height: 340px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 4px;
 }
 .cl {
-  font-size: 0.6em;
+  font-size: 0.5em;
   color: #e6edf3;
   align-self: flex-start;
   margin-bottom: 2px;
@@ -5285,7 +5285,7 @@ h1 {
 .cl .p { color: #4ade80; font-weight: 700; }
 .cl .f { color: #79c0ff; }
 .qp {
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1;
   color: #4ade80;
   margin: 0;
@@ -5294,21 +5294,21 @@ h1 {
   text-shadow: 0 0 6px rgba(74, 222, 128, 0.15);
 }
 .ql {
-  font-size: 0.56em;
+  font-size: 0.48em;
   color: #4ade80;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 .qu {
-  font-size: 0.44em;
+  font-size: 0.38em;
   color: #8b949e;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 @keyframes qs {
-  0%, 38% { transform: translateY(0); }
-  44%, 88% { transform: translateY(-340px); }
-  94%, 100% { transform: translateY(0); }
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-280px); }
+  100% { transform: translateY(-560px); }
 }
 </style>
 
@@ -5361,6 +5361,26 @@ h1 {
 █ █▄▄▄█ █   ▄ ▀ ▀█ █  ▀▀▄ ▄█▀▄█
 █▄▄▄▄▄▄▄█▄██▄██▄▄▄▄█▄▄▄█▄▄▄█▄▄█</pre>
 <span class="qu">linkedin.com/in/niekpalm</span>
+</div>
+<div class="qs">
+<div class="cl"><span class="p">$</span> qr-scan <span class="f">--target</span> github</div>
+<span class="ql">GitHub</span>
+<pre class="qp">█ ▄▄▄▄▄ █▀██▄▀ ▀▀ ▄▄▄ █ ▄▄▄▄▄ █
+█ █   █ █▀▄ ▀▀▀█▄█▀▄███ █   █ █
+█ █▄▄▄█ █▀▄▄▄█▄▀▀ ▄▄▄▄█ █▄▄▄█ █
+█▄▄▄▄▄▄▄█▄▀ █ █ ▀▄█▄█▄█▄▄▄▄▄▄▄█
+█▄▄▄▄▄█▄▄ ▄█▀▄▄ ▄▀  ▀ ▄▀ ▀▄█▄▀█
+█ █▀█▀▀▄███▄█▄▄▀ █▄█▀▀███▄▀█▀██
+███▄█▄ ▄█▄▄▄▀█▄▄█▀▄█ ▀▀▀▀▀▄▄█▀█
+█▄█▀ ▀ ▄ ▄▄ ███ ▄▄▄▄▀  ▀▀ ▄▄▀██
+█  ▄▀▀█▄ ▄    ▄▄▄▀▄█ █ ▀ ▀▄ █▀█
+█ ███ ▄▄█▀ ▀█▀▄▀  ███ ▀ ▄▄█▄▀██
+█▄█████▄▄ █  █▄ ██▄█▄ ▄▄▄ ▀   █
+█ ▄▄▄▄▄ █▄ ▄█▄█  ▄█   █▄█ ▄▄▀██
+█ █   █ █ ▀▀▀█▄ █ ▄█▀ ▄▄▄▄▀ █▀█
+█ █▄▄▄█ █ ███▀▄█ ▀█ ▄  ▄ ▄ ▄ ██
+█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄██▄█▄██▄▄▄█▄███</pre>
+<span class="qu">github.com/npalm/supply-chain-security-talks</span>
 </div>
 </div>
 </div>
