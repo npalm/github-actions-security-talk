@@ -5232,7 +5232,6 @@ section {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 30px 60px;
-  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
   font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
 }
 h1 {
