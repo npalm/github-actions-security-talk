@@ -3568,6 +3568,13 @@ section {
   padding: 35px 50px;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
+h2 {
+  font-size: 1.8em;
+  color: #86efac;
+  margin: 0 0 16px 0;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
 .terminal {
   background: #0d1117;
   border: 1px solid #30363d;
@@ -3751,14 +3758,14 @@ Hardening in action. Walk through each line - trigger restrictions, permission b
 
 <style scoped>
 section {
-  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #0a0a0f 100%);
+  background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%);
   color: #e2e8f0;
   padding: 40px 50px;
   font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 h2 {
   font-size: 1.9em;
-  color: #a5b4fc;
+  color: #86efac;
   margin: 0 0 12px 0;
   font-weight: 700;
 }
@@ -3916,7 +3923,7 @@ section {
 }
 h2 {
   font-size: 1.8em;
-  color: #a5b4fc;
+  color: #86efac;
   margin: 0 0 16px 0;
   font-weight: 700;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
@@ -3939,7 +3946,7 @@ h2 {
 }
 .code-block h3 {
   font-size: 0.6em;
-  color: #818cf8;
+  color: #86efac;
   margin: 0 0 8px 0;
   font-weight: 600;
 }
@@ -4437,12 +4444,12 @@ section {
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 h2 {
-  font-size: 1.6em;
+  font-size: 1.8em;
   text-align: center;
   margin-bottom: 0.15em;
-  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #86efac;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-weight: 700;
 }
 .subtitle {
   text-align: center;
@@ -4635,7 +4642,7 @@ section {
 }
 h2 {
   font-size: 1.9em;
-  color: #c084fc;
+  color: #86efac;
   margin: 0 0 12px 0;
   font-weight: 700;
 }
@@ -4753,7 +4760,7 @@ section {
 }
 h2 {
   font-size: 1.8em;
-  color: #c084fc;
+  color: #86efac;
   margin: 0 0 16px 0;
   font-weight: 700;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
@@ -4901,10 +4908,10 @@ section {
   background: linear-gradient(135deg, #052e16 0%, #14532d 50%, #0a0a0f 100%);
   color: #e2e8f0;
   padding: 28px 45px;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 h2 {
-  font-size: 1.85em;
+  font-size: 1.9em;
   color: #86efac;
   margin: 0 0 8px 0;
   font-weight: 700;
@@ -5177,6 +5184,10 @@ section {
 h1 {
   font-size: 3.4em;
   margin-bottom: 0.4em;
+  background: linear-gradient(135deg, #86efac 0%, #4ade80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .qr-row {
   display: flex;
