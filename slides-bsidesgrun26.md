@@ -5167,10 +5167,56 @@ Closing - the supply chain is everyone's responsibility. Share resources.
 
 <!-- Questions -->
 
+<style scoped>
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 60px;
+}
+h1 {
+  font-size: 3.4em;
+  margin-bottom: 0.4em;
+}
+.qr-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-end;
+}
+.qr-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.qr-box img {
+  width: 220px;
+  height: 220px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+.qr-label {
+  font-size: 0.7em;
+  color: #94a3b8;
+  font-weight: 600;
+}
+</style>
+
 # Questions
+
+<div class="qr-row">
+<div class="qr-box">
+<img src="assets/img/qr-gh.png" alt="GitHub QR">
+<span class="qr-label">GitHub</span>
+</div>
+<div class="qr-box">
+<img src="assets/img/qr-in.png" alt="LinkedIn QR">
+<span class="qr-label">LinkedIn</span>
+</div>
+</div>
 
 ![bg](assets/img/questions.jpeg)
 
 <!--
-Q&A. Have backup slides ready for deep-dive questions on specific attacks.
+Q&A. QR codes link to GitHub repo and LinkedIn profile.
 -->
