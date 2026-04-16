@@ -5220,3 +5220,140 @@ h1 {
 <!--
 Q&A. QR codes link to GitHub repo and LinkedIn profile.
 -->
+
+---
+
+<!-- Questions - Terminal Style -->
+
+<style scoped>
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 60px;
+  background: #0d1117;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+h1 {
+  font-size: 3.2em;
+  margin-bottom: 0.5em;
+  color: #4ade80;
+  text-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
+}
+.terminal {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 24px 28px;
+  max-width: 780px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+.terminal-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.dot-red { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green { background: #28c840; }
+.terminal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cmd-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.72em;
+  line-height: 1.5;
+}
+.prompt {
+  color: #4ade80;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.cmd {
+  color: #e6edf3;
+}
+.cmd .flag { color: #79c0ff; }
+.cmd .url { color: #a5d6ff; text-decoration: underline; }
+.qr-row {
+  display: flex;
+  gap: 32px;
+  margin-top: 8px;
+}
+.qr-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(74, 222, 128, 0.06);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+.qr-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+.qr-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.qr-info .label {
+  font-size: 0.6em;
+  color: #4ade80;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.qr-info .link {
+  font-size: 0.48em;
+  color: #8b949e;
+  word-break: break-all;
+}
+</style>
+
+# Questions
+
+<div class="terminal">
+<div class="terminal-bar">
+<span class="terminal-dot dot-red"></span>
+<span class="terminal-dot dot-yellow"></span>
+<span class="terminal-dot dot-green"></span>
+</div>
+<div class="terminal-content">
+<div class="cmd-line">
+<span class="prompt">$</span>
+<span class="cmd">open <span class="flag">--connect</span> <span class="url">niekpalm</span></span>
+</div>
+<div class="qr-row">
+<div class="qr-card">
+<img src="assets/img/qr-gh.png" alt="GitHub QR">
+<div class="qr-info">
+<span class="label">GitHub</span>
+<span class="link">github.com/npalm/supply-chain-security-talks</span>
+</div>
+</div>
+<div class="qr-card">
+<img src="assets/img/qr-in.png" alt="LinkedIn QR">
+<div class="qr-info">
+<span class="label">LinkedIn</span>
+<span class="link">linkedin.com/in/niekpalm</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!--
+Q&A terminal style. GitHub repo and LinkedIn profile QR codes.
+-->
