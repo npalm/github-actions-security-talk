@@ -5117,14 +5117,17 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.terminal {
+.mm-term {
   background: #0d1117;
   border: 1px solid #30363d;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 40px rgba(34, 197, 94, 0.06), 0 16px 48px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  max-height: 520px;
 }
-.title-bar {
+.mm-bar {
   background: #161b22;
   padding: 7px 14px;
   display: flex;
@@ -5132,69 +5135,122 @@ h2 {
   gap: 7px;
   border-bottom: 1px solid #30363d;
 }
-.dot { width: 11px; height: 11px; border-radius: 50%; }
-.dot-r { background: #f87171; }
-.dot-y { background: #fbbf24; }
-.dot-g { background: #4ade80; }
-.title-bar span {
-  color: #484f58;
-  font-size: 0.5em;
-  margin-left: 8px;
+.mm-dot { width: 11px; height: 11px; border-radius: 50%; }
+.mm-dot-r { background: #f87171; }
+.mm-dot-y { background: #fbbf24; }
+.mm-dot-g { background: #4ade80; }
+.mm-bar-title { color: #484f58; font-size: 0.5em; margin-left: 8px; }
+.mm-body {
+  padding: 12px 18px;
+  font-size: 0.46em;
+  line-height: 1.7;
+  color: #c8c8c8;
+  flex: 1;
+  overflow: hidden;
 }
-.chat {
-  padding: 14px 20px;
-  font-size: 0.50em;
-  line-height: 1.85;
+.ml { opacity: 0; transition: opacity 0.15s; white-space: pre; }
+.ml.mv { opacity: 1; }
+.mm-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  background: #4ade80;
+  vertical-align: text-bottom;
+  animation: mmblink 0.7s step-end infinite;
 }
-.ai { color: #86efac; }
-.ai-label { color: #4ade80; font-weight: 700; }
-.you { color: #fbbf24; }
-.you-label { color: #fbbf24; font-weight: 700; }
-.cmd { color: #e2e8f0; font-weight: 700; background: rgba(255,255,255,0.05); padding: 1px 6px; border-radius: 4px; }
-.ok { color: #4ade80; }
-.dim { color: #6b7280; }
+@keyframes mmblink { 50% { opacity: 0; } }
+.mm-typed { display: inline; }
+.mm-prompt { color: #c084fc; font-weight: 700; font-size: 1.1em; }
+.mm-ai { color: #86efac; }
+.mm-you { color: #fbbf24; }
+.mm-cmd { color: #e2e8f0; font-weight: 700; }
+.mm-ok { color: #4ade80; }
+.mm-dim { color: #64748b; }
+.mm-out { color: #86efac; }
 </style>
 
 ## Monday morning todo list ☕
 
-<div class="terminal">
-<div class="title-bar">
-  <div class="dot dot-r"></div>
-  <div class="dot dot-y"></div>
-  <div class="dot dot-g"></div>
-  <span>defender@monday-morning ~ /your-repo</span>
+<div class="mm-term">
+<div class="mm-bar">
+  <span class="mm-dot mm-dot-r"></span>
+  <span class="mm-dot mm-dot-y"></span>
+  <span class="mm-dot mm-dot-g"></span>
+  <span class="mm-bar-title">defender@monday-morning ~ /your-repo</span>
 </div>
-<div class="chat">
-<span class="ai-label">terminal:</span> <span class="ai">Good morning! How was your weekend?</span><br>
-<span class="you-label">you:</span> <span class="you">Yeah good! Ready to go.</span><br>
-<br>
-<span class="ai-label">terminal:</span> <span class="ai">Shall we secure our supply chain before the coffee kicks in?</span><br>
-<span class="you-label">you:</span> <span class="you">Yes</span><br>
-<br>
-<span class="ai-label">terminal:</span> <span class="ai">Running zizmor on your workflows with auto-fix...</span><br>
-<span class="dim">&nbsp; $ </span><span class="cmd">zizmor --fix .github/workflows/</span><br>
-<span class="ok">&nbsp; ✓ 12 findings fixed</span> <span class="dim">-- injections, misconfigs, permissions</span><br>
-<br>
-<span class="you-label">you:</span> <span class="you">Great, what's next?</span><br>
-<br>
-<span class="ai-label">terminal:</span> <span class="ai">Generating a safe .npmrc...</span><br>
-<span class="dim">&nbsp; $ </span><span class="cmd">cat >> .npmrc</span><br>
-<span class="ok">&nbsp; ignore-scripts=true</span><br>
-<span class="ok">&nbsp; min-release-age=7</span><br>
-<span class="ok">&nbsp; ✓ cooldown + no postinstall surprises</span><br>
-<br>
-<span class="you-label">you:</span> <span class="you">What's next? Keep it short, need my coffee.</span><br>
-<br>
-<span class="ai-label">terminal:</span> <span class="ai">Checking your skill files for dangerous patterns...</span><br>
-<span class="dim">&nbsp; $ </span><span class="cmd">cat -v .agent/*.md .cursorrules .github/copilot-instructions.md</span><br>
-<span class="ok">&nbsp; ✓ no hidden Unicode or injected prompts</span><br>
-<br>
-<span class="ai-label">terminal:</span> <span class="ai">Done. Go get that coffee. ☕</span><br>
+<div class="mm-body" id="mm-chat">
+<div class="ml" data-d="200"><span class="mm-ai">Good morning! How was your weekend?</span></div>
+<div class="ml" data-d="300" data-t="500"><span class="mm-prompt">❯</span> <span class="mm-typed mm-you" data-text="Yeah good! Ready to go."></span></div>
+<div class="ml" data-d="200"></div>
+<div class="ml" data-d="400"><span class="mm-ai">Shall we secure our supply chain before the coffee kicks in?</span></div>
+<div class="ml" data-d="200" data-t="300"><span class="mm-prompt">❯</span> <span class="mm-typed mm-you" data-text="yes"></span></div>
+<div class="ml" data-d="200"></div>
+<div class="ml" data-d="300"><span class="mm-ai">Running zizmor on your workflows with auto-fix...</span></div>
+<div class="ml" data-d="200"><span class="mm-dim">  $ </span><span class="mm-cmd">zizmor --fix .github/workflows/</span></div>
+<div class="ml" data-d="300"><span class="mm-ok">  ✓ 12 findings fixed</span></div>
+<div class="ml" data-d="200"></div>
+<div class="ml" data-d="200" data-t="500"><span class="mm-prompt">❯</span> <span class="mm-typed mm-you" data-text="great, what is next?"></span></div>
+<div class="ml" data-d="200"></div>
+<div class="ml" data-d="300"><span class="mm-ai">Generating a safe .npmrc...</span></div>
+<div class="ml" data-d="200"><span class="mm-dim">  $ </span><span class="mm-cmd">cat >> .npmrc</span></div>
+<div class="ml" data-d="200"><span class="mm-out">  ignore-scripts=true</span></div>
+<div class="ml" data-d="200"><span class="mm-out">  min-release-age=7</span></div>
+<div class="ml" data-d="300"><span class="mm-ok">  ✓ no postinstall surprises</span></div>
+<div class="ml" data-d="200"></div>
+<div class="ml" data-d="200" data-t="700"><span class="mm-prompt">❯</span> <span class="mm-typed mm-you" data-text="what next, keep it short need my coffee"></span></div>
+<div class="ml" data-d="200"></div>
+<div class="ml" data-d="300"><span class="mm-ai">Checking your skill files for dangerous patterns...</span></div>
+<div class="ml" data-d="200"><span class="mm-dim">  $ </span><span class="mm-cmd">cat -v .agent/*.md .cursorrules .github/copilot-instructions.md</span></div>
+<div class="ml" data-d="300"><span class="mm-ok">  ✓ no hidden Unicode or injected prompts</span></div>
+<div class="ml" data-d="200"></div>
+<div class="ml" data-d="400"><span class="mm-ai">Done. Go get that coffee. ☕</span></div>
+<div class="ml" data-d="300"><span class="mm-prompt">❯</span> <span class="mm-cursor"></span></div>
 </div>
 </div>
 
+<script>
+{
+  const section = document.currentScript.closest('section')
+  let started = false
+  const run = () => {
+    if (started) return
+    started = true
+    const container = section.querySelector('#mm-chat')
+    if (!container) return
+    const lines = container.querySelectorAll('.ml')
+    let cumDelay = 400
+    lines.forEach(line => {
+      const lineDelay = parseInt(line.dataset.d || '300', 10)
+      const typeSpeed = parseInt(line.dataset.t || '0', 10)
+      cumDelay += lineDelay
+      const typedEl = line.querySelector('.mm-typed')
+      if (typedEl && typeSpeed > 0) {
+        const fullText = typedEl.dataset.text
+        typedEl.textContent = ''
+        const showAt = cumDelay
+        setTimeout(() => { line.classList.add('mv') }, showAt)
+        const charDelay = typeSpeed / fullText.length
+        for (let i = 0; i < fullText.length; i++) {
+          setTimeout(() => { typedEl.textContent = fullText.slice(0, i + 1) }, showAt + charDelay * i)
+        }
+        cumDelay += typeSpeed
+      } else {
+        setTimeout(() => { line.classList.add('mv') }, cumDelay)
+      }
+    })
+  }
+  if (typeof IntersectionObserver !== 'undefined') {
+    const obs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) { run(); obs.disconnect() }
+    }, { threshold: 0.5 })
+    obs.observe(section)
+  }
+  section.addEventListener('click', run, { once: true })
+}
+</script>
+
 <!--
-Interactive version of the Monday morning slide. Same 3 actions: run zizmor, set up .npmrc, check AI agent configs. Presented as a casual terminal conversation. Less than 1 hour, zero budget, blocks 80% of attacks we covered today.
+Interactive terminal version of Monday morning slide. Terminal is the active agent -- asks questions, runs commands. User types responses (typing animation). Same 3 defenses: zizmor, .npmrc, skill file checks. Blinking cursor at end.
 -->
 
 ---
