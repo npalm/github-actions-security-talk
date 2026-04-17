@@ -5101,6 +5101,104 @@ Monday morning todo list. 5 things before your first coffee. Check AI agent conf
 
 ---
 
+<!-- Monday Morning - Interactive Terminal Chat -->
+
+<style scoped>
+section {
+  background: #0a0a0a;
+  padding: 30px 50px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+h2 {
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 0.3em;
+  background: linear-gradient(135deg, #86efac 0%, #4ade80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.terminal {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(34, 197, 94, 0.06), 0 16px 48px rgba(0,0,0,0.5);
+}
+.title-bar {
+  background: #161b22;
+  padding: 7px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1px solid #30363d;
+}
+.dot { width: 11px; height: 11px; border-radius: 50%; }
+.dot-r { background: #f87171; }
+.dot-y { background: #fbbf24; }
+.dot-g { background: #4ade80; }
+.title-bar span {
+  color: #484f58;
+  font-size: 0.5em;
+  margin-left: 8px;
+}
+.chat {
+  padding: 14px 20px;
+  font-size: 0.50em;
+  line-height: 1.85;
+}
+.ai { color: #86efac; }
+.ai-label { color: #4ade80; font-weight: 700; }
+.you { color: #fbbf24; }
+.you-label { color: #fbbf24; font-weight: 700; }
+.cmd { color: #e2e8f0; font-weight: 700; background: rgba(255,255,255,0.05); padding: 1px 6px; border-radius: 4px; }
+.ok { color: #4ade80; }
+.dim { color: #6b7280; }
+</style>
+
+## Monday morning todo list ☕
+
+<div class="terminal">
+<div class="title-bar">
+  <div class="dot dot-r"></div>
+  <div class="dot dot-y"></div>
+  <div class="dot dot-g"></div>
+  <span>defender@monday-morning ~ /your-repo</span>
+</div>
+<div class="chat">
+<span class="ai-label">terminal:</span> <span class="ai">Good morning! How was your weekend?</span><br>
+<span class="you-label">you:</span> <span class="you">Yeah good! Ready to go.</span><br>
+<br>
+<span class="ai-label">terminal:</span> <span class="ai">Shall we secure our supply chain before the coffee kicks in?</span><br>
+<span class="you-label">you:</span> <span class="you">Yes</span><br>
+<br>
+<span class="ai-label">terminal:</span> <span class="ai">Running zizmor on your workflows with auto-fix...</span><br>
+<span class="dim">&nbsp; $ </span><span class="cmd">zizmor --fix .github/workflows/</span><br>
+<span class="ok">&nbsp; ✓ 12 findings fixed</span> <span class="dim">-- injections, misconfigs, permissions</span><br>
+<br>
+<span class="you-label">you:</span> <span class="you">Great, what's next?</span><br>
+<br>
+<span class="ai-label">terminal:</span> <span class="ai">Generating a safe .npmrc...</span><br>
+<span class="dim">&nbsp; $ </span><span class="cmd">cat >> .npmrc</span><br>
+<span class="ok">&nbsp; ignore-scripts=true</span><br>
+<span class="ok">&nbsp; min-release-age=7</span><br>
+<span class="ok">&nbsp; ✓ cooldown + no postinstall surprises</span><br>
+<br>
+<span class="you-label">you:</span> <span class="you">What's next? Keep it short, need my coffee.</span><br>
+<br>
+<span class="ai-label">terminal:</span> <span class="ai">Checking your skill files for dangerous patterns...</span><br>
+<span class="dim">&nbsp; $ </span><span class="cmd">cat -v .agent/*.md .cursorrules .github/copilot-instructions.md</span><br>
+<span class="ok">&nbsp; ✓ no hidden Unicode or injected prompts</span><br>
+<br>
+<span class="ai-label">terminal:</span> <span class="ai">Done. Go get that coffee. ☕</span><br>
+</div>
+</div>
+
+<!--
+Interactive version of the Monday morning slide. Same 3 actions: run zizmor, set up .npmrc, check AI agent configs. Presented as a casual terminal conversation. Less than 1 hour, zero budget, blocks 80% of attacks we covered today.
+-->
+
+---
+
 <!-- Closing -->
 
 <style scoped>
