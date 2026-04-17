@@ -5200,7 +5200,7 @@ h2 {
 <div class="ml" data-d="200" data-t="700"><span class="mm-prompt">❯</span> <span class="mm-typed mm-you" data-text="what next, keep it short need my coffee"></span></div>
 <div class="ml" data-d="200"></div>
 <div class="ml" data-d="300"><span class="mm-ai">Checking your skill files for dangerous patterns...</span></div>
-<div class="ml" data-d="200"><span class="mm-dim">  $ </span><span class="mm-cmd">cat -v .agent/*.md .cursorrules .github/copilot-instructions.md</span></div>
+<div class="ml" data-d="200"><span class="mm-dim">  $ </span><span class="mm-cmd">grep -rP '[\x{200B}-\x{200F}\x{202A}-\x{202E}\x{2066}-\x{2069}]' .agent/ .cursorrules .github/copilot-instructions.md</span></div>
 <div class="ml" data-d="300"><span class="mm-ok">  ✓ no hidden Unicode or injected prompts</span></div>
 <div class="ml" data-d="200"></div>
 <div class="ml" data-d="400"><span class="mm-ai">Done. Go get that coffee. ☕</span></div>
