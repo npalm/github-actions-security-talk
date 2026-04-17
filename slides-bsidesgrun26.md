@@ -1419,24 +1419,26 @@ h2 { font-size: 0.8em; color: #dc2626; margin-bottom: 0.6em; }
 
 <div class="warning-box">
 <h3>Scorched Earth Fallback</h3>
-<p>Exfiltration blocked? Activate destructive mode. If the attacker can't profit, they maximize damage.</p>
+<p>Can't authenticate to GitHub, create repos, or find npm/GitHub tokens? Destroy the user's home directory.</p>
 </div>
 
 <div class="methods">
 <div class="method">
 <h4>Linux</h4>
-<code>shred -vfz -n 5</code>
-<p>Secure deletion, multiple overwrites</p>
+<code>shred -vfz -n 5 ~/</code>
+<p>5-pass overwrite + zero fill on home dir</p>
 </div>
 <div class="method">
 <h4>Windows</h4>
-<code>cipher /W</code>
-<p>Wipes free space, destroys remnants</p>
+<code>del /F /S /Q %USERPROFILE%</code>
+<code>rd /S /Q %USERPROFILE%</code>
+<code>cipher /W:%USERPROFILE%</code>
+<p>Delete home dir, then 3-pass free space wipe to destroy remnants</p>
 </div>
 </div>
 
 <!--
-Step 6 - if exfiltration fails, destroy everything. Delete repos, wipe traces. Anti-forensics built in.
+Step 6 - Wiper: if it cannot authenticate to GitHub, create repos, or find npm/GitHub tokens, it attempts to destroy the user's home directory. Windows: del/rd to delete files, then cipher /W overwrites free space in 3 passes (zeros, 0xFF, random) making recovery impossible. Linux: shred with 5-pass overwrite. Anti-forensics built in - if the attacker can't profit, they maximize damage.
 -->
 
 ---
